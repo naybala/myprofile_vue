@@ -1,7 +1,7 @@
 <template>
    <!--===== HOME =====-->
         <section class="home bd-grid" id="home">
-            <div id="theme-open"><i class="fa-solid fa-angles-right"></i></div>
+            <!-- <div id="theme-open"><i class="fa-solid fa-angles-right"></i></div> -->
 
         <!-- <div class="themes-container">
             <div id="theme-close"><i class="fa-solid fa-xmark"></i></div>
