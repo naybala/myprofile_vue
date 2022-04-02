@@ -1,34 +1,53 @@
 <template>
- <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <!--===== HEADER =====-->
-      <div>
-          <header class="l-header">
+  <!--===== HEADER =====-->
+        <header class="l-header" id="head">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Marlon</a>
+                    <a href="#" class="nav__logo text-decoration-none">Nay Ba la
+                    </a>
+                    <br>
+                    <a href="tel:+959763684400" class="nav__logo text-decoration-none"><i class="fa-solid fa-phone"></i>+95 9 763684400</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="#home"
+                                class="nav__link active text-decoration-none">Home</a></li>
+                        <li class="nav__item"><a href="#about"
+                                class="nav__link text-decoration-none">About</a></li>
+                        <li class="nav__item"><a href="#skills"
+                                class="nav__link text-decoration-none">Skills</a></li>
+                        <li class="nav__item"><a href="#project"
+                                class="nav__link text-decoration-none">Projects</a></li>
+                        <li class="nav__item"><a href="#contact"
+                                class="nav__link text-decoration-none">Contact
+                                Me</a></li>
                     </ul>
                 </div>
 
-                <div class="nav__toggle" id="nav-toggle">
+                <div @click="navMenuShow" class="nav__toggle" id="nav-toggle">
                     <i class='bx bx-menu'></i>
                 </div>
             </nav>
         </header>
-      </div>
 </template>
 
 <script>
 export default {
-
+  methods:{
+    navMenuShow(){
+     const nav = document.querySelector('.nav__menu');
+     if (nav.classList.contains("isOpened")) {
+        nav.classList.remove('show');
+        nav.classList.remove("isOpened");
+         
+    } else {
+       nav.classList.add('show');
+        nav.classList.add("isOpened");
+        
+    }
+    }
+  }
 }
 </script>
 
@@ -48,7 +67,11 @@ export default {
   left: 0;
   z-index: var(--z-fixed);
   background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  box-shadow: 0 3px 5px rgba(109, 112, 114, 0.15);
+}
+.l-header.ac{
+  background-color:#242f3f;
+  color: #Fff;
 }
 
 /*===== NAV =====*/
@@ -59,27 +82,33 @@ export default {
   align-items: center;
   font-weight: var(--font-semi);
 }
+.nav__toggle{
+  cursor: pointer;
+}
 
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
     top: var(--header-height);
     right: -100%;
-    width: 80%;
+    width: 50%;
     height: 100%;
     padding: 2rem;
+   
     background-color: var(--second-color);
     transition: .5s;
   }
+ 
 }
 
 .nav__item {
   margin-bottom: var(--mb-4);
+  
 }
 
 .nav__link {
   position: relative;
-  color: #fff;
+  color: var(--first-color);
 }
 
 .nav__link:hover {
@@ -97,11 +126,11 @@ export default {
 }
 
 .nav__logo {
-  color: var(--second-color);
+  color: var(--first-color);
 }
 
 .nav__toggle {
-  color: var(--second-color);
+  /* color: var(--second-color); */
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -116,14 +145,10 @@ export default {
   top: 2rem;
   background-color: var(--first-color);
 }
-
-/*=== Show menu ===*/
 .show {
   right: 0;
 }
 
-
-/* ===== MEDIA QUERIES=====*/
 
 @media screen and (min-width: 768px) {
   body {
@@ -146,7 +171,6 @@ export default {
   .nav__link {
     color: var(--second-color);
   }
-
 }
 
 @media screen and (min-width: 992px) {
