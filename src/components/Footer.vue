@@ -1,5 +1,19 @@
 <template>
-  
+  <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">HELLO World!</p>
+            <div class="footer__social">
+                <a href="#" class="footer__icon"><i class='bx
+                        bxl-facebook'></i></a>
+                <a href="#" class="footer__icon"><i class='bx
+                        bxl-instagram'></i></a>
+                <a href="#" class="footer__icon"><i class='bx
+                        bxl-twitter'></i></a>
+            </div>
+            <p class="footer__copy">&#169; All rigths
+                reserved</p>
+        </footer>
+         <!--===== FOOTER End =====-->
 </template>
 
 <script>

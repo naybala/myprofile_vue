@@ -5,16 +5,19 @@
   <link rel="stylesheet" href="../public/fontawesome/css/all.css">
 <Header/>
 <Home/>
+<Footer/>
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import Home from './components/Home.vue'
+import Footer from './components/Footer.vue'
 export default{
     name:"App",
      components:{
      Header,
-     Home
+     Home,
+     Footer
     },
   }
 </script>
