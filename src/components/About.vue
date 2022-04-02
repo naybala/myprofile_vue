@@ -6,7 +6,7 @@
 
                     <div class="about__container bd-grid" data-aos="zoom-in-up">
                         <div class="about__img" >
-                            <img  @click="imageView" src="../assets/images/myFullProfile.jpg" alt="" id="gallery">
+                            <img  @click="imageViewOne"  src="../assets/images/myFullProfile.jpg" alt="" id="galleryOne">
                         </div>
                         <div>
                             <h2 class="about__subtitle">I'am Nay Ba La</h2>
@@ -30,9 +30,11 @@
                     <br>
                     <div class="about__container bd-grid" data-aos="fade-left">
                         <div class="about__img">
-                            <img  @click="imageView" src="../assets/images/myInfo.jpg" alt=""  id="gallery">
+                            <img  @click="imageViewTwo"  src="../assets/images/myInfo.jpg" alt=""  id="galleryTwo">
                         </div>
-
+                        <div class="div" id="popup">
+                        <img src="" alt="" id="selectedImage">
+                        </div>
                         <div>
                             <h2 class="about__subtitle">I was graduated from</h2>
                             <p class="about__text"><span class="text-primary">Hinthada
@@ -52,10 +54,12 @@
                     <br>
                     <div class="about__container bd-grid" data-aos="zoom-in-up">
                         <div class="about__img">
-                            <img  @click="imageView" src="../assets/images/myInfo-2.jpg" alt=""  id="gallery">
+                            <img  @click="imageViewThree" src="../assets/images/myInfo-2.jpg" alt=""  id="galleryThree">
                            
                         </div>
-                      
+                         <div class="div" id="popup">
+                        <img src="" alt="" id="selectedImage">
+                        </div>
                         <div>
                             <h2 class="about__subtitle">I'also have</h2>
                             <p class="about__text"> - A website wesign
@@ -71,9 +75,11 @@
                     <br>
                     <div class="about__container bd-grid" data-aos="fade-up">
                         <div class="about__img">
-                            <img  @click="imageView" src="../assets/images/myInfo-3.jpg" alt=""  id="gallery">
+                            <img  @click="imageViewFour" src="../assets/images/myInfo-3.jpg" alt=""  id="galleryFour">
                         </div>
-
+                         <div class="div" id="popup">
+                        <img src="" alt="" id="selectedImage">
+                        </div>
                         <div>
                             <h2 class="about__subtitle">I'am Nay Ba La</h2>
                             <p class="about__text">- Good in English (4) skills.
@@ -97,8 +103,54 @@
 
 
 export default {
+  methods:{
+  imageViewOne(){
+      const popup = document.querySelector('#popup');
+      const gallery = document.querySelector('#galleryOne');
+      const selectedImage = document.querySelector('#selectedImage');
+      selectedImage.src = gallery.src;
+      popup.style.transform = `translateY(0%)`;
+       popup.addEventListener('click', () => {
+            popup.style.transform = `translateY(-100%)`;
+            popup.src = '';
+        })
+  },
+  imageViewTwo(){
+      const popup = document.querySelector('#popup');
+      const gallery = document.querySelector('#galleryTwo');
+      const selectedImage = document.querySelector('#selectedImage');
+      selectedImage.src = gallery.src;
+      popup.style.transform = `translateY(0%)`;
+       popup.addEventListener('click', () => {
+            popup.style.transform = `translateY(-100%)`;
+            popup.src = '';
+        })
+  },
+  imageViewThree(){
+      const popup = document.querySelector('#popup');
+      const gallery = document.querySelector('#galleryThree');
+      const selectedImage = document.querySelector('#selectedImage');
+      selectedImage.src = gallery.src;
+     popup.style.transform = `translateY(0%)`;
+      popup.addEventListener('click', () => {
+            popup.style.transform = `translateY(-100%)`;
+            popup.src = '';
+        })
+  },
+  imageViewFour(){
+      const popup = document.querySelector('#popup');
+      const gallery = document.querySelector('#galleryFour');
+      const selectedImage = document.querySelector('#selectedImage');
+      selectedImage.src = gallery.src;
+     popup.style.transform = `translateY(0%)`;
+      popup.addEventListener('click', () => {
+            popup.style.transform = `translateY(-100%)`;
+            popup.src = '';
+        })
+  },
 
- }
+}
+}
 
 
 </script>
@@ -152,7 +204,27 @@ export default {
   transform: translateY(-3px);
   box-shadow: 3px 3px 10px black;
 }
-
+#popup{
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(23, 22, 22, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: 250ms transform;
+  padding: 50px;
+  z-index: 2000;
+  overflow-x:hidden;
+}
+#selectedImage{
+  max-height: 100%;
+  border-radius: 1rem;
+  max-width: 100%;
+}
 /* ===== MEDIA QUERIES=====*/
 
 
