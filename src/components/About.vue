@@ -155,7 +155,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 /* ===== ABOUT =====*/
 .section-title {
   position: relative;
@@ -164,6 +164,13 @@ export default {
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-4);
   text-align: center;
+}
+.bd-grid {
+  max-width: 1024px;
+  display: grid;
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+  
 }
 
 .section-title::after {
@@ -257,6 +264,12 @@ export default {
   }
   .about__img img {
     width: 300px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

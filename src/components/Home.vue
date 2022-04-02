@@ -1,35 +1,9 @@
 <template>
    <!--===== HOME =====-->
         <section class="home bd-grid" id="home">
-            <!-- <div id="theme-open"><i class="fa-solid fa-angles-right"></i></div> -->
+            <div id="theme-open"><i class="fa-solid fa-angles-right"></i></div>
 
-        <!-- <div class="themes-container">
-            <div id="theme-close"><i class="fa-solid fa-xmark"></i></div>
-            <h3>switch theme</h3>
-            <div class="theme-toggler">
-                <span>light</span>
-                <span class="toggler"></span>
-                <span>dark</span>
-            </div>
-
-            <h3>pick an acent color</h3>
-            <div class="theme-colors">
-                <div class="color" style="background:#3e6ff4"></div>
-                <div class="color" style="background:#0044fd"></div>
-                <div class="color" style="background:#27ae60"></div>
-                <div class="color" style="background:#00ee63"></div>
-                <div class="color" style="background:#0fb9b1"></div>
-                <div class="color" style="background:#00fff2"></div>
-                <div class="color" style="background:#ceb244"></div>
-                <div class="color" style="background:#ffcc00"></div>
-                <div class="color" style="background:#ac354c"></div>
-                <div class="color" style="background:#ff0033"></div>
-                <div class="color" style="background:#e84393"></div>
-                <div class="color" style="background:#baee00"></div>
-                <div class="color" style="background:#914b6c"></div>
-                <div class="color" style="background:#fc07ef"></div>
-            </div>
-         </div> -->
+        
                 <div class="home__data">
                     <h1 class="home__title">Hi,<br>I'am <span
                             class="home__title-color">Nay Ba La</span><br> Web
@@ -94,7 +68,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 /*===== HOME =====*/
 .bd-grid {
   max-width: 1024px;
@@ -103,8 +77,12 @@ export default {
   margin-right: var(--mb-2);
   
 }
+#theme-open{
+  cursor: pointer;
+  z-index: 1;
+  font-size: 2rem;
+}
 .home {
-  margin-top: 4rem;
   position: relative;
   row-gap: 5rem;
   padding: 4rem 0 5rem;
@@ -210,9 +188,6 @@ export default {
   .bd-grid {
     margin-left: auto;
     margin-right: auto;
-  }
-  .home {
-    padding: 5rem  2rem;
   }
   .home__img {
     width: 450px;
