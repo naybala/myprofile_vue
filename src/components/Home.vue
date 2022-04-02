@@ -101,8 +101,10 @@ export default {
   display: grid;
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
+  
 }
 .home {
+  margin-top: 4rem;
   position: relative;
   row-gap: 5rem;
   padding: 4rem 0 5rem;

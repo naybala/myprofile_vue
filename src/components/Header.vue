@@ -85,7 +85,9 @@ export default {
 .nav__toggle{
   cursor: pointer;
 }
-
+.nav__list .nav__item .nav__link{
+  color: var(--first-color);
+}
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
@@ -94,7 +96,6 @@ export default {
     width: 50%;
     height: 100%;
     padding: 2rem;
-   
     background-color: var(--second-color);
     transition: .5s;
   }
