@@ -85,7 +85,12 @@ body {
   font-size: var(--normal-font-size);
   color: var(--second-color);
 }
-
+body.activeDark {
+  overflow-x: hidden;
+  margin: 0px;
+  background: #242f3f;
+  color: #ffffff;
+}
 h1,
 h2,
 p {
