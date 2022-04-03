@@ -1,27 +1,26 @@
 <template>
   <!--===== HEADER =====-->
-        <header class="l-header" id="head">
+        <section class="l-header" id="head" @click="scrollActive">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo text-decoration-none">Nay Ba la
+                    <a href="#" class="nav__logo text-decoration-none">{{ name }}
                     </a>
                     <br>
-                    <a href="tel:+959763684400" class="nav__logo text-decoration-none"><i class="fa-solid fa-phone"></i>+95 9 763684400</a>
+                    <a href="tel:+959763684400" class="nav__logo text-decoration-none"><i class="fa-solid fa-phone"></i>{{ phone }}</a>
                 </div>
 
-                <div class="nav__menu" id="nav-menu">
+                <div class="nav__menu" id="nav-menu" >
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#home"
-                                class="nav__link active text-decoration-none">Home</a></li>
+                                class="nav__link active text-decoration-none" ref="name">{{ home }}</a></li>
                         <li class="nav__item"><a href="#about"
-                                class="nav__link text-decoration-none">About</a></li>
+                                class="nav__link text-decoration-none">{{ about }}</a></li>
                         <li class="nav__item"><a href="#skills"
-                                class="nav__link text-decoration-none">Skills</a></li>
+                                class="nav__link text-decoration-none"  >{{ skill }}</a></li>
                         <li class="nav__item"><a href="#project"
-                                class="nav__link text-decoration-none">Projects</a></li>
+                                class="nav__link text-decoration-none">{{ project }}</a></li>
                         <li class="nav__item"><a href="#contact"
-                                class="nav__link text-decoration-none">Contact
-                                Me</a></li>
+                                class="nav__link text-decoration-none">{{ contact }}</a></li>
                     </ul>
                 </div>
 
@@ -29,24 +28,74 @@
                     <i class='bx bx-menu'></i>
                 </div>
             </nav>
-        </header>
+        </section>
 </template>
 
 <script>
 export default {
+  data(){
+    return{
+      name : "Nay Ba La",
+      phone : "+95 9 763684400",
+      home : "Home",
+      about: "About",
+      skill : "Skills",
+      project : "Projects",
+      contact : "Contact Me"
+    }
+  },
+  created () {
+     window.addEventListener('scroll', this.scrollActive);
+    },
+  active(){
+     window.addEventListener('scroll', this.scrollActive)
+    },
+  destroyed () {
+    window.removeEventListener('scroll', this.scrollActive);
+    },
   methods:{
     navMenuShow(){
      const nav = document.querySelector('.nav__menu');
+    
      if (nav.classList.contains("isOpened")) {
         nav.classList.remove('show');
         nav.classList.remove("isOpened");
          
-    } else {
+      } else {
        nav.classList.add('show');
         nav.classList.add("isOpened");
         
-    }
-    }
+      }
+    },
+    scrollActive(event){
+      // const reff = this.$refs.name;
+      // console.log(reff);
+        const sections = document.querySelectorAll('section[id]');
+        const scrollY = window.pageYOffset;
+        sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute('id');
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          // this.$refs.name.href = sectionId;
+         this.$refs.name.classList.add('active');
+          // isActive.href = sectionId;
+          // const Active = isActive.href;
+          // console.log(Active);
+           
+            //  const isActive = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+            //  console.log(isActive);
+            //  isActive.classList.add('active');
+        } else {
+            //  const isNotActive = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+            //  console.log(isNotActive);
+            //  isNotActive.classList.remove('active');
+        }
+  
+        
+      })
+    
+    },
   }
 }
 </script>
