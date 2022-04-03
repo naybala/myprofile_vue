@@ -95,6 +95,13 @@ export default {
       const themeOpen = document.querySelector('#theme-open');
         themesContainer.classList.add('activeMenu');
         themeOpen.style.opacity="0";
+         const themeColor = document.querySelectorAll('.theme-colors .color');
+        themeColor.forEach(color => {
+            color.onclick = () => {
+                let background = color.style.background;
+                document.querySelector(':root').style.setProperty('--first-color', background);
+            }
+        });
     },
     themeClose(){
       const themesContainer = document.querySelector('.themes-container');
@@ -115,7 +122,7 @@ export default {
               headDark.classList.remove('ac');
              
           }
-    }
+    },
   }
 }
 </script>
