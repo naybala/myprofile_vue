@@ -1,6 +1,6 @@
 <template>
   <!--===== HEADER =====-->
-        <section class="l-header" id="head" @click="scrollActive">
+        <div class="l-header" id="head" @scroll="scrollActive">
             <nav class="nav bd-grid">
                 <div>
                     <a href="#" class="nav__logo text-decoration-none">{{ name }}
@@ -9,14 +9,14 @@
                     <a href="tel:+959763684400" class="nav__logo text-decoration-none"><i class="fa-solid fa-phone"></i>{{ phone }}</a>
                 </div>
 
-                <div class="nav__menu" id="nav-menu" >
+                <div class="nav__menu" id="nav-menu" ref="name">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#home"
-                                class="nav__link active text-decoration-none" ref="name">{{ home }}</a></li>
+                                class="nav__link text-decoration-none active">{{ home }}</a></li>
                         <li class="nav__item"><a href="#about"
                                 class="nav__link text-decoration-none">{{ about }}</a></li>
                         <li class="nav__item"><a href="#skills"
-                                class="nav__link text-decoration-none"  >{{ skill }}</a></li>
+                                class="nav__link text-decoration-none" >{{ skill }}</a></li>
                         <li class="nav__item"><a href="#project"
                                 class="nav__link text-decoration-none">{{ project }}</a></li>
                         <li class="nav__item"><a href="#contact"
@@ -28,10 +28,11 @@
                     <i class='bx bx-menu'></i>
                 </div>
             </nav>
-        </section>
+        </div>
 </template>
 
 <script>
+import { onMounted, ref } from '@vue/runtime-core';
 export default {
   data(){
     return{
@@ -48,7 +49,7 @@ export default {
      window.addEventListener('scroll', this.scrollActive);
     },
   active(){
-     window.addEventListener('scroll', this.scrollActive)
+    window.addEventListener('scroll', this.scrollActive);
     },
   destroyed () {
     window.removeEventListener('scroll', this.scrollActive);
@@ -68,28 +69,16 @@ export default {
       }
     },
     scrollActive(event){
-      // const reff = this.$refs.name;
-      // console.log(reff);
-        const sections = document.querySelectorAll('section[id]');
+      const sections = document.querySelectorAll('section[id]')
         const scrollY = window.pageYOffset;
         sections.forEach(current => {
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 50;
         const sectionId = current.getAttribute('id');
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          // this.$refs.name.href = sectionId;
-         this.$refs.name.classList.add('active');
-          // isActive.href = sectionId;
-          // const Active = isActive.href;
-          // console.log(Active);
-           
-            //  const isActive = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
-            //  console.log(isActive);
-            //  isActive.classList.add('active');
+             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active');
         } else {
-            //  const isNotActive = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
-            //  console.log(isNotActive);
-            //  isNotActive.classList.remove('active');
+             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active');
         }
   
         
