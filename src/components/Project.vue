@@ -409,7 +409,7 @@ export default {
   left: 0;
   right: 0;
   margin: auto;
-  top: 3rem;
+  top: 2.5rem;
   background-color: var(--first-color);
 }
 

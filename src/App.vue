@@ -10,6 +10,7 @@
 <About/>
 <Skill/>
 <Project/>
+<Contact/>
 <Footer/>
 </template>
 
@@ -19,6 +20,7 @@ import Home from './components/Home.vue'
 import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Project from './components/Project.vue'
+import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 
 
@@ -30,6 +32,7 @@ export default{
     About,
     Skill,
     Project,
+    Contact,
     Footer,
   
 },

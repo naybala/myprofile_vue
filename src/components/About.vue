@@ -200,11 +200,15 @@ export default {
   width: 200px;
   border-radius: .5rem;
   cursor: pointer;
+  transform: translateY(0px);
+  transition: .3s;
 }
 .about__img img:hover {
   transform: translateY(-3px);
   box-shadow: 3px 3px 10px black;
+  transition: .3s;
 }
+
 #popup{
   position: fixed;
   top: 0px;

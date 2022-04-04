@@ -146,7 +146,6 @@ export default {
 
 .nav__item {
   margin-bottom: var(--mb-4);
-  
 }
 
 .nav__link {
@@ -156,16 +155,20 @@ export default {
 
 .nav__link:hover {
   position: relative;
+ 
 }
 
 .nav__link:hover::after {
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 10px black;
   position: absolute;
   content: '';
   width: 100%;
   height: 0.18rem;
   left: 0;
-  top: 2rem;
+  top: 1.6rem;
   background-color: var(--first-color);
+  transition: .3s;
 }
 
 .nav__logo {
@@ -185,8 +188,10 @@ export default {
   width: 100%;
   height: 0.18rem;
   left: 0;
-  top: 2rem;
+  top: 1.6rem;
   background-color: var(--first-color);
+  transform: translateY(0px);
+  transition: .3s;
 }
 .show {
   right: 0;

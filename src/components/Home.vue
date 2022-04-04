@@ -1,5 +1,4 @@
 <template>
-   <!--===== HOME =====-->
         <section class="home bd-grid" id="home">
             <div id="theme-open" @click="themeOpen"><i class="fa-solid fa-angles-right"></i></div>
             <div class="themes-container">
@@ -44,12 +43,12 @@
                     <a
                         href="https://www.facebook.com/profile.php?id=100076412994170"
                         class="home__social-icon"><i class="fab
-                            fa-facebook"></i></a>
-                    <a href="#" class="home__social-icon"><i class="fab
+                            fa-facebook icon"></i></a>
+                    <a href="#" class="home__social-icon icon"><i class="fab
                             fa-instagram"></i></a>
                     <a href="https://github.com/naybala"
                         class="home__social-icon"><i class='bx
-                            bxl-github'></i></a>
+                            bxl-github icon'></i></a>
                 </div>
 
                 <div class="home__img">
@@ -200,7 +199,8 @@ export default {
 }
 
 .button:hover {
-  box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+   transform: translateY(-3px);
+   box-shadow: 3px 3px 10px black;
 }
 /* ===== Theme Open =====*/
 #theme-open{
@@ -422,6 +422,13 @@ export default {
   .home__social-icon {
     margin-bottom: 0;
     margin-right: var(--mb-4);
+    transition: .3s;
+  }
+  .home__social-icon:hover{
+    transform: translateY(-6px);
+    box-shadow: 2px 2px 10px rgb(223, 219, 219);
+    border-radius: 2.5rem;
+
   }
   .home__img {
     width: 300px;
