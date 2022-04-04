@@ -32,7 +32,6 @@
 </template>
 
 <script>
-import { onMounted, ref } from '@vue/runtime-core';
 export default {
   data(){
     return{
@@ -56,17 +55,22 @@ export default {
     },
   methods:{
     navMenuShow(){
-     const nav = document.querySelector('.nav__menu');
-    
-     if (nav.classList.contains("isOpened")) {
-        nav.classList.remove('show');
-        nav.classList.remove("isOpened");
-         
-      } else {
-       nav.classList.add('show');
-        nav.classList.add("isOpened");
-        
+      const showMenu = (toggleId, navId) => {
+      const toggle = document.getElementById(toggleId),
+        nav = document.getElementById(navId);
+
+      if (toggle && nav) {
+        nav.classList.toggle('show');
+       }
       }
+     showMenu('nav-toggle', 'nav-menu');
+
+     const navLink = document.querySelectorAll('.nav__link');
+     function linkAction() {
+       const navMenu = document.getElementById('nav-menu');
+         navMenu.classList.remove('show');
+      }
+     navLink.forEach(n => n.addEventListener('click', linkAction));
     },
     scrollActive(event){
       const sections = document.querySelectorAll('section[id]')
@@ -189,7 +193,7 @@ export default {
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   body {
     margin: 0;
   }

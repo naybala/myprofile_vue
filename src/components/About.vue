@@ -1,6 +1,4 @@
 <template>
-  
-    <!--===== ABOUT =====-->
         <section class="about section"  id="about">
                     <h2 class="section-title">About</h2>
 
@@ -157,6 +155,13 @@ export default {
 
 <style scoped>
 /* ===== ABOUT =====*/
+.bd-grid {
+  max-width: 1024px;
+  display: grid;
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+  
+}
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
@@ -165,14 +170,6 @@ export default {
   margin-bottom: var(--mb-4);
   text-align: center;
 }
-.bd-grid {
-  max-width: 1024px;
-  display: grid;
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
-  
-}
-
 .section-title::after {
   position: absolute;
   content: '';

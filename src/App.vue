@@ -8,6 +8,8 @@
 <Header/>
 <Home/>
 <About/>
+<Skill/>
+<Project/>
 <Footer/>
 </template>
 
@@ -15,16 +17,22 @@
 import Header from './components/Header.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
+import Skill from './components/Skill.vue'
+import Project from './components/Project.vue'
 import Footer from './components/Footer.vue'
+
 
 export default{
     name:"App",
      components:{
-     Header,
-     Home,
-     About,
-     Footer
-    },
+    Header,
+    Home,
+    About,
+    Skill,
+    Project,
+    Footer,
+  
+},
 
   }
 </script>

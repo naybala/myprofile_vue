@@ -30,7 +30,7 @@
               </div>
             </div>
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span
+                    <h1 class="home__title">Hello World,<br>I'am <span
                             class="home__title-color">Nay Ba La</span><br> Web
                         Developer
                     </h1>
