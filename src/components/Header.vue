@@ -3,7 +3,7 @@
         <div class="l-header" id="head" @scroll="scrollActive">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo text-decoration-none">{{ name }}
+                    <a href="#" class="nav__logo text-decoration-none">{{ myName }}
                     </a>
                     <br>
                     <a href="tel:+959763684400" class="nav__logo text-decoration-none"><i class="fa-solid fa-phone"></i>{{ phone }}</a>
@@ -35,7 +35,7 @@
 export default {
   data(){
     return{
-      name : "Nay Ba La",
+      myName : "Nay Ba La",
       phone : "+95 9 763684400",
       home : "Home",
       about: "About",

@@ -112,7 +112,7 @@ export default {
             popup.style.transform = `translateY(-100%)`;
             popup.src = '';
         })
-  },
+   },
   imageViewTwo(){
       const popup = document.querySelector('#popup');
       const gallery = document.querySelector('#galleryTwo');
@@ -123,7 +123,7 @@ export default {
             popup.style.transform = `translateY(-100%)`;
             popup.src = '';
         })
-  },
+   },
   imageViewThree(){
       const popup = document.querySelector('#popup');
       const gallery = document.querySelector('#galleryThree');
@@ -134,7 +134,7 @@ export default {
             popup.style.transform = `translateY(-100%)`;
             popup.src = '';
         })
-  },
+   },
   imageViewFour(){
       const popup = document.querySelector('#popup');
       const gallery = document.querySelector('#galleryFour');
@@ -145,12 +145,9 @@ export default {
             popup.style.transform = `translateY(-100%)`;
             popup.src = '';
         })
-  },
-
+    },
+  }
 }
-}
-
-
 </script>
 
 <style scoped>
