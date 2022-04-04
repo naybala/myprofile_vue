@@ -168,9 +168,12 @@ export default {
   border-radius: .5rem;
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
   cursor: pointer;
+  transition: .3s;
+  transform: translateY(0px);
 }
 
 .skills__data:hover {
+  transition: .3s;
   transform: translateY(-3px);
   box-shadow: 3px 3px 10px black;
 }
@@ -215,9 +218,12 @@ export default {
 .skills__img {
   border-radius: .5rem;
   cursor: pointer;
+   transition: .3s;
+  transform: translateY(0px);
 }
 
 .skills__img:hover {
+  transition: .3s;
   transform: translateY(-3px);
   box-shadow: 3px 3px 10px black;
 }
