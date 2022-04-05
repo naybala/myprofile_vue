@@ -55,8 +55,8 @@
                     <svg class="home__blob" viewBox="0 0 479 467"
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865
+                            <mask id="mask0" mask-type="alpha">
+                               <path d="M9.19024 145.964C34.0253 76.5814 114.865
                                 54.7299 184.111 29.4823C245.804 6.98884 311.86
                                 -14.9503 370.735 14.143C431.207 44.026 467.948
                                 107.508 477.191 174.311C485.897 237.229 454.931
@@ -78,9 +78,9 @@
                                     9.19024 145.964Z" />
                                     <image class="home__blob-img" x="-80" y="60"
                                         href="../assets/images/myProfile.png" />
-                                    </g>
-                                </svg>
-                            </div>
+                              </g>
+                    </svg>
+                </div>
                       
         </section>
 </template>

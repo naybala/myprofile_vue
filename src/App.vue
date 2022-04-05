@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="../public/fontawesome/css/all.css">
  <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<Loader/>
 <Header/>
 <Home/>
 <About/>
@@ -15,6 +16,7 @@
 </template>
 
 <script>
+import Loader from './components/Loading.vue'
 import Header from './components/Header.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
@@ -27,13 +29,14 @@ import Footer from './components/Footer.vue'
 export default{
     name:"App",
      components:{
-    Header,
-    Home,
-    About,
-    Skill,
-    Project,
-    Contact,
-    Footer,
+        Loader,
+        Header,
+        Home,
+        About,
+        Skill,
+        Project,
+        Contact,
+        Footer,
   
 },
 
