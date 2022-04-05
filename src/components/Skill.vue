@@ -70,7 +70,7 @@
                         <br>
                         <div class="mt-1">
                             <img src="../assets/images/myCerti.jpg" alt=""
-                                class="skills__img img-fluid" id="gallery">
+                                class="skills__img img-fluid" id="galleryFive" @click="imageViewOne">
                         </div>
                         <div class="div" id="popup">
                             <img src="" alt="" id="selectedImage">
@@ -79,13 +79,13 @@
 
                     <div>
                         <img src="../assets/images/myView.jpg" alt=""
-                            class="skills__img img-fluid mt-5 mb-5" id="gallery">
+                            class="skills__img img-fluid mt-5 mb-5" id="gallerySix" @click="imageViewTwo">
                             <div class="div" id="popup">
                                 <img src="" alt="" id="selectedImage">
                             </div>
                         <br><br><br>
                         <img src="../assets/images/myCerti-2.jpg" alt=""
-                            class="skills__img img-fluid" id="gallery">
+                            class="skills__img img-fluid" id="gallerySeven" @click="imageViewThree">
                             <div class="div" id="popup">
                                 <img src="" alt="" id="selectedImage">
                             </div>
@@ -108,6 +108,41 @@ export default {
       mysql:"MySQL"
     }
   },
+   methods:{
+  imageViewOne(){
+      const popup = document.querySelector('#popup');
+      const gallery = document.querySelector('#galleryFive');
+      const selectedImage = document.querySelector('#selectedImage');
+      selectedImage.src = gallery.src;
+      popup.style.transform = `translateY(0%)`;
+       popup.addEventListener('click', () => {
+            popup.style.transform = `translateY(-100%)`;
+            popup.src = '';
+        })
+   },
+  imageViewTwo(){
+      const popup = document.querySelector('#popup');
+      const gallery = document.querySelector('#gallerySix');
+      const selectedImage = document.querySelector('#selectedImage');
+      selectedImage.src = gallery.src;
+      popup.style.transform = `translateY(0%)`;
+       popup.addEventListener('click', () => {
+            popup.style.transform = `translateY(-100%)`;
+            popup.src = '';
+        })
+   },
+  imageViewThree(){
+      const popup = document.querySelector('#popup');
+      const gallery = document.querySelector('#gallerySeven');
+      const selectedImage = document.querySelector('#selectedImage');
+      selectedImage.src = gallery.src;
+     popup.style.transform = `translateY(0%)`;
+      popup.addEventListener('click', () => {
+            popup.style.transform = `translateY(-100%)`;
+            popup.src = '';
+        })
+   },
+  }
 }
 </script>
 
@@ -226,6 +261,27 @@ export default {
   transition: .3s;
   transform: translateY(-3px);
   box-shadow: 3px 3px 10px black;
+}
+#popup{
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(23, 22, 22, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: 250ms transform;
+  padding: 50px;
+  z-index: 2000;
+  overflow-x:hidden;
+}
+#selectedImage{
+  max-height: 100%;
+  border-radius: 1rem;
+  max-width: 100%;
 }
 @media screen and (min-width: 576px) {
   .skills__container {

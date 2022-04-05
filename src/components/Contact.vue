@@ -25,7 +25,7 @@
                         </a>
                     </div>
                 </div>
-                <img src="../assets/images/Footer-Up.jpg" class="img-fluid rounded-1" alt="" id="gallery">
+                <img src="../assets/images/Footer-Up.jpg" class="img-fluid rounded-1" alt="" id="galleryEight" @click="imageViewOne">
                 <div class="div" id="popup">
                     <img src="" alt="" id="selectedImage">
                 </div>
@@ -35,7 +35,19 @@
 
 <script>
 export default {
-
+    methods:{
+    imageViewOne(){
+      const popup = document.querySelector('#popup');
+      const gallery = document.querySelector('#galleryEight');
+      const selectedImage = document.querySelector('#selectedImage');
+      selectedImage.src = gallery.src;
+      popup.style.transform = `translateY(0%)`;
+       popup.addEventListener('click', () => {
+            popup.style.transform = `translateY(-100%)`;
+            popup.src = '';
+        })
+      },
+    }
 }
 </script>
 
@@ -77,6 +89,37 @@ export default {
 .button:hover {
   transform: translateY(-3px);
   box-shadow: 3px 3px 10px black;
+}
+#galleryEight{
+  cursor: pointer;
+  transform: translateY(0px);
+  transition: .3s;
+}
+#galleryEight:hover{
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 10px black;
+  transition: .3s;
+}
+#popup{
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(23, 22, 22, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: 250ms transform;
+  padding: 50px;
+  z-index: 2000;
+  overflow-x:hidden;
+}
+#selectedImage{
+  max-height: 100%;
+  border-radius: 1rem;
+  max-width: 100%;
 }
 
 </style>
