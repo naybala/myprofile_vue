@@ -1,17 +1,24 @@
 <template >
- <!-- =====BOX ICONS===== -->
-  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'
-  rel='stylesheet'>
-  <link rel="stylesheet" href="../public/fontawesome/css/all.css">
- <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-      <Header/>
-      <Home/>
-      <About/>
-      <Skill/>
-      <Project/>
-      <Contact/>
-      <Footer/>
+    <head>
+      <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'
+        rel='stylesheet'>
+        <link rel="stylesheet" href="../public/fontawesome/css/all.css">
+      <!-- CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+          <div v-show="loading">
+              <Loader/>
+          </div>
+          <div v-if="!loading">
+              <Header/>
+              <Home/>
+              <About/>
+              <Skill/>
+              <Project/>
+              <Contact/>
+              <Footer/>
+          </div>
 </template>
 
 <script>
@@ -37,7 +44,15 @@ export default{
         Contact,
         Footer,
   
-},
+      },
+      data: () => ({
+            loading: true
+        }),
+      mounted() {
+            setTimeout(() => {
+                this.loading = false
+            }, 3000)
+        }
 
   }
 </script>
