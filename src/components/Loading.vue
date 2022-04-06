@@ -9,7 +9,7 @@
                     <span class="loader-inner-up"></span>
                 </span>
             </span>
-            <span class="text-white ms-4"> Loading Please Wait...</span>
+            <span class="loader-text ms-4"> Loading Please Wait...</span>
         </div>
 </template>
 
@@ -111,6 +111,10 @@ export default {}
   100% {
     height: 0%;
   }
+}
+
+.loader-text{
+  color: #Fff;
 }
 
 </style>
