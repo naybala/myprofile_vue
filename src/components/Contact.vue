@@ -6,21 +6,21 @@
                     <div class="col-md-4 mb-3">
                         <a href="tel:+959763684400">
                             <button class="button text-decoration-none">Call
-                                <i class="ms-2 fa-solid fa-phone"></i>
+                               <i class='bx bx-phone-outgoing'></i>
                             </button>
                         </a>
                     </div>
                     <div class="col-md-4 mb-3">
                         <a href="mailto: naybala.153808@gmail.com">
                             <button class="button text-decoration-none">Email
-                                <i class="ms-2 fa-solid fa-paper-plane"></i>
+                                <i class='bx bxs-envelope'></i>
                             </button>
                         </a>
                     </div>
                     <div class="col-md-4 mb-3">
                         <a href="https://www.facebook.com/profile.php?id=100076412994170" target="_blink">
                             <button class="button text-decoration-none">facebook
-                                <i class="ms-2 fa-brands fa-facebook"></i>
+                                <i class="ms-2 bx bxl-facebook icon"></i>
                             </button>
                         </a>
                     </div>

@@ -1,8 +1,9 @@
 <template>
         <section class="home bd-grid" id="home">
-            <div id="theme-open" @click="themeOpen"><i class="fa-solid fa-angles-right"></i></div>
+            <div id="theme-open" @click="themeOpen"><i class='bx bx-menu-alt-left'></i></div>
             <div class="themes-container">
-              <div id="theme-close" @click="themeClose"><i class="fa-solid fa-xmark"></i></div>
+              <i class=""></i>
+              <div id="theme-close" @click="themeClose"><i class='bx bxs-chevrons-left'></i></div>
               <h3>switch theme</h3>
               <div class="theme-toggler" @click="themeToggler">
                   <span>light</span>
@@ -34,18 +35,17 @@
                         Developer
                     </h1>
 
-                    <p class="mb-2">Email : naybala.153808@gmail.com</p>
-
+                    <p class="mb-3">Email : naybala.153808@gmail.com</p>
                     <a href="#about" class="button text-decoration-none">Discover</a>
                 </div>
 
-                <div class="home__social">
+                <div class="home__social mt-1">
                     <a
                         href="https://www.facebook.com/profile.php?id=100076412994170"
-                        class="home__social-icon"><i class="fab
-                            fa-facebook icon"></i></a>
-                    <a href="#" class="home__social-icon icon"><i class="fab
-                            fa-instagram"></i></a>
+                        class="home__social-icon"><i class="bx
+                            bxl-facebook icon"></i></a>
+                    <a href="#" class="home__social-icon icon"><i class="bx
+                            bxl-instagram icon"></i></a>
                     <a href="https://github.com/naybala"
                         class="home__social-icon"><i class='bx
                             bxl-github icon'></i></a>

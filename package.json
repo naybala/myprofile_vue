@@ -7,8 +7,10 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "aos": "^2.3.4",
-    "jquery": "^3.6.0",
     "vue": "^3.2.31"
   },
   "devDependencies": {
