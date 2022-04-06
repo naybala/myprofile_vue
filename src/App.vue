@@ -18,6 +18,7 @@
               <Contact/>
               <Footer/>
               <Cookie/>
+              <Track/>
           </div>
 </template>
 
@@ -31,23 +32,27 @@ import Project from './components/Project.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 import Cookie from './components/Cookie.vue'
+import Track from './components/Track.vue'
+import Track1 from './components/Track.vue'
 
 
 export default{
     name:"App",
     components:{
-          Loader,
-          Header,
-          Home,
-          About,
-          Skill,
-          Project,
-          Contact,
-          Footer,
-          Cookie
-      },
+    Loader,
+    Header,
+    Home,
+    About,
+    Skill,
+    Project,
+    Contact,
+    Footer,
+    Cookie,
+    Track,
+    Track1
+},
     data: () => ({
-            loading: true
+            loading: true,
         }),
     mounted() {
             setTimeout(() => {
@@ -55,6 +60,7 @@ export default{
             }, 3000);
 
         },
+    
   }
 </script>
 

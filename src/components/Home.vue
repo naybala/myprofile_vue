@@ -98,6 +98,54 @@ export default {
         themeColor.forEach(color => {
             color.onclick = () => {
                 let background = color.style.background;
+                switch (background) {
+                case 'rgb(62, 111, 244)':
+                    localStorage.setItem("theme", "1");
+                    break;
+                case 'rgb(0, 68, 253)':
+                    localStorage.setItem("theme", "2");
+                    break;
+                case 'rgb(39, 174, 96)':
+                    localStorage.setItem("theme", "3");
+                    break;
+                case 'rgb(0, 238, 99)':
+                    localStorage.setItem("theme", "4");
+                    break;
+
+                case 'rgb(15, 185, 177)':
+                    localStorage.setItem("theme", "5");
+                    break;
+                case 'rgb(0, 255, 242)':
+                    localStorage.setItem("theme", "6");
+                    break;
+                case 'rgb(206, 178, 68)':
+                    localStorage.setItem("theme", "7");
+                    break;
+                case 'rgb(255, 204, 0)':
+                    localStorage.setItem("theme", "8");
+                    break;
+
+                case 'rgb(172, 53, 76)':
+                    localStorage.setItem("theme", "9");
+                    break;
+                case 'rgb(255, 0, 51)':
+                    localStorage.setItem("theme", "10");
+                    break;
+                case 'rgb(232, 67, 147)':
+                    localStorage.setItem("theme", "11");
+                    break;
+                case 'rgb(186, 238, 0)':
+                    localStorage.setItem("theme", "12");
+                    break;
+                case 'rgb(145, 75, 108)':
+                    localStorage.setItem("theme", "13");
+                    break;
+                case 'rgb(252, 7, 239)':
+                    localStorage.setItem("theme", "14");
+                    break;
+                default:
+                    break;
+            }
                 document.querySelector(':root').style.setProperty('--first-color', background);
             }
         });
@@ -116,11 +164,13 @@ export default {
           if (themeToggler.classList.contains('activeToggle')) {
               document.body.classList.add('activeDark');
               headDark.classList.add('ac');
+              localStorage.setItem("dark", "1");
               toastAlert.classList.add('dark');
           } else {
               document.body.classList.remove('activeDark');
               headDark.classList.remove('ac');
-               toastAlert.classList.remove('dark');
+              localStorage.setItem("dark", "0");
+              toastAlert.classList.remove('dark');
           }
     },
   }
