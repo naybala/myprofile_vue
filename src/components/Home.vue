@@ -111,15 +111,16 @@ export default {
     themeToggler(){
       let themeToggler = document.querySelector('.theme-toggler');
       let headDark = document.querySelector('#head');
+      let toastAlert =document.querySelector('#cookie')
         themeToggler.classList.toggle('activeToggle');
           if (themeToggler.classList.contains('activeToggle')) {
               document.body.classList.add('activeDark');
               headDark.classList.add('ac');
-             
+              toastAlert.classList.add('dark');
           } else {
               document.body.classList.remove('activeDark');
               headDark.classList.remove('ac');
-             
+               toastAlert.classList.remove('dark');
           }
     },
   }

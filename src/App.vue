@@ -17,6 +17,7 @@
               <Project/>
               <Contact/>
               <Footer/>
+              <Cookie/>
           </div>
 </template>
 
@@ -29,30 +30,31 @@ import Skill from './components/Skill.vue'
 import Project from './components/Project.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
+import Cookie from './components/Cookie.vue'
 
 
 export default{
     name:"App",
-     components:{
-        Loader,
-        Header,
-        Home,
-        About,
-        Skill,
-        Project,
-        Contact,
-        Footer,
-  
+    components:{
+          Loader,
+          Header,
+          Home,
+          About,
+          Skill,
+          Project,
+          Contact,
+          Footer,
+          Cookie
       },
-      data: () => ({
+    data: () => ({
             loading: true
         }),
-      mounted() {
+    mounted() {
             setTimeout(() => {
                 this.loading = false
-            }, 3000)
-        }
+            }, 3000);
 
+        },
   }
 </script>
 
