@@ -1,9 +1,9 @@
 <template>
         <section class="home bd-grid" id="home">
-            <div id="theme-open" @click="themeOpen"><i class='bx bx-menu-alt-left'></i></div>
+            <div id="theme-open" @click="themeOpen" class="home__social-icon"><i class="fa-brands fa-themeco"></i></div>
             <div class="themes-container">
               <i class=""></i>
-              <div id="theme-close" @click="themeClose"><i class='bx bxs-chevrons-left'></i></div>
+              <div id="theme-close" @click="themeClose"><i class="fa-solid fa-circle-xmark"></i></div>
               <h3>switch theme</h3>
               <div class="theme-toggler" @click="themeToggler">
                   <span>light</span>
@@ -30,7 +30,7 @@
               </div>
             </div>
                 <div class="home__data">
-                    <h1 class="home__title">Hello  <a href="https://earth.google.com/web/" target="_blink" class="home__title-color"><i class='bx bx-world'></i></a>,<br>I'am <span
+                    <h1 class="home__title">Hello  <a href="https://earth.google.com/web/" target="_blink" class="home__title-color"><i class="fa-solid fa-earth-americas"></i></a>,<br>I'am <span
                             class="home__title-color">Nay Ba La</span><br> Web
                         Developer
                     </h1>
@@ -42,13 +42,10 @@
                 <div class="home__social mt-1">
                     <a
                         href="https://www.facebook.com/profile.php?id=100076412994170"
-                        class="home__social-icon"><i class="bx
-                            bxl-facebook icon"></i></a>
-                    <a href="#" class="home__social-icon icon"><i class="bx
-                            bxl-instagram icon"></i></a>
+                        class="home__social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="home__social-icon icon"><i class="fa-brands fa-instagram-square"></i></a>
                     <a href="https://github.com/naybala"
-                        class="home__social-icon"><i class='bx
-                            bxl-github icon'></i></a>
+                        class="home__social-icon"><i class="fa-brands fa-github"></i></a>
                 </div>
 
                 <div class="home__img">
@@ -159,16 +156,19 @@ export default {
     themeToggler(){
       let themeToggler = document.querySelector('.theme-toggler');
       let headDark = document.querySelector('#head');
+      let footerDark = document.querySelector('#footer');
       let toastAlert =document.querySelector('#cookie')
         themeToggler.classList.toggle('activeToggle');
           if (themeToggler.classList.contains('activeToggle')) {
               document.body.classList.add('activeDark');
               headDark.classList.add('ac');
+              footerDark.classList.add('acti');
               localStorage.setItem("dark", "1");
               toastAlert.classList.add('dark');
           } else {
               document.body.classList.remove('activeDark');
               headDark.classList.remove('ac');
+              footerDark.classList.remove('acti');
               localStorage.setItem("dark", "0");
               toastAlert.classList.remove('dark');
           }
@@ -188,7 +188,7 @@ export default {
 
 .home {
   position: relative;
-  row-gap: 5rem;
+  row-gap: 4rem;
   padding: 4rem 0 5rem;
 }
 

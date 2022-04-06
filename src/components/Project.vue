@@ -13,18 +13,18 @@
                                 <h2>TEC Clollage</h2>
                                 <div class="size mt-1 mb-2">
                                     <h3 class="mt-2">usage :</h3>
-                                    <span> <i class='bx bxl-html5
+                                    <span> <i class='fa-brands fa-html5
                                             skills__icon'></i></span>
-                                    <span><i class='bx bxl-css3
+                                    <span><i class='fa-brands fa-css3
                                             skills__icon'></i></span>
-                                    <span> <i class='bx bxl-javascript
+                                    <span> <i class='fa-brands fa-js-square
                                             skills__icon'></i></span>
                                     <span> <i class='fab fa-bootstrap
                                             skills__icon'></i></span>
                                 </div>
                                 <div class="color mt-1 mb-1">
-                                    <h3 class="">Type of Wesbsite :</h3>
-                                    <p class="text-white" style="margin-top: 0.5rem;">Portfolio</p>
+                                    <h3 class="mt-2">Type of Wesbsite :</h3>
+                                    <p class="text-white">Portfolio</p>
                                 </div>
                                 <a
                                     href="https://61f03b2509e1d572f0acd7be--naughty-hugle-7cf607.netlify.app/"
@@ -42,18 +42,18 @@
                                 <h2>Daily News</h2>
                                 <div class="size mt-1 mb-2">
                                     <h3 class="mt-2">usage :</h3>
-                                    <span> <i class='bx bxl-html5
+                                    <span> <i class='fa-brands fa-html5
                                             skills__icon'></i></span>
-                                    <span><i class='bx bxl-css3
+                                    <span><i class='fa-brands fa-css3
                                             skills__icon'></i></span>
-                                    <span> <i class='bx bxl-javascript
+                                    <span> <i class='fa-brands fa-js-square
                                             skills__icon'></i></span>
                                     <span> <i class='fab fa-bootstrap
                                             skills__icon'></i></span>
                                 </div>
                                 <div class="color mt-1 mb-1">
-                                    <h3 class="">Type of Wesbsite :</h3>
-                                    <p class="text-white" style="margin-top: 0.5rem;">Portfolio</p>
+                                    <h3 class="mt-2">Type of Wesbsite :</h3>
+                                    <p class="text-white">Portfolio</p>
                                 </div>
                                 <a
                                     href="https://61f03022e2d4ae55df6b63c8--priceless-ptolemy-f0444b.netlify.app/"
@@ -71,18 +71,18 @@
                                 <h2>Alpha Cement</h2>
                                 <div class="size mt-1 mb-2">
                                     <h3 class="mt-2">usage :</h3>
-                                    <span> <i class='bx bxl-html5
+                                    <span> <i class='fa-brands fa-html5
                                             skills__icon'></i></span>
-                                    <span><i class='bx bxl-css3
+                                    <span><i class='fa-brands fa-css3
                                             skills__icon'></i></span>
-                                    <span> <i class='bx bxl-javascript
+                                    <span> <i class='fa-brands fa-js-square
                                             skills__icon'></i></span>
                                     <span> <i class='fab fa-bootstrap
                                             skills__icon'></i></span>
                                 </div>
                                 <div class="color mt-1 mb-1">
-                                    <h3 class="">Type of Wesbsite :</h3>
-                                    <p class="text-white" style="margin-top: 0.5rem;">Portfolio</p>
+                                    <h3 class="mt-2">Type of Wesbsite :</h3>
+                                    <p class="text-white">Portfolio</p>
                                 </div>
                                 <a
                                     href="https://61f03500fa3a5f000887b362--adoring-dijkstra-34907e.netlify.app/"

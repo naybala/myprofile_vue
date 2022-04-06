@@ -24,8 +24,8 @@
                     </ul>
                 </div>
 
-                <div @click="navMenuShow" class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
+                <div @click="navMenuShow" class="nav__toggle nav__logo" id="nav-toggle">
+                    <i class="fa-brands fa-elementor"></i>
                 </div>
             </nav>
         </div>

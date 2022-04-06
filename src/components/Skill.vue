@@ -7,8 +7,7 @@
                                 <p class="skills__text"></p>
                                 <div class="skills__data">
                                     <div class="skills__names">
-                                        <i class='bx bxl-html5
-                                            skills__icon'></i>
+                                        <i class="fa-brands fa-html5  skills__icon"></i>
                                         <span class="skills__name">{{html}}</span>
                                     </div>
                                     <div class="skills__bar skills__html">
@@ -16,8 +15,7 @@
                                 </div>
                                 <div class="skills__data">
                                     <div class="skills__names">
-                                        <i class='bx bxl-css3
-                                            skills__icon'></i>
+                                        <i class="fa-brands fa-css3  skills__icon"></i>
                                         <span class="skills__name">{{css}}</span>
                                     </div>
                                     <div class="skills__bar skills__css">
@@ -25,8 +23,7 @@
                                 </div>
                                 <div class="skills__data">
                                     <div class="skills__names">
-                                        <i class='bx bxl-javascript
-                                            skills__icon'></i>
+                                      <i class="fa-brands fa-js-square skills__icon"></i>
                                         <span class="skills__name">{{js}}</span>
                                     </div>
                                     <div class="skills__bar skills__js">
