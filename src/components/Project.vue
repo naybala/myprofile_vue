@@ -26,9 +26,10 @@
                                     <h3 class="mt-2">Type of Wesbsite :</h3>
                                     <p class="text-white">Portfolio</p>
                                 </div>
-                                <a
-                                    href="https://61f03b2509e1d572f0acd7be--naughty-hugle-7cf607.netlify.app/"
+                                <div class="btn-project">
+                                    <a href="https://61f03b2509e1d572f0acd7be--naughty-hugle-7cf607.netlify.app/"
                                     target="_blink">View Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -55,9 +56,11 @@
                                     <h3 class="mt-2">Type of Wesbsite :</h3>
                                     <p class="text-white">Portfolio</p>
                                 </div>
-                                <a
+                                <div class="btn-project">
+                                     <a
                                     href="https://61f03022e2d4ae55df6b63c8--priceless-ptolemy-f0444b.netlify.app/"
                                     target="_blink">View Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -603,6 +606,18 @@ export default {
   transform: translateY(0px);
   transition-delay: 0.75s;
 }
+
+.btn-project {
+   transform: translateY(0px);
+   transition: .3s;
+}
+
+.btn-project:hover {
+   transform: translateY(3px);
+   box-shadow: 3px 3px 10px black;
+   transition: .3s;
+}
+
 @media (min-width : 320px) and (max-width :370px) {
   .container .card {
     width: 280px;
