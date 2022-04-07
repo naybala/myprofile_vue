@@ -2,8 +2,8 @@
      <section class="skills section" id="skills">
             <h2 class="section-title">Skills</h2>
                 <div class="skills__container bd-grid">
-                            <div>
-                                <h2 class="skills__subtitle">{{title}}</h2>
+                       <div>
+                         <h2 class="skills__subtitle">{{title}}</h2>
                                 <p class="skills__text"></p>
                                 <div class="skills__data">
                                     <div class="skills__names">
@@ -23,6 +23,14 @@
                                 </div>
                                 <div class="skills__data">
                                     <div class="skills__names">
+                                        <i class=" fab fa-bootstrap skills__icon"></i>
+                                    <span class="skills__name">{{bootstrap}}</span>
+                                </div>
+                                <div class="skills__bar skills__ux">
+                                </div>
+                                </div>
+                                <div class="skills__data">
+                                    <div class="skills__names">
                                       <i class="fa-brands fa-js-square skills__icon"></i>
                                         <span class="skills__name">{{js}}</span>
                                     </div>
@@ -31,48 +39,57 @@
                                 </div>
                                 <div class="skills__data">
                                     <div class="skills__names">
-                                        <i class="fab fa-php skills__icon"></i>
-                                    <span class="skills__name">{{bootstrap}}</span>
+                                        <i class="fa-brands fa-vuejs skills__icon"></i>
+                                        <span class="skills__name">{{vue}}</span>
+                                    </div>
+                                    <div class="skills__bar skills__js">
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <div class="skills__names">
+                                        <i class=" fab fa-php skills__icon"></i>
+                                    <span class="skills__name">{{php}}</span>
                                 </div>
                                 <div class="skills__bar skills__ux">
                                 </div>
-                            </div>
-                            <div class="skills__data">
-                                <div class="skills__names">
-                                    <i class="fab fa-laravel skills__icon"></i>
-                                <span class="skills__name">{{php}}</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                            </div>
+                                </div>
+                                <div class="skills__data">
+                                    <div class="skills__names">
+                                        <i class='fab fa-laravel
+                                            skills__icon'></i>
+                                        <span class="skills__name">{{laravel}}</span>
+                                    </div>
+                                    <div class="skills__bar skills__ux">
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <div class="skills__names">
+                                        <i class=' fas fa-database
+                                            skills__icon'></i>
+                                        <span class="skills__name">{{mysql}}</span>
+                                    </div>
+                                    <div class="skills__bar skills__ux">
+                                    </div>
+                                </div>      
+                                <br>
+                               
+                                <div class="mt-1">
+                                    <img src="../assets/images/myCerti.jpg" alt=""
+                                        class="skills__img img-fluid" id="galleryFive" @click="imageViewOne">
+                                </div>
+                                <div class="div" id="popup">
+                                    <img src="" alt="" id="selectedImage">
+                                </div>
+                                <br>
+                                <br>
+                                 <div class="mt-1">
+                                    <img src="../assets/images/job-trainning.png" alt=""
+                                        class="skills__img img-fluid" id="galleryTen" @click="imageViewFour">
+                                </div>
+                                <div class="div" id="popup">
+                                    <img src="" alt="" id="selectedImage">
+                                </div>
                         </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='fas fa-database
-                                    skills__icon'></i>
-                                <span class="skills__name">{{laravel}}</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='fab fa-bootstrap
-                                    skills__icon'></i>
-                                <span class="skills__name">{{mysql}}</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="mt-1">
-                            <img src="../assets/images/myCerti.jpg" alt=""
-                                class="skills__img img-fluid" id="galleryFive" @click="imageViewOne">
-                        </div>
-                        <div class="div" id="popup">
-                            <img src="" alt="" id="selectedImage">
-                        </div>
-                    </div>
 
                     <div>
                         <img src="../assets/images/myView.jpg" alt=""
@@ -82,7 +99,12 @@
                             </div>
                         <br><br><br>
                         <img src="../assets/images/myCerti-2.jpg" alt=""
-                            class="skills__img img-fluid" id="gallerySeven" @click="imageViewThree">
+                            class="skills__img img-fluid mt-5" id="gallerySeven" @click="imageViewThree">
+                            <div class="div" id="popup">
+                                <img src="" alt="" id="selectedImage">
+                            </div>
+                        <img src="../assets/images/certificate-3.png" alt=""
+                            class="skills__img img-fluid mt-5" id="galleryEle" @click="imageViewFive">
                             <div class="div" id="popup">
                                 <img src="" alt="" id="selectedImage">
                             </div>
@@ -100,6 +122,7 @@ export default {
       css : "CSS",
       js: "JavaScript",
       bootstrap:"Bootstrap",
+      vue : "Vue Js",
       php : "Php",
       laravel:"Laravel",
       mysql:"MySQL"
@@ -131,6 +154,28 @@ export default {
   imageViewThree(){
       const popup = document.querySelector('#popup');
       const gallery = document.querySelector('#gallerySeven');
+      const selectedImage = document.querySelector('#selectedImage');
+      selectedImage.src = gallery.src;
+     popup.style.transform = `translateY(0%)`;
+      popup.addEventListener('click', () => {
+            popup.style.transform = `translateY(-100%)`;
+            popup.src = '';
+        })
+   },
+   imageViewFour(){
+      const popup = document.querySelector('#popup');
+      const gallery = document.querySelector('#galleryTen');
+      const selectedImage = document.querySelector('#selectedImage');
+      selectedImage.src = gallery.src;
+     popup.style.transform = `translateY(0%)`;
+      popup.addEventListener('click', () => {
+            popup.style.transform = `translateY(-100%)`;
+            popup.src = '';
+        })
+   },
+   imageViewFive(){
+      const popup = document.querySelector('#popup');
+      const gallery = document.querySelector('#galleryEle');
       const selectedImage = document.querySelector('#selectedImage');
       selectedImage.src = gallery.src;
      popup.style.transform = `translateY(0%)`;
