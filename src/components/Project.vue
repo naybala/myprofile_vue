@@ -87,9 +87,11 @@
                                     <h3 class="mt-2">Type of Wesbsite :</h3>
                                     <p class="text-white">Portfolio</p>
                                 </div>
-                                <a
+                                <div class="btn-project">
+                                     <a
                                     href="https://61f03500fa3a5f000887b362--adoring-dijkstra-34907e.netlify.app/"
                                     target="_blink">View Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -119,9 +121,11 @@
                                     <h3 class="mt-2">Type of Wesbsite :</h3>
                                     <p class="text-white">JavaScript</p>
                                 </div>
-                                <a
+                                <div class="btn-project">
+                                     <a
                                     href="https://62187191868ca642f1d13408--competent-chandrasekhar-b57c89.netlify.app/"
                                     target="_blink">View Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -149,9 +153,11 @@
                                     <h3 class="mt-2">Type of Wesbsite :</h3>
                                     <p class="text-white">JavaScript</p>
                                 </div>
-                                <a
+                                <div class="btn-project">
+                                    <a
                                     href="https://621871f590b15959528f792e--agitated-wing-d5b708.netlify.app/"
                                     target="_blink">View Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -179,9 +185,11 @@
                                     <h3 class="mt-2">Type of Wesbsite :</h3>
                                     <p class="text-white">JavaScript</p>
                                 </div>
-                                <a
+                                <div class="btn-project">
+                                    <a
                                     href="https://62187231163f604c0e1be791--elegant-bardeen-ef25d0.netlify.app/"
                                     target="_blink">View Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -211,9 +219,11 @@
                                     <h3 class="mt-2">Type of Wesbsite :</h3>
                                     <p class="text-white">JavaScript</p>
                                 </div>
-                                <a
+                                <div class="btn-project">
+                                    <a
                                     href="https://6218772f529a4b469a5aa3bc--vigilant-mirzakhani-16f9ab.netlify.app/"
                                     target="_blink">View Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -241,9 +251,11 @@
                                     <h3 class="mt-2">Type of Wesbsite :</h3>
                                     <p class="text-white">JavaScript</p>
                                 </div>
-                                <a
+                                <div class="btn-project">
+                                    <a
                                     href="https://62187820163f6048891bec8e--nervous-einstein-6ff6f2.netlify.app/"
                                     target="_blink">View Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -271,9 +283,11 @@
                                     <h3 class="mt-2">Type of Wesbsite :</h3>
                                     <p class="text-white">Simple</p>
                                 </div>
-                                <a
+                                <div class="btn-project">
+                                    <a
                                     href="https://621877d5ba5aba588084ab49--hardcore-babbage-7e84ae.netlify.app/"
                                     target="_blink">View Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -304,8 +318,10 @@
                                     <h3 class="mt-2">Type of Wesbsite :</h3>
                                     <p class="text-white">Simple Mini</p>
                                 </div>
-                                <a href="https://621c71a8ae1b82ed2a39a4f7--serene-borg-f36e46.netlify.app/"
+                                <div class="btn-project">
+                                     <a href="https://621c71a8ae1b82ed2a39a4f7--serene-borg-f36e46.netlify.app/"
                                     target="_blink">View Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -340,8 +356,10 @@
                                     <h3 class="mt-2">Type of Wesbsite :</h3>
                                     <p class="text-white">Full-Stack</p>
                                 </div>
-                                <a href="https://github.com/naybala/Pizza-Order"
+                                <div class="btn-project">
+                                    <a href="https://github.com/naybala/Pizza-Order"
                                     target="_blink">View Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -377,9 +395,11 @@
                                     <h3 class="mt-2">Type of Wesbsite :</h3>
                                     <p class="text-white">Full-Stack</p>
                                 </div>
-                                <a
+                                <div class="btn-project">
+                                    <a
                                     href="https://github.com/naybala/Admin-Pannel-Laravel-"
                                     target="_blink">View Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
