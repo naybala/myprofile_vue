@@ -42,10 +42,10 @@
                 <div class="home__social mt-1">
                     <a
                         href="https://www.facebook.com/profile.php?id=100076412994170"
-                        class="home__social-icon"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="home__social-icon icon"><i class="fa-brands fa-instagram-square"></i></a>
+                        class="home__social-icon" target="_blink"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/naybala190510" class="home__social-icon icon" target="_blink"><i class="fa-brands fa-instagram-square"></i></a>
                     <a href="https://github.com/naybala"
-                        class="home__social-icon"><i class="fa-brands fa-github"></i></a>
+                        class="home__social-icon"><i class="fa-brands fa-github" target="_blink"></i></a>
                 </div>
 
                 <div class="home__img">

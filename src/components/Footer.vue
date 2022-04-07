@@ -2,9 +2,9 @@
         <footer class="footer footer__text" id="footer">
             <p class="footer__title">HELLO World!</p>
             <div class="footer__social">
-                <a href="#" class="footer__icon"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="footer__icon"><i class="fa-brands fa-instagram-square"></i></a>
-                <a href="#" class="footer__icon"><i class="fa-brands fa-github-square"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100076412994170" target="_blink" class="footer__icon"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/naybala190510" target="_blink" class="footer__icon" ><i class="fa-brands fa-instagram-square"></i></a>
+                <a href="https://github.com/naybala" target="_blink" class="footer__icon"><i class="fa-brands fa-github-square"></i></a>
             </div>
             <p class="footer__copy">&#169; All rigths
                 reserved</p>
@@ -21,7 +21,6 @@ export default {
 /* ===== FOOTER =====*/
 .footer {
   background-color: #fff;
-  
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
@@ -46,7 +45,11 @@ export default {
   color: var(--first-color);
   margin: 0 var(--mb-2);
 }
-
+.footer__icon:hover {
+    transform: translateY(-6px);
+    box-shadow: 2px 2px 10px rgb(223, 219, 219);
+    border-radius: 2.5rem;
+}
 .footer__copy {
   font-size: var(--smaller-font-size);
 }
