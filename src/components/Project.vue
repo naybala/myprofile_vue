@@ -580,10 +580,14 @@ export default {
   font-size: 2rem;
   margin-right: var(--mb-2);
   color: var(--first-color);
+  transform: translateY(0px);
+  transition: .3s;
 }
-/* .container .card .contentBx .size span:hover{
-  background: #f3f5f1;
-} */
+.skills__icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 10px rgb(114, 109, 109);
+  transition: .3s;
+}
 
 .container .card .contentBx .color span {
   width: 20px;

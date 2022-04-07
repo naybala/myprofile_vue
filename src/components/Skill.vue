@@ -216,6 +216,7 @@ export default {
   color: var(--first-color);
 }
 
+
 .skills__names {
   display: flex;
   align-items: center;
