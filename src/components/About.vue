@@ -8,7 +8,7 @@
                         </div>
                         <div>
                             <h2 class="about__subtitle"><typical class="typicalWrapper"
-                                :steps="[`I'am`, 500, `I'am Nay Ba La`, 5000]"
+                                :steps="[`I`, 100, `I'am Nay Ba La`, 2500]"
                                 :loop="Infinity"></typical></h2>
                             <p class="about__text">I was born in
                                 Zalun,Ayeyarwady Division,Myanmar.
@@ -36,7 +36,7 @@
                         </div>
                         <div>
                             <h2 class="about__subtitle"><typical class="typicalWrapper"
-                                :steps="[`I was`, 500, `I was graduated from`, 5000]"
+                                :steps="[`I`, 100, `I was graduated from`, 2500]"
                                 :loop="Infinity"></typical></h2>
                             <p class="about__text"><span class="text-primary">Hinthada
                                     Technological University</span> got <span
@@ -66,7 +66,7 @@
                         </div>
                         <div>
                             <h2 class="about__subtitle"><typical class="typicalWrapper"
-                                :steps="[`I`, 500, `I'also have`, 5000]"
+                                :steps="[`I`, 100, `I'also have`, 2500]"
                                 :loop="Infinity"></typical></h2>
                             <p class="about__text"> - A website wesign
                                 perspective. <br>
@@ -91,7 +91,7 @@
                         </div>
                         <div>
                             <h2 class="about__subtitle"><typical class="typicalWrapper"
-                                :steps="[`I'am`, 500, `I'am Nay Ba La`, 5000]"
+                                :steps="[`I`, 100, `I'am Nay Ba La`, 2500]"
                                 :loop="Infinity"></typical></h2>
                             <p class="about__text">- Good in English (4) skills.
                                 <br>
