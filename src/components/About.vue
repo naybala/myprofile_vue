@@ -35,7 +35,9 @@
                             <img  @click="imageViewTwo"  src="../assets/images/myInfo.jpg" alt=""  id="galleryTwo">
                         </div>
                         <div>
-                            <h2 class="about__subtitle">I was graduated from</h2>
+                            <h2 class="about__subtitle"><typical class="typicalWrapper"
+                                :steps="[`I was`, 500, `I was graduated from`, 5000]"
+                                :loop="Infinity"></typical></h2>
                             <p class="about__text"><span class="text-primary">Hinthada
                                     Technological University</span> got <span
                                     class="text-primary">Bachelor Of
