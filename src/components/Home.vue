@@ -1,6 +1,5 @@
 <template>
-        <section class="home bd-grid" id="home" data-aos="fade-up"
-     data-aos-anchor-placement="bottom-bottom">
+        <section class="home bd-grid" id="home" data-aos="fade-up">
             <div id="theme-open" @click="themeOpen" class="home__social-icon"><i class="fa-brands fa-themeco"></i></div>
             <div class="themes-container">
               <i class=""></i>
@@ -189,8 +188,8 @@ export default {
 
 .home {
   position: relative;
-  row-gap: 4rem;
-  padding: 4rem 0 5rem;
+  row-gap: 3rem;
+  padding: 6rem 0 5rem;
 }
 
 .home__data {
@@ -343,11 +342,20 @@ export default {
 .themes-container .theme-colors .color:hover {
   opacity: .5;
 }
+@media screen and (max-width: 320px) {
+  .home {
+    row-gap: 0rem;
+  }
+  .home__img {
+    width: 200px;
+  }
 
+}
 /* ===== MEDIA QUERIES=====*/
-@media (max-width:400px) and (min-width: 300px){
+@media (max-width:430px) and (min-width: 300px){
    .home {
     row-gap: 0rem;
+    padding: 3rem 0 6rem;
   }
   .theme-colors {
     gap: 5px;
@@ -366,7 +374,7 @@ export default {
     right: 0px;
     cursor: pointer;
     z-index: 1;
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .themes-container {
@@ -450,21 +458,10 @@ export default {
     opacity: .5;
   }
 }
-@media screen and (max-width: 320px) {
-  .home {
-    row-gap: 0rem;
-  }
-  .home__img {
-    width: 200px;
-  }
 
-}
 
 @media screen and (min-width: 576px) {
 
-  .home {
-    padding: 4rem 0 2rem;
-  }
   .home__social {
     padding-top: 0;
     padding-bottom: 2.5rem;

@@ -100,7 +100,10 @@ export default{
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
+    transition: .1s linear;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -139,4 +142,5 @@ img {
   height: auto;
   display: block;
 }
+
 </style>
