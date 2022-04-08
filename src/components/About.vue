@@ -27,13 +27,10 @@
                     </div>
 
                     <br>
-                    
+
                     <div class="about__container bd-grid" data-aos="fade-left">
                         <div class="about__img">
                             <img  @click="imageViewTwo"  src="../assets/images/myInfo.jpg" alt=""  id="galleryTwo">
-                        </div>
-                        <div class="div" id="popup">
-                        <img src="" alt="" id="selectedImage">
                         </div>
                         <div>
                             <h2 class="about__subtitle">I was graduated from</h2>
@@ -51,14 +48,17 @@
                                 section.</p>
                         </div>
                     </div>
+
+                    <div class="div" id="popup">
+                        <img src="" alt="" id="selectedImage">
+                    </div>
+
                     <br>
+
                     <div class="about__container bd-grid" data-aos="zoom-in-up">
                         <div class="about__img">
                             <img  @click="imageViewThree" src="../assets/images/myInfo-2.jpg" alt=""  id="galleryThree">
                            
-                        </div>
-                         <div class="div" id="popup">
-                        <img src="" alt="" id="selectedImage">
                         </div>
                         <div>
                             <h2 class="about__subtitle">I'also have</h2>
@@ -72,13 +72,16 @@
                                 - I have good teamwork and communication skills.</p>
                         </div>
                     </div>
+
+                     <div class="div" id="popup">
+                            <img src="" alt="" id="selectedImage">
+                     </div>
+
                     <br>
-                    <div class="about__container bd-grid" data-aos="fade-up">
+
+                    <div class="about__container bd-grid" data-aos="zoom-in-up">
                         <div class="about__img">
                             <img  @click="imageViewFour" src="../assets/images/myInfo-3.jpg" alt=""  id="galleryFour">
-                        </div>
-                         <div class="div" id="popup">
-                        <img src="" alt="" id="selectedImage">
                         </div>
                         <div>
                             <h2 class="about__subtitle">I'am Nay Ba La</h2>
@@ -95,6 +98,12 @@
                             </p>
                         </div>
                     </div>
+
+                    <div class="div" id="popup">
+                        <img src="" alt="" id="selectedImage">
+                    </div>
+
+                    <br>
         </section>
        
 </template>
