@@ -90,7 +90,9 @@
                             <img  @click="imageViewFour" src="../assets/images/myInfo-3.jpg" alt=""  id="galleryFour">
                         </div>
                         <div>
-                            <h2 class="about__subtitle">I'am Nay Ba La</h2>
+                            <h2 class="about__subtitle"><typical class="typicalWrapper"
+                                :steps="[`I'am`, 500, `I'am Nay Ba La`, 5000]"
+                                :loop="Infinity"></typical></h2>
                             <p class="about__text">- Good in English (4) skills.
                                 <br>
                                 - Good in Japanese Basic N5 <br>
