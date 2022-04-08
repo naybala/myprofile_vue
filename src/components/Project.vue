@@ -2,8 +2,8 @@
      <section class="project section" id="project">
             <h2 class="section-title">Projects</h2>
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4 py-3" id="col">
+                 <div class="flex-container">
+                     <div class=" py-3" id="col">
                         <div class="card">
                             <div class="imgBx">
                                 <img
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 py-3" id="col">
+                    <div class=" py-3" id="col">
                         <div class="card">
                             <div class="imgBx">
                                 <img
@@ -64,7 +64,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 py-3" id="col">
+                    <div class=" py-3" id="col">
                         <div class="card">
                             <div class="imgBx">
                                 <img
@@ -95,14 +95,14 @@
                             </div>
                         </div>
                     </div>
-                    <br>
+                                        <br>
                     <hr>
-                    <div class="col-md-4 py-3" id="col">
+                    <div class=" py-3" id="col">
                         <div class="card">
                             <div class="imgBx">
                                 <img
-                                    src="../assets/images/google.png"
-                                    class="img-thumbnail">
+                                    src="../assets/images/google.jpg"
+                                    class="img-fluid">
                             </div>
                             <div class="contentBx">
                                 <h2 class="mt-2">Google Clone</h2>
@@ -129,7 +129,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 py-3" id="col">
+                    <div class=" py-3" id="col">
                         <div class="card">
                             <div class="imgBx">
                                 <img
@@ -161,7 +161,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 py-3" id="col">
+                    <div class=" py-3" id="col">
                         <div class="card">
                             <div class="imgBx">
                                 <img
@@ -195,7 +195,7 @@
                     </div>
                     <br>
                     <hr>
-                    <div class="col-md-4 py-3" id="col">
+                    <div class=" py-3" id="col">
                         <div class="card">
                             <div class="imgBx">
                                 <img
@@ -227,7 +227,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 py-3" id="col">
+                    <div class=" py-3" id="col">
                         <div class="card">
                             <div class="imgBx">
                                 <img
@@ -259,7 +259,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 py-3" id="col">
+                    <div class=" py-3" id="col">
                         <div class="card">
                             <div class="imgBx">
                                 <img
@@ -293,7 +293,7 @@
                     </div>
                     <br>
                     <hr>
-                    <div class="col-md-4 py-3" id="col">
+                    <div class=" py-3" id="col">
                         <div class="card">
                             <div class="imgBx">
                                 <img
@@ -316,7 +316,7 @@
                                 </div>
                                 <div class="color mt-1 mb-1">
                                     <h3 class="mt-2">Type of Wesbsite :</h3>
-                                    <p class="text-white">Simple Mini</p>
+                                    <p class="text-white">Simple</p>
                                 </div>
                                 <div class="btn-project">
                                      <a href="https://621c71a8ae1b82ed2a39a4f7--serene-borg-f36e46.netlify.app/"
@@ -325,7 +325,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 py-3" id="col">
+                    <div class=" py-3" id="col">
                         <div class="card">
                             <div class="imgBx">
                                 <img
@@ -363,7 +363,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 py-3" id="col">
+                    <div class=" py-3" id="col">
                         <div class="card">
                             <div class="imgBx">
                                 <img class="rounded"
@@ -403,8 +403,7 @@
                             </div>
                         </div>
                     </div>
-
-                </div>
+                 </div>
             </div>
      </section>
 </template>
@@ -416,6 +415,15 @@ export default {
 </script>
 
 <style scoped>
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+.flex-container > div {
+    margin: 0.12rem;
+}
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
@@ -642,18 +650,24 @@ export default {
    transition: .3s;
 }
 
-@media (min-width : 320px) and (max-width :370px) {
+@media (min-width : 300px) and (max-width :800px) {
   .container .card {
-    width: 280px;
+    width: 300px;
     height: 410px;
   }
+  .container .card .imgBx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 100%;
+  height: 180px;
+  transition: 0.5s;
 }
-@media (min-width : 760px) and (max-width :1200px) {
-
-  #col {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
+.flex-container {
+  justify-content: center;
+}
+}
   @media screen and (min-width: 767px) {
  
   .section {
@@ -670,5 +684,5 @@ export default {
     top: 3rem;
   }
 }
-}
+
 </style>

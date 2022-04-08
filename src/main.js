@@ -10,6 +10,7 @@ app.AOS = new AOS.init({
     duration: 1000 // values from 0 to 3000, with step 50ms
 });
 
+
 app.mount('#app');
 
 

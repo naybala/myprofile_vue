@@ -7,7 +7,9 @@
                             <img  @click="imageViewOne"  src="../assets/images/myFullProfile.jpg" alt="" id="galleryOne">
                         </div>
                         <div>
-                            <h2 class="about__subtitle">I'am Nay Ba La</h2>
+                            <h2 class="about__subtitle"><typical class="typicalWrapper"
+                                :steps="[`I'am`, 500, `I'am Nay Ba La`, 5000]"
+                                :loop="Infinity"></typical></h2>
                             <p class="about__text">I was born in
                                 Zalun,Ayeyarwady Division,Myanmar.
                                 But now i live in Ingapu Street,SanChaung
@@ -109,9 +111,16 @@
 </template>
 
 <script>
-
-
+import typical from 'vue-typical';
 export default {
+  data: function() {
+    return {
+      msg: 'vue typical'
+    }
+  },
+  components: {
+    typical
+  },
   methods:{
   imageViewOne(){
       const popup = document.querySelector('#popup');

@@ -9,12 +9,25 @@
                     <span class="loader-inner-up"></span>
                 </span>
             </span>
-            <span class="loader-text ms-4"> Loading Please Wait...</span>
+            <span class="loader-text ms-4">
+              <typical class="typicalWrapper d-inline"
+                                :steps="[``, 700, `Loading Please Wait ........`,]"></typical>
+              </span>
         </div>
 </template>
 
 <script>
-export default {}
+import typical from 'vue-typical';
+export default {
+   data: function() {
+    return {
+      msg: 'vue typical'
+    }
+  },
+      components: {
+        typical
+      },
+}
 </script>
 
 <style scoped>

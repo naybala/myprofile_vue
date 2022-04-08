@@ -30,9 +30,13 @@
               </div>
             </div>
                 <div class="home__data">
-                    <h1 class="home__title">Hello  <a href="https://earth.google.com/web/" target="_blink" class="home__title-color"><i class="fa-solid fa-earth-americas"></i></a>,<br>I'am <span
-                            class="home__title-color">Nay Ba La</span><br> Web
-                        Developer
+                    <h1 class="home__title">Hello  <a href="https://earth.google.com/web/" target="_blink" class="home__title-color"><i class="fa-solid fa-earth-americas fa-spin" style="--fa-animation-duration: 15s;"></i></a>,
+                    <br>I'am <span class="home__title-color"><typical class="typicalWrapper d-inline"
+                                :steps="[``, 500, `Nay Ba La`, 5000]"
+                                :loop="Infinity"></typical>
+                            </span>
+                            <br> 
+                          Web Developer
                     </h1>
 
                     <p class="mb-3">Email : naybala.153808@gmail.com</p>
@@ -73,7 +77,7 @@
                                     469.835 111.552 422.137 65.1576
                                     361.805C17.4835 299.81 -17.1617 219.583
                                     9.19024 145.964Z" />
-                                    <image class="home__blob-img" x="-80" y="60"
+                                    <image class="home__blob-img" x="-80" y="15"
                                         href="../assets/images/myProfile.png" />
                               </g>
                     </svg>
@@ -83,8 +87,16 @@
 </template>
 
 <script>
-
+import typical from 'vue-typical';
 export default {
+  data: function() {
+    return {
+      msg: 'vue typical'
+    }
+  },
+  components: {
+    typical
+  },
   methods:{
     themeOpen(){
       const themesContainer = document.querySelector('.themes-container');
@@ -178,6 +190,7 @@ export default {
 </script>
 
 <style scoped>
+
 /*===== HOME =====*/
 .bd-grid {
   max-width: 1024px;
