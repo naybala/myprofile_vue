@@ -65,7 +65,9 @@
                            
                         </div>
                         <div>
-                            <h2 class="about__subtitle">I'also have</h2>
+                            <h2 class="about__subtitle"><typical class="typicalWrapper"
+                                :steps="[`I`, 500, `I'also have`, 5000]"
+                                :loop="Infinity"></typical></h2>
                             <p class="about__text"> - A website wesign
                                 perspective. <br>
                                 - I can work in accordance with Dealine. <br>
