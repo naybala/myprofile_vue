@@ -1,5 +1,6 @@
 <template>
-        <section class="home bd-grid" id="home">
+        <section class="home bd-grid" id="home" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
             <div id="theme-open" @click="themeOpen" class="home__social-icon"><i class="fa-brands fa-themeco"></i></div>
             <div class="themes-container">
               <i class=""></i>
