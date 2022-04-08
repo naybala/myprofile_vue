@@ -20,12 +20,14 @@
                                     href="#project"> Project</a> section.
                             </p>
                         </div>
-                       
                     </div>
+
                     <div class="div" id="popup">
                         <img src="" alt="" id="selectedImage">
                     </div>
+
                     <br>
+                    
                     <div class="about__container bd-grid" data-aos="fade-left">
                         <div class="about__img">
                             <img  @click="imageViewTwo"  src="../assets/images/myInfo.jpg" alt=""  id="galleryTwo">

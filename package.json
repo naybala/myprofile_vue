@@ -7,6 +7,7 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "vue": "^3.2.31"
   },
   "devDependencies": {
