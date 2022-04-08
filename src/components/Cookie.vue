@@ -32,7 +32,7 @@ export default {
                         closeButtonTag.style.backgroundColor = "var(--first-color)";
                         closeButtonTag.style.color = "#fff";
                         closeButtonTag.style.display = "inline-block";
-                        closeButtonTag.style.padding = ".2rem .5rem";
+                        closeButtonTag.style.padding = ".5rem";
                         closeButtonTag.style.borderRadius = ".5rem";
                         closeButtonTag.style.cursor = "pointer";
                         closeButtonTag.classList.add("button","ms-3");
@@ -42,7 +42,7 @@ export default {
                         closeUnAcceptButtonTag.style.backgroundColor = "var(--first-color)";
                         closeUnAcceptButtonTag.style.color = "#fff";
                         closeUnAcceptButtonTag.style.display = "inline-block";
-                        closeUnAcceptButtonTag.style.padding = ".2rem .5rem";
+                        closeUnAcceptButtonTag.style.padding = ".5rem";
                         closeUnAcceptButtonTag.style.borderRadius = ".5rem";
                         closeUnAcceptButtonTag.style.cursor = "pointer";
                         closeUnAcceptButtonTag.classList.add("button","ms-1");
@@ -93,5 +93,11 @@ export default {
 .dark {
   background: #242f3f;
 }
+/* @media screen and (max-width: 320px) {
+  .button{
+
+  }
+
+} */
 
 </style>

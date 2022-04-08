@@ -100,14 +100,12 @@ export default{
 *,
 ::before,
 ::after {
-    transition: .1s linear;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+   overflow-x: hidden;
 }
 
 body {
@@ -142,5 +140,6 @@ img {
   height: auto;
   display: block;
 }
+
 
 </style>
