@@ -296,7 +296,7 @@ export default {
 .skills__img {
   border-radius: .5rem;
   cursor: pointer;
-   transition: .3s;
+  transition: .3s;
   transform: translateY(0px);
 }
 

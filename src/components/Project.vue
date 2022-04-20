@@ -137,7 +137,7 @@
                                     class="img-thumbnail">
                             </div>
                             <div class="contentBx">
-                                <h2>Auto Complete Search</h2>
+                                <h2>Auto Complete</h2>
                                 <div class="size mt-1 mb-2">
                                     <h3 class="mt-2">usage :</h3>
                                     <span> <i class='fa-brands fa-html5
