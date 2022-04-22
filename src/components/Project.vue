@@ -302,6 +302,7 @@
                             <div class="contentBx">
                                 <h2>Simple Music Player</h2>
                                 <div class="size mt-1 mb-2">
+                                    <h3 class="mt-2">usage :</h3>
                                     <span> <i class='fa-brands fa-html5
                                             skills__icon'></i></span>
                                     <span><i class='fa-brands fa-css3
@@ -334,6 +335,7 @@
                             <div class="contentBx">
                                 <h2>Pizza Online Order</h2>
                                 <div class="size mt-1 mb-2">
+                                     <h3 class="mt-2">usage :</h3>
                                     <span><i class='fas fa-database
                                             skills__icon'></i></span>
                                     <span class="me-3">
@@ -372,6 +374,7 @@
                             <div class="contentBx">
                                 <h2>Pizza Online Order</h2>
                                 <div class="size mt-1 mb-2">
+                                     <h3 class="mt-2">usage :</h3>
                                     <span> <i class='fab fa-laravel
                                             skills__icon'></i></span>
                                     <span> <i class='fa-brands fa-html5
@@ -563,10 +566,10 @@ export default {
 .container .card .contentBx .color h3 {
   color: #fff;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-right: 10px;
+  letter-spacing: 1px;
+  margin-right: 6px;
 }
 
 .container .card .contentBx .size span {
