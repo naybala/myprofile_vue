@@ -335,31 +335,31 @@
                             <div class="contentBx">
                                 <h2>Pizza Online Order</h2>
                                 <div class="size mt-1 mb-2">
-                                     <h3 class="mt-2">usage :</h3>
-                                    <span><i class='fas fa-database
-                                            skills__icon'></i></span>
-                                    <span class="me-3">
-                                        <i class='fab fa-php skills__icon'>
-                                        </i>
-                                    </span>
+                                     <h3 class="mt-2">use:</h3>
                                     <span> <i class='fa-brands fa-html5
                                             skills__icon'></i></span>
                                     <span><i class='fa-brands fa-css3
                                             skills__icon'></i></span>
                                     <span> <i class='fa-brands fa-js-square
                                             skills__icon'></i></span>
-                                    <span>
+                                    <span class="me-2">
                                         <i class='fab fa-bootstrap
                                             skills__icon'></i>
                                     </span>
-
+                                    <span class="me-3">
+                                        <i class='fab fa-php skills__icon'>
+                                        </i>
+                                    </span>
+                                    <span><i class='fas fa-database
+                                            skills__icon'></i></span>
                                 </div>
                                 <div class="color mt-1 mb-1">
                                     <h3 class="mt-2">Type of Wesbsite :</h3>
                                     <p class="text-white">Full-Stack</p>
                                 </div>
                                 <div class="btn-project">
-                                    <a href="https://github.com/naybala/Pizza-Order"
+                                    <a
+                                    href="https://github.com/naybala/Admin-Pannel-Laravel-"
                                     target="_blink">View Detail</a>
                                 </div>
                             </div>
@@ -374,7 +374,7 @@
                             <div class="contentBx">
                                 <h2>Pizza Online Order</h2>
                                 <div class="size mt-1 mb-2">
-                                     <h3 class="mt-2">usage :</h3>
+                                     <h3 class="mt-2">use:</h3>
                                     <span> <i class='fab fa-laravel
                                             skills__icon'></i></span>
                                     <span> <i class='fa-brands fa-html5
@@ -588,7 +588,7 @@ export default {
   cursor: pointer;
 }
 .skills__icon {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-right: var(--mb-2);
   color: var(--first-color);
   transform: translateY(0px);
