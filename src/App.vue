@@ -26,7 +26,7 @@ import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 import Cookie from './components/Cookie.vue'
 import Track from './components/Track.vue'
-import Track1 from './components/Track.vue'
+
 
 
 export default{
@@ -42,7 +42,6 @@ export default{
     Footer,
     Cookie,
     Track,
-    Track1
 },
     data: () => ({
             loading: true,
