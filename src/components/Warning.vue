@@ -46,7 +46,7 @@ p{
 }
 
 .nav-top-bg{
-	height: 50px;
+	height: 40px;
 	background-color: #000;
 	font-size: 15px;
 }
@@ -55,20 +55,20 @@ p{
 }
 .nav-top-bg-text{
 	position: relative;
-	top: 25px;
+	top: 10px;
 }
 
 /* Tablet View */
 @media (min-width : 768px) and (max-width :950px)  {
 .nav-top-bg{
-    height: 70px;
+    height: 50px;
 	font-size: 10px;
 }
 p{
     margin-left: 0rem;
 }
 .nav-top-bg-text{
-	top: 30px;
+	top: 15px;
 }
  
 }
