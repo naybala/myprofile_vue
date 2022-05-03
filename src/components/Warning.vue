@@ -23,7 +23,7 @@ export default {
   animation-duration: 30s;
 }
 p{
-    margin-left: 4rem;
+    margin-left: 4.5rem;
 }
 
 @keyframes run {
