@@ -49,9 +49,11 @@ p{
 	height: 40px;
 	background-color: #000;
 	font-size: 15px;
+   box-shadow: 0 3px 5px rgba(109, 112, 114, 0.15);
 }
+
 .nav-top-bg span{
-	color: red;
+	color: var(--first-color);
 }
 .nav-top-bg-text{
 	position: relative;
