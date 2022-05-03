@@ -3,6 +3,7 @@
             <div class="container nav-top-bg-text">
                 <p class="text-white" id="text-animation"><span class="fw-bold">Warning</span>
                     Don't forget to operate Pro button!This button was included dark mode and changing ascent color options.
+                    If you have any question contact me.
                 </p>
             </div>
         </div>
@@ -20,6 +21,9 @@ export default {
   animation: reverse infinite; 
   animation-name: run;
   animation-duration: 30s;
+}
+p{
+    margin-left: 4rem;
 }
 
 @keyframes run {
@@ -42,7 +46,7 @@ export default {
 }
 
 .nav-top-bg{
-	height: 100px;
+	height: 50px;
 	background-color: #000;
 	font-size: 15px;
 }
@@ -51,6 +55,6 @@ export default {
 }
 .nav-top-bg-text{
 	position: relative;
-	top: 30px;
+	top: 25px;
 }
 </style>
