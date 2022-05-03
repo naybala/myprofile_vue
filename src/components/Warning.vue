@@ -57,4 +57,27 @@ p{
 	position: relative;
 	top: 25px;
 }
+
+/* Tablet View */
+@media (min-width : 768px) and (max-width :950px)  {
+.nav-top-bg{
+    height: 70px;
+	font-size: 10px;
+}
+p{
+    margin-left: 0rem;
+}
+.nav-top-bg-text{
+	top: 30px;
+}
+ 
+}
+
+/* Moblie View */
+@media (min-width : 290px) and (max-width :500px)  {
+.nav-top-bg{
+    display: none;
+}
+
+}
 </style>
