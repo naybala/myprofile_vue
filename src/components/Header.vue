@@ -1,4 +1,5 @@
 <template>
+        <Warning/>
   <!--===== HEADER =====-->
         <div class="l-header" id="head" @scroll="scrollActive">
             <nav class="nav bd-grid">
@@ -32,7 +33,12 @@
 </template>
 
 <script>
+ import Warning from './Warning.vue'
+
 export default {
+   components:{
+     Warning,
+  },
   data(){
     return{
       myName : "Nay Ba La",
