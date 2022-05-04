@@ -13,7 +13,7 @@
 
                 <div class="nav__menu" id="nav-menu" ref="name">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#home"
+                        <li class="nav__item"><a href="#home #home" @click="homeHeader"
                                 class="nav__link text-decoration-none active">{{ home }}</a></li>
                         <li class="nav__item"><a href="#about"
                                 class="nav__link text-decoration-none">{{ about }}</a></li>
@@ -96,6 +96,13 @@ export default {
         
       })
     
+    },
+    homeHeader(){
+      window.scroll ({
+        top: 0,
+        left:0,
+        behavior: 'smooth'
+      })
     },
   }
 }
