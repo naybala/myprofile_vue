@@ -3,7 +3,7 @@
             <div class="container nav-top-bg-text">
                 <p class="text-white" id="text-animation"><i class="fa-solid fa-person-running"></i> <span class="fw-bold">Warning : </span>
                     Don't forget to operate Pro button!This button was included dark mode and changing ascent color options.
-                    If you have any question contact me.
+                    If you have any question contact me. <i class="fa-solid fa-person-running"></i>
                 </p>
             </div>
         </div>
