@@ -113,11 +113,13 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
+  transition:background-color 1.5s;
 }
 body.activeDark {
   overflow-x: hidden;
   background: #242f3f;
   color: #ffffff;
+  transition:background-color 1.5s;
 }
 h1,
 h2,
