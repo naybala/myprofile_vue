@@ -125,13 +125,37 @@ export default {
   z-index: var(--z-fixed);
   background-color: #fff;
   box-shadow: 0 3px 5px rgba(109, 112, 114, 0.15);
-  transition:background-color 1.5s;
+  /* transition:background-color 1.5s; */
 }
 .l-header.ac{
   background-color:#242f3f;
   color: #Fff;
-  transition:background-color 1.5s;
+  z-index:1; 
+  transition:2.6s;  
+  /* transition:background-color 1.5s; */
 }
+
+.l-header::before, .l-header::after{
+  content:''; 
+  position:absolute; 
+  width:0; 
+  height: 100%;
+  z-index:-2; 
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+}
+.l-header::before{
+  z-index:-1; 
+  background:#242f3f;                
+  transition:2.6s;                                 
+}
+
+.l-header.ac::before, .l-header.ac::after{ 
+  width:100%; 
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+}
+
 
 /*===== NAV =====*/
 .nav {
