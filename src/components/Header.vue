@@ -141,8 +141,8 @@ export default {
   width:0; 
   height: 100%;
   z-index:-2; 
-  border-top-right-radius: 5rem;
-  border-bottom-right-radius: 5rem;
+  /* border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem; */
 }
 .l-header::before{
   z-index:-1; 
@@ -152,8 +152,8 @@ export default {
 
 .l-header.ac::before, .l-header.ac::after{ 
   width:100%; 
-  border-top-right-radius: 5rem;
-  border-bottom-right-radius: 5rem;
+  /* border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem; */
 }
 
 
