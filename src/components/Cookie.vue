@@ -88,10 +88,12 @@ export default {
   background-color: rgb(247, 247, 247);
   z-index: var(--z-fixed);
   box-shadow: 5px 0 1px rgba(15, 15, 15, 0.15);
+  transition:background-color 1.5s;
 }
 
 .dark {
   background: #242f3f;
+  transition:background-color 1.5s;
 }
 /* @media screen and (max-width: 320px) {
   .button{

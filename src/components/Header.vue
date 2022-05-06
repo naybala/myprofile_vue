@@ -125,10 +125,12 @@ export default {
   z-index: var(--z-fixed);
   background-color: #fff;
   box-shadow: 0 3px 5px rgba(109, 112, 114, 0.15);
+  transition:background-color 1.5s;
 }
 .l-header.ac{
   background-color:#242f3f;
   color: #Fff;
+  transition:background-color 1.5s;
 }
 
 /*===== NAV =====*/
