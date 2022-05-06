@@ -113,14 +113,33 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
-  transition:background-color 1.5s;
+  /* transition:background-color 1.5s; */
 }
+body:before, body:after{
+  content:''; 
+  position:absolute; 
+  width:0; 
+  min-height:100%;
+  z-index:-2; 
+}
+body:before{
+  z-index:-1; 
+  background:#242f3f;                
+  transition:2.6s;                                 
+}
+
 body.activeDark {
   overflow-x: hidden;
   background: #242f3f;
   color: #ffffff;
-  transition:background-color 1.5s;
+  z-index:1; 
+  transition:2.6s;  
+  /* transition:background-color 1.5s; */
 }
+body.activeDark:before, body.activeDark:after{ 
+  width:100%; 
+}
+
 h1,
 h2,
 p {
