@@ -126,7 +126,7 @@ body:before, body:after{
 body:before{
   z-index:-1; 
   background:#242f3f;                
-  transition:2.6s;                                 
+  transition:500ms;                                 
 }
 
 body.activeDark {
@@ -134,7 +134,7 @@ body.activeDark {
   background: #242f3f;
   color: #ffffff;
   z-index:1; 
-  transition:2.6s;  
+  transition:500ms;  
   /* transition:background-color 1.5s; */
 }
 body.activeDark:before, body.activeDark:after{ 

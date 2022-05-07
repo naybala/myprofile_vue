@@ -228,6 +228,7 @@ export default {
   margin-bottom: var(--mb-2);
   font-size: 1.5rem;
   color: var(--first-color);
+  z-index: auto;
 }
 
 .home__social-icon:hover {

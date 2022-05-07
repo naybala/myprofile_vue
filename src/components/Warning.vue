@@ -47,7 +47,7 @@ p{
 
 .nav-top-bg{
 	height: 40px;
-	background-color: #000;
+	background-color: #242f3f;  
 	font-size: 15px;
    box-shadow: 0 3px 5px rgba(109, 112, 114, 0.15);
 }
