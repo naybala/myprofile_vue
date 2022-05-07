@@ -20,7 +20,7 @@ export default {
 #text-animation {
   animation: reverse infinite; 
   animation-name: run;
-  animation-duration: 30s;
+  animation-duration: 25s;
 }
 p{
     margin-left: 4.5rem;

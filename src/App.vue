@@ -118,10 +118,11 @@ body {
 body:before, body:after{
   content:''; 
   position:absolute; 
-  width:0; 
-  height:0%;
+  top:0;
+  left:0;                 
+  width:0;                  
+  height:100%;                  
   z-index:-2; 
-  border-bottom-right-radius: 10rem;
 }
 body:before{
   z-index:-1; 
@@ -139,8 +140,6 @@ body.activeDark {
 }
 body.activeDark:before, body.activeDark:after{ 
   width:100%; 
-  height: 100%;
-  border-bottom-right-radius: 10rem;
 }
 
 h1,
