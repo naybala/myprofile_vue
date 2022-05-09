@@ -361,6 +361,17 @@ export default {
     row-gap: 0rem;
     padding: 0rem 0 6rem;
   }
+   [data-aos] {
+    pointer-events: auto !important;
+  }
+  html:not(.no-js) [data-aos^=fade][data-aos^=fade] {
+    opacity: 1 !important;
+  }
+
+  html:not(.no-js) [data-aos=fade-up] {
+    transform: none !important;
+  }
+
   .home__img {
     width: 200px;
   }
