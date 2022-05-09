@@ -1,7 +1,6 @@
 <template>
   <!--===== HEADER =====-->
         <div class="l-header" id="head" @scroll="scrollActive">
-           <!-- <Warning/>  -->
             <nav class="nav bd-grid">
                 <div>
                     <a href="#" class="nav__logo text-decoration-none">{{ myName }}
@@ -30,7 +29,8 @@
                 </div>
             </nav>
         </div>
-        
+        <br>
+           <Warning/>   
 </template>
 
 <script>

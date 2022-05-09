@@ -356,20 +356,121 @@ export default {
 .themes-container .theme-colors .color:hover {
   opacity: .5;
 }
-@media screen and (max-width: 320px) {
+@media  (max-width:320px) and (min-width: 300px) {
   .home {
     row-gap: 0rem;
+    padding: 0rem 0 6rem;
   }
   .home__img {
     width: 200px;
   }
+  .theme-colors {
+    gap: 5px;
+  }
+
+  .theme-colors .color {
+    border-radius: 15px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  #theme-open {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 2rem;
+  }
+
+  .themes-container {
+    position: fixed;
+    top: 100;
+    left: -100%;
+    background: rgb(143, 143, 150);
+    height: 70vh;
+    width: 250px;
+    z-index: 1000;
+    text-align: right;
+    padding: 20px;
+    border-radius: 1rem;
+    transition: all 0.7s ease;
+  }
+
+  .themes-container.activeMenu {
+    left: 0;
+  }
+
+  .themes-container #theme-close {
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.7s ease;
+  }
+
+  .themes-container h3 {
+    color: var(--first-color);
+    text-align: center;
+    padding: 2px 0;
+    margin: 10px 0;
+  }
+
+  .themes-container .theme-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .themes-container .theme-toggler .toggler {
+    height: 20px;
+    width: 70px;
+    border-radius: 50px;
+    background: rgb(89, 89, 95);
+    position: relative;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+
+  .themes-container .theme-toggler .toggler::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: rgb(233, 228, 228);
+    transition: .2s linear;
+  }
+
+  .themes-container .theme-toggler.activeToggle .toggler::before {
+    left: 50px;
+  }
+
+  .themes-container .theme-colors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .themes-container .theme-colors .color {
+    border-radius: 5px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+
+  .themes-container .theme-colors .color:hover {
+    opacity: .5;
+  }
 
 }
 /* ===== MEDIA QUERIES=====*/
-@media (max-width:430px) and (min-width: 300px){
+@media (max-width:430px) and (min-width: 321px){
    .home {
     row-gap: 0rem;
-    padding: 3rem 0 6rem;
+    padding: 0rem 0 6rem;
   }
   .theme-colors {
     gap: 5px;
