@@ -1,73 +1,104 @@
 <template>
-        <section class="home bd-grid" id="home" data-aos="fade-up">
-            <div id="theme-open" @click="themeOpen" class="home__social-icon"><i class="fa-brands fa-themeco"></i></div>
-            <div class="themes-container">
-              <i class=""></i>
-              <div id="theme-close" @click="themeClose"><i class="fa-solid fa-circle-xmark"></i></div>
-              <h3>switch theme</h3>
-              <div class="theme-toggler" @click="themeToggler">
-                  <span>light</span>
-                  <span class="toggler"></span>
-                  <span>dark</span>
-              </div>
+  <section class="home bd-grid" id="home" data-aos="fade-up">
+    <div id="theme-open" @click="themeOpen" class="home__social-icon">
+      <i class="fa-brands fa-themeco"></i>
+    </div>
+    <div class="themes-container">
+      <i class=""></i>
+      <div id="theme-close" @click="themeClose">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </div>
+      <h3>Switch Theme</h3>
+      <div class="theme-toggler" @click="themeToggler">
+        <span>light</span>
+        <span class="toggler"></span>
+        <span>dark</span>
+      </div>
 
-              <h3>pick an acent color</h3>
-              <div class="theme-colors">
-                  <div class="color" style="background:#3e6ff4"></div>
-                  <div class="color" style="background:#0044fd"></div>
-                  <div class="color" style="background:#27ae60"></div>
-                  <div class="color" style="background:#00ee63"></div>
-                  <div class="color" style="background:#0fb9b1"></div>
-                  <div class="color" style="background:#00fff2"></div>
-                  <div class="color" style="background:#ceb244"></div>
-                  <div class="color" style="background:#ffcc00"></div>
-                  <div class="color" style="background:#ac354c"></div>
-                  <div class="color" style="background:#ff0033"></div>
-                  <div class="color" style="background:#e84393"></div>
-                  <div class="color" style="background:#baee00"></div>
-                  <div class="color" style="background:#914b6c"></div>
-                  <div class="color" style="background:#fc07ef"></div>
-              </div>
-            </div>
-                <div class="home__data">
-                    <h1 class="home__title">Hello  <a href="https://earth.google.com/web/" target="_blink" class="home__title-color"><i class="fa-solid fa-earth-americas fa-spin" style="--fa-animation-duration: 15s;"></i></a>,
-                    <br>I'am <span class="home__title-color"><typical class="typicalWrapper d-inline"
-                                :steps="[``, 500, `Nay Ba La`, 5000]"
-                                :loop="Infinity"></typical>
-                            </span>
-                            <br> 
-                          Web Developer
-                    </h1>
+      <h3>pick an acent color</h3>
 
-                    <p class="mb-3">Email : naybala.153808@gmail.com</p>
-                    <a href="#about" class="button text-decoration-none">Discover</a>
-                </div>
+      <div class="theme-colors">
+        <div class="color" style="background: #3e6ff4"></div>
+        <div class="color" style="background: #0044fd"></div>
+        <div class="color" style="background: #27ae60"></div>
+        <div class="color" style="background: #00ee63"></div>
+        <div class="color" style="background: #0fb9b1"></div>
+        <div class="color" style="background: #00fff2"></div>
+        <div class="color" style="background: #ceb244"></div>
+        <div class="color" style="background: #ffcc00"></div>
+        <div class="color" style="background: #ac354c"></div>
+        <div class="color" style="background: #ff0033"></div>
+        <div class="color" style="background: #e84393"></div>
+        <div class="color" style="background: #baee00"></div>
+        <div class="color" style="background: #914b6c"></div>
+        <div class="color" style="background: #fc07ef"></div>
+      </div>
+      <h3>version 3.0</h3>
+    </div>
+    <div class="home__data">
+      <h1 class="home__title">
+        Hello
+        <a href="https://earth.google.com/web/" target="_blink" class="home__title-color"
+          ><i
+            class="fa-solid fa-earth-americas fa-spin"
+            style="--fa-animation-duration: 15s"
+          ></i></a
+        >, <br />I'am
+        <span class="home__title-color"
+          ><typical
+            class="typicalWrapper d-inline"
+            :steps="[``, 500, `Nay Ba La`, 5000]"
+            :loop="Infinity"
+          ></typical>
+        </span>
+        <br />
+        Web Developer
+      </h1>
 
-                <div class="home__social mt-1">
-                    <a
-                        href="https://www.facebook.com/profile.php?id=100076412994170"
-                        class="home__social-icon" target="_blink"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/naybala190510" class="home__social-icon icon" target="_blink"><i class="fa-brands fa-instagram-square"></i></a>
-                    <a href="https://github.com/naybala"
-                        class="home__social-icon"><i class="fa-brands fa-github" target="_blink"></i></a>
-                </div>
+      <p class="mb-3">Email : naybala.153808@gmail.com</p>
+      <a href="#about" class="button text-decoration-none">Discover</a>
+    </div>
 
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="mask0" mask-type="alpha">
-                               <path d="M9.19024 145.964C34.0253 76.5814 114.865
+    <div class="home__social mt-1">
+      <a
+        href="https://www.facebook.com/profile.php?id=100076412994170"
+        class="home__social-icon"
+        target="_blink"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+      <a
+        href="https://www.instagram.com/naybala190510"
+        class="home__social-icon icon"
+        target="_blink"
+        ><i class="fa-brands fa-instagram-square"></i
+      ></a>
+      <a href="https://github.com/naybala" class="home__social-icon"
+        ><i class="fa-brands fa-github" target="_blink"></i
+      ></a>
+    </div>
+
+    <div class="home__img">
+      <svg
+        class="home__blob"
+        viewBox="0 0 479 467"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <mask id="mask0" mask-type="alpha">
+          <path
+            d="M9.19024 145.964C34.0253 76.5814 114.865
                                 54.7299 184.111 29.4823C245.804 6.98884 311.86
                                 -14.9503 370.735 14.143C431.207 44.026 467.948
                                 107.508 477.191 174.311C485.897 237.229 454.931
                                 294.377 416.506 344.954C373.74 401.245 326.068
                                 462.801 255.442 466.189C179.416 469.835 111.552
                                 422.137 65.1576 361.805C17.4835 299.81 -17.1617
-                                219.583 9.19024 145.964Z" />
-                            </mask>
-                            <g mask="url(#mask0)">
-                                <path d="M9.19024 145.964C34.0253 76.5814
+                                219.583 9.19024 145.964Z"
+          />
+        </mask>
+        <g mask="url(#mask0)">
+          <path
+            d="M9.19024 145.964C34.0253 76.5814
                                     114.865 54.7299 184.111 29.4823C245.804
                                     6.98884 311.86 -14.9503 370.735
                                     14.143C431.207 44.026 467.948 107.508
@@ -76,121 +107,124 @@
                                     326.068 462.801 255.442 466.189C179.416
                                     469.835 111.552 422.137 65.1576
                                     361.805C17.4835 299.81 -17.1617 219.583
-                                    9.19024 145.964Z" />
-                                    <image class="home__blob-img" x="-80" y="15"
-                                        href="../assets/images/myProfile.png" />
-                              </g>
-                    </svg>
-                </div>
-                      
-        </section>
+                                    9.19024 145.964Z"
+          />
+          <image
+            class="home__blob-img"
+            x="-80"
+            y="15"
+            href="../assets/images/myProfile.png"
+          />
+        </g>
+      </svg>
+    </div>
+  </section>
 </template>
 
 <script>
-import typical from 'vue-typical';
+import typical from "vue-typical";
 export default {
-  data: function() {
+  data: function () {
     return {
-      msg: 'vue typical'
-    }
+      msg: "vue typical",
+    };
   },
   components: {
-    typical
+    typical,
   },
-  methods:{
-    themeOpen(){
-      const themesContainer = document.querySelector('.themes-container');
-      const themeOpen = document.querySelector('#theme-open');
-        themesContainer.classList.add('activeMenu');
-        themeOpen.style.opacity="0";
-         const themeColor = document.querySelectorAll('.theme-colors .color');
-        themeColor.forEach(color => {
-            color.onclick = () => {
-                let background = color.style.background;
-                switch (background) {
-                case 'rgb(62, 111, 244)':
-                    localStorage.setItem("theme", "1");
-                    break;
-                case 'rgb(0, 68, 253)':
-                    localStorage.setItem("theme", "2");
-                    break;
-                case 'rgb(39, 174, 96)':
-                    localStorage.setItem("theme", "3");
-                    break;
-                case 'rgb(0, 238, 99)':
-                    localStorage.setItem("theme", "4");
-                    break;
+  methods: {
+    themeOpen() {
+      const themesContainer = document.querySelector(".themes-container");
+      const themeOpen = document.querySelector("#theme-open");
+      themesContainer.classList.add("activeMenu");
+      themeOpen.style.opacity = "0";
+      const themeColor = document.querySelectorAll(".theme-colors .color");
+      themeColor.forEach((color) => {
+        color.onclick = () => {
+          let background = color.style.background;
+          switch (background) {
+            case "rgb(62, 111, 244)":
+              localStorage.setItem("theme", "1");
+              break;
+            case "rgb(0, 68, 253)":
+              localStorage.setItem("theme", "2");
+              break;
+            case "rgb(39, 174, 96)":
+              localStorage.setItem("theme", "3");
+              break;
+            case "rgb(0, 238, 99)":
+              localStorage.setItem("theme", "4");
+              break;
 
-                case 'rgb(15, 185, 177)':
-                    localStorage.setItem("theme", "5");
-                    break;
-                case 'rgb(0, 255, 242)':
-                    localStorage.setItem("theme", "6");
-                    break;
-                case 'rgb(206, 178, 68)':
-                    localStorage.setItem("theme", "7");
-                    break;
-                case 'rgb(255, 204, 0)':
-                    localStorage.setItem("theme", "8");
-                    break;
+            case "rgb(15, 185, 177)":
+              localStorage.setItem("theme", "5");
+              break;
+            case "rgb(0, 255, 242)":
+              localStorage.setItem("theme", "6");
+              break;
+            case "rgb(206, 178, 68)":
+              localStorage.setItem("theme", "7");
+              break;
+            case "rgb(255, 204, 0)":
+              localStorage.setItem("theme", "8");
+              break;
 
-                case 'rgb(172, 53, 76)':
-                    localStorage.setItem("theme", "9");
-                    break;
-                case 'rgb(255, 0, 51)':
-                    localStorage.setItem("theme", "10");
-                    break;
-                case 'rgb(232, 67, 147)':
-                    localStorage.setItem("theme", "11");
-                    break;
-                case 'rgb(186, 238, 0)':
-                    localStorage.setItem("theme", "12");
-                    break;
-                case 'rgb(145, 75, 108)':
-                    localStorage.setItem("theme", "13");
-                    break;
-                case 'rgb(252, 7, 239)':
-                    localStorage.setItem("theme", "14");
-                    break;
-                default:
-                    break;
-            }
-                document.querySelector(':root').style.setProperty('--first-color', background);
-            }
-        });
-    },
-    themeClose(){
-      const themesContainer = document.querySelector('.themes-container');
-      const themeOpen = document.querySelector('#theme-open');
-      themesContainer.classList.remove('activeMenu');
-      themeOpen.style.opacity="1";
-    },
-    themeToggler(){
-      let themeToggler = document.querySelector('.theme-toggler');
-      let headDark = document.querySelector('#head');
-      let footerDark = document.querySelector('#footer');
-      let toastAlert =document.querySelector('#cookie')
-        themeToggler.classList.toggle('activeToggle');
-          if (themeToggler.classList.contains('activeToggle')) {
-              document.body.classList.add('activeDark');
-              headDark.classList.add('ac');
-              footerDark.classList.add('acti');
-              localStorage.setItem("dark", "1");
-              toastAlert.classList.add('dark');
-          } else {
-              document.body.classList.remove('activeDark');
-              headDark.classList.remove('ac');
-              footerDark.classList.remove('acti');
-              localStorage.setItem("dark", "0");
-              toastAlert.classList.remove('dark');
+            case "rgb(172, 53, 76)":
+              localStorage.setItem("theme", "9");
+              break;
+            case "rgb(255, 0, 51)":
+              localStorage.setItem("theme", "10");
+              break;
+            case "rgb(232, 67, 147)":
+              localStorage.setItem("theme", "11");
+              break;
+            case "rgb(186, 238, 0)":
+              localStorage.setItem("theme", "12");
+              break;
+            case "rgb(145, 75, 108)":
+              localStorage.setItem("theme", "13");
+              break;
+            case "rgb(252, 7, 239)":
+              localStorage.setItem("theme", "14");
+              break;
+            default:
+              break;
           }
+          document.querySelector(":root").style.setProperty("--first-color", background);
+        };
+      });
     },
-  }
-}
+    themeClose() {
+      const themesContainer = document.querySelector(".themes-container");
+      const themeOpen = document.querySelector("#theme-open");
+      themesContainer.classList.remove("activeMenu");
+      themeOpen.style.opacity = "1";
+    },
+    themeToggler() {
+      let themeToggler = document.querySelector(".theme-toggler");
+      let headDark = document.querySelector("#head");
+      let footerDark = document.querySelector("#footer");
+      let toastAlert = document.querySelector("#cookie");
+      themeToggler.classList.toggle("activeToggle");
+      if (themeToggler.classList.contains("activeToggle")) {
+        document.body.classList.add("activeDark");
+        headDark.classList.add("ac");
+        footerDark.classList.add("acti");
+        localStorage.setItem("dark", "1");
+        toastAlert.classList.add("dark");
+      } else {
+        document.body.classList.remove("activeDark");
+        headDark.classList.remove("ac");
+        footerDark.classList.remove("acti");
+        localStorage.setItem("dark", "0");
+        toastAlert.classList.remove("dark");
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>
-
 /*===== HOME =====*/
 .bd-grid {
   max-width: 1024px;
@@ -251,24 +285,23 @@ export default {
   width: 600px;
 }
 
-
 /*BUTTONS*/
 .button {
   display: inline-block;
   background-color: var(--first-color);
   color: #fff;
-  padding: .75rem 2.5rem;
+  padding: 0.75rem 2.5rem;
   font-weight: var(--font-semi);
-  border-radius: .5rem;
-  transition: .3s;
+  border-radius: 0.5rem;
+  transition: 0.3s;
 }
 
 .button:hover {
-   transform: translateY(-3px);
-   box-shadow: 3px 3px 10px black;
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 10px black;
 }
 /* ===== Theme Open =====*/
-#theme-open{
+#theme-open {
   cursor: pointer;
   z-index: 1;
   font-size: 2rem;
@@ -324,7 +357,7 @@ export default {
 }
 
 .themes-container .theme-toggler .toggler::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 5px;
   left: 5px;
@@ -332,7 +365,7 @@ export default {
   width: 28px;
   border-radius: 50%;
   background: rgb(233, 228, 228);
-  transition: .2s linear;
+  transition: 0.2s linear;
 }
 
 .themes-container .theme-toggler.activeToggle .toggler::before {
@@ -354,21 +387,21 @@ export default {
 }
 
 .themes-container .theme-colors .color:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
-@media  (max-width:320px) and (min-width: 300px) {
+@media (max-width: 320px) and (min-width: 300px) {
   .home {
     row-gap: 0rem;
     padding: 0rem 0 6rem;
   }
-   [data-aos] {
+  [data-aos] {
     pointer-events: auto !important;
   }
-  html:not(.no-js) [data-aos^=fade][data-aos^=fade] {
+  html:not(.no-js) [data-aos^="fade"][data-aos^="fade"] {
     opacity: 1 !important;
   }
 
-  html:not(.no-js) [data-aos=fade-up] {
+  html:not(.no-js) [data-aos="fade-up"] {
     transform: none !important;
   }
 
@@ -443,7 +476,7 @@ export default {
   }
 
   .themes-container .theme-toggler .toggler::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 1px;
     left: 1px;
@@ -451,7 +484,7 @@ export default {
     width: 18px;
     border-radius: 50%;
     background: rgb(233, 228, 228);
-    transition: .2s linear;
+    transition: 0.2s linear;
   }
 
   .themes-container .theme-toggler.activeToggle .toggler::before {
@@ -473,13 +506,12 @@ export default {
   }
 
   .themes-container .theme-colors .color:hover {
-    opacity: .5;
+    opacity: 0.5;
   }
-
 }
 /* ===== MEDIA QUERIES=====*/
-@media (max-width:430px) and (min-width: 321px){
-   .home {
+@media (max-width: 430px) and (min-width: 321px) {
+  .home {
     row-gap: 0rem;
     padding: 0rem 0 6rem;
   }
@@ -551,7 +583,7 @@ export default {
   }
 
   .themes-container .theme-toggler .toggler::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 1px;
     left: 1px;
@@ -559,7 +591,7 @@ export default {
     width: 18px;
     border-radius: 50%;
     background: rgb(233, 228, 228);
-    transition: .2s linear;
+    transition: 0.2s linear;
   }
 
   .themes-container .theme-toggler.activeToggle .toggler::before {
@@ -581,13 +613,11 @@ export default {
   }
 
   .themes-container .theme-colors .color:hover {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
-
 @media screen and (min-width: 576px) {
-
   .home__social {
     padding-top: 0;
     padding-bottom: 2.5rem;
@@ -597,19 +627,17 @@ export default {
   .home__social-icon {
     margin-bottom: 0;
     margin-right: var(--mb-4);
-    transition: .3s;
+    transition: 0.3s;
   }
-  .home__social-icon:hover{
+  .home__social-icon:hover {
     transform: translateY(-6px);
     box-shadow: 2px 2px 10px rgb(223, 219, 219);
     border-radius: 2.5rem;
-
   }
   .home__img {
     width: 300px;
     bottom: 25%;
   }
-  
 }
 
 @media screen and (min-width: 992px) {
@@ -621,5 +649,4 @@ export default {
     width: 450px;
   }
 }
-
 </style>
