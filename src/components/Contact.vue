@@ -40,7 +40,7 @@
           @click="imageViewOne"
         />
         <br />
-        <h5>Current Laptop Specification are</h5>
+        <h5>Current Laptop Specification</h5>
         <ul class="text-capitalize">
           <li>15.6-inch screen, 1920x1080 pixel display.</li>
           <li>Full-size keyboard built in back lid white light</li>
@@ -49,7 +49,7 @@
           <li>16GB DDR4 dual channel RAM, and 1TB PCIe SSD storage.</li>
           <li>Windows 11 pro Home operating system</li>
           <li>
-            more specification are
+            more details
             <a
               href="https://www.giztop.com/xiaomi-mi-notebook-pro-15-6-2020-version.html"
               target="_blink"
