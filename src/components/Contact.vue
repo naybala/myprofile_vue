@@ -39,6 +39,27 @@
           id="galleryEight"
           @click="imageViewOne"
         />
+        <br />
+        <h5>Current Laptop Specification are</h5>
+        <ul class="text-capitalize">
+          <li>15.6-inch screen, 1920x1080 pixel display.</li>
+          <li>Full-size keyboard built in back lid white light</li>
+          <li>
+            Intel Core i5-10210U or i7-10510U processor, Quad core up to 4.2GHz-4.9GHz.
+          </li>
+          <li>GPU: 2G GDDR5 NVIDIA GeForce MX350 Discrete Graphics.</li>
+          <li>16GB DDR4 dual channel RAM, and 1TB PCIe SSD storage.</li>
+          <li>Windows 11 pro Home operating system</li>
+          <li>
+            more specification are
+            <a
+              href="https://www.giztop.com/xiaomi-mi-notebook-pro-15-6-2020-version.html"
+              target="_blink"
+              class="button"
+              >here</a
+            >
+          </li>
+        </ul>
       </div>
       <div class="div" id="popup">
         <img src="" alt="" id="selectedImage" />
