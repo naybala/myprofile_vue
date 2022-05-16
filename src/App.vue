@@ -1,37 +1,35 @@
-<template >
-          <div v-if="loading">
-              <Loader/>
-          </div>
-          <div v-if="!loading">
-              <Header/>
-              <Home/>
-              <About/>
-              <Skill/>
-              <Project/>
-              <Contact/>
-              <Footer/>
-              <Cookie/>
-              <Track/>
-          </div>
+<template>
+  <div v-if="loading">
+    <Loader />
+  </div>
+  <div v-if="!loading">
+    <Header />
+    <Home />
+    <About />
+    <Skill />
+    <Project />
+    <Contact />
+    <Footer />
+    <Cookie />
+    <Track />
+  </div>
 </template>
 
 <script>
-import Loader from './components/Loading.vue'
-import Header from './components/Header.vue'
-import Home from './components/Home.vue'
-import About from './components/About.vue'
-import Skill from './components/Skill.vue'
-import Project from './components/Project.vue'
-import Contact from './components/Contact.vue'
-import Footer from './components/Footer.vue'
-import Cookie from './components/Cookie.vue'
-import Track from './components/Track.vue'
+import Loader from "./components/Loading.vue";
+import Header from "./components/Header.vue";
+import Home from "./components/Home.vue";
+import About from "./components/About.vue";
+import Skill from "./components/Skill.vue";
+import Project from "./components/Project.vue";
+import Contact from "./components/Contact.vue";
+import Footer from "./components/Footer.vue";
+import Cookie from "./components/Cookie.vue";
+import Track from "./components/Track.vue";
 
-
-
-export default{
-    name:"App",
-    components:{
+export default {
+  name: "App",
+  components: {
     Loader,
     Header,
     Home,
@@ -42,18 +40,16 @@ export default{
     Footer,
     Cookie,
     Track,
-},
-    data: () => ({
-            loading: true,
-        }),
-    mounted() {
-            setTimeout(() => {
-                this.loading = false
-            }, 3000);
-
-        },
-    
-  }
+  },
+  data: () => ({
+    loading: true,
+  }),
+  mounted() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 3000);
+  },
+};
 </script>
 
 <style>
@@ -71,11 +67,11 @@ export default{
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
   /*===== Fuente y tipografia =====*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
   /*===== Margenes =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
@@ -91,7 +87,7 @@ export default{
     --big-font-size: 3.5rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
-    --smaller-font-size: .875rem;
+    --smaller-font-size: 0.875rem;
   }
 }
 
@@ -104,7 +100,7 @@ export default{
 
 html {
   scroll-behavior: smooth;
-   overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -115,31 +111,33 @@ body {
   color: var(--second-color);
   /* transition:background-color 1.5s; */
 }
-body:before, body:after{
-  content:''; 
-  position:absolute; 
-  top:0;
-  left:0;                 
-  width:0;                  
-  height:100%;                  
-  z-index:-2; 
+body:before,
+body:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -2;
 }
-body:before{
-  z-index:-1; 
-  background:#242f3f;                
-  transition:500ms;                                 
+body:before {
+  z-index: -1;
+  background: #242f3f;
+  transition: 500ms;
 }
 
 body.activeDark {
   overflow-x: hidden;
   background: #242f3f;
   color: #ffffff;
-  z-index:1; 
-  transition:500ms;  
+  z-index: 1;
+  transition: 500ms;
   /* transition:background-color 1.5s; */
 }
-body.activeDark:before, body.activeDark:after{ 
-  width:100%; 
+body.activeDark:before,
+body.activeDark:after {
+  width: 100%;
 }
 
 h1,
@@ -161,8 +159,5 @@ a {
 img {
   max-width: 100%;
   height: auto;
-  display: block;
 }
-
-
 </style>

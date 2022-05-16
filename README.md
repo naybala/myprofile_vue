@@ -16,6 +16,13 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
+## if npm install does now work 100% manually install plugin usage
+
+```sh
+npm install vue-typical
+npm install aos
+```
+
 ### Compile and Hot-Reload for Development
 
 ```sh
