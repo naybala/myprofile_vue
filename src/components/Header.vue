@@ -1,111 +1,117 @@
 <template>
   <!--===== HEADER =====-->
-        <div class="l-header" id="head" @scroll="scrollActive">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo text-decoration-none">{{ myName }}
-                    </a>
-                    <br>
-                    <a href="tel:+959763684400" class="nav__logo text-decoration-none"><i class="fa-solid fa-phone"></i>{{ phone }}</a>
-                </div>
+  <div class="l-header" id="head" @scroll="scrollActive">
+    <nav class="nav bd-grid">
+      <div>
+        <a href="#" class="nav__logo text-decoration-none">{{ myName }} </a>
+        <br />
+        <a href="tel:+959763684400" class="nav__logo text-decoration-none"
+          ><i class="fa-solid fa-phone"></i>{{ phone }}</a
+        >
+      </div>
 
-                <div class="nav__menu" id="nav-menu" ref="name">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home #home" @click="homeHeader"
-                                class="nav__link text-decoration-none active">{{ home }}</a></li>
-                        <li class="nav__item"><a href="#about"
-                                class="nav__link text-decoration-none">{{ about }}</a></li>
-                        <li class="nav__item"><a href="#skills"
-                                class="nav__link text-decoration-none" >{{ skill }}</a></li>
-                        <li class="nav__item"><a href="#project"
-                                class="nav__link text-decoration-none">{{ project }}</a></li>
-                        <li class="nav__item"><a href="#contact"
-                                class="nav__link text-decoration-none">{{ contact }}</a></li>
-                    </ul>
-                </div>
+      <div class="nav__menu" id="nav-menu" ref="name">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a
+              href="#home #home"
+              @click="homeHeader"
+              class="nav__link text-decoration-none active"
+              >{{ home }}</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link text-decoration-none">{{ about }}</a>
+          </li>
+          <li class="nav__item">
+            <a href="#skills" class="nav__link text-decoration-none">{{ skill }}</a>
+          </li>
+          <li class="nav__item">
+            <a href="#project" class="nav__link text-decoration-none">{{ project }}</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link text-decoration-none">{{ contact }}</a>
+          </li>
+        </ul>
+      </div>
 
-                <div @click="navMenuShow" class="nav__toggle nav__logo" id="nav-toggle">
-                    <i class="fa-brands fa-elementor"></i>
-                </div>
-            </nav>
-        </div>
-        <br>
-           <Warning/>   
+      <div @click="navMenuShow" class="nav__toggle nav__logo" id="nav-toggle">
+        <i class="fa-brands fa-elementor"></i>
+      </div>
+    </nav>
+  </div>
+  <br />
 </template>
 
 <script>
- import Warning from './Warning.vue'
-
 export default {
-   components:{
-     Warning,
-  },
-  data(){
-    return{
-      myName : "Nay Ba La",
-      phone : "+95 9 763684400",
-      home : "Home",
+  data() {
+    return {
+      myName: "Nay Ba La",
+      phone: "+95 9 763684400",
+      home: "Home",
       about: "About",
-      skill : "Skills",
-      project : "Projects",
-      contact : "Contact Me"
-    }
+      skill: "Skills",
+      project: "Projects",
+      contact: "Contact Me",
+    };
   },
-  created () {
-     window.addEventListener('scroll', this.scrollActive);
-    },
-  active(){
-    window.addEventListener('scroll', this.scrollActive);
-    },
-  destroyed () {
-    window.removeEventListener('scroll', this.scrollActive);
-    },
-  methods:{
-    navMenuShow(){
+  created() {
+    window.addEventListener("scroll", this.scrollActive);
+  },
+  active() {
+    window.addEventListener("scroll", this.scrollActive);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.scrollActive);
+  },
+  methods: {
+    navMenuShow() {
       const showMenu = (toggleId, navId) => {
-      const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId);
+        const toggle = document.getElementById(toggleId),
+          nav = document.getElementById(navId);
 
-      if (toggle && nav) {
-        nav.classList.toggle('show');
-       }
-      }
-     showMenu('nav-toggle', 'nav-menu');
+        if (toggle && nav) {
+          nav.classList.toggle("show");
+        }
+      };
+      showMenu("nav-toggle", "nav-menu");
 
-     const navLink = document.querySelectorAll('.nav__link');
-     function linkAction() {
-       const navMenu = document.getElementById('nav-menu');
-         navMenu.classList.remove('show');
+      const navLink = document.querySelectorAll(".nav__link");
+      function linkAction() {
+        const navMenu = document.getElementById("nav-menu");
+        navMenu.classList.remove("show");
       }
-     navLink.forEach(n => n.addEventListener('click', linkAction));
+      navLink.forEach((n) => n.addEventListener("click", linkAction));
     },
-    scrollActive(event){
-      const sections = document.querySelectorAll('section[id]')
-        const scrollY = window.pageYOffset;
-        sections.forEach(current => {
+    scrollActive(event) {
+      const sections = document.querySelectorAll("section[id]");
+      const scrollY = window.pageYOffset;
+      sections.forEach((current) => {
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 50;
-        const sectionId = current.getAttribute('id');
+        const sectionId = current.getAttribute("id");
         console.log(sectionId);
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active');
+          document
+            .querySelector(".nav__menu a[href*=" + sectionId + "]")
+            .classList.add("active");
         } else {
-             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active');
+          document
+            .querySelector(".nav__menu a[href*=" + sectionId + "]")
+            .classList.remove("active");
         }
-  
-        
-      })
-    
+      });
     },
-    homeHeader(){
-      window.scroll ({
+    homeHeader() {
+      window.scroll({
         top: 0,
-        left:0,
-        behavior: 'smooth'
-      })
+        left: 0,
+        behavior: "smooth",
+      });
     },
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
@@ -127,10 +133,10 @@ export default {
   box-shadow: 0 3px 5px rgba(109, 112, 114, 0.15);
   /* transition:background-color 1.5s; */
 }
-.l-header.ac{
-  background-color:#242f3f;
-  color: #Fff;
-  transition:.5s;  
+.l-header.ac {
+  background-color: #242f3f;
+  color: #fff;
+  transition: 0.5s;
   /* transition:background-color 1.5s; */
 }
 
@@ -151,7 +157,6 @@ export default {
   width:100%; 
 } */
 
-
 /*===== NAV =====*/
 .nav {
   height: var(--header-height);
@@ -160,10 +165,10 @@ export default {
   align-items: center;
   font-weight: var(--font-semi);
 }
-.nav__toggle{
+.nav__toggle {
   cursor: pointer;
 }
-.nav__list .nav__item .nav__link{
+.nav__list .nav__item .nav__link {
   color: var(--first-color);
 }
 @media screen and (max-width: 767px) {
@@ -175,9 +180,8 @@ export default {
     height: 100%;
     padding: 2rem;
     background-color: var(--second-color);
-    transition: .5s;
+    transition: 0.5s;
   }
- 
 }
 
 .nav__item {
@@ -191,20 +195,19 @@ export default {
 
 .nav__link:hover {
   position: relative;
- 
 }
 
 .nav__link:hover::after {
   transform: translateY(-3px);
   box-shadow: 3px 3px 10px black;
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   height: 0.18rem;
   left: 0;
   top: 1.6rem;
   background-color: var(--first-color);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .nav__logo {
@@ -220,19 +223,18 @@ export default {
 /*Active menu*/
 .active::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   height: 0.18rem;
   left: 0;
   top: 1.6rem;
   background-color: var(--first-color);
   transform: translateY(0px);
-  transition: .3s;
+  transition: 0.3s;
 }
 .show {
   right: 0;
 }
-
 
 @media screen and (min-width: 767px) {
   body {
@@ -263,5 +265,4 @@ export default {
     margin-right: auto;
   }
 }
-
 </style>

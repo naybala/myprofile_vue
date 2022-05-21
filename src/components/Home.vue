@@ -1,4 +1,5 @@
 <template>
+  <Warning />
   <section class="home bd-grid" id="home" data-aos="fade-up">
     <div id="theme-open" @click="themeOpen" class="home__social-icon">
       <i class="fa-brands fa-themeco"></i>
@@ -123,7 +124,11 @@
 
 <script>
 import typical from "vue-typical";
+import Warning from "./Warning.vue";
 export default {
+  components: {
+    Warning,
+  },
   data: function () {
     return {
       msg: "vue typical",
@@ -131,6 +136,7 @@ export default {
   },
   components: {
     typical,
+    Warning,
   },
   methods: {
     themeOpen() {
