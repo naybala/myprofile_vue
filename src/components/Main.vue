@@ -12,6 +12,7 @@
     <Footer />
     <Cookie />
     <Track />
+    <ScrollTop />
   </div>
 </template>
 
@@ -26,6 +27,7 @@ import Contact from "./Contact.vue";
 import Footer from "./Footer.vue";
 import Cookie from "./Cookie.vue";
 import Track from "./Track.vue";
+import ScrollTop from "./ScrollTop.vue";
 
 export default {
   name: "Main",
@@ -40,6 +42,7 @@ export default {
     Footer,
     Cookie,
     Track,
+    ScrollTop,
   },
   data: () => ({
     loading: true,

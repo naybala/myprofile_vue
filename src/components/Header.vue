@@ -14,7 +14,7 @@
         <ul class="nav__list">
           <li class="nav__item">
             <a
-              href="#home #home"
+              href="#home"
               @click="homeHeader"
               class="nav__link text-decoration-none active"
               >{{ home }}</a
@@ -106,7 +106,6 @@ export default {
     homeHeader() {
       window.scroll({
         top: 0,
-        left: 0,
         behavior: "smooth",
       });
     },
