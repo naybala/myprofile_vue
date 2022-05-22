@@ -43,4 +43,23 @@ export default {
 #scroll-top.active {
   top: calc(100% - 4rem);
 }
+
+@media (max-width: 319px) and (min-width: 300px) {
+  #scroll-top {
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+  }
+  #scroll-top.active {
+    top: calc(100% - 7rem);
+  }
+}
+@media (max-width: 550px) and (min-width: 320px) {
+  #scroll-top {
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+  }
+  #scroll-top.active {
+    top: calc(100% - 7rem);
+  }
+}
 </style>
