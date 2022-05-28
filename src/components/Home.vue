@@ -112,9 +112,9 @@
           />
           <image
             class="home__blob-img"
-            x="-80"
-            y="15"
-            href="../assets/images/myProfile.png"
+            x="20"
+            y="-50"
+            href="../assets/images/20220527_174432751_iOS.png"
           />
         </g>
       </svg>
@@ -288,7 +288,7 @@ export default {
 }
 
 .home__blob-img {
-  width: 600px;
+  width: 420px;
 }
 
 /*BUTTONS*/
