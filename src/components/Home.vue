@@ -57,7 +57,12 @@
       </h1>
 
       <p class="mb-3">Email : naybala.153808@gmail.com</p>
-      <a href="#about" class="button text-decoration-none">Discover</a>
+      <a
+        href="https://drive.google.com/file/d/1xeFPr_vRYCg6ycjo8SrMvk7b6nf-YnLH/view?usp=sharing"
+        class="button text-decoration-none"
+        target="_blink"
+        >Download Cv Here</a
+      >
     </div>
 
     <div class="home__social mt-1">
