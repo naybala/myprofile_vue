@@ -364,26 +364,26 @@ export default {
 .container-thin-left {
   width: 95rem;
   height: 10px;
-  background-color: var(--first-color);
+  box-shadow: 3px 3px 10px rgb(214, 212, 212);
 }
 .container-thin {
   width: 75rem;
   height: 10px;
-  background-color: var(--first-color);
+  box-shadow: 3px 3px 10px rgb(214, 212, 212);
 }
 .container-right {
   width: 350px;
   height: 80px;
-  background-color: var(--first-color);
   border-top-left-radius: 5rem;
   border-bottom-left-radius: 5rem;
+  box-shadow: 3px 3px 10px rgb(214, 212, 212);
 }
 .container-left {
   width: 350px;
   height: 80px;
-  background-color: var(--first-color);
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
+  box-shadow: 3px 3px 10px rgb(214, 212, 212);
 }
 
 @media (max-width: 1500px) {
