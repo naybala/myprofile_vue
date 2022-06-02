@@ -22,87 +22,96 @@
     <div class="container-right"></div>
   </div>
 
-  <section class="home bd-grid" id="home" data-aos="fade-up">
-    <div id="theme-open" @click="themeOpen" class="home__social-icon">
-      <i class="fa-brands fa-themeco"></i>
-    </div>
-    <div class="themes-container">
-      <i class=""></i>
-      <div id="theme-close" @click="themeClose">
-        <i class="fa-solid fa-circle-xmark"></i>
+  <section class="home bd-grid" id="home">
+    <div data-aos="fade-up">
+      <div id="theme-open" @click="themeOpen" class="home__social-icon">
+        <i class="fa-brands fa-themeco"></i>
       </div>
-      <h3>Switch Theme</h3>
-      <div class="theme-toggler" @click="themeToggler">
-        <span>light</span>
-        <span class="toggler"></span>
-        <span>dark</span>
+      <div class="themes-container">
+        <i class=""></i>
+        <div id="theme-close" @click="themeClose">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+        <h3>Switch Theme</h3>
+        <div class="theme-toggler" @click="themeToggler">
+          <span>light</span>
+          <span class="toggler"></span>
+          <span>dark</span>
+        </div>
+
+        <h3>pick an acent color</h3>
+
+        <div class="theme-colors">
+          <div class="color" style="background: #3e6ff4"></div>
+          <div class="color" style="background: #0044fd"></div>
+          <div class="color" style="background: #27ae60"></div>
+          <div class="color" style="background: #00ee63"></div>
+          <div class="color" style="background: #0fb9b1"></div>
+          <div class="color" style="background: #00fff2"></div>
+          <div class="color" style="background: #ceb244"></div>
+          <div class="color" style="background: #ffcc00"></div>
+          <div class="color" style="background: #ac354c"></div>
+          <div class="color" style="background: #ff0033"></div>
+          <div class="color" style="background: #e84393"></div>
+          <div class="color" style="background: #baee00"></div>
+          <div class="color" style="background: #914b6c"></div>
+          <div class="color" style="background: #fc07ef"></div>
+        </div>
+        <h3>version 3.0</h3>
+      </div>
+      <div class="home__data">
+        <h1 class="home__title">
+          Hello
+          <a
+            href="https://earth.google.com/web/"
+            target="_blink"
+            class="home__title-color"
+            ><i
+              class="fa-solid fa-earth-americas fa-spin"
+              style="--fa-animation-duration: 15s"
+            ></i></a
+          >, <br />I'am
+          <span class="home__title-color"
+            ><typical
+              class="typicalWrapper d-inline"
+              :steps="[``, 500, `Nay Ba La`, 5000]"
+              :loop="Infinity"
+            ></typical>
+          </span>
+          <br />
+          Web Developer
+        </h1>
+
+        <p class="mb-3">Email : naybala.153808@gmail.com</p>
+        <a
+          href="https://drive.google.com/file/d/1xeFPr_vRYCg6ycjo8SrMvk7b6nf-YnLH/view?usp=sharing"
+          class="button text-decoration-none"
+          target="_blink"
+          >Download Cv Here</a
+        >
       </div>
 
-      <h3>pick an acent color</h3>
+      <div class="home__social mt-2 ms-3">
+        <a
+          href="https://www.facebook.com/profile.php?id=100076412994170"
+          class="home__social-icon"
+          target="_blink"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/naybala190510"
+          class="home__social-icon icon"
+          target="_blink"
+          ><i class="fa-brands fa-instagram-square"></i
+        ></a>
+        <a href="https://github.com/naybala" class="home__social-icon"
+          ><i class="fa-brands fa-github" target="_blink"></i
+        ></a>
 
-      <div class="theme-colors">
-        <div class="color" style="background: #3e6ff4"></div>
-        <div class="color" style="background: #0044fd"></div>
-        <div class="color" style="background: #27ae60"></div>
-        <div class="color" style="background: #00ee63"></div>
-        <div class="color" style="background: #0fb9b1"></div>
-        <div class="color" style="background: #00fff2"></div>
-        <div class="color" style="background: #ceb244"></div>
-        <div class="color" style="background: #ffcc00"></div>
-        <div class="color" style="background: #ac354c"></div>
-        <div class="color" style="background: #ff0033"></div>
-        <div class="color" style="background: #e84393"></div>
-        <div class="color" style="background: #baee00"></div>
-        <div class="color" style="background: #914b6c"></div>
-        <div class="color" style="background: #fc07ef"></div>
+        <a href="tel:+959763684400" class="home__social-icon"
+          ><i class="fa-solid fa-phone"></i
+        ></a>
       </div>
-      <h3>version 3.0</h3>
-    </div>
-    <div class="home__data">
-      <h1 class="home__title">
-        Hello
-        <a href="https://earth.google.com/web/" target="_blink" class="home__title-color"
-          ><i
-            class="fa-solid fa-earth-americas fa-spin"
-            style="--fa-animation-duration: 15s"
-          ></i></a
-        >, <br />I'am
-        <span class="home__title-color"
-          ><typical
-            class="typicalWrapper d-inline"
-            :steps="[``, 500, `Nay Ba La`, 5000]"
-            :loop="Infinity"
-          ></typical>
-        </span>
-        <br />
-        Web Developer
-      </h1>
-
-      <p class="mb-3">Email : naybala.153808@gmail.com</p>
-      <a
-        href="https://drive.google.com/file/d/1xeFPr_vRYCg6ycjo8SrMvk7b6nf-YnLH/view?usp=sharing"
-        class="button text-decoration-none"
-        target="_blink"
-        >Download Cv Here</a
-      >
-    </div>
-
-    <div class="home__social mt-1">
-      <a
-        href="https://www.facebook.com/profile.php?id=100076412994170"
-        class="home__social-icon"
-        target="_blink"
-        ><i class="fa-brands fa-facebook"></i
-      ></a>
-      <a
-        href="https://www.instagram.com/naybala190510"
-        class="home__social-icon icon"
-        target="_blink"
-        ><i class="fa-brands fa-instagram-square"></i
-      ></a>
-      <a href="https://github.com/naybala" class="home__social-icon"
-        ><i class="fa-brands fa-github" target="_blink"></i
-      ></a>
     </div>
 
     <div class="home__img">
