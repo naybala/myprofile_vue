@@ -1,18 +1,27 @@
 <template>
   <Warning />
-  <div class="leftShowCase-1">
-    <div class="container-left"></div>
-  </div>
+
   <div class="leftShowCase-2">
     <div class="container-left"></div>
   </div>
-
-  <div class="rightShowCase-1">
-    <div class="container-right"></div>
+  <div class="leftShowCase-3">
+    <div class="container-left"></div>
   </div>
+
+  <div class="leftShowCase-5">
+    <div class="container-thin-left"></div>
+  </div>
+  <div class="rightShowCase-0">
+    <div class="container-thin"></div>
+  </div>
+
   <div class="rightShowCase-2">
     <div class="container-right"></div>
   </div>
+  <div class="rightShowCase-3">
+    <div class="container-right"></div>
+  </div>
+
   <section class="home bd-grid" id="home" data-aos="fade-up">
     <div id="theme-open" @click="themeOpen" class="home__social-icon">
       <i class="fa-brands fa-themeco"></i>
@@ -310,55 +319,76 @@ export default {
 }
 
 /*Left And Right Decoration */
-.leftShowCase-1 {
-  transition: all 0.3s;
-  position: absolute;
-  left: -5rem;
-  top: 13rem;
-  transform: rotate(-40deg);
-}
 
 .leftShowCase-2 {
-  transition: all 0.3s;
   position: absolute;
   left: -5rem;
-  top: 25rem;
+  top: 22.5rem;
+  transform: rotate(-40deg);
+}
+.leftShowCase-3 {
+  position: absolute;
+  left: -5rem;
+  top: 32.5rem;
   transform: rotate(-40deg);
 }
 
-.rightShowCase-1 {
-  transition: all 0.3s;
+.leftShowCase-5 {
   position: absolute;
-  right: -5rem;
-  top: 13rem;
-  transform: rotate(40deg);
+  left: -13rem;
+  bottom: 0rem;
+  transform: rotate(-40deg);
+}
+
+.rightShowCase-0 {
+  position: absolute;
+  right: -28rem;
+  top: 0rem;
+  transform: rotate(-40deg);
+  z-index: -1;
 }
 
 .rightShowCase-2 {
-  transition: all 0.3s;
   position: absolute;
   right: -5rem;
-  top: 25rem;
-  transform: rotate(40deg);
+  top: 23.5rem;
+  transform: rotate(-40deg);
+}
+.rightShowCase-3 {
+  position: absolute;
+  right: -5rem;
+  top: 33.5rem;
+  transform: rotate(-40deg);
+}
+
+.container-thin-left {
+  width: 95rem;
+  height: 10px;
+  background-color: var(--first-color);
+}
+.container-thin {
+  width: 75rem;
+  height: 10px;
+  background-color: var(--first-color);
 }
 .container-right {
-  cursor: pointer;
   width: 350px;
-  height: 100px;
+  height: 80px;
   background-color: var(--first-color);
   border-top-left-radius: 5rem;
   border-bottom-left-radius: 5rem;
 }
 .container-left {
-  cursor: pointer;
   width: 350px;
-  height: 100px;
+  height: 80px;
   background-color: var(--first-color);
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1500px) {
+  .container-thin,
+  .container-thin-left,
   .container-left,
   .container-right {
     display: none;
