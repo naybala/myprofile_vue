@@ -1,191 +1,206 @@
 <template>
-     <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
-                <div class="skills__container bd-grid">
-                       <div>
-                         <h2 class="skills__subtitle">{{title}}</h2>
-                                <p class="skills__text"></p>
-                                <div class="skills__data">
-                                    <div class="skills__names">
-                                        <i class="fa-brands fa-html5  skills__icon"></i>
-                                        <span class="skills__name">{{html}}</span>
-                                    </div>
-                                    <div class="skills__bar skills__html">
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <div class="skills__names">
-                                        <i class="fa-brands fa-css3  skills__icon"></i>
-                                        <span class="skills__name">{{css}}</span>
-                                    </div>
-                                    <div class="skills__bar skills__css">
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <div class="skills__names">
-                                        <i class=" fab fa-bootstrap skills__icon"></i>
-                                    <span class="skills__name">{{bootstrap}}</span>
-                                </div>
-                                <div class="skills__bar skills__ux">
-                                </div>
-                                </div>
-                                <div class="skills__data">
-                                    <div class="skills__names">
-                                      <i class="fa-brands fa-js-square skills__icon"></i>
-                                        <span class="skills__name">{{js}}</span>
-                                    </div>
-                                    <div class="skills__bar skills__js">
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <div class="skills__names">
-                                        <i class="fa-brands fa-vuejs skills__icon"></i>
-                                        <span class="skills__name">{{vue}}</span>
-                                    </div>
-                                    <div class="skills__bar skills__js">
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <div class="skills__names">
-                                        <i class=" fab fa-php skills__icon"></i>
-                                    <span class="skills__name">{{php}}</span>
-                                </div>
-                                <div class="skills__bar skills__ux">
-                                </div>
-                                </div>
-                                <div class="skills__data">
-                                    <div class="skills__names">
-                                        <i class='fab fa-laravel
-                                            skills__icon'></i>
-                                        <span class="skills__name">{{laravel}}</span>
-                                    </div>
-                                    <div class="skills__bar skills__ux">
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <div class="skills__names">
-                                        <i class=' fas fa-database
-                                            skills__icon'></i>
-                                        <span class="skills__name">{{mysql}}</span>
-                                    </div>
-                                    <div class="skills__bar skills__ux">
-                                    </div>
-                                </div>      
-                                <br>
-                               
-                                <div class="mt-1">
-                                    <img src="../assets/images/myCerti.jpg" alt=""
-                                        class="skills__img img-fluid" id="galleryFive" @click="imageViewOne">
-                                </div>
-                                <div class="div" id="popup">
-                                    <img src="" alt="" id="selectedImage">
-                                </div>
-                                <br>
-                                <br>
-                                 <div class="mt-1">
-                                    <img src="../assets/images/job-trainning.png" alt=""
-                                        class="skills__img img-fluid" id="galleryTen" @click="imageViewFour">
-                                </div>
-                                <div class="div" id="popup">
-                                    <img src="" alt="" id="selectedImage">
-                                </div>
-                        </div>
+  <section class="skills section" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills__container bd-grid">
+      <div>
+        <h2 class="skills__subtitle">{{ title }}</h2>
+        <p class="skills__text"></p>
+        <div class="skills__data" data-aos="fade-right">
+          <div class="skills__names">
+            <i class="fa-brands fa-html5 skills__icon"></i>
+            <span class="skills__name">{{ html }}</span>
+          </div>
+          <div class="skills__bar skills__html"></div>
+        </div>
+        <div class="skills__data" data-aos="fade-right">
+          <div class="skills__names">
+            <i class="fa-brands fa-css3 skills__icon"></i>
+            <span class="skills__name">{{ css }}</span>
+          </div>
+          <div class="skills__bar skills__css"></div>
+        </div>
+        <div class="skills__data" data-aos="fade-right">
+          <div class="skills__names">
+            <i class="fab fa-bootstrap skills__icon"></i>
+            <span class="skills__name">{{ bootstrap }}</span>
+          </div>
+          <div class="skills__bar skills__ux"></div>
+        </div>
+        <div class="skills__data" data-aos="fade-right">
+          <div class="skills__names">
+            <i class="fa-brands fa-js-square skills__icon"></i>
+            <span class="skills__name">{{ js }}</span>
+          </div>
+          <div class="skills__bar skills__js"></div>
+        </div>
+        <div class="skills__data" data-aos="fade-right">
+          <div class="skills__names">
+            <i class="fa-brands fa-vuejs skills__icon"></i>
+            <span class="skills__name">{{ vue }}</span>
+          </div>
+          <div class="skills__bar skills__js"></div>
+        </div>
+        <div class="skills__data" data-aos="fade-right">
+          <div class="skills__names">
+            <i class="fab fa-php skills__icon"></i>
+            <span class="skills__name">{{ php }}</span>
+          </div>
+          <div class="skills__bar skills__ux"></div>
+        </div>
+        <div class="skills__data" data-aos="fade-right">
+          <div class="skills__names">
+            <i class="fab fa-laravel skills__icon"></i>
+            <span class="skills__name">{{ laravel }}</span>
+          </div>
+          <div class="skills__bar skills__ux"></div>
+        </div>
+        <div class="skills__data" data-aos="fade-right">
+          <div class="skills__names">
+            <i class="fas fa-database skills__icon"></i>
+            <span class="skills__name">{{ mysql }}</span>
+          </div>
+          <div class="skills__bar skills__ux"></div>
+        </div>
+        <br />
 
-                    <div>
-                        <img src="../assets/images/myView.jpg" alt=""
-                            class="skills__img img-fluid mt-5 mb-5" id="gallerySix" @click="imageViewTwo">
-                            <div class="div" id="popup">
-                                <img src="" alt="" id="selectedImage">
-                            </div>
-                        <br><br><br>
-                        <img src="../assets/images/myCerti-2.jpg" alt=""
-                            class="skills__img img-fluid mt-5" id="gallerySeven" @click="imageViewThree">
-                            <div class="div" id="popup">
-                                <img src="" alt="" id="selectedImage">
-                            </div>
-                        <img src="../assets/images/certificate-3.png" alt=""
-                            class="skills__img img-fluid mt-5" id="galleryEle" @click="imageViewFive">
-                            <div class="div" id="popup">
-                                <img src="" alt="" id="selectedImage">
-                            </div>
-                    </div>
-                </div>
-        </section>
+        <div class="mt-1">
+          <img
+            src="../assets/images/myCerti.jpg"
+            alt=""
+            class="skills__img img-fluid"
+            id="galleryFive"
+            @click="imageViewOne"
+          />
+        </div>
+        <div class="div" id="popup">
+          <img src="" alt="" id="selectedImage" />
+        </div>
+        <br />
+        <br />
+        <div class="mt-1">
+          <img
+            src="../assets/images/job-trainning.png"
+            alt=""
+            class="skills__img img-fluid"
+            id="galleryTen"
+            @click="imageViewFour"
+          />
+        </div>
+        <div class="div" id="popup">
+          <img src="" alt="" id="selectedImage" />
+        </div>
+      </div>
+
+      <div>
+        <img
+          src="../assets/images/myView.jpg"
+          alt=""
+          class="skills__img img-fluid mt-5 mb-5"
+          id="gallerySix"
+          @click="imageViewTwo"
+        />
+        <div class="div" id="popup">
+          <img src="" alt="" id="selectedImage" />
+        </div>
+        <br /><br /><br />
+        <img
+          src="../assets/images/myCerti-2.jpg"
+          alt=""
+          class="skills__img img-fluid mt-5"
+          id="gallerySeven"
+          @click="imageViewThree"
+        />
+        <div class="div" id="popup">
+          <img src="" alt="" id="selectedImage" />
+        </div>
+        <img
+          src="../assets/images/certificate-3.png"
+          alt=""
+          class="skills__img img-fluid mt-5"
+          id="galleryEle"
+          @click="imageViewFive"
+        />
+        <div class="div" id="popup">
+          <img src="" alt="" id="selectedImage" />
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-    data(){
-    return{
-      title : "Professional Skills",
-      html : "HTML",
-      css : "CSS",
+  data() {
+    return {
+      title: "Professional Skills",
+      html: "HTML",
+      css: "CSS",
       js: "JavaScript",
-      bootstrap:"Bootstrap",
-      vue : "Vue Js",
-      php : "Php",
-      laravel:"Laravel",
-      mysql:"MySQL"
-    }
+      bootstrap: "Bootstrap",
+      vue: "Vue Js",
+      php: "Php",
+      laravel: "Laravel",
+      mysql: "MySQL",
+    };
   },
-   methods:{
-  imageViewOne(){
-      const popup = document.querySelector('#popup');
-      const gallery = document.querySelector('#galleryFive');
-      const selectedImage = document.querySelector('#selectedImage');
+  methods: {
+    imageViewOne() {
+      const popup = document.querySelector("#popup");
+      const gallery = document.querySelector("#galleryFive");
+      const selectedImage = document.querySelector("#selectedImage");
       selectedImage.src = gallery.src;
       popup.style.transform = `translateY(0%)`;
-       popup.addEventListener('click', () => {
-            popup.style.transform = `translateY(-100%)`;
-            popup.src = '';
-        })
-   },
-  imageViewTwo(){
-      const popup = document.querySelector('#popup');
-      const gallery = document.querySelector('#gallerySix');
-      const selectedImage = document.querySelector('#selectedImage');
+      popup.addEventListener("click", () => {
+        popup.style.transform = `translateY(-100%)`;
+        popup.src = "";
+      });
+    },
+    imageViewTwo() {
+      const popup = document.querySelector("#popup");
+      const gallery = document.querySelector("#gallerySix");
+      const selectedImage = document.querySelector("#selectedImage");
       selectedImage.src = gallery.src;
       popup.style.transform = `translateY(0%)`;
-       popup.addEventListener('click', () => {
-            popup.style.transform = `translateY(-100%)`;
-            popup.src = '';
-        })
-   },
-  imageViewThree(){
-      const popup = document.querySelector('#popup');
-      const gallery = document.querySelector('#gallerySeven');
-      const selectedImage = document.querySelector('#selectedImage');
+      popup.addEventListener("click", () => {
+        popup.style.transform = `translateY(-100%)`;
+        popup.src = "";
+      });
+    },
+    imageViewThree() {
+      const popup = document.querySelector("#popup");
+      const gallery = document.querySelector("#gallerySeven");
+      const selectedImage = document.querySelector("#selectedImage");
       selectedImage.src = gallery.src;
-     popup.style.transform = `translateY(0%)`;
-      popup.addEventListener('click', () => {
-            popup.style.transform = `translateY(-100%)`;
-            popup.src = '';
-        })
-   },
-   imageViewFour(){
-      const popup = document.querySelector('#popup');
-      const gallery = document.querySelector('#galleryTen');
-      const selectedImage = document.querySelector('#selectedImage');
+      popup.style.transform = `translateY(0%)`;
+      popup.addEventListener("click", () => {
+        popup.style.transform = `translateY(-100%)`;
+        popup.src = "";
+      });
+    },
+    imageViewFour() {
+      const popup = document.querySelector("#popup");
+      const gallery = document.querySelector("#galleryTen");
+      const selectedImage = document.querySelector("#selectedImage");
       selectedImage.src = gallery.src;
-     popup.style.transform = `translateY(0%)`;
-      popup.addEventListener('click', () => {
-            popup.style.transform = `translateY(-100%)`;
-            popup.src = '';
-        })
-   },
-   imageViewFive(){
-      const popup = document.querySelector('#popup');
-      const gallery = document.querySelector('#galleryEle');
-      const selectedImage = document.querySelector('#selectedImage');
+      popup.style.transform = `translateY(0%)`;
+      popup.addEventListener("click", () => {
+        popup.style.transform = `translateY(-100%)`;
+        popup.src = "";
+      });
+    },
+    imageViewFive() {
+      const popup = document.querySelector("#popup");
+      const gallery = document.querySelector("#galleryEle");
+      const selectedImage = document.querySelector("#selectedImage");
       selectedImage.src = gallery.src;
-     popup.style.transform = `translateY(0%)`;
-      popup.addEventListener('click', () => {
-            popup.style.transform = `translateY(-100%)`;
-            popup.src = '';
-        })
-   },
-  }
-}
+      popup.style.transform = `translateY(0%)`;
+      popup.addEventListener("click", () => {
+        popup.style.transform = `translateY(-100%)`;
+        popup.src = "";
+      });
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -207,7 +222,7 @@ export default {
 }
 .section-title::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 64px;
   height: 0.18rem;
   left: 0;
@@ -240,17 +255,17 @@ export default {
   align-items: center;
   position: relative;
   font-weight: var(--font-semi);
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: var(--mb-4);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
   transform: translateY(0px);
 }
 
 .skills__data:hover {
-  transition: .3s;
+  transition: 0.3s;
   transform: translateY(-3px);
   box-shadow: 3px 3px 10px black;
 }
@@ -260,7 +275,6 @@ export default {
   margin-right: var(--mb-2);
   color: var(--first-color);
 }
-
 
 .skills__names {
   display: flex;
@@ -272,8 +286,8 @@ export default {
   left: 0;
   bottom: 0;
   background-color: var(--first-color);
-  height: .25rem;
-  border-radius: .5rem;
+  height: 0.25rem;
+  border-radius: 0.5rem;
   z-index: var(--z-back);
 }
 
@@ -294,18 +308,18 @@ export default {
 }
 
 .skills__img {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
   transform: translateY(0px);
 }
 
 .skills__img:hover {
-  transition: .3s;
+  transition: 0.3s;
   transform: translateY(-3px);
   box-shadow: 3px 3px 10px black;
 }
-#popup{
+#popup {
   position: fixed;
   top: 0px;
   bottom: 0px;
@@ -319,24 +333,22 @@ export default {
   transition: 250ms transform;
   padding: 50px;
   z-index: 2000;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
-#selectedImage{
+#selectedImage {
   max-height: 100%;
   border-radius: 1rem;
   max-width: 100%;
 }
 @media screen and (min-width: 576px) {
   .skills__container {
-    grid-template-columns: .7fr;
+    grid-template-columns: 0.7fr;
     justify-content: center;
     column-gap: 1rem;
   }
-
 }
 
 @media screen and (min-width: 767px) {
- 
   .section {
     padding-top: 4rem;
     padding-bottom: 3rem;
