@@ -168,6 +168,8 @@ export default {
   data: function () {
     return {
       msg: "vue typical",
+      home: "< Home >",
+      homeEnd: "< Home />",
     };
   },
   components: {
@@ -328,7 +330,6 @@ export default {
 }
 
 /*Left And Right Decoration */
-
 .leftShowCase-2 {
   position: absolute;
   left: -5rem;

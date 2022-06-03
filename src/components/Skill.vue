@@ -63,7 +63,7 @@
         </div>
         <br />
 
-        <div class="mt-1">
+        <div class="">
           <img
             src="../assets/images/myCerti.jpg"
             alt=""
@@ -77,7 +77,7 @@
         </div>
         <br />
         <br />
-        <div class="mt-1">
+        <div class="">
           <img
             src="../assets/images/job-trainning.png"
             alt=""
@@ -95,14 +95,17 @@
         <img
           src="../assets/images/myView.jpg"
           alt=""
-          class="skills__img img-fluid mt-5 mb-5"
+          class="skills__img img-fluid mt-5"
           id="gallerySix"
           @click="imageViewTwo"
         />
+
         <div class="div" id="popup">
           <img src="" alt="" id="selectedImage" />
         </div>
+
         <br /><br /><br />
+        <br /><br />
         <img
           src="../assets/images/myCerti-2.jpg"
           alt=""
@@ -113,6 +116,7 @@
         <div class="div" id="popup">
           <img src="" alt="" id="selectedImage" />
         </div>
+        <br /><br />
         <img
           src="../assets/images/certificate-3.png"
           alt=""
@@ -205,7 +209,6 @@ export default {
 
 <style scoped>
 /* ===== SKILLS =====*/
-
 .bd-grid {
   max-width: 1024px;
   display: grid;
@@ -266,7 +269,7 @@ export default {
 
 .skills__data:hover {
   transition: 0.3s;
-  transform: translateY(-3px);
+  transform: translateY(-13px);
   box-shadow: 3px 3px 10px black;
 }
 
@@ -340,6 +343,7 @@ export default {
   border-radius: 1rem;
   max-width: 100%;
 }
+
 @media screen and (min-width: 576px) {
   .skills__container {
     grid-template-columns: 0.7fr;
