@@ -150,7 +150,7 @@
             class="home__blob-img"
             x="20"
             y="-50"
-            href="../assets/images/20220527_174432751_iOS.png"
+            href="https://drive.google.com/uc?export=view&id=1TsIrh-07APlWex7DuYSRo1EQN2SWSMzh"
           />
         </g>
       </svg>
