@@ -151,7 +151,7 @@
             class="home__blob-img"
             x="20"
             y="-50"
-            href="../assets/images/20220527_174432751_iOS.png"
+            href="../assets/images/home_showCase.png"
           />
         </g>
       </svg>
