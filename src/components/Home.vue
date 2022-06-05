@@ -146,11 +146,12 @@
                                     361.805C17.4835 299.81 -17.1617 219.583
                                     9.19024 145.964Z"
           />
+
           <image
             class="home__blob-img"
             x="20"
             y="-50"
-            href="https://drive.google.com/uc?export=view&id=1TsIrh-07APlWex7DuYSRo1EQN2SWSMzh"
+            href="../assets/images/20220527_174432751_iOS.png"
           />
         </g>
       </svg>
