@@ -1,37 +1,36 @@
 <template>
-     <div class="loader-wrapper" v-if="!isloaded">
-            <span class="loader">
-                <img class="img-loader"
-                    src="../assets/images/myProfile.png"
-                    alt="">
-                <span class="loader-inner">
-
-                    <span class="loader-inner-up"></span>
-                </span>
-            </span>
-            <span class="loader-text ms-4">
-              <typical class="typicalWrapper d-inline"
-                                :steps="[``, 700, `Loading Please Wait ........`,]"></typical>
-              </span>
-        </div>
+  <div class="loader-wrapper" v-if="!isloaded">
+    <span class="loader">
+      <img class="img-loader" src="../assets/images/myProfile.png" alt="" />
+      <span class="loader-inner">
+        <span class="loader-inner-up"></span>
+      </span>
+    </span>
+    <span class="loader-text ms-4">
+      <typical
+        class="typicalWrapper d-inline"
+        :steps="[``, 700, `Loading Please Wait ........`]"
+      ></typical>
+    </span>
+  </div>
 </template>
 
 <script>
-import typical from 'vue-typical';
+import typical from "vue-typical";
 export default {
-   data: function() {
+  data: function () {
     return {
-      msg: 'vue typical'
-    }
+      msg: "vue typical",
+    };
   },
-      components: {
-        typical
-      },
-}
+  components: {
+    typical,
+  },
+};
 </script>
 
 <style scoped>
-    /* Loading  Test*/
+/* Loading  Test*/
 .loader-wrapper {
   width: 100%;
   height: 100%;
@@ -50,7 +49,6 @@ export default {
   height: 80px;
   position: relative;
   border: none;
-
 }
 
 .loader-inner {
@@ -58,7 +56,7 @@ export default {
   width: 100%;
   height: 100%;
   position: relative;
-  border: 4px solid #Fff;
+  border: 4px solid #fff;
   border-radius: 0.6rem;
   /* border-radius: 4rem; */
   animation: loader 2s infinite ease;
@@ -69,7 +67,6 @@ export default {
   height: 88%;
   position: absolute;
   left: -4px;
-
 }
 
 .loader-inner-up {
@@ -126,8 +123,7 @@ export default {
   }
 }
 
-.loader-text{
-  color: #Fff;
+.loader-text {
+  color: #fff;
 }
-
 </style>
