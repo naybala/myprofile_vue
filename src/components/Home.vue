@@ -339,6 +339,12 @@ export default {
 .home__blob {
   /* fill : rgb(44, 231, 19); */
   fill: #fffefe;
+  background-color: #fffefe;
+  box-shadow: 10px 10px 5px 5px rgb(214, 212, 212);
+  border-top-left-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  border-top-right-radius: 10rem;
+  border-bottom-left-radius: 20rem;
 }
 
 .home__blob-img {
