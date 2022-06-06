@@ -150,8 +150,8 @@
           <image
             class="home__blob-img"
             x="-23"
-            y="50"
-            href="../assets/svg/web_developer.gif"
+            y="-10"
+            href="../assets/svg/programer.gif"
           />
         </g>
       </svg>
@@ -323,7 +323,7 @@ export default {
 
 .home__blob {
   /* fill : rgb(44, 231, 19); */
-  fill: #e3e3e3;
+  fill: #fffefe;
 }
 
 .home__blob-img {
