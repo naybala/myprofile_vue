@@ -149,9 +149,9 @@
 
           <image
             class="home__blob-img"
-            x="20"
-            y="-50"
-            href="../assets/images/home_showCase.png"
+            x="-23"
+            y="50"
+            href="../assets/svg/web_developer.gif"
           />
         </g>
       </svg>
@@ -323,11 +323,11 @@ export default {
 
 .home__blob {
   /* fill : rgb(44, 231, 19); */
-  fill: var(--first-color);
+  fill: #e3e3e3;
 }
 
 .home__blob-img {
-  width: 420px;
+  width: 520px;
 }
 
 /*Left And Right Decoration */
