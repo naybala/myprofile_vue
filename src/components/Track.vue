@@ -13,15 +13,21 @@ export default {
         let headDark = document.querySelector("#head");
         let themeToggler = document.querySelector(".theme-toggler");
         let footerDark = document.querySelector("#footer");
+        let imageUrl = document.querySelector("#imageUrl");
+        let imageUrl1 = document.querySelector("#imageUrl1");
         if (dark == 1) {
           themeToggler.classList.toggle("activeToggle");
           document.body.classList.add("activeDark");
           headDark.classList.add("ac");
           footerDark.classList.add("acti");
+          imageUrl.style.opacity = "0";
+          imageUrl1.style.opacity = "1";
         } else {
           document.body.classList.remove("activeDark");
           headDark.classList.remove("ac");
           footerDark.classList.remove("acti");
+          imageUrl.style.opacity = "1";
+          imageUrl1.style.opacity = "0";
         }
 
         const theme = localStorage.getItem("theme");

@@ -149,9 +149,17 @@
 
           <image
             class="home__blob-img"
+            id="imageUrl"
             x="-23"
             y="-10"
             href="../assets/svg/programer.gif"
+          />
+          <image
+            class="home__blob-img"
+            id="imageUrl1"
+            x="-23"
+            y="-10"
+            href="../assets/svg/sleepy.gif"
           />
         </g>
       </svg>
@@ -250,6 +258,9 @@ export default {
       let headDark = document.querySelector("#head");
       let footerDark = document.querySelector("#footer");
       let toastAlert = document.querySelector("#cookie");
+      let imageUrl = document.querySelector("#imageUrl");
+      let imageUrl1 = document.querySelector("#imageUrl1");
+
       themeToggler.classList.toggle("activeToggle");
       if (themeToggler.classList.contains("activeToggle")) {
         document.body.classList.add("activeDark");
@@ -257,12 +268,16 @@ export default {
         footerDark.classList.add("acti");
         localStorage.setItem("dark", "1");
         toastAlert.classList.add("dark");
+        imageUrl.style.opacity = "0";
+        imageUrl1.style.opacity = "1";
       } else {
         document.body.classList.remove("activeDark");
         headDark.classList.remove("ac");
         footerDark.classList.remove("acti");
         localStorage.setItem("dark", "0");
         toastAlert.classList.remove("dark");
+        imageUrl.style.opacity = "1";
+        imageUrl1.style.opacity = "0";
       }
     },
   },
@@ -397,6 +412,10 @@ export default {
   box-shadow: 3px 3px 10px rgb(214, 212, 212);
 }
 
+#imageUrl1 {
+  transition: 0.3s;
+  opacity: 0;
+}
 @media (max-width: 1500px) {
   .container-thin,
   .container-thin-left,
