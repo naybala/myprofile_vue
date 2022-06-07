@@ -84,7 +84,7 @@
 
         <p class="mb-3">Email : naybala.153808@gmail.com</p>
         <a
-          href="https://drive.google.com/file/d/1xeFPr_vRYCg6ycjo8SrMvk7b6nf-YnLH/view?usp=sharing"
+          href="https://drive.google.com/file/d/1dfIKCLs-ecwZm3RG0Zwrse5DI_bXolg_/view?usp=sharing"
           class="button text-decoration-none"
           target="_blink"
           >Download Cv Here</a
