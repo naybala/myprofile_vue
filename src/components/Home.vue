@@ -340,7 +340,7 @@ export default {
   /* fill : rgb(44, 231, 19); */
   fill: #fffefe;
   background-color: #fffefe;
-  box-shadow: 10px 10px 5px 5px rgb(214, 212, 212);
+  box-shadow: 10px 10px 5px 5px rgb(99, 98, 98);
   border-top-left-radius: 5rem;
   border-bottom-right-radius: 5rem;
   border-top-right-radius: 10rem;

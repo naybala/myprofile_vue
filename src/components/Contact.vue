@@ -31,9 +31,10 @@
           </a>
         </div>
       </div>
+      <br /><br />
       <div class="img__center">
         <img
-          src="../assets/images/Footer-Up.png"
+          src="../assets/svg/undraw_online_stats_0g94.svg"
           class="img-fluid rounded-1"
           alt=""
           id="galleryEight"
@@ -126,6 +127,7 @@ export default {
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
   transition: 0.3s;
+  border: none;
 }
 
 .button:hover {
