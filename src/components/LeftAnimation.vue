@@ -10,35 +10,44 @@ export default {};
 .left-container {
   width: 20px;
   height: 20px;
-  background-color: aquamarine;
+  background-color: var(--first-color);
   position: absolute;
-  top: 7rem;
-  left: 10rem;
+  top: 11.1rem;
+  right: 24rem;
   border-radius: 2rem;
 }
+
+/* .left-container {
+  width: 20px;
+  height: 20px;
+  background-color: var(--first-color);
+  position: absolute;
+  top: 32.6rem;
+  right: 53.5rem;
+  border-radius: 2rem;
+} */
 #container-animation {
   animation: run 3s infinite;
 }
 
 @keyframes run {
   0% {
-    top: 7rem;
+    top: 11.1rem;
+    right: 24rem;
   }
-  25% {
+  /* 25% {
     top: 16.5rem;
-  }
+  } */
   50% {
-    left: 0rem;
-    transform: rotate(45deg);
+    top: 32.6rem;
+    right: 53.5rem;
   }
   /* 75% {
-    left: 0rem;
-    top: 16.5rem;
-    transform: translateX(rotate 45deg);
-  }
-  100% {
-    top: 7rem;
-    transform: rotate(45deg);
+    right: 60rem;
   } */
+  100% {
+    top: 11.1rem;
+    right: 24rem;
+  }
 }
 </style>
