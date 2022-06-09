@@ -1,6 +1,6 @@
 <template>
   <Warning />
-
+  <LeftAnimation />
   <div class="leftShowCase-2">
     <div class="container-left"></div>
   </div>
@@ -170,9 +170,12 @@
 <script>
 import typical from "vue-typical";
 import Warning from "./Warning.vue";
+import LeftAnimation from "./LeftAnimation.vue";
 export default {
   components: {
+    typical,
     Warning,
+    LeftAnimation,
   },
   data: function () {
     return {
@@ -180,10 +183,6 @@ export default {
       home: "< Home >",
       homeEnd: "< Home />",
     };
-  },
-  components: {
-    typical,
-    Warning,
   },
   methods: {
     themeOpen() {
