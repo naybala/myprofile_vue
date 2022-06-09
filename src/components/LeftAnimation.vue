@@ -28,17 +28,17 @@ export default {};
     top: 16.5rem;
   }
   50% {
-    left: 10rem;
+    left: 0rem;
     transform: rotate(45deg);
   }
-  75% {
+  /* 75% {
     left: 0rem;
-    top: 10rem;
-    transform: rotate(45deg);
+    top: 16.5rem;
+    transform: translateX(rotate 45deg);
   }
   100% {
     top: 7rem;
     transform: rotate(45deg);
-  }
+  } */
 }
 </style>
