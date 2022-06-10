@@ -5,66 +5,69 @@
       <div>
         <h2 class="skills__subtitle">{{ title }}</h2>
         <p class="skills__text"></p>
-        <div class="skills__data" data-aos="fade-right">
-          <div class="skills__names">
-            <i class="fa-brands fa-html5 skills__icon"></i>
-            <span class="skills__name">{{ html }}</span>
+        <div data-aos="fade-right">
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="fa-brands fa-html5 skills__icon"></i>
+              <span class="skills__name">{{ html }}</span>
+            </div>
+            <div class="skills__bar skills__html"></div>
           </div>
-          <div class="skills__bar skills__html"></div>
-        </div>
-        <div class="skills__data" data-aos="fade-right">
-          <div class="skills__names">
-            <i class="fa-brands fa-css3 skills__icon"></i>
-            <span class="skills__name">{{ css }}</span>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="fa-brands fa-css3 skills__icon"></i>
+              <span class="skills__name">{{ css }}</span>
+            </div>
+            <div class="skills__bar skills__css"></div>
           </div>
-          <div class="skills__bar skills__css"></div>
-        </div>
-        <div class="skills__data" data-aos="fade-right">
-          <div class="skills__names">
-            <i class="fab fa-bootstrap skills__icon"></i>
-            <span class="skills__name">{{ bootstrap }}</span>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="fab fa-bootstrap skills__icon"></i>
+              <span class="skills__name">{{ bootstrap }}</span>
+            </div>
+            <div class="skills__bar skills__ux"></div>
           </div>
-          <div class="skills__bar skills__ux"></div>
-        </div>
-        <div class="skills__data" data-aos="fade-right">
-          <div class="skills__names">
-            <i class="fa-brands fa-js-square skills__icon"></i>
-            <span class="skills__name">{{ js }}</span>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="fa-brands fa-js-square skills__icon"></i>
+              <span class="skills__name">{{ js }}</span>
+            </div>
+            <div class="skills__bar skills__js"></div>
           </div>
-          <div class="skills__bar skills__js"></div>
-        </div>
-        <div class="skills__data" data-aos="fade-right">
-          <div class="skills__names">
-            <i class="fa-brands fa-vuejs skills__icon"></i>
-            <span class="skills__name">{{ vue }}</span>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="fa-brands fa-vuejs skills__icon"></i>
+              <span class="skills__name">{{ vue }}</span>
+            </div>
+            <div class="skills__bar skills__js"></div>
           </div>
-          <div class="skills__bar skills__js"></div>
-        </div>
-        <div class="skills__data" data-aos="fade-right">
-          <div class="skills__names">
-            <i class="fab fa-php skills__icon"></i>
-            <span class="skills__name">{{ php }}</span>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="fab fa-php skills__icon"></i>
+              <span class="skills__name">{{ php }}</span>
+            </div>
+            <div class="skills__bar skills__ux"></div>
           </div>
-          <div class="skills__bar skills__ux"></div>
-        </div>
-        <div class="skills__data" data-aos="fade-right">
-          <div class="skills__names">
-            <i class="fab fa-laravel skills__icon"></i>
-            <span class="skills__name">{{ laravel }}</span>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="fab fa-laravel skills__icon"></i>
+              <span class="skills__name">{{ laravel }}</span>
+            </div>
+            <div class="skills__bar skills__ux"></div>
           </div>
-          <div class="skills__bar skills__ux"></div>
-        </div>
-        <div class="skills__data" data-aos="fade-right">
-          <div class="skills__names">
-            <i class="fas fa-database skills__icon"></i>
-            <span class="skills__name">{{ mysql }}</span>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="fas fa-database skills__icon"></i>
+              <span class="skills__name">{{ mysql }}</span>
+            </div>
+            <div class="skills__bar skills__ux"></div>
           </div>
-          <div class="skills__bar skills__ux"></div>
         </div>
         <br />
 
         <div class="">
           <img
+            data-aos="fade-right"
             src="../assets/images/myCerti.jpg"
             alt=""
             class="skills__img img-fluid"
@@ -75,10 +78,11 @@
         <div class="div" id="popup">
           <img src="" alt="" id="selectedImage" />
         </div>
+
         <br />
-        <br />
-        <div class="">
+        <div>
           <img
+            data-aos="fade-right"
             src="../assets/images/job-trainning.png"
             alt=""
             class="skills__img img-fluid"
@@ -92,35 +96,41 @@
       </div>
 
       <div>
+        <br /><br /><br />
+
         <img
+          data-aos="fade-left"
           src="../assets/images/myView.jpg"
           alt=""
-          class="skills__img img-fluid mt-5"
+          class="skills__img img-fluid"
           id="gallerySix"
           @click="imageViewTwo"
         />
-
-        <div class="div" id="popup">
-          <img src="" alt="" id="selectedImage" />
-        </div>
-
         <br /><br /><br />
-        <br /><br />
-        <img
-          src="../assets/images/myCerti-2.jpg"
-          alt=""
-          class="skills__img img-fluid mt-5"
-          id="gallerySeven"
-          @click="imageViewThree"
-        />
+        <br /><br /><br />
         <div class="div" id="popup">
           <img src="" alt="" id="selectedImage" />
         </div>
+
+        <div>
+          <img
+            data-aos="fade-left"
+            src="../assets/images/myCerti-2.jpg"
+            alt=""
+            class="skills__img img-fluid"
+            id="gallerySeven"
+            @click="imageViewThree"
+          />
+          <div class="div" id="popup">
+            <img src="" alt="" id="selectedImage" />
+          </div>
+        </div>
         <br /><br />
         <img
+          data-aos="fade-left"
           src="../assets/images/certificate-3.png"
           alt=""
-          class="skills__img img-fluid mt-5"
+          class="skills__img img-flui"
           id="galleryEle"
           @click="imageViewFive"
         />

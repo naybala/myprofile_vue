@@ -3,7 +3,7 @@
     <h2 class="section-title">Projects</h2>
     <div class="container">
       <div class="flex-container">
-        <div class="py-3" id="col">
+        <div class="py-3" id="col" data-aos="fade-right">
           <div class="card">
             <div class="imgBx">
               <img src="../assets/images/logo.png" />
@@ -31,7 +31,7 @@
             </div>
           </div>
         </div>
-        <div class="py-3" id="col">
+        <div class="py-3" id="col" data-aos="fade-right">
           <div class="card">
             <div class="imgBx">
               <img src="../assets/images/logo1.png" />
@@ -59,7 +59,7 @@
             </div>
           </div>
         </div>
-        <div class="py-3" id="col">
+        <div class="py-3" id="col" data-aos="fade-left">
           <div class="card">
             <div class="imgBx">
               <img src="../assets/images/logo2.png" />
@@ -89,7 +89,7 @@
         </div>
         <br />
         <hr />
-        <div class="py-3" id="col">
+        <div class="py-3" id="col" data-aos="fade-left">
           <div class="card">
             <div class="imgBx">
               <img src="../assets/images/google.jpg" class="img-fluid" />
@@ -117,7 +117,7 @@
             </div>
           </div>
         </div>
-        <div class="py-3" id="col">
+        <div class="py-3" id="col" data-aos="fade-right">
           <div class="card">
             <div class="imgBx">
               <img src="../assets/images/autocomplete_search.jpg" class="img-thumbnail" />
@@ -145,7 +145,7 @@
             </div>
           </div>
         </div>
-        <div class="py-3" id="col">
+        <div class="py-3" id="col" data-aos="fade-right">
           <div class="card">
             <div class="imgBx">
               <img src="../assets/images/stop-watch.jpg" class="img-fluid" />
@@ -175,7 +175,7 @@
         </div>
         <br />
         <hr />
-        <div class="py-3" id="col">
+        <div class="py-3" id="col" data-aos="fade-left">
           <div class="card">
             <div class="imgBx">
               <img src="../assets/images/To_Do_List.png" class="img-thumbnail" />
@@ -203,7 +203,7 @@
             </div>
           </div>
         </div>
-        <div class="py-3" id="col">
+        <div class="py-3" id="col" data-aos="fade-left">
           <div class="card">
             <div class="imgBx">
               <img src="../assets/images/heroBg.jpg" class="img-thumbnail" />
@@ -231,7 +231,7 @@
             </div>
           </div>
         </div>
-        <div class="py-3" id="col">
+        <div class="py-3" id="col" data-aos="fade-right">
           <div class="card">
             <div class="imgBx">
               <img src="../assets/images/facebook-messenger.png" class="img-fluid" />
@@ -261,7 +261,7 @@
         </div>
         <br />
         <hr />
-        <div class="py-3" id="col">
+        <div class="py-3" id="col" data-aos="fade-right">
           <div class="card">
             <div class="imgBx">
               <img
@@ -294,7 +294,7 @@
             </div>
           </div>
         </div>
-        <div class="py-3" id="col">
+        <div class="py-3" id="col" data-aos="fade-left">
           <div class="card">
             <div class="imgBx">
               <img src="../assets/images/step-2.png" />
@@ -326,7 +326,7 @@
             </div>
           </div>
         </div>
-        <div class="py-3" id="col">
+        <div class="py-3" id="col" data-aos="fade-left">
           <div class="card">
             <div class="imgBx">
               <img class="rounded" src="../assets/images/admin-pannel.jpg" />
