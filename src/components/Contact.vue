@@ -32,46 +32,42 @@
         </div>
       </div>
       <br /><br />
-      <div class="img__center">
-        <div data-aos="fade-right">
-          <img
-            src="../assets/svg/undraw_online_stats_0g94.svg"
-            class="img-fluid rounded-1"
-            alt=""
-            id="galleryEight"
-            @click="imageViewOne"
-          />
-        </div>
+      <div class="img__center" data-aos="fade-right">
+        <img
+          src="../assets/svg/undraw_online_stats_0g94.svg"
+          class="img-fluid rounded-1"
+          alt=""
+          id="galleryEight"
+          @click="imageViewOne"
+        />
         <br />
         <br />
-        <div data-aos="fade-left">
-          <h5 class="fw-bold text-decoration-underline">Current Laptop Specification</h5>
-          <h3>Xaomi Note-Book Pro 2020</h3>
-          <ul class="text-capitalize">
-            <li><span>15.6-inch</span> screen,<span> 1920x1080</span> pixel display.</li>
-            <li>Full-size keyboard built in back lid white light</li>
-            <li>
-              Intel Core <span>i7-10510U</span> processor, Quad core up to
-              <span> 4.2GHz-4.9GHz</span>.
-            </li>
-            <li>GPU: <span>2G GDDR5 NVIDIA GeForce MX350</span> Discrete Graphics.</li>
-            <li>
-              <span>16GB DDR4</span> dual channel RAM, and
-              <span>1TB PCIe SSD storage</span>.
-            </li>
-            <li>Windows <span>11 pro</span> Home operating system</li>
-            <br />
-            <li>
-              more details
-              <a
-                href="https://www.giztop.com/xiaomi-mi-notebook-pro-15-6-2020-version.html"
-                target="_blink"
-                class="button"
-                >here</a
-              >
-            </li>
-          </ul>
-        </div>
+        <h5 class="fw-bold text-decoration-underline">Current Laptop Specification</h5>
+        <h3>Xaomi Note-Book Pro 2020</h3>
+        <ul class="text-capitalize">
+          <li><span>15.6-inch</span> screen,<span> 1920x1080</span> pixel display.</li>
+          <li>Full-size keyboard built in back lid white light</li>
+          <li>
+            Intel Core <span>i7-10510U</span> processor, Quad core up to
+            <span> 4.2GHz-4.9GHz</span>.
+          </li>
+          <li>GPU: <span>2G GDDR5 NVIDIA GeForce MX350</span> Discrete Graphics.</li>
+          <li>
+            <span>16GB DDR4</span> dual channel RAM, and
+            <span>1TB PCIe SSD storage</span>.
+          </li>
+          <li>Windows <span>11 pro</span> Home operating system</li>
+          <br />
+          <li>
+            more details
+            <a
+              href="https://www.giztop.com/xiaomi-mi-notebook-pro-15-6-2020-version.html"
+              target="_blink"
+              class="button"
+              >here</a
+            >
+          </li>
+        </ul>
       </div>
       <div class="div" id="popup">
         <img src="" alt="" id="selectedImage" />
