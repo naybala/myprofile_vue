@@ -17,15 +17,6 @@ export default {};
   border-radius: 2rem;
 }
 
-/* .left-container {
-  width: 20px;
-  height: 20px;
-  background-color: var(--first-color);
-  position: absolute;
-  top: 32.6rem;
-  right: 53.5rem;
-  border-radius: 2rem;
-} */
 #container-animation {
   animation: run 3s infinite;
 }
@@ -35,19 +26,27 @@ export default {};
     top: 11.1rem;
     right: 24rem;
   }
-  /* 25% {
-    top: 16.5rem;
-  } */
+  25% {
+    top: 28.6rem;
+    right: 30.75rem;
+  }
   50% {
     top: 32.6rem;
     right: 53.5rem;
   }
-  /* 75% {
-    right: 60rem;
-  } */
+  75% {
+    top: 17.6rem;
+    right: 43.5rem;
+  }
   100% {
     top: 11.1rem;
     right: 24rem;
+  }
+}
+
+@media (max-width: 1500px) {
+  .left-container {
+    display: none;
   }
 }
 </style>
