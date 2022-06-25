@@ -90,6 +90,12 @@
           >Download Cv Here</a
         >
         <br />
+        <a
+          href="https://myresumenaybala.netlify.app/"
+          class="button text-decoration-none mb-2"
+          target="_blink"
+          >Check My Resume</a
+        >
       </div>
 
       <div class="home__social mt-2 ms-3">
