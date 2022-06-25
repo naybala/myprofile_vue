@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+
+
 const app = createApp(App);
 
 import AOS from "aos";
@@ -11,7 +13,8 @@ app.AOS = new AOS.init({
 
   
 });
-app.mount('#app');
+app.mount('#app')
+
 
 
 
