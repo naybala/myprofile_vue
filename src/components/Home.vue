@@ -85,13 +85,9 @@
         <p class="mb-3">Email : naybala.153808@gmail.com</p>
         <a
           href="https://drive.google.com/file/d/1dfIKCLs-ecwZm3RG0Zwrse5DI_bXolg_/view?usp=sharing"
-          class="button text-decoration-none mb-1"
+          class="button text-decoration-none"
           target="_blink"
           >Download Cv Here</a
-        >
-        <br />
-        <a href="#" class="button text-decoration-none" target="_blink"
-          >Check My Resume</a
         >
       </div>
 
@@ -543,7 +539,6 @@ export default {
     row-gap: 0rem;
     padding: 0rem 0 6rem;
   }
-
   [data-aos] {
     pointer-events: auto !important;
   }

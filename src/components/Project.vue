@@ -364,7 +364,9 @@
   </section>
 </template>
 
-<script></script>
+<script>
+export default {};
+</script>
 
 <style scoped>
 .flex-container {
