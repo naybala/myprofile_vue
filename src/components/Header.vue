@@ -91,7 +91,7 @@ export default {
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 50;
         const sectionId = current.getAttribute("id");
-        console.log(sectionId);
+        // console.log(sectionId);
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
           document
             .querySelector(".nav__menu a[href*=" + sectionId + "]")
