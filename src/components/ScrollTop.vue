@@ -8,7 +8,7 @@
 
 <script>
 window.onscroll = () => {
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
   if (window.scrollY > 380) {
     document.querySelector("#scroll-top").classList.add("active");
   } else {
