@@ -80,7 +80,7 @@
         </div>
 
         <br />
-        <div>
+        <!-- <div>
           <img
             data-aos="fade-right"
             src="../assets/images/job-trainning.png"
@@ -89,7 +89,7 @@
             id="galleryTen"
             @click="imageViewFour"
           />
-        </div>
+        </div> -->
         <div class="div" id="popup">
           <img src="" alt="" id="selectedImage" />
         </div>
@@ -126,14 +126,14 @@
           </div>
         </div>
         <br /><br />
-        <img
+        <!-- <img
           data-aos="fade-left"
           src="../assets/images/certificate-3.png"
           alt=""
           class="skills__img img-flui"
           id="galleryEle"
           @click="imageViewFive"
-        />
+        /> -->
         <div class="div" id="popup">
           <img src="" alt="" id="selectedImage" />
         </div>
