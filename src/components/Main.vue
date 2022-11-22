@@ -8,6 +8,7 @@
     <About />
     <Skill />
     <Project />
+    <CurrentlyWork />
     <Contact />
     <Footer />
     <Cookie />
@@ -28,6 +29,7 @@ import Footer from "./Footer.vue";
 import Cookie from "./Cookie.vue";
 import Track from "./Track.vue";
 import ScrollTop from "./ScrollTop.vue";
+import CurrentlyWork from "./CurrentlyWork.vue";
 
 export default {
   name: "Main",
@@ -43,6 +45,7 @@ export default {
     Cookie,
     Track,
     ScrollTop,
+    CurrentlyWork,
   },
   data: () => ({
     loading: true,

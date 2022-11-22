@@ -361,12 +361,11 @@
         </div>
       </div>
     </div>
+    <hr />
   </section>
 </template>
 
-<script>
-export default {};
-</script>
+<script></script>
 
 <style scoped>
 .flex-container {
