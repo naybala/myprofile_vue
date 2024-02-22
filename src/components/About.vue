@@ -115,7 +115,7 @@
         <h2 class="about__subtitle">
           <typical
             class="typicalWrapper"
-            :steps="[`I`, 100, `I'am Nay Ba La`, 2500]"
+            :steps="[`I`, 100, `I'm Nay Ba La`, 2500]"
             :loop="Infinity"
           ></typical>
         </h2>
