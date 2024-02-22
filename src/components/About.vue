@@ -23,7 +23,7 @@
           I was born in Zalun,Ayeyarwady Division,Myanmar. But now I live in Ingapu
           Street,SanChaung Township,Yangon Division. And then I was learning Web
           Development.Since About 2019 December I started learn Java Programming.And still
-          learning html , css , ava-script , bootstrap , php , mysql and laravel too.You can view my
+          learning html , css , java-script , bootstrap , php , mysql and laravel too.You can view my
           learning project in<a href="#project"> Project</a> section.
         </p>
       </div>
