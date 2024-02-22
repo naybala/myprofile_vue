@@ -18,7 +18,7 @@ export default {
         toastAlertContainerTag.style.marginTop = "0.5rem";
         toastAlertContainerTag.style.marginBottom = "0.5rem";
         const toastAlertTextTag = document.createElement("div");
-        toastAlertTextTag.append(`My Wesbsite Using Cookiee...`);
+        toastAlertTextTag.append(`My Website Using Cookies...`);
         toastAlertTextTag.classList.add("toastAlertText");
         toastAlertTextTag.style.marginTop = ".3rem";
         // create AcceptButtonTag

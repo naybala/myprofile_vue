@@ -15,15 +15,15 @@
         <h2 class="about__subtitle">
           <typical
             class="typicalWrapper"
-            :steps="[`I`, 100, `I'am Nay Ba La`, 2500]"
+            :steps="[`I`, 100, `I'm Nay Ba La`, 2500]"
             :loop="Infinity"
           ></typical>
         </h2>
         <p class="about__text">
-          I was born in Zalun,Ayeyarwady Division,Myanmar. But now i live in Ingapu
-          Street,SanChaung Township,Yangon Division. And then i was learning Web
-          Development.Since About 2019 December i started learn Java Programming.And still
-          learning html,css,java-script,boostrap,php,mysql,laravel too.You can view my
+          I was born in Zalun,Ayeyarwady Division,Myanmar. But now I live in Ingapu
+          Street,SanChaung Township,Yangon Division. And then I was learning Web
+          Development.Since About 2019 December I started learn Java Programming.And still
+          learning html , css , ava-script , bootstrap , php , mysql and laravel too.You can view my
           learning project in<a href="#project"> Project</a> section.
         </p>
       </div>
@@ -55,10 +55,10 @@
         <p class="about__text">
           <span class="text-primary">Hinthada Technological University</span> got
           <span class="text-primary">Bachelor Of Technology(2018)</span> and
-          <span class="text-primary">Bachelor Of Engineering (2020)</span> with studying
-          major of <span class="text-primary">Electronic Communication</span>.I also got a
-          chance of Master Of Engineering and i could not attend this cause of many
-          reason!You can check gratuated certifie in <a href="#skills">skills</a> section.
+          <span class="text-primary">Bachelor Of Engineering (2020)</span> 
+          major of <span class="text-primary">Electronic Communication</span>.I also got the
+          chance of Master Of Engineering and I could not attend this cause of many
+          reason!You can check graduated certifications in <a href="#skills">skills</a> section.
         </p>
       </div>
     </div>
@@ -87,8 +87,8 @@
           ></typical>
         </h2>
         <p class="about__text">
-          - A website wesign perspective. <br />
-          - I can work in accordance with Dealine. <br />
+          - A website design perspective. <br />
+          - I can work in accordance with Deadline. <br />
           - I can work in a team and have a strong desire to learn. <br />
           - I can complete tasks within the specified time. <br />
           - I have good teamwork and communication skills.
@@ -145,6 +145,7 @@
 
 <script>
 import typical from "vue-typical";
+
 export default {
   data: function () {
     return {

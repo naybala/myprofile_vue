@@ -25,7 +25,7 @@
   <section class="home bd-grid" id="home">
     <div data-aos="fade-up">
       <div id="theme-open" @click="themeOpen" class="home__social-icon">
-        <i class="fa-brands fa-themeco"></i>
+        <i class="fa-solid fa-palette"></i>
       </div>
       <div class="themes-container">
         <i class=""></i>
@@ -70,7 +70,7 @@
               class="fa-solid fa-earth-americas fa-spin"
               style="--fa-animation-duration: 15s"
             ></i></a
-          >, <br />I'am
+          >, <br />I'm
           <span class="home__title-color"
             ><typical
               class="typicalWrapper d-inline"
@@ -159,7 +159,7 @@
             id="imageUrl"
             x="-23"
             y="-10"
-            href="../assets/svg/programer.gif"
+            href="../assets/svg/myRealPic.jpg"
           />
           <image
             class="home__blob-img"
@@ -346,7 +346,7 @@ export default {
   /* fill : rgb(44, 231, 19); */
   fill: #fffefe;
   background-color: #fffefe;
-  box-shadow: 10px 10px 5px 5px rgb(99, 98, 98);
+  box-shadow: 2px 6px 5px 5px rgb(99, 98, 98);
   border-top-left-radius: 5rem;
   border-bottom-right-radius: 5rem;
   border-top-right-radius: 10rem;
@@ -354,7 +354,7 @@ export default {
 }
 
 .home__blob-img {
-  width: 520px;
+  width: 560px;
 }
 
 /*Left And Right Decoration */

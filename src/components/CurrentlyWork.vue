@@ -1,5 +1,5 @@
 <template>
-  <section class="about section" id="about">
+  <section class="currentlyWork section" id="currentlyWork">
     <h2 class="section-title">CurrentlyWork</h2>
 
     <div class="about__container bd-grid" data-aos="fade-right">
@@ -8,25 +8,27 @@
           @click="imageViewOne"
           src="../assets/images/current_work.avif"
           alt=""
-          id="galleryOne"
+          id="galleryCurrentWorkOne"
         />
       </div>
       <div>
         <h2 class="about__subtitle">
           <typical
             class="typicalWrapper"
-            :steps="[`A`, 100, `Anonymous Innovation..`, 2500]"
+            :steps="[`Zo`, 100, `Zote By Foucs Innovation..`, 2500]"
             :loop="Infinity"
           ></typical>
         </h2>
         <p class="about__text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate vero ducimus
-          eligendi, beatae quibusdam, molestiae iste natus consequatur officiis veniam
-          sapiente ullam blanditiis! Facilis est ipsum consectetur harum aperiam
-          explicabo.
+          Zote By Focus Innovation co.,ltd.
+        </p>
+        <p>
+          Room 804, 7th Floor, Building 19, MICT Park, Hlaing, Yangon.
         </p>
       </div>
     </div>
+
+    
 
     <div class="div" id="popup">
       <img src="" alt="" id="selectedImage" />
@@ -37,6 +39,7 @@
 
 <script>
 import typical from "vue-typical";
+
 export default {
   data: function () {
     return {
@@ -49,7 +52,7 @@ export default {
   methods: {
     imageViewOne() {
       const popup = document.querySelector("#popup");
-      const gallery = document.querySelector("#galleryOne");
+      const gallery = document.querySelector("#galleryCurrentWorkOne");
       const selectedImage = document.querySelector("#selectedImage");
       selectedImage.src = gallery.src;
       popup.style.transform = `translateY(0%)`;
