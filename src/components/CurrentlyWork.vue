@@ -25,6 +25,7 @@
         <p>
           Room 804, 7th Floor, Building 19, MICT Park, Hlaing, Yangon.
         </p>
+        <a target="__blank" href="https://zotefamily.com/">Company profile link</a>
       </div>
     </div>
 
