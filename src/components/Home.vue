@@ -61,7 +61,7 @@
       </div>
       <div class="home__data">
         <h1 class="home__title">
-          Hello
+          HHGello
           <a
             href="https://earth.google.com/web/"
             target="_blink"
