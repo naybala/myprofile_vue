@@ -5,7 +5,7 @@
     <div class="about__container bd-grid" data-aos="fade-right">
       <div class="about__img">
         <img
-          @click="imageViewOne"
+          @click="imageView('galleryOne')"
           src="../assets/images/myFullProfile.jpg"
           alt=""
           id="galleryOne"
@@ -28,17 +28,12 @@
         </p>
       </div>
     </div>
-
-    <div class="div" id="popup">
-      <img src="" alt="" id="selectedImage" />
-    </div>
-
     <br />
 
     <div class="about__container bd-grid" data-aos="fade-left">
       <div class="about__img">
         <img
-          @click="imageViewTwo"
+          @click="imageView('galleryTwo')"
           src="../assets/images/myInfo.jpg"
           alt=""
           id="galleryTwo"
@@ -62,17 +57,12 @@
         </p>
       </div>
     </div>
-
-    <div class="div" id="popup">
-      <img src="" alt="" id="selectedImage" />
-    </div>
-
     <br />
 
     <div class="about__container bd-grid" data-aos="fade-right">
       <div class="about__img">
         <img
-          @click="imageViewThree"
+          @click="imageView('galleryThree')"
           src="../assets/images/myInfo-2.jpg"
           alt=""
           id="galleryThree"
@@ -95,17 +85,12 @@
         </p>
       </div>
     </div>
-
-    <div class="div" id="popup">
-      <img src="" alt="" id="selectedImage" />
-    </div>
-
     <br />
 
     <div class="about__container bd-grid" data-aos="fade-left">
       <div class="about__img">
         <img
-          @click="imageViewFour"
+          @click="imageView('galleryFour')"
           src="../assets/images/myInfo-3.jpg"
           alt=""
           id="galleryFour"
@@ -134,12 +119,35 @@
         </p>
       </div>
     </div>
+    <br />
+
+    <div class="about__container bd-grid" data-aos="fade-left">
+      <div class="about__img">
+        <img
+          @click="imageView('galleryFive')"
+          src="../assets/images/myInfo-4.jpg"
+          alt=""
+          id="galleryFive"
+        />
+      </div>
+      <div>
+        <h2 class="about__subtitle">
+          <typical
+            class="typicalWrapper"
+            :steps="[`My`, 100, `My working experience`, 2500]"
+            :loop="Infinity"
+          ></typical>
+        </h2>
+        <p class="about__text">
+          With over 1.7 years of professional experience in handling diverse projects and extensive expertise in managing large datasets while ensuring clean code practices.One of the significant aspects of my experience lies in my proficiency in handling large datasets. I have adeptly managed substantial volumes of data, implementing efficient storage solutions, and developing algorithms to extract valuable insights. My experience has taught me the importance of data cleanliness and accuracy, which I prioritize diligently in all my projects.I understand the significance of writing code that is not only functional but also easily understandable by fellow team members, enabling smoother collaboration and troubleshooting.
+        </p>
+      </div>
+    </div>
+    <br />
 
     <div class="div" id="popup">
       <img src="" alt="" id="selectedImage" />
     </div>
-
-    <br />
   </section>
 </template>
 
@@ -156,9 +164,9 @@ export default {
     typical,
   },
   methods: {
-    imageViewOne() {
+    imageView(el) {
       const popup = document.querySelector("#popup");
-      const gallery = document.querySelector("#galleryOne");
+      const gallery = document.querySelector("#"+el);
       const selectedImage = document.querySelector("#selectedImage");
       selectedImage.src = gallery.src;
       popup.style.transform = `translateY(0%)`;
@@ -166,40 +174,7 @@ export default {
         popup.style.transform = `translateY(-100%)`;
         popup.src = "";
       });
-    },
-    imageViewTwo() {
-      const popup = document.querySelector("#popup");
-      const gallery = document.querySelector("#galleryTwo");
-      const selectedImage = document.querySelector("#selectedImage");
-      selectedImage.src = gallery.src;
-      popup.style.transform = `translateY(0%)`;
-      popup.addEventListener("click", () => {
-        popup.style.transform = `translateY(-100%)`;
-        popup.src = "";
-      });
-    },
-    imageViewThree() {
-      const popup = document.querySelector("#popup");
-      const gallery = document.querySelector("#galleryThree");
-      const selectedImage = document.querySelector("#selectedImage");
-      selectedImage.src = gallery.src;
-      popup.style.transform = `translateY(0%)`;
-      popup.addEventListener("click", () => {
-        popup.style.transform = `translateY(-100%)`;
-        popup.src = "";
-      });
-    },
-    imageViewFour() {
-      const popup = document.querySelector("#popup");
-      const gallery = document.querySelector("#galleryFour");
-      const selectedImage = document.querySelector("#selectedImage");
-      selectedImage.src = gallery.src;
-      popup.style.transform = `translateY(0%)`;
-      popup.addEventListener("click", () => {
-        popup.style.transform = `translateY(-100%)`;
-        popup.src = "";
-      });
-    },
+    } 
   },
 };
 </script>
