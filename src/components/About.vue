@@ -125,7 +125,7 @@
       <div class="about__img">
         <img
           @click="imageView('galleryFive')"
-          src="../assets/images/myInfo-4.jpg"
+          src="../assets/images/myInfoFour.jpg"
           alt=""
           id="galleryFive"
         />
