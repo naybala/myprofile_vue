@@ -71,28 +71,11 @@
             src="../assets/images/myCerti.jpg"
             alt=""
             class="skills__img img-fluid"
-            id="galleryFive"
-            @click="imageViewOne"
+            id="galleryCerti"
+            @click="imageView('galleryCerti')"
           />
         </div>
-        <div class="div" id="popup">
-          <img src="" alt="" id="selectedImage" />
-        </div>
-
         <br />
-        <!-- <div>
-          <img
-            data-aos="fade-right"
-            src="../assets/images/job-trainning.png"
-            alt=""
-            class="skills__img img-fluid"
-            id="galleryTen"
-            @click="imageViewFour"
-          />
-        </div> -->
-        <div class="div" id="popup">
-          <img src="" alt="" id="selectedImage" />
-        </div>
       </div>
 
       <div>
@@ -104,13 +87,11 @@
           alt=""
           class="skills__img img-fluid"
           id="gallerySix"
-          @click="imageViewTwo"
+          @click="imageView('gallerySix')"
         />
         <br /><br /><br />
         <br /><br /><br />
-        <div class="div" id="popup">
-          <img src="" alt="" id="selectedImage" />
-        </div>
+       
 
         <div>
           <img
@@ -119,21 +100,14 @@
             alt=""
             class="skills__img img-fluid"
             id="gallerySeven"
-            @click="imageViewThree"
+            @click="imageView('gallerySeven')"
           />
           <div class="div" id="popup">
             <img src="" alt="" id="selectedImage" />
           </div>
         </div>
         <br /><br />
-        <!-- <img
-          data-aos="fade-left"
-          src="../assets/images/certificate-3.png"
-          alt=""
-          class="skills__img img-flui"
-          id="galleryEle"
-          @click="imageViewFive"
-        /> -->
+       
         <div class="div" id="popup">
           <img src="" alt="" id="selectedImage" />
         </div>
@@ -158,53 +132,9 @@ export default {
     };
   },
   methods: {
-    imageViewOne() {
+    imageView(el) {
       const popup = document.querySelector("#popup");
-      const gallery = document.querySelector("#galleryFive");
-      const selectedImage = document.querySelector("#selectedImage");
-      selectedImage.src = gallery.src;
-      popup.style.transform = `translateY(0%)`;
-      popup.addEventListener("click", () => {
-        popup.style.transform = `translateY(-100%)`;
-        popup.src = "";
-      });
-    },
-    imageViewTwo() {
-      const popup = document.querySelector("#popup");
-      const gallery = document.querySelector("#gallerySix");
-      const selectedImage = document.querySelector("#selectedImage");
-      selectedImage.src = gallery.src;
-      popup.style.transform = `translateY(0%)`;
-      popup.addEventListener("click", () => {
-        popup.style.transform = `translateY(-100%)`;
-        popup.src = "";
-      });
-    },
-    imageViewThree() {
-      const popup = document.querySelector("#popup");
-      const gallery = document.querySelector("#gallerySeven");
-      const selectedImage = document.querySelector("#selectedImage");
-      selectedImage.src = gallery.src;
-      popup.style.transform = `translateY(0%)`;
-      popup.addEventListener("click", () => {
-        popup.style.transform = `translateY(-100%)`;
-        popup.src = "";
-      });
-    },
-    imageViewFour() {
-      const popup = document.querySelector("#popup");
-      const gallery = document.querySelector("#galleryTen");
-      const selectedImage = document.querySelector("#selectedImage");
-      selectedImage.src = gallery.src;
-      popup.style.transform = `translateY(0%)`;
-      popup.addEventListener("click", () => {
-        popup.style.transform = `translateY(-100%)`;
-        popup.src = "";
-      });
-    },
-    imageViewFive() {
-      const popup = document.querySelector("#popup");
-      const gallery = document.querySelector("#galleryEle");
+      const gallery = document.querySelector("#"+el);
       const selectedImage = document.querySelector("#selectedImage");
       selectedImage.src = gallery.src;
       popup.style.transform = `translateY(0%)`;
