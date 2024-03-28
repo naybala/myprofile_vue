@@ -52,7 +52,7 @@
           <span class="text-primary">Bachelor Of Technology(2018)</span> and
           <span class="text-primary">Bachelor Of Engineering (2020)</span> 
           major of <span class="text-primary">Electronic Communication</span>.I also got the
-          chance of Master Of Engineering and I could not attend this cause of many
+          chance of Master Of Engineering and I could not attend for some many
           reason!You can check graduated certifications in <a href="#skills">skills</a> section.
         </p>
       </div>
