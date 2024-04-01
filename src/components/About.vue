@@ -139,7 +139,7 @@
           ></typical>
         </h2>
         <p class="about__text">
-          With over 1.7 years of professional experience in handling diverse projects and extensive expertise in managing large datasets while ensuring clean code practices.One of the significant aspects of my experience lies in my proficiency in handling large datasets. I have adeptly managed substantial volumes of data, implementing efficient storage solutions, and developing algorithms to extract valuable insights. My experience has taught me the importance of data cleanliness and accuracy, which I prioritize diligently in all my projects.I understand the significance of writing code that is not only functional but also easily understandable by fellow team members, enabling smoother collaboration and troubleshooting.
+          Hand on professional experience in handling diverse projects and extensive expertise in managing large datasets while ensuring clean code practices.One of the significant aspects of my experience lies in my proficiency in handling large datasets. I have adeptly managed substantial volumes of data, implementing efficient storage solutions, and developing algorithms to extract valuable insights. My experience has taught me the importance of data cleanliness and accuracy, which I prioritize diligently in all my projects.I understand the significance of writing code that is not only functional but also easily understandable by fellow team members, enabling smoother collaboration and troubleshooting.
         </p>
       </div>
     </div>
