@@ -30,6 +30,9 @@
             <a href="#project" class="nav__link text-decoration-none">{{ project }}</a>
           </li>
           <li class="nav__item">
+            <a href="#currentlyWork" class="nav__link text-decoration-none">{{ currentlyWork }}</a>
+          </li>
+          <li class="nav__item">
             <a href="#contact" class="nav__link text-decoration-none">{{ contact }}</a>
           </li>
         </ul>
@@ -53,6 +56,7 @@ export default {
       about: "About",
       skill: "Skills",
       project: "Projects",
+      currentlyWork: "Currently Work",
       contact: "Contact Me",
     };
   },

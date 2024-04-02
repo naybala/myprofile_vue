@@ -27,19 +27,7 @@
         </p>
         <a target="__blank" href="https://zotefamily.com/">Company profile link</a>
       </div>
-    </div>
-
-
-    <!-- <div class="about__container bd-grid" data-aos="fade-right">
-     
-      <div class="text-center">
-        <p>Precise Location of Current Work</p>
-      </div>
-      <div class="about__img rounded-2">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3382.3335474286414!2d96.12686013187466!3d16.849440303624753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c194eb70b00001%3A0xb2a1f5694971b1b6!2sMICT%20Park%20Main%20Building!5e0!3m2!1sen!2smm!4v1708621693584!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div> -->
-   
+    </div>   
     <div class="div" id="popup">
       <img src="" alt="" id="selectedImage" />
     </div>
