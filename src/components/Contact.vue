@@ -12,7 +12,7 @@
           </a>
         </div>
         <div class="col-md-4 mb-3">
-          <a href="mailto: naybala.153808@gmail.com">
+          <a href="mailto: naybala.personal@gmail.com">
             <button class="button text-decoration-none">
               Email
               <i class="fa-solid fa-paper-plane"></i>

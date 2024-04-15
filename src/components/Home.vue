@@ -82,7 +82,7 @@
           Web Developer
         </h1>
 
-        <p class="mb-3">Email : naybala.153808@gmail.com</p>
+        <p class="mb-3">Email : naybala.personal@gmail.com</p>
         <a
           href="https://docs.google.com/document/d/1oJfB8rVmc7DGpI8S1ptiWuAS8UihM7Cn/edit?usp=sharing&ouid=113067556543671072385&rtpof=true&sd=true"
           class="button text-decoration-none mb-2"

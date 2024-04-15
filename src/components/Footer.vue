@@ -32,11 +32,11 @@
         </p>
         <p class="footer__copy text-center mt-3">
           <a
-            href="mailto: naybala.153808@gmail.com"
+            href="mailto: naybala.personal@gmail.com"
             class="nav__logo text-decoration-none"
           >
             <i class="fa-solid fa-paper-plane"></i>
-            naybala.153808@gmail.com</a
+            naybala.personal@gmail.com</a
           >
         </p>
       </div>
