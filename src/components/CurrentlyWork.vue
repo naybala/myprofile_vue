@@ -6,7 +6,7 @@
       <div class="about__img">
         <img
           @click="imageViewOne"
-          src="../assets/images/current_work.avif"
+          src="../assets/images/image.png"
           alt=""
           id="galleryCurrentWorkOne"
         />
@@ -15,19 +15,24 @@
         <h2 class="about__subtitle">
           <typical
             class="typicalWrapper"
-            :steps="[`Zo`, 100, `Zote By Foucs Innovation..`, 2500]"
+            :steps="[`BIG`, 100, `BIGSOFT Technology PLC..`, 2500]"
             :loop="Infinity"
           ></typical>
         </h2>
         <p class="about__text">
-          Zote By Focus Innovation co.,ltd.
+          BIGSOFT established since 2019 in Cambodia and Myanmar, We serve
+          clients all over the world who needs transform their business to
+          digitalize and any software development.
         </p>
         <p>
-          Room 804, 7th Floor, Building 19, MICT Park, Hlaing, Yangon.
+          BIGSOFT TECHNOLOGY PLC located No 1036, Road5 Sangkat Mittapheap, Khan
+          Russey Keo, Phnom Penh Cambodia.
         </p>
-        <a target="__blank" href="https://zotefamily.com/">Company profile link</a>
+        <a target="__blank" href="https://bigsoft.tech/"
+          >Company profile link</a
+        >
       </div>
-    </div>   
+    </div>
     <div class="div" id="popup">
       <img src="" alt="" id="selectedImage" />
     </div>
