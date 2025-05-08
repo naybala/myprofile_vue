@@ -84,10 +84,10 @@
 
         <p class="mb-3">Email : naybala.personal@gmail.com</p>
         <a
-          href="https://docs.google.com/document/d/1oJfB8rVmc7DGpI8S1ptiWuAS8UihM7Cn/edit?usp=sharing&ouid=113067556543671072385&rtpof=true&sd=true"
+          href="https://drive.google.com/file/d/1fmzAnanAbQiwhQyDPx8NT9GtUKCdUwOv/view?usp=sharing"
           class="button text-decoration-none mb-2"
           target="_blink"
-          >Check My Cv Here</a
+          >Download My Resume</a
         >
         <br />
         <a
@@ -249,7 +249,9 @@ export default {
             default:
               break;
           }
-          document.querySelector(":root").style.setProperty("--first-color", background);
+          document
+            .querySelector(":root")
+            .style.setProperty("--first-color", background);
         };
       });
     },
