@@ -1,86 +1,99 @@
 <template>
-  <section class="project section" id="project">
-    <h2 class="section-title">Projects</h2>
-    <div class="container">
-      <div class="flex-container">
-        <div class="py-3" id="col" data-aos="fade-right">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/logo.png" />
+  <section class="py-12 md:py-16" id="project">
+    <h2
+      class="relative text-2xl md:text-3xl font-bold text-center text-indigo-600 mb-10"
+    >
+      Projects
+      <span
+        class="absolute left-1/2 -translate-x-1/2 block w-24 h-[3px] bg-indigo-600 mt-8"
+      ></span>
+    </h2>
+    <div class="container mx-auto">
+      <div class="flex flex-wrap justify-center">
+        <div class="p-3" id="col" data-aos="fade-right">
+          <div class="relative w-80 h-[450px] bg-gray-800 rounded-2xl overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-indigo-600 clip-circle-200-50-20 transition-all duration-1000 ease-in-out hover:clip-circle-300-80--20"></div>
+            <div class="absolute top-1/2 -translate-y-1/2 z-10 w-full h-56 transition-all duration-500 hover:top-0 hover:translate-y-0">
+              <img src="../assets/images/logo.png" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64" />
             </div>
-            <div class="contentBx">
-              <h2>TEC Clollage</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
+            <div class="absolute bottom-0 w-full h-24 text-center transition-all duration-1000 z-10 hover:h-52">
+              <h2 class="relative font-semibold tracking-wider text-white m-0">TEC Clollage</h2>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-500">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">usage :</h3>
+                <span> <i class="fa-brands fa-html5 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span><i class="fa-brands fa-css3 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fa-brands fa-js-square text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fab fa-bootstrap text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
               </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-600">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">Type of Wesbsite :</h3>
                 <p class="text-white">Portfolio</p>
               </div>
-              <div class="btn-project">
+              <div class="transition-transform duration-300 hover:translate-y-1 hover:shadow-lg">
                 <a
                   href="https://61f03b2509e1d572f0acd7be--naughty-hugle-7cf607.netlify.app/"
                   target="_blink"
+                  class="inline-block py-2.5 px-5 bg-indigo-600 rounded-md mt-2.5 no-underline font-semibold text-gray-800 opacity-0 transform translate-y-12 transition-all duration-500 hover:opacity-100 hover:translate-y-0 hover:delay-750"
                   >View Detail</a
                 >
               </div>
             </div>
           </div>
         </div>
-        <div class="py-3" id="col" data-aos="fade-right">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/logo1.png" />
+        <div class="p-3" id="col" data-aos="fade-right">
+          <div class="relative w-80 h-[450px] bg-gray-800 rounded-2xl overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-indigo-600 clip-circle-200-50-20 transition-all duration-1000 ease-in-out hover:clip-circle-300-80--20"></div>
+            <div class="absolute top-1/2 -translate-y-1/2 z-10 w-full h-56 transition-all duration-500 hover:top-0 hover:translate-y-0">
+              <img src="../assets/images/logo1.png" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64" />
             </div>
-            <div class="contentBx">
-              <h2>Daily News</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
+            <div class="absolute bottom-0 w-full h-24 text-center transition-all duration-1000 z-10 hover:h-52">
+              <h2 class="relative font-semibold tracking-wider text-white m-0">Daily News</h2>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-500">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">usage :</h3>
+                <span> <i class="fa-brands fa-html5 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span><i class="fa-brands fa-css3 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fa-brands fa-js-square text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fab fa-bootstrap text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
               </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-600">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">Type of Wesbsite :</h3>
                 <p class="text-white">Portfolio</p>
               </div>
-              <div class="btn-project">
+              <div class="transition-transform duration-300 hover:translate-y-1 hover:shadow-lg">
                 <a
                   href="https://61f03022e2d4ae55df6b63c8--priceless-ptolemy-f0444b.netlify.app/"
                   target="_blink"
+                  class="inline-block py-2.5 px-5 bg-indigo-600 rounded-md mt-2.5 no-underline font-semibold text-gray-800 opacity-0 transform translate-y-12 transition-all duration-500 hover:opacity-100 hover:translate-y-0 hover:delay-750"
                   >View Detail</a
                 >
               </div>
             </div>
           </div>
         </div>
-        <div class="py-3" id="col" data-aos="fade-left">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/logo2.png" />
+        <div class="p-3" id="col" data-aos="fade-left">
+          <div class="relative w-80 h-[450px] bg-gray-800 rounded-2xl overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-indigo-600 clip-circle-200-50-20 transition-all duration-1000 ease-in-out hover:clip-circle-300-80--20"></div>
+            <div class="absolute top-1/2 -translate-y-1/2 z-10 w-full h-56 transition-all duration-500 hover:top-0 hover:translate-y-0">
+              <img src="../assets/images/logo2.png" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64" />
             </div>
-            <div class="contentBx">
-              <h2>Alpha Cement</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
+            <div class="absolute bottom-0 w-full h-24 text-center transition-all duration-1000 z-10 hover:h-52">
+              <h2 class="relative font-semibold tracking-wider text-white m-0">Alpha Cement</h2>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-500">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">usage :</h3>
+                <span> <i class="fa-brands fa-html5 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span><i class="fa-brands fa-css3 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fa-brands fa-js-square text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fab fa-bootstrap text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
               </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-600">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">Type of Wesbsite :</h3>
                 <p class="text-white">Portfolio</p>
               </div>
-              <div class="btn-project">
+              <div class="transition-transform duration-300 hover:translate-y-1 hover:shadow-lg">
                 <a
                   href="https://61f03500fa3a5f000887b362--adoring-dijkstra-34907e.netlify.app/"
                   target="_blink"
+                  class="inline-block py-2.5 px-5 bg-indigo-600 rounded-md mt-2.5 no-underline font-semibold text-gray-800 opacity-0 transform translate-y-12 transition-all duration-500 hover:opacity-100 hover:translate-y-0 hover:delay-750"
                   >View Detail</a
                 >
               </div>
@@ -89,84 +102,90 @@
         </div>
         <br />
         <hr />
-        <div class="py-3" id="col" data-aos="fade-left">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/google.jpg" class="img-fluid" />
+        <div class="p-3" id="col" data-aos="fade-left">
+          <div class="relative w-80 h-[450px] bg-gray-800 rounded-2xl overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-indigo-600 clip-circle-200-50-20 transition-all duration-1000 ease-in-out hover:clip-circle-300-80--20"></div>
+            <div class="absolute top-1/2 -translate-y-1/2 z-10 w-full h-56 transition-all duration-500 hover:top-0 hover:translate-y-0">
+              <img src="../assets/images/google.jpg" class="w-full" />
             </div>
-            <div class="contentBx">
-              <h2 class="mt-2">Google Clone</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
+            <div class="absolute bottom-0 w-full h-24 text-center transition-all duration-1000 z-10 hover:h-52">
+              <h2 class="relative font-semibold tracking-wider text-white m-0">Google Clone</h2>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-500">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">usage :</h3>
+                <span> <i class="fa-brands fa-html5 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span><i class="fa-brands fa-css3 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fa-brands fa-js-square text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fab fa-bootstrap text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
               </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-600">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">Type of Wesbsite :</h3>
                 <p class="text-white">JavaScript</p>
               </div>
-              <div class="btn-project">
+              <div class="transition-transform duration-300 hover:translate-y-1 hover:shadow-lg">
                 <a
                   href="https://62187191868ca642f1d13408--competent-chandrasekhar-b57c89.netlify.app/"
                   target="_blink"
+                  class="inline-block py-2.5 px-5 bg-indigo-600 rounded-md mt-2.5 no-underline font-semibold text-gray-800 opacity-0 transform translate-y-12 transition-all duration-500 hover:opacity-100 hover:translate-y-0 hover:delay-750"
                   >View Detail</a
                 >
               </div>
             </div>
           </div>
         </div>
-        <div class="py-3" id="col" data-aos="fade-right">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/autocomplete_search.jpg" class="img-thumbnail" />
+        <div class="p-3" id="col" data-aos="fade-right">
+          <div class="relative w-80 h-[450px] bg-gray-800 rounded-2xl overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-indigo-600 clip-circle-200-50-20 transition-all duration-1000 ease-in-out hover:clip-circle-300-80--20"></div>
+            <div class="absolute top-1/2 -translate-y-1/2 z-10 w-full h-56 transition-all duration-500 hover:top-0 hover:translate-y-0">
+              <img src="../assets/images/autocomplete_search.jpg" class="border" />
             </div>
-            <div class="contentBx">
-              <h2>Auto Complete</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
+            <div class="absolute bottom-0 w-full h-24 text-center transition-all duration-1000 z-10 hover:h-52">
+              <h2 class="relative font-semibold tracking-wider text-white m-0">Auto Complete</h2>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-500">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">usage :</h3>
+                <span> <i class="fa-brands fa-html5 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span><i class="fa-brands fa-css3 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fa-brands fa-js-square text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fab fa-bootstrap text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
               </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-600">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">Type of Wesbsite :</h3>
                 <p class="text-white">JavaScript</p>
               </div>
-              <div class="btn-project">
+              <div class="transition-transform duration-300 hover:translate-y-1 hover:shadow-lg">
                 <a
                   href="https://621871f590b15959528f792e--agitated-wing-d5b708.netlify.app/"
                   target="_blink"
+                  class="inline-block py-2.5 px-5 bg-indigo-600 rounded-md mt-2.5 no-underline font-semibold text-gray-800 opacity-0 transform translate-y-12 transition-all duration-500 hover:opacity-100 hover:translate-y-0 hover:delay-750"
                   >View Detail</a
                 >
               </div>
             </div>
           </div>
         </div>
-        <div class="py-3" id="col" data-aos="fade-right">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/stop-watch.jpg" class="img-fluid" />
+        <div class="p-3" id="col" data-aos="fade-right">
+          <div class="relative w-80 h-[450px] bg-gray-800 rounded-2xl overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-indigo-600 clip-circle-200-50-20 transition-all duration-1000 ease-in-out hover:clip-circle-300-80--20"></div>
+            <div class="absolute top-1/2 -translate-y-1/2 z-10 w-full h-56 transition-all duration-500 hover:top-0 hover:translate-y-0">
+              <img src="../assets/images/stop-watch.jpg" class="w-full" />
             </div>
-            <div class="contentBx">
-              <h2>Stop Watch</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
+            <div class="absolute bottom-0 w-full h-24 text-center transition-all duration-1000 z-10 hover:h-52">
+              <h2 class="relative font-semibold tracking-wider text-white m-0">Stop Watch</h2>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-500">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">usage :</h3>
+                <span> <i class="fa-brands fa-html5 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span><i class="fa-brands fa-css3 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fa-brands fa-js-square text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fab fa-bootstrap text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
               </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-600">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">Type of Wesbsite :</h3>
                 <p class="text-white">JavaScript</p>
               </div>
-              <div class="btn-project">
+              <div class="transition-transform duration-300 hover:translate-y-1 hover:shadow-lg">
                 <a
                   href="https://62187231163f604c0e1be791--elegant-bardeen-ef25d0.netlify.app/"
                   target="_blink"
+                  class="inline-block py-2.5 px-5 bg-indigo-600 rounded-md mt-2.5 no-underline font-semibold text-gray-800 opacity-0 transform translate-y-12 transition-all duration-500 hover:opacity-100 hover:translate-y-0 hover:delay-750"
                   >View Detail</a
                 >
               </div>
@@ -175,84 +194,90 @@
         </div>
         <br />
         <hr />
-        <div class="py-3" id="col" data-aos="fade-left">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/To_Do_List.png" class="img-thumbnail" />
+        <div class="p-3" id="col" data-aos="fade-left">
+          <div class="relative w-80 h-[450px] bg-gray-800 rounded-2xl overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-indigo-600 clip-circle-200-50-20 transition-all duration-1000 ease-in-out hover:clip-circle-300-80--20"></div>
+            <div class="absolute top-1/2 -translate-y-1/2 z-10 w-full h-56 transition-all duration-500 hover:top-0 hover:translate-y-0">
+              <img src="../assets/images/To_Do_List.png" class="border" />
             </div>
-            <div class="contentBx">
-              <h2 class="mt-2">To Do List</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
+            <div class="absolute bottom-0 w-full h-24 text-center transition-all duration-1000 z-10 hover:h-52">
+              <h2 class="relative font-semibold tracking-wider text-white m-0">To Do List</h2>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-500">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">usage :</h3>
+                <span> <i class="fa-brands fa-html5 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span><i class="fa-brands fa-css3 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fa-brands fa-js-square text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fab fa-bootstrap text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
               </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-600">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">Type of Wesbsite :</h3>
                 <p class="text-white">JavaScript</p>
               </div>
-              <div class="btn-project">
+              <div class="transition-transform duration-300 hover:translate-y-1 hover:shadow-lg">
                 <a
                   href="https://6218772f529a4b469a5aa3bc--vigilant-mirzakhani-16f9ab.netlify.app/"
                   target="_blink"
+                  class="inline-block py-2.5 px-5 bg-indigo-600 rounded-md mt-2.5 no-underline font-semibold text-gray-800 opacity-0 transform translate-y-12 transition-all duration-500 hover:opacity-100 hover:translate-y-0 hover:delay-750"
                   >View Detail</a
                 >
               </div>
             </div>
           </div>
         </div>
-        <div class="py-3" id="col" data-aos="fade-left">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/heroBg.jpg" class="img-thumbnail" />
+        <div class="p-3" id="col" data-aos="fade-left">
+          <div class="relative w-80 h-[450px] bg-gray-800 rounded-2xl overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-indigo-600 clip-circle-200-50-20 transition-all duration-1000 ease-in-out hover:clip-circle-300-80--20"></div>
+            <div class="absolute top-1/2 -translate-y-1/2 z-10 w-full h-56 transition-all duration-500 hover:top-0 hover:translate-y-0">
+              <img src="../assets/images/heroBg.jpg" class="border" />
             </div>
-            <div class="contentBx">
-              <h2>Simple Scroll</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
+            <div class="absolute bottom-0 w-full h-24 text-center transition-all duration-1000 z-10 hover:h-52">
+              <h2 class="relative font-semibold tracking-wider text-white m-0">Simple Scroll</h2>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-500">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">usage :</h3>
+                <span> <i class="fa-brands fa-html5 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span><i class="fa-brands fa-css3 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fa-brands fa-js-square text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fab fa-bootstrap text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
               </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-600">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">Type of Wesbsite :</h3>
                 <p class="text-white">JavaScript</p>
               </div>
-              <div class="btn-project">
+              <div class="transition-transform duration-300 hover:translate-y-1 hover:shadow-lg">
                 <a
                   href="https://62187820163f6048891bec8e--nervous-einstein-6ff6f2.netlify.app/"
                   target="_blink"
+                  class="inline-block py-2.5 px-5 bg-indigo-600 rounded-md mt-2.5 no-underline font-semibold text-gray-800 opacity-0 transform translate-y-12 transition-all duration-500 hover:opacity-100 hover:translate-y-0 hover:delay-750"
                   >View Detail</a
                 >
               </div>
             </div>
           </div>
         </div>
-        <div class="py-3" id="col" data-aos="fade-right">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/facebook-messenger.png" class="img-fluid" />
+        <div class="p-3" id="col" data-aos="fade-right">
+          <div class="relative w-80 h-[450px] bg-gray-800 rounded-2xl overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-indigo-600 clip-circle-200-50-20 transition-all duration-1000 ease-in-out hover:clip-circle-300-80--20"></div>
+            <div class="absolute top-1/2 -translate-y-1/2 z-10 w-full h-56 transition-all duration-500 hover:top-0 hover:translate-y-0">
+              <img src="../assets/images/facebook-messenger.png" class="w-full" />
             </div>
-            <div class="contentBx">
-              <h2>Messenger</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
+            <div class="absolute bottom-0 w-full h-24 text-center transition-all duration-1000 z-10 hover:h-52">
+              <h2 class="relative font-semibold tracking-wider text-white m-0">Messenger</h2>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-500">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">usage :</h3>
+                <span> <i class="fa-brands fa-html5 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span><i class="fa-brands fa-css3 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fa-brands fa-js-square text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fab fa-bootstrap text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
               </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-600">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">Type of Wesbsite :</h3>
                 <p class="text-white">Simple</p>
               </div>
-              <div class="btn-project">
+              <div class="transition-transform duration-300 hover:translate-y-1 hover:shadow-lg">
                 <a
                   href="https://621877d5ba5aba588084ab49--hardcore-babbage-7e84ae.netlify.app/"
                   target="_blink"
+                  class="inline-block py-2.5 px-5 bg-indigo-600 rounded-md mt-2.5 no-underline font-semibold text-gray-800 opacity-0 transform translate-y-12 transition-all duration-500 hover:opacity-100 hover:translate-y-0 hover:delay-750"
                   >View Detail</a
                 >
               </div>
@@ -261,98 +286,104 @@
         </div>
         <br />
         <hr />
-        <div class="py-3" id="col" data-aos="fade-right">
-          <div class="card">
-            <div class="imgBx">
+        <div class="p-3" id="col" data-aos="fade-right">
+          <div class="relative w-80 h-[450px] bg-gray-800 rounded-2xl overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-indigo-600 clip-circle-200-50-20 transition-all duration-1000 ease-in-out hover:clip-circle-300-80--20"></div>
+            <div class="absolute top-1/2 -translate-y-1/2 z-10 w-full h-56 transition-all duration-500 hover:top-0 hover:translate-y-0">
               <img
                 src="../assets/images/simple-music-player.jpg"
-                class="img-fluid rounded-1"
+                class="w-full rounded-sm"
               />
             </div>
-            <div class="contentBx">
-              <h2>Simple Music Player</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
+            <div class="absolute bottom-0 w-full h-24 text-center transition-all duration-1000 z-10 hover:h-52">
+              <h2 class="relative font-semibold tracking-wider text-white m-0">Simple Music Player</h2>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-500">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">usage :</h3>
+                <span> <i class="fa-brands fa-html5 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span><i class="fa-brands fa-css3 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fa-brands fa-js-square text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
                 <span>
-                  <i class="fab fa-bootstrap skills__icon"></i>
+                  <i class="fab fa-bootstrap text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i>
                 </span>
               </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-600">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">Type of Wesbsite :</h3>
                 <p class="text-white">Simple</p>
               </div>
-              <div class="btn-project">
+              <div class="transition-transform duration-300 hover:translate-y-1 hover:shadow-lg">
                 <a
                   href="https://621c71a8ae1b82ed2a39a4f7--serene-borg-f36e46.netlify.app/"
                   target="_blink"
+                  class="inline-block py-2.5 px-5 bg-indigo-600 rounded-md mt-2.5 no-underline font-semibold text-gray-800 opacity-0 transform translate-y-12 transition-all duration-500 hover:opacity-100 hover:translate-y-0 hover:delay-750"
                   >View Detail</a
                 >
               </div>
             </div>
           </div>
         </div>
-        <div class="py-3" id="col" data-aos="fade-left">
-          <div class="card">
-            <div class="imgBx">
+        <div class="p-3" id="col" data-aos="fade-left">
+          <div class="relative w-80 h-[450px] bg-gray-800 rounded-2xl overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-indigo-600 clip-circle-200-50-20 transition-all duration-1000 ease-in-out hover:clip-circle-300-80--20"></div>
+            <div class="absolute top-1/2 -translate-y-1/2 z-10 w-full h-56 transition-all duration-500 hover:top-0 hover:translate-y-0">
               <img src="../assets/images/step-2.png" />
             </div>
-            <div class="contentBx">
-              <h2>Pizza Online Order</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">use:</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span class="me-2">
-                  <i class="fab fa-bootstrap skills__icon"></i>
+            <div class="absolute bottom-0 w-full h-24 text-center transition-all duration-1000 z-10 hover:h-52">
+              <h2 class="relative font-semibold tracking-wider text-white m-0">Pizza Online Order</h2>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-500">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">use:</h3>
+                <span> <i class="fa-brands fa-html5 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span><i class="fa-brands fa-css3 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fa-brands fa-js-square text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span class="mr-2">
+                  <i class="fab fa-bootstrap text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i>
                 </span>
-                <span class="me-3">
-                  <i class="fab fa-php skills__icon"> </i>
+                <span class="mr-3">
+                  <i class="fab fa-php text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"> </i>
                 </span>
-                <span><i class="fas fa-database skills__icon"></i></span>
+                <span><i class="fas fa-database text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
               </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-600">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">Type of Wesbsite :</h3>
                 <p class="text-white">Full-Stack</p>
               </div>
-              <div class="btn-project">
+              <div class="transition-transform duration-300 hover:translate-y-1 hover:shadow-lg">
                 <a href="https://github.com/naybala/Admin-Pannel-Laravel-" target="_blink"
+                  class="inline-block py-2.5 px-5 bg-indigo-600 rounded-md mt-2.5 no-underline font-semibold text-gray-800 opacity-0 transform translate-y-12 transition-all duration-500 hover:opacity-100 hover:translate-y-0 hover:delay-750"
                   >View Detail</a
                 >
               </div>
             </div>
           </div>
         </div>
-        <div class="py-3" id="col" data-aos="fade-left">
-          <div class="card">
-            <div class="imgBx">
+        <div class="p-3" id="col" data-aos="fade-left">
+          <div class="relative w-80 h-[450px] bg-gray-800 rounded-2xl overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-indigo-600 clip-circle-200-50-20 transition-all duration-1000 ease-in-out hover:clip-circle-300-80--20"></div>
+            <div class="absolute top-1/2 -translate-y-1/2 z-10 w-full h-56 transition-all duration-500 hover:top-0 hover:translate-y-0">
               <img class="rounded" src="../assets/images/admin-pannel.jpg" />
             </div>
-            <div class="contentBx">
-              <h2>Pizza Online Order</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">use:</h3>
-                <span> <i class="fab fa-laravel skills__icon"></i></span>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span class="me-2">
-                  <i class="fab fa-bootstrap skills__icon"></i>
+            <div class="absolute bottom-0 w-full h-24 text-center transition-all duration-1000 z-10 hover:h-52">
+              <h2 class="relative font-semibold tracking-wider text-white m-0">Pizza Online Order</h2>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-500">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">use:</h3>
+                <span> <i class="fab fa-laravel text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fa-brands fa-html5 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span><i class="fa-brands fa-css3 text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span> <i class="fa-brands fa-js-square text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
+                <span class="mr-2">
+                  <i class="fab fa-bootstrap text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i>
                 </span>
-                <span class="me-3">
-                  <i class="fab fa-php skills__icon"> </i>
+                <span class="mr-3">
+                  <i class="fab fa-php text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"> </i>
                 </span>
-                <span><i class="fas fa-database skills__icon"></i></span>
+                <span><i class="fas fa-database text-3xl mr-4 text-indigo-600 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"></i></span>
               </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
+              <div class="flex justify-center items-center py-2 px-5 transition-all duration-500 opacity-0 invisible hover:opacity-100 hover:visible hover:delay-600">
+                <h3 class="text-white font-light text-xs uppercase tracking-wider mr-1.5">Type of Wesbsite :</h3>
                 <p class="text-white">Full-Stack</p>
               </div>
-              <div class="btn-project">
+              <div class="transition-transform duration-300 hover:translate-y-1 hover:shadow-lg">
                 <a href="https://github.com/naybala/Admin-Pannel-Laravel-" target="_blink"
+                  class="inline-block py-2.5 px-5 bg-indigo-600 rounded-md mt-2.5 no-underline font-semibold text-gray-800 opacity-0 transform translate-y-12 transition-all duration-500 hover:opacity-100 hover:translate-y-0 hover:delay-750"
                   >View Detail</a
                 >
               </div>
@@ -366,272 +397,3 @@
 </template>
 
 <script></script>
-
-<style scoped>
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.flex-container > div {
-  margin: 0.12rem;
-}
-.section-title {
-  position: relative;
-  font-size: var(--h2-font-size);
-  color: var(--first-color);
-  margin-top: var(--mb-2);
-  margin-bottom: var(--mb-4);
-  text-align: center;
-}
-.section-title::after {
-  position: absolute;
-  content: "";
-  width: 120px;
-  height: 0.18rem;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 2.5rem;
-  background-color: var(--first-color);
-}
-
-.section {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-}
-/* ===== Projects =====*/
-
-.container .card {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  width: 320px;
-  height: 450px;
-  background: #232323;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.container .card:before {
-  content: "naybala";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--first-color);
-  clip-path: circle(200px at 50% 20%);
-  transition: 1s ease-in-out;
-}
-
-.container .card:hover:before {
-  clip-path: circle(300px at 80% -20%);
-}
-
-.container .card:after {
-  content: "";
-  position: absolute;
-  top: 30%;
-  left: -20%;
-  font-size: 12em;
-  font-weight: 800;
-  font-style: italic;
-  color: rgba(255, 255, 25, 0.05);
-}
-
-.container .card .imgBx {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  width: 100%;
-  height: 220px;
-  transition: 0.5s;
-}
-
-.container .card:hover .imgBx {
-  top: 0%;
-  transform: translateY(0%);
-}
-
-.container .card .imgBx img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
-  width: 270px;
-}
-
-.container .card .contentBx {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  transition: 1s;
-  z-index: 10;
-}
-
-.container .card:hover .contentBx {
-  height: 210px;
-}
-
-.container .card .contentBx h2 {
-  position: relative;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: rgb(250, 246, 246);
-  margin: 0;
-}
-
-.container .card .contentBx .size,
-.container .card .contentBx .color {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 20px;
-  transition: 0.5s;
-  opacity: 0;
-  visibility: hidden;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.container .card:hover .contentBx .size {
-  opacity: 1;
-  visibility: visible;
-  transition-delay: 0.5s;
-}
-
-.container .card:hover .contentBx .color {
-  opacity: 1;
-  visibility: visible;
-  transition-delay: 0.6s;
-}
-
-.container .card .contentBx .size h3,
-.container .card .contentBx .color h3 {
-  color: #fff;
-  font-weight: 300;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-right: 6px;
-}
-
-.container .card .contentBx .size span {
-  width: 26px;
-  height: 26px;
-  text-align: center;
-  line-height: 26px;
-  font-size: 14px;
-  display: inline-block;
-  color: #111;
-
-  margin: 0 5px;
-  transition: 0.5s;
-  color: #111;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.skills__icon {
-  font-size: 1.8rem;
-  margin-right: var(--mb-2);
-  color: var(--first-color);
-  transform: translateY(0px);
-  transition: 0.3s;
-}
-.skills__icon:hover {
-  transform: translateY(-3px);
-  box-shadow: 3px 3px 10px rgb(114, 109, 109);
-  transition: 0.3s;
-}
-
-.container .card .contentBx .color span {
-  width: 20px;
-  height: 20px;
-  background: #ff0;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.container .card .contentBx .color span:nth-child(2) {
-  background: #9bdc28;
-}
-
-.container .card .contentBx .color span:nth-child(3) {
-  background: #03a9f4;
-}
-
-.container .card .contentBx .color span:nth-child(4) {
-  background: #e91e63;
-}
-
-.container .card .contentBx a {
-  display: inline-block;
-  padding: 10px 20px;
-  background: var(--first-color);
-  border-radius: 4px;
-  margin-top: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #111;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: 0.5s;
-  margin-top: 0;
-}
-
-.container .card:hover .contentBx a {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0.75s;
-}
-
-.btn-project {
-  transform: translateY(0px);
-  transition: 0.3s;
-}
-
-.btn-project:hover {
-  transform: translateY(3px);
-  box-shadow: 3px 3px 10px black;
-  transition: 0.3s;
-}
-
-@media (min-width: 300px) and (max-width: 800px) {
-  .container .card {
-    width: 300px;
-    height: 410px;
-  }
-  .container .card .imgBx {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    width: 100%;
-    height: 180px;
-    transition: 0.5s;
-  }
-  .flex-container {
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 767px) {
-  .section {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-  }
-
-  .section-title {
-    margin-bottom: var(--mb-6);
-  }
-
-  .section-title::after {
-    width: 80px;
-    top: 3rem;
-  }
-}
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="left-container" id="container-animation"></div>
+  <div class="w-5 h-5 bg-indigo-600 absolute top-[11.1rem] right-[24rem] rounded-full animate-run hidden md:block"></div>
 </template>
 
 <script>
@@ -7,20 +7,6 @@ export default {};
 </script>
 
 <style scoped>
-.left-container {
-  width: 20px;
-  height: 20px;
-  background-color: var(--first-color);
-  position: absolute;
-  top: 11.1rem;
-  right: 24rem;
-  border-radius: 2rem;
-}
-
-#container-animation {
-  animation: run 3s infinite;
-}
-
 @keyframes run {
   0% {
     top: 11.1rem;
@@ -44,9 +30,7 @@ export default {};
   }
 }
 
-@media (max-width: 1500px) {
-  .left-container {
-    display: none;
-  }
+.animate-run {
+  animation: run 3s infinite;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div @click="top">
-    <a href="#home #home" id="scroll-top">
+    <a href="#home #home" id="scroll-top" class="fixed top-[-120%] right-2 p-2 text-4xl bg-indigo-600 text-white rounded-lg transition-all duration-1000 linear z-[1000]">
       <i class="fas fa-chevron-circle-up"></i>
     </a>
   </div>
@@ -30,19 +30,6 @@ export default {
 </script>
 
 <style>
-#scroll-top {
-  position: fixed;
-  top: -120%;
-  right: 0.5rem;
-  padding: 0.5rem 1.5rem;
-  font-size: 2rem;
-  background: var(--first-color);
-  color: #fff;
-  border-radius: 0.5rem;
-  transition: 1s linear;
-  z-index: 1000;
-}
-
 #scroll-top.active {
   top: calc(100% - 4rem);
 }

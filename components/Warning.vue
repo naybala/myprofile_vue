@@ -1,11 +1,17 @@
 <template>
-  <div class="container-fluid nav-top-bg">
-    <div class="container nav-top-bg-text">
-      <p class="text-white" id="text-animation">
+  <div
+    class="h-10 bg-gray-800 text-sm shadow-md md:h-12 md:text-xs hidden sm:block overflow-hidden mt-10"
+  >
+    <div class="container mx-auto relative top-2.5 md:top-5">
+      <p
+        class="text-white animate-run ml-18 relative inline-block whitespace-nowrap"
+      >
         <i class="fa-solid fa-person-running"></i>
-        <span class="fw-bold">Warning : </span> Don't forget to operate
-        <span class="fw-bold">Theme</span> button!This button was included dark mode and
-        changing ascent color options. If you have any question contact me.
+        <span class="font-bold text-indigo-600">Warning : </span> Don't forget
+        to operate
+        <span class="font-bold text-indigo-600"> Theme </span> button! This
+        button includes dark mode and changing accent color options. If you have
+        any questions, contact me.
         <i class="fa-solid fa-person-running"></i>
       </p>
     </div>
@@ -17,67 +23,21 @@ export default {};
 </script>
 
 <style scoped>
-#text-animation {
-  animation: reverse infinite;
-  animation-name: run;
-  animation-duration: 25s;
-}
-p {
-  margin-left: 4.5rem;
-}
-
 @keyframes run {
   0% {
-    left: -100%;
     transform: translateX(-140%);
   }
-  40% {
-    left: 0%;
-    transform: none;
-  }
-  60% {
-    left: 0%;
-    transform: none;
+  50% {
+    transform: translateX(0%);
   }
   100% {
-    left: 100%;
     transform: translateX(140%);
   }
 }
 
-.nav-top-bg {
-  height: 40px;
-  background-color: #242f3f;
-  font-size: 15px;
-  box-shadow: 0 3px 5px rgba(109, 112, 114, 0.15);
-}
-
-.nav-top-bg span {
-  color: var(--first-color);
-}
-.nav-top-bg-text {
+.animate-run {
+  font-size: 1rem;
   position: relative;
-  top: 10px;
-}
-
-/* Tablet View */
-@media (min-width: 768px) and (max-width: 950px) {
-  .nav-top-bg {
-    height: 50px;
-    font-size: 10px;
-  }
-  p {
-    margin-left: 0rem;
-  }
-  .nav-top-bg-text {
-    top: 15px;
-  }
-}
-
-/* Moblie View */
-@media (min-width: 290px) and (max-width: 500px) {
-  .nav-top-bg {
-    display: none;
-  }
+  animation: run 25s linear infinite;
 }
 </style>

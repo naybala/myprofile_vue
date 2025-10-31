@@ -1,76 +1,117 @@
 <template>
-  <section class="contact section" id="contact">
-    <h2 class="section-title">Contact</h2>
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-md-4 mb-3">
+  <section id="contact" class="py-12 md:py-16">
+    <!-- Title -->
+    <h2
+      class="relative text-2xl md:text-3xl font-bold text-center text-indigo-600 mb-12"
+    >
+      Contact
+      <span
+        class="absolute left-1/2 -translate-x-1/2 block w-28 h-[3px] bg-indigo-600 mt-8"
+      ></span>
+    </h2>
+
+    <div class="max-w-5xl mx-auto text-center">
+      <!-- Buttons -->
+      <div class="flex flex-wrap justify-center">
+        <div class="w-full md:w-1/3 px-2 mb-4">
           <a href="tel:+959763684400">
-            <button class="button text-decoration-none">
+            <button
+              class="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold shadow transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+            >
               Call
               <i class="fa-solid fa-square-phone"></i>
             </button>
           </a>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="w-full md:w-1/3 px-2 mb-4">
           <a href="mailto: naybala.personal@gmail.com">
-            <button class="button text-decoration-none">
+            <button
+              class="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold shadow transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+            >
               Email
               <i class="fa-solid fa-paper-plane"></i>
             </button>
           </a>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="w-full md:w-1/3 px-2 mb-4">
           <a
             href="https://www.facebook.com/profile.php?id=100076412994170"
-            target="_blink"
+            target="_blank"
           >
-            <button class="button text-decoration-none">
-              facebook
+            <button
+              class="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold shadow transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+            >
+              Facebook
               <i class="fa-brands fa-facebook"></i>
             </button>
           </a>
         </div>
       </div>
-      <br /><br />
-      <div class="img__center" data-aos="fade-right">
+
+      <!-- Laptop Spec -->
+      <div class="mt-12" data-aos="fade-right">
         <img
           src="../assets/svg/undraw_online_stats_0g94.svg"
-          class="img-fluid rounded-1"
           alt=""
           id="galleryEight"
           @click="imageViewOne"
+          class="mx-auto w-72 md:w-96 rounded-lg cursor-pointer transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
         />
-        <br />
-        <br />
-        <h5 class="fw-bold text-decoration-underline">Current Laptop Specification</h5>
-        <h3>Xaomi Note-Book Pro 2020</h3>
-        <ul class="text-capitalize">
-          <li><span>15.6-inch</span> screen,<span> 1920x1080</span> pixel display.</li>
-          <li>Full-size keyboard built in back lid white light</li>
+
+        <h5 class="mt-8 text-lg font-semibold underline">
+          Current Laptop Specification
+        </h5>
+        <h3 class="mt-2 text-2xl font-bold text-indigo-600">
+          Xaomi Note-Book Pro 2020
+        </h3>
+
+        <ul
+          class="mt-6 text-gray-700 leading-relaxed text-left inline-block space-y-2"
+        >
           <li>
-            Intel Core <span>i7-10510U</span> processor, Quad core up to
-            <span> 4.2GHz-4.9GHz</span>.
+            <span class="text-indigo-600">15.6-inch</span> screen,
+            <span class="text-indigo-600">1920x1080</span> pixel display.
           </li>
-          <li>GPU: <span>2G GDDR5 NVIDIA GeForce MX350</span> Discrete Graphics.</li>
+          <li>Full-size keyboard with backlit white light</li>
           <li>
-            <span>16GB DDR4</span> dual channel RAM, and
-            <span>1TB PCIe SSD storage</span>.
+            Intel Core <span class="text-indigo-600">i7-10510U</span> processor,
+            Quad core up to <span class="text-indigo-600">4.2GHz-4.9GHz</span>.
           </li>
-          <li>Windows <span>11 pro</span> Home operating system</li>
-          <br />
           <li>
-            more details
+            GPU:
+            <span class="text-indigo-600">2G GDDR5 NVIDIA GeForce MX350</span>
+            Discrete Graphics.
+          </li>
+          <li>
+            <span class="text-indigo-600">16GB DDR4</span> dual channel RAM, and
+            <span class="text-indigo-600">1TB PCIe SSD storage</span>.
+          </li>
+          <li>
+            Windows <span class="text-indigo-600">11 Pro</span> operating system
+          </li>
+          <li class="pt-4">
+            More details
             <a
               href="https://www.giztop.com/xiaomi-mi-notebook-pro-15-6-2020-version.html"
-              target="_blink"
-              class="button"
-              >here</a
+              target="_blank"
+              class="ml-1 inline-block bg-indigo-600 text-white px-4 py-2 rounded-lg font-semibold shadow transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >Here</a
             >
           </li>
         </ul>
       </div>
-      <div class="div" id="popup">
-        <img src="" alt="" id="selectedImage" />
+
+      <!-- Popup -->
+      <div
+        id="popup"
+        class="fixed inset-0 bg-black/90 hidden items-center justify-center p-8 z-[2000]"
+      >
+        <img
+          id="selectedImage"
+          src=""
+          alt=""
+          class="max-h-full max-w-full rounded-xl"
+        />
       </div>
     </div>
   </section>
@@ -84,92 +125,14 @@ export default {
       const gallery = document.querySelector("#galleryEight");
       const selectedImage = document.querySelector("#selectedImage");
       selectedImage.src = gallery.src;
-      popup.style.transform = `translateY(0%)`;
+      popup.classList.remove("hidden");
+      popup.classList.add("flex");
       popup.addEventListener("click", () => {
-        popup.style.transform = `translateY(-100%)`;
-        popup.src = "";
+        popup.classList.add("hidden");
+        popup.classList.remove("flex");
+        selectedImage.src = "";
       });
     },
   },
 };
 </script>
-
-<style scoped>
-.section-title {
-  position: relative;
-  font-size: var(--h2-font-size);
-  color: var(--first-color);
-  margin-top: var(--mb-2);
-  margin-bottom: var(--mb-4);
-  text-align: center;
-}
-.section-title::after {
-  position: absolute;
-  content: "";
-  width: 120px;
-  height: 0.18rem;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 2.5rem;
-  background-color: var(--first-color);
-}
-
-.section {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-}
-.button {
-  display: inline-block;
-  background-color: var(--first-color);
-  color: #fff;
-  padding: 0.75rem 2.5rem;
-  font-weight: var(--font-semi);
-  border-radius: 0.5rem;
-  transition: 0.3s;
-  border: none;
-}
-
-.button:hover {
-  transform: translateY(-3px);
-  box-shadow: 3px 3px 10px black;
-}
-#galleryEight {
-  cursor: pointer;
-  transform: translateY(0px);
-  transition: 0.3s;
-}
-#galleryEight:hover {
-  transform: translateY(-3px);
-  box-shadow: 3px 3px 10px black;
-  transition: 0.3s;
-}
-#popup {
-  position: fixed;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  background-color: rgba(23, 22, 22, 0.95);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(-100%);
-  transition: 250ms transform;
-  padding: 50px;
-  z-index: 2000;
-  overflow-x: hidden;
-}
-#selectedImage {
-  max-height: 100%;
-  border-radius: 1rem;
-  max-width: 100%;
-}
-
-h3 {
-  color: var(--first-color);
-}
-span {
-  color: var(--first-color);
-}
-</style>

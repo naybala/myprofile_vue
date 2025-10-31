@@ -106,11 +106,10 @@ export default {
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
