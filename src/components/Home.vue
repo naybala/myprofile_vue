@@ -84,7 +84,7 @@
 
         <p class="mb-3">Email : naybala.personal@gmail.com</p>
         <a
-          href="https://drive.google.com/file/d/1fmzAnanAbQiwhQyDPx8NT9GtUKCdUwOv/view?usp=sharing"
+          href="https://drive.google.com/file/d/1WliobQmUhoYBZr7Qij5dD1oSQe6vIPQi/view?usp=sharing"
           class="button text-decoration-none mb-2"
           target="_blink"
           >Download My Resume</a
