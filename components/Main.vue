@@ -1,6 +1,6 @@
 <template>
   <div v-if="loading">
-    <Loader />
+    <Loading />
   </div>
   <div v-if="!loading">
     <Header />
@@ -18,35 +18,8 @@
 </template>
 
 <script>
-import Loader from "./Loading.vue";
-import Header from "./Header.vue";
-import Home from "./Home.vue";
-import About from "./About.vue";
-import Skill from "./Skill.vue";
-import Project from "./Project.vue";
-import Contact from "./Contact.vue";
-import Footer from "./Footer.vue";
-import Cookie from "./Cookie.vue";
-import Track from "./Track.vue";
-import ScrollTop from "./ScrollTop.vue";
-import CurrentlyWork from "./CurrentlyWork.vue";
-
 export default {
   name: "Main",
-  components: {
-    Loader,
-    Header,
-    Home,
-    About,
-    Skill,
-    Project,
-    Contact,
-    Footer,
-    Cookie,
-    Track,
-    ScrollTop,
-    CurrentlyWork,
-  },
   data: () => ({
     loading: true,
   }),

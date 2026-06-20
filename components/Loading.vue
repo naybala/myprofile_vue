@@ -1,5 +1,5 @@
 <template>
-  <div class="loader-wrapper" v-if="!isloaded">
+  <div class="loader-wrapper">
     <span class="loader">
       <img class="img-loader" src="../assets/images/myProfile.png" alt="" />
       <span class="loader-inner">

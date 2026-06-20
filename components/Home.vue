@@ -170,13 +170,9 @@
 
 <script>
 import typical from "vue-typical";
-import Warning from "./Warning.vue";
-import LeftAnimation from "./LeftAnimation.vue";
 export default {
   components: {
     typical,
-    Warning,
-    LeftAnimation,
   },
   data: function () {
     return {

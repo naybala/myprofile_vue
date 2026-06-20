@@ -7,16 +7,23 @@
 </template>
 
 <script>
-window.onscroll = () => {
-  // console.log(window.scrollY);
-  if (window.scrollY > 380) {
-    document.querySelector("#scroll-top").classList.add("active");
-  } else {
-    document.querySelector("#scroll-top").classList.remove("active");
-  }
-};
 export default {
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
   methods: {
+    handleScroll() {
+      const el = document.querySelector("#scroll-top");
+      if (!el) return;
+      if (window.scrollY > 380) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active");
+      }
+    },
     top() {
       window.scroll({
         top: 0,

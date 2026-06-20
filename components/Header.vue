@@ -60,13 +60,10 @@ export default {
       contact: "Contact Me",
     };
   },
-  created() {
+  mounted() {
     window.addEventListener("scroll", this.scrollActive);
   },
-  active() {
-    window.addEventListener("scroll", this.scrollActive);
-  },
-  destroyed() {
+  beforeUnmount() {
     window.removeEventListener("scroll", this.scrollActive);
   },
   methods: {
