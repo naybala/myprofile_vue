@@ -15,7 +15,7 @@
           <li class="nav__item">
             <a
               href="#home"
-              @click="homeHeader"
+              @click.prevent="homeHeader"
               class="nav__link text-decoration-none active"
               >{{ home }}</a
             >

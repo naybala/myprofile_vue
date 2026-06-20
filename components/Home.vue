@@ -21,7 +21,7 @@
   <div class="rightShowCase-3">
     <div class="container-right"></div>
   </div>
-
+  <br /><br />
   <section class="home bd-grid" id="home">
     <div data-aos="fade-up">
       <div id="theme-open" @click="themeOpen" class="home__social-icon">
@@ -231,7 +231,9 @@ const themeOpen = () => {
         default:
           break;
       }
-      document.querySelector(":root").style.setProperty("--first-color", background);
+      document
+        .querySelector(":root")
+        .style.setProperty("--first-color", background);
     };
   });
 };
