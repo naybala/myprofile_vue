@@ -24,17 +24,17 @@ export default defineNuxtConfig({
         { property: 'og:url', content: 'https://naybala.netlify.app/' },
         { property: 'og:title', content: 'Nay Ba La – Web Developer from Myanmar' },
         { property: 'og:description', content: "Hi! I'm Nay Ba La, a passionate web developer building modern and efficient websites." },
-        { property: 'og:image', content: 'https://naybala.netlify.app/favicon.png' },
+        { property: 'og:image', content: 'https://naybala.netlify.app/myFullProfile.jpg' },
         { property: 'og:site_name', content: 'Nay Ba La Portfolio' },
         // Twitter
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:url', content: 'https://naybala.netlify.app/' },
         { name: 'twitter:title', content: 'Nay Ba La – Web Developer from Myanmar' },
         { name: 'twitter:description', content: "Hi! I'm Nay Ba La, a passionate web developer building modern and efficient websites." },
-        { name: 'twitter:image', content: 'https://naybala.netlify.app/favicon.png' }
+        { name: 'twitter:image', content: 'https://naybala.netlify.app/myFullProfile.jpg' }
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+        { rel: 'icon', type: 'image/png', href: '/myProfile.png' },
         {
           rel: 'stylesheet',
           href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css',
