@@ -111,7 +111,9 @@ const backendSkills = [
   { name: "PostgreSQL", icon: "fa-solid fa-database" },
   { name: "MySQL", icon: "fa-solid fa-database" },
   { name: "Mongo DB", icon: "fa-solid fa-leaf" },
-  { name: "Linux Ubuntu", icon: "fa-brands fa-linux" }
+  { name: "Linux Ubuntu", icon: "fa-brands fa-linux" },
+  { name: "Prime Vue", icon: "fa-solid fa-shield-halved" },
+  { name: "Prime React", icon: "fa-solid fa-shield-halved" }
 ];
 
 const frontendLines = [
@@ -129,14 +131,16 @@ const frontendLines = [
 ];
 
 const backendLines = [
-  { x1: 580, y1: 50, x2: 400, y2: 300 },
-  { x1: 580, y1: 110, x2: 400, y2: 300 },
-  { x1: 580, y1: 170, x2: 400, y2: 300 },
+  { x1: 580, y1: 30, x2: 400, y2: 300 },
+  { x1: 580, y1: 80, x2: 400, y2: 300 },
+  { x1: 580, y1: 130, x2: 400, y2: 300 },
+  { x1: 580, y1: 180, x2: 400, y2: 300 },
   { x1: 580, y1: 230, x2: 400, y2: 300 },
-  { x1: 580, y1: 290, x2: 400, y2: 300 },
-  { x1: 580, y1: 350, x2: 400, y2: 300 },
-  { x1: 580, y1: 410, x2: 400, y2: 300 },
-  { x1: 580, y1: 470, x2: 400, y2: 300 },
+  { x1: 580, y1: 280, x2: 400, y2: 300 },
+  { x1: 580, y1: 330, x2: 400, y2: 300 },
+  { x1: 580, y1: 380, x2: 400, y2: 300 },
+  { x1: 580, y1: 430, x2: 400, y2: 300 },
+  { x1: 580, y1: 480, x2: 400, y2: 300 },
   { x1: 580, y1: 530, x2: 400, y2: 300 }
 ];
 </script>
