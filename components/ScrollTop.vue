@@ -6,32 +6,33 @@
   </div>
 </template>
 
-<script>
-export default {
-  mounted() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  beforeUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
-  methods: {
-    handleScroll() {
-      const el = document.querySelector("#scroll-top");
-      if (!el) return;
-      if (window.scrollY > 380) {
-        el.classList.add("active");
-      } else {
-        el.classList.remove("active");
-      }
-    },
-    top() {
-      window.scroll({
-        top: 0,
-        behavior: "smooth",
-      });
-    },
-  },
+<script setup>
+import { onMounted, onBeforeUnmount } from "vue";
+
+const handleScroll = () => {
+  const el = document.querySelector("#scroll-top");
+  if (!el) return;
+  if (window.scrollY > 380) {
+    el.classList.add("active");
+  } else {
+    el.classList.remove("active");
+  }
 };
+
+const top = () => {
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <style>

@@ -46,84 +46,72 @@
   <br />
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      myName: "Nay Ba La",
-      phone: "+95 9 763684400",
-      home: "Home",
-      about: "About",
-      skill: "Skills",
-      project: "Projects",
-      currentlyWork: "Currently Work",
-      contact: "Contact Me",
-    };
-  },
-  mounted() {
-    window.addEventListener("scroll", this.scrollActive);
-  },
-  beforeUnmount() {
-    window.removeEventListener("scroll", this.scrollActive);
-  },
-  methods: {
-    navMenuShow() {
-      const showMenu = (toggleId, navId) => {
-        const toggle = document.getElementById(toggleId),
-          nav = document.getElementById(navId);
+<script setup>
+import { onMounted, onBeforeUnmount } from "vue";
 
-        if (toggle && nav) {
-          nav.classList.toggle("show");
-        }
-      };
-      showMenu("nav-toggle", "nav-menu");
+const myName = "Nay Ba La";
+const phone = "+95 9 763684400";
+const home = "Home";
+const about = "About";
+const skill = "Skills";
+const project = "Projects";
+const currentlyWork = "Currently Work";
+const contact = "Contact Me";
 
-      const navLink = document.querySelectorAll(".nav__link");
-      function linkAction() {
-        const navMenu = document.getElementById("nav-menu");
-        navMenu.classList.remove("show");
-      }
-      navLink.forEach((n) => n.addEventListener("click", linkAction));
-    },
-    scrollActive(event) {
-      const sections = document.querySelectorAll("section[id]");
-      const scrollY = window.pageYOffset;
-      sections.forEach((current) => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50;
-        const sectionId = current.getAttribute("id");
-        console.log(sectionId);
-        // console.log(sectionId);
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          document
-            .querySelector(".nav__menu a[href*=" + sectionId + "]")
-            .classList.add("active");
-        } else {
-          document
-            .querySelector(".nav__menu a[href*=" + sectionId + "]")
-            .classList.remove("active");
-        }
-      });
-    },
-    homeHeader() {
-      window.scroll({
-        top: 0,
-        behavior: "smooth",
-      });
-    },
-  },
+const navMenuShow = () => {
+  const showMenu = (toggleId, navId) => {
+    const toggle = document.getElementById(toggleId),
+      nav = document.getElementById(navId);
+
+    if (toggle && nav) {
+      nav.classList.toggle("show");
+    }
+  };
+  showMenu("nav-toggle", "nav-menu");
+
+  const navLink = document.querySelectorAll(".nav__link");
+  function linkAction() {
+    const navMenu = document.getElementById("nav-menu");
+    if (navMenu) navMenu.classList.remove("show");
+  }
+  navLink.forEach((n) => n.addEventListener("click", linkAction));
 };
+
+const scrollActive = () => {
+  const sections = document.querySelectorAll("section[id]");
+  const scrollY = window.pageYOffset;
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    const sectionId = current.getAttribute("id");
+    const activeLink = document.querySelector(".nav__menu a[href*=" + sectionId + "]");
+    if (activeLink) {
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        activeLink.classList.add("active");
+      } else {
+        activeLink.classList.remove("active");
+      }
+    }
+  });
+};
+
+const homeHeader = () => {
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", scrollActive);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", scrollActive);
+});
 </script>
 
 <style scoped>
-/*===== LAYOUT =====*/
-.bd-grid {
-  max-width: 1024px;
-  display: grid;
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
-}
-
 .l-header {
   width: 100%;
   position: fixed;
@@ -187,6 +175,7 @@ export default {
   width: 100%;
   height: 0.18rem;
   left: 0;
+  right: 0;
   top: 1.6rem;
   background-color: var(--first-color);
   transition: 0.3s;
@@ -238,13 +227,6 @@ export default {
   }
   .nav__link {
     color: var(--second-color);
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .bd-grid {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 </style>

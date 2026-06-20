@@ -1,4 +1,11 @@
 export default defineNuxtConfig({
+  compatibilityDate: '2024-04-03',
+  experimental: {
+    appManifest: false
+  },
+  css: [
+    '~/assets/css/global.css'
+  ],
   app: {
     head: {
       title: 'Nay Ba La – Web Developer',

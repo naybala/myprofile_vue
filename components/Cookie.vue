@@ -2,77 +2,77 @@
   <div class="accept-cokkiee" id="cookie" @load="load"></div>
 </template>
 
-<script>
-export default {
-  mounted() {
-    this.load();
-  },
-  methods: {
-    load() {
-      const parentTag = document.querySelector(".accept-cokkiee");
-      const openToastAlert = () => {
-        parentTag.innerHTML = "";
-        const toastAlertContainerTag = document.createElement("div");
-        toastAlertContainerTag.classList.add("toastAlertContainer");
-        toastAlertContainerTag.style.display = "flex";
-        toastAlertContainerTag.style.marginTop = "0.5rem";
-        toastAlertContainerTag.style.marginBottom = "0.5rem";
-        const toastAlertTextTag = document.createElement("div");
-        toastAlertTextTag.append(`My Website Using Cookies...`);
-        toastAlertTextTag.classList.add("toastAlertText");
-        toastAlertTextTag.style.marginTop = ".3rem";
-        // create AcceptButtonTag
-        const closeButtonTag = document.createElement("div");
-        closeButtonTag.append("Accept");
-        closeButtonTag.style.backgroundColor = "var(--first-color)";
-        closeButtonTag.style.color = "#fff";
-        closeButtonTag.style.display = "inline-block";
-        closeButtonTag.style.padding = ".5rem";
-        closeButtonTag.style.borderRadius = ".5rem";
-        closeButtonTag.style.cursor = "pointer";
-        closeButtonTag.classList.add("button", "ms-3");
-        // create AcceptButtonTag
-        const closeUnAcceptButtonTag = document.createElement("div");
-        closeUnAcceptButtonTag.append("Close");
-        closeUnAcceptButtonTag.style.backgroundColor = "var(--first-color)";
-        closeUnAcceptButtonTag.style.color = "#fff";
-        closeUnAcceptButtonTag.style.display = "inline-block";
-        closeUnAcceptButtonTag.style.padding = ".5rem";
-        closeUnAcceptButtonTag.style.borderRadius = ".5rem";
-        closeUnAcceptButtonTag.style.cursor = "pointer";
-        closeUnAcceptButtonTag.classList.add("button", "ms-1");
-        // append toastAlertTextTag, closeButtonTag to toastAlertContainerTag
-        toastAlertContainerTag.append(
-          toastAlertTextTag,
-          closeButtonTag,
-          closeUnAcceptButtonTag
-        );
+<script setup>
+import { onMounted } from "vue";
 
-        // append toastAlertContainerTag to parentTag
-        parentTag.append(toastAlertContainerTag);
-        parentTag.style.bottom = `-${parentTag.offsetHeight}px`;
-        setTimeout(() => {
-          parentTag.style.bottom = `0px`;
-        }, 100);
+const load = () => {
+  const parentTag = document.querySelector(".accept-cokkiee");
+  if (!parentTag) return;
+  const openToastAlert = () => {
+    parentTag.innerHTML = "";
+    const toastAlertContainerTag = document.createElement("div");
+    toastAlertContainerTag.classList.add("toastAlertContainer");
+    toastAlertContainerTag.style.display = "flex";
+    toastAlertContainerTag.style.marginTop = "0.5rem";
+    toastAlertContainerTag.style.marginBottom = "0.5rem";
+    const toastAlertTextTag = document.createElement("div");
+    toastAlertTextTag.append(`My Website Using Cookies...`);
+    toastAlertTextTag.classList.add("toastAlertText");
+    toastAlertTextTag.style.marginTop = ".3rem";
+    // create AcceptButtonTag
+    const closeButtonTag = document.createElement("div");
+    closeButtonTag.append("Accept");
+    closeButtonTag.style.backgroundColor = "var(--first-color)";
+    closeButtonTag.style.color = "#fff";
+    closeButtonTag.style.display = "inline-block";
+    closeButtonTag.style.padding = ".5rem";
+    closeButtonTag.style.borderRadius = ".5rem";
+    closeButtonTag.style.cursor = "pointer";
+    closeButtonTag.classList.add("button", "ms-3");
+    // create AcceptButtonTag
+    const closeUnAcceptButtonTag = document.createElement("div");
+    closeUnAcceptButtonTag.append("Close");
+    closeUnAcceptButtonTag.style.backgroundColor = "var(--first-color)";
+    closeUnAcceptButtonTag.style.color = "#fff";
+    closeUnAcceptButtonTag.style.display = "inline-block";
+    closeUnAcceptButtonTag.style.padding = ".5rem";
+    closeUnAcceptButtonTag.style.borderRadius = ".5rem";
+    closeUnAcceptButtonTag.style.cursor = "pointer";
+    closeUnAcceptButtonTag.classList.add("button", "ms-1");
+    // append toastAlertTextTag, closeButtonTag to toastAlertContainerTag
+    toastAlertContainerTag.append(
+      toastAlertTextTag,
+      closeButtonTag,
+      closeUnAcceptButtonTag
+    );
 
-        // Attach event listener on closeButtonTag
-        closeButtonTag.addEventListener("click", () => {
-          localStorage.setItem("accepted", "1");
-          parentTag.style.bottom = `-${parentTag.offsetHeight}px`;
-        });
+    // append toastAlertContainerTag to parentTag
+    parentTag.append(toastAlertContainerTag);
+    parentTag.style.bottom = `-${parentTag.offsetHeight}px`;
+    setTimeout(() => {
+      parentTag.style.bottom = `0px`;
+    }, 100);
 
-        // Attach event listener on closeButtonTag
-        closeUnAcceptButtonTag.addEventListener("click", () => {
-          parentTag.style.bottom = `-${parentTag.offsetHeight}px`;
-        });
-      };
-      const accept = localStorage.getItem("accepted");
-      if (accept != "1") {
-        openToastAlert();
-      }
-    },
-  },
+    // Attach event listener on closeButtonTag
+    closeButtonTag.addEventListener("click", () => {
+      localStorage.setItem("accepted", "1");
+      parentTag.style.bottom = `-${parentTag.offsetHeight}px`;
+    });
+
+    // Attach event listener on closeButtonTag
+    closeUnAcceptButtonTag.addEventListener("click", () => {
+      parentTag.style.bottom = `-${parentTag.offsetHeight}px`;
+    });
+  };
+  const accept = localStorage.getItem("accepted");
+  if (accept != "1") {
+    openToastAlert();
+  }
 };
+
+onMounted(() => {
+  load();
+});
 </script>
 
 <style scoped>

@@ -365,7 +365,9 @@
   </section>
 </template>
 
-<script></script>
+<script setup>
+// No script logic needed for this presentational component
+</script>
 
 <style scoped>
 .flex-container {
@@ -376,30 +378,11 @@
 .flex-container > div {
   margin: 0.12rem;
 }
-.section-title {
-  position: relative;
-  font-size: var(--h2-font-size);
-  color: var(--first-color);
-  margin-top: var(--mb-2);
-  margin-bottom: var(--mb-4);
-  text-align: center;
-}
 .section-title::after {
-  position: absolute;
-  content: "";
   width: 120px;
-  height: 0.18rem;
-  left: 0;
-  right: 0;
-  margin: auto;
   top: 2.5rem;
-  background-color: var(--first-color);
 }
 
-.section {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-}
 /* ===== Projects =====*/
 
 .container .card {
@@ -617,21 +600,6 @@
   }
   .flex-container {
     justify-content: center;
-  }
-}
-@media screen and (min-width: 767px) {
-  .section {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-  }
-
-  .section-title {
-    margin-bottom: var(--mb-6);
-  }
-
-  .section-title::after {
-    width: 80px;
-    top: 3rem;
   }
 }
 </style>

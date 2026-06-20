@@ -2,8 +2,7 @@
   <div class="left-container" id="container-animation"></div>
 </template>
 
-<script>
-export default {};
+<script setup>
 </script>
 
 <style scoped>

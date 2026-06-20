@@ -76,64 +76,28 @@
   </section>
 </template>
 
-<script>
-export default {
-  methods: {
-    imageViewOne() {
-      const popup = document.querySelector("#popup");
-      const gallery = document.querySelector("#galleryEight");
-      const selectedImage = document.querySelector("#selectedImage");
-      selectedImage.src = gallery.src;
-      popup.style.transform = `translateY(0%)`;
-      popup.addEventListener("click", () => {
-        popup.style.transform = `translateY(-100%)`;
-        popup.src = "";
-      });
-    },
-  },
+<script setup>
+const imageViewOne = () => {
+  const popup = document.querySelector("#popup");
+  const gallery = document.querySelector("#galleryEight");
+  const selectedImage = document.querySelector("#selectedImage");
+  if (popup && gallery && selectedImage) {
+    selectedImage.src = gallery.src;
+    popup.style.transform = `translateY(0%)`;
+    popup.addEventListener("click", () => {
+      popup.style.transform = `translateY(-100%)`;
+      popup.src = "";
+    });
+  }
 };
 </script>
 
 <style scoped>
-.section-title {
-  position: relative;
-  font-size: var(--h2-font-size);
-  color: var(--first-color);
-  margin-top: var(--mb-2);
-  margin-bottom: var(--mb-4);
-  text-align: center;
-}
 .section-title::after {
-  position: absolute;
-  content: "";
   width: 120px;
-  height: 0.18rem;
-  left: 0;
-  right: 0;
-  margin: auto;
   top: 2.5rem;
-  background-color: var(--first-color);
 }
 
-.section {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-}
-.button {
-  display: inline-block;
-  background-color: var(--first-color);
-  color: #fff;
-  padding: 0.75rem 2.5rem;
-  font-weight: var(--font-semi);
-  border-radius: 0.5rem;
-  transition: 0.3s;
-  border: none;
-}
-
-.button:hover {
-  transform: translateY(-3px);
-  box-shadow: 3px 3px 10px black;
-}
 #galleryEight {
   cursor: pointer;
   transform: translateY(0px);
@@ -143,27 +107,6 @@ export default {
   transform: translateY(-3px);
   box-shadow: 3px 3px 10px black;
   transition: 0.3s;
-}
-#popup {
-  position: fixed;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  background-color: rgba(23, 22, 22, 0.95);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(-100%);
-  transition: 250ms transform;
-  padding: 50px;
-  z-index: 2000;
-  overflow-x: hidden;
-}
-#selectedImage {
-  max-height: 100%;
-  border-radius: 1rem;
-  max-width: 100%;
 }
 
 h3 {

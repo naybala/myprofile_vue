@@ -116,69 +116,34 @@
   </section>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      title: "Professional Skills",
-      html: "HTML",
-      css: "CSS",
-      js: "JavaScript",
-      bootstrap: "Bootstrap",
-      vue: "Vue Js",
-      php: "Php",
-      laravel: "Laravel",
-      mysql: "MySQL",
-    };
-  },
-  methods: {
-    imageView(el) {
-      const popup = document.querySelector("#popup");
-      const gallery = document.querySelector("#"+el);
-      const selectedImage = document.querySelector("#selectedImage");
-      selectedImage.src = gallery.src;
-      popup.style.transform = `translateY(0%)`;
-      popup.addEventListener("click", () => {
-        popup.style.transform = `translateY(-100%)`;
-        popup.src = "";
-      });
-    },
-  },
+<script setup>
+const title = "Professional Skills";
+const html = "HTML";
+const css = "CSS";
+const js = "JavaScript";
+const bootstrap = "Bootstrap";
+const vue = "Vue Js";
+const php = "Php";
+const laravel = "Laravel";
+const mysql = "MySQL";
+
+const imageView = (el) => {
+  const popup = document.querySelector("#popup");
+  const gallery = document.querySelector("#" + el);
+  const selectedImage = document.querySelector("#selectedImage");
+  if (popup && gallery && selectedImage) {
+    selectedImage.src = gallery.src;
+    popup.style.transform = `translateY(0%)`;
+    popup.addEventListener("click", () => {
+      popup.style.transform = `translateY(-100%)`;
+      popup.src = "";
+    });
+  }
 };
 </script>
 
 <style scoped>
 /* ===== SKILLS =====*/
-.bd-grid {
-  max-width: 1024px;
-  display: grid;
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
-}
-.section-title {
-  position: relative;
-  font-size: var(--h2-font-size);
-  color: var(--first-color);
-  margin-top: var(--mb-2);
-  margin-bottom: var(--mb-4);
-  text-align: center;
-}
-.section-title::after {
-  position: absolute;
-  content: "";
-  width: 64px;
-  height: 0.18rem;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 2rem;
-  background-color: var(--first-color);
-}
-
-.section {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-}
 .skills__container {
   row-gap: 2rem;
   text-align: center;
@@ -262,27 +227,6 @@ export default {
   transform: translateY(-3px);
   box-shadow: 3px 3px 10px black;
 }
-#popup {
-  position: fixed;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  background-color: rgba(23, 22, 22, 0.95);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(-100%);
-  transition: 250ms transform;
-  padding: 50px;
-  z-index: 2000;
-  overflow-x: hidden;
-}
-#selectedImage {
-  max-height: 100%;
-  border-radius: 1rem;
-  max-width: 100%;
-}
 
 @media screen and (min-width: 576px) {
   .skills__container {
@@ -293,32 +237,11 @@ export default {
 }
 
 @media screen and (min-width: 767px) {
-  .section {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-  }
-
-  .section-title {
-    margin-bottom: var(--mb-6);
-  }
-
-  .section-title::after {
-    width: 80px;
-    top: 3rem;
-  }
-
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     align-items: center;
     text-align: initial;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .bd-grid {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 </style>

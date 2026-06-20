@@ -15,18 +15,10 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import typical from "vue-typical";
-export default {
-  data: function () {
-    return {
-      msg: "vue typical",
-    };
-  },
-  components: {
-    typical,
-  },
-};
+
+const msg = "vue typical";
 </script>
 
 <style scoped>

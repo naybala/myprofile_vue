@@ -28,7 +28,6 @@
         <i class="fa-solid fa-palette"></i>
       </div>
       <div class="themes-container">
-        <i class=""></i>
         <div id="theme-close" @click="themeClose">
           <i class="fa-solid fa-circle-xmark"></i>
         </div>
@@ -57,7 +56,7 @@
           <div class="color" style="background: #914b6c"></div>
           <div class="color" style="background: #fc07ef"></div>
         </div>
-        <h3>version 3.0</h3>
+        <span class="version-text">version 3.0</span>
       </div>
       <div class="home__data">
         <h1 class="home__title">
@@ -168,129 +167,117 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import typical from "vue-typical";
-export default {
-  components: {
-    typical,
-  },
-  data: function () {
-    return {
-      msg: "vue typical",
-      home: "< Home >",
-      homeEnd: "< Home />",
-    };
-  },
-  methods: {
-    themeOpen() {
-      const themesContainer = document.querySelector(".themes-container");
-      const themeOpen = document.querySelector("#theme-open");
-      themesContainer.classList.add("activeMenu");
-      themeOpen.style.opacity = "0";
-      const themeColor = document.querySelectorAll(".theme-colors .color");
-      themeColor.forEach((color) => {
-        color.onclick = () => {
-          let background = color.style.background;
-          switch (background) {
-            case "rgb(62, 111, 244)":
-              localStorage.setItem("theme", "1");
-              break;
-            case "rgb(0, 68, 253)":
-              localStorage.setItem("theme", "2");
-              break;
-            case "rgb(39, 174, 96)":
-              localStorage.setItem("theme", "3");
-              break;
-            case "rgb(0, 238, 99)":
-              localStorage.setItem("theme", "4");
-              break;
 
-            case "rgb(15, 185, 177)":
-              localStorage.setItem("theme", "5");
-              break;
-            case "rgb(0, 255, 242)":
-              localStorage.setItem("theme", "6");
-              break;
-            case "rgb(206, 178, 68)":
-              localStorage.setItem("theme", "7");
-              break;
-            case "rgb(255, 204, 0)":
-              localStorage.setItem("theme", "8");
-              break;
+const msg = "vue typical";
+const home = "< Home >";
+const homeEnd = "< Home />";
 
-            case "rgb(172, 53, 76)":
-              localStorage.setItem("theme", "9");
-              break;
-            case "rgb(255, 0, 51)":
-              localStorage.setItem("theme", "10");
-              break;
-            case "rgb(232, 67, 147)":
-              localStorage.setItem("theme", "11");
-              break;
-            case "rgb(186, 238, 0)":
-              localStorage.setItem("theme", "12");
-              break;
-            case "rgb(145, 75, 108)":
-              localStorage.setItem("theme", "13");
-              break;
-            case "rgb(252, 7, 239)":
-              localStorage.setItem("theme", "14");
-              break;
-            default:
-              break;
-          }
-          document
-            .querySelector(":root")
-            .style.setProperty("--first-color", background);
-        };
-      });
-    },
-    themeClose() {
-      const themesContainer = document.querySelector(".themes-container");
-      const themeOpen = document.querySelector("#theme-open");
-      themesContainer.classList.remove("activeMenu");
-      themeOpen.style.opacity = "1";
-    },
-    themeToggler() {
-      let themeToggler = document.querySelector(".theme-toggler");
-      let headDark = document.querySelector("#head");
-      let footerDark = document.querySelector("#footer");
-      let toastAlert = document.querySelector("#cookie");
-      let imageUrl = document.querySelector("#imageUrl");
-      let imageUrl1 = document.querySelector("#imageUrl1");
-
-      themeToggler.classList.toggle("activeToggle");
-      if (themeToggler.classList.contains("activeToggle")) {
-        document.body.classList.add("activeDark");
-        headDark.classList.add("ac");
-        footerDark.classList.add("acti");
-        localStorage.setItem("dark", "1");
-        toastAlert.classList.add("dark");
-        imageUrl.style.opacity = "0";
-        imageUrl1.style.opacity = "1";
-      } else {
-        document.body.classList.remove("activeDark");
-        headDark.classList.remove("ac");
-        footerDark.classList.remove("acti");
-        localStorage.setItem("dark", "0");
-        toastAlert.classList.remove("dark");
-        imageUrl.style.opacity = "1";
-        imageUrl1.style.opacity = "0";
+const themeOpen = () => {
+  const themesContainer = document.querySelector(".themes-container");
+  const themeOpenBtn = document.querySelector("#theme-open");
+  if (themesContainer && themeOpenBtn) {
+    themesContainer.classList.add("activeMenu");
+    themeOpenBtn.style.opacity = "0";
+  }
+  const themeColor = document.querySelectorAll(".theme-colors .color");
+  themeColor.forEach((color) => {
+    color.onclick = () => {
+      let background = color.style.background;
+      switch (background) {
+        case "rgb(62, 111, 244)":
+          localStorage.setItem("theme", "1");
+          break;
+        case "rgb(0, 68, 253)":
+          localStorage.setItem("theme", "2");
+          break;
+        case "rgb(39, 174, 96)":
+          localStorage.setItem("theme", "3");
+          break;
+        case "rgb(0, 238, 99)":
+          localStorage.setItem("theme", "4");
+          break;
+        case "rgb(15, 185, 177)":
+          localStorage.setItem("theme", "5");
+          break;
+        case "rgb(0, 255, 242)":
+          localStorage.setItem("theme", "6");
+          break;
+        case "rgb(206, 178, 68)":
+          localStorage.setItem("theme", "7");
+          break;
+        case "rgb(255, 204, 0)":
+          localStorage.setItem("theme", "8");
+          break;
+        case "rgb(172, 53, 76)":
+          localStorage.setItem("theme", "9");
+          break;
+        case "rgb(255, 0, 51)":
+          localStorage.setItem("theme", "10");
+          break;
+        case "rgb(232, 67, 147)":
+          localStorage.setItem("theme", "11");
+          break;
+        case "rgb(186, 238, 0)":
+          localStorage.setItem("theme", "12");
+          break;
+        case "rgb(145, 75, 108)":
+          localStorage.setItem("theme", "13");
+          break;
+        case "rgb(252, 7, 239)":
+          localStorage.setItem("theme", "14");
+          break;
+        default:
+          break;
       }
-    },
-  },
+      document.querySelector(":root").style.setProperty("--first-color", background);
+    };
+  });
+};
+
+const themeClose = () => {
+  const themesContainer = document.querySelector(".themes-container");
+  const themeOpenBtn = document.querySelector("#theme-open");
+  if (themesContainer && themeOpenBtn) {
+    themesContainer.classList.remove("activeMenu");
+    themeOpenBtn.style.opacity = "1";
+  }
+};
+
+const themeToggler = () => {
+  let togglerEl = document.querySelector(".theme-toggler");
+  let headDark = document.querySelector("#head");
+  let footerDark = document.querySelector("#footer");
+  let toastAlert = document.querySelector("#cookie");
+  let imageUrl = document.querySelector("#imageUrl");
+  let imageUrl1 = document.querySelector("#imageUrl1");
+
+  if (togglerEl) {
+    togglerEl.classList.toggle("activeToggle");
+    if (togglerEl.classList.contains("activeToggle")) {
+      document.body.classList.add("activeDark");
+      if (headDark) headDark.classList.add("ac");
+      if (footerDark) footerDark.classList.add("acti");
+      localStorage.setItem("dark", "1");
+      if (toastAlert) toastAlert.classList.add("dark");
+      if (imageUrl) imageUrl.style.opacity = "0";
+      if (imageUrl1) imageUrl1.style.opacity = "1";
+    } else {
+      document.body.classList.remove("activeDark");
+      if (headDark) headDark.classList.remove("ac");
+      if (footerDark) footerDark.classList.remove("acti");
+      localStorage.setItem("dark", "0");
+      if (toastAlert) toastAlert.classList.remove("dark");
+      if (imageUrl) imageUrl.style.opacity = "1";
+      if (imageUrl1) imageUrl1.style.opacity = "0";
+    }
+  }
 };
 </script>
 
 <style scoped>
 /*===== HOME =====*/
-.bd-grid {
-  max-width: 1024px;
-  display: grid;
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
-}
-
 .home {
   position: relative;
   row-gap: 3rem;
@@ -335,7 +322,6 @@ export default {
 }
 
 .home__blob {
-  /* fill : rgb(44, 231, 19); */
   fill: #fffefe;
   background-color: #fffefe;
   box-shadow: 2px 6px 5px 5px rgb(99, 98, 98);
@@ -429,42 +415,52 @@ export default {
   }
 }
 
-/*BUTTONS*/
-.button {
-  display: inline-block;
+/* ===== Theme Open ===== */
+#theme-open {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   background-color: var(--first-color);
   color: #fff;
-  padding: 0.75rem 2.5rem;
-  font-weight: var(--font-semi);
-  border-radius: 0.5rem;
-  transition: 0.3s;
+  width: 45px;
+  height: 45px;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
 }
 
-.button:hover {
-  transform: translateY(-3px);
-  box-shadow: 3px 3px 10px black;
+#theme-open:hover {
+  width: 55px;
 }
-/* ===== Theme Open =====*/
-#theme-open {
-  cursor: pointer;
-  z-index: 1;
-  font-size: 2rem;
-  margin-bottom: 0;
-}
+
 .themes-container {
-  margin-top: 1rem;
-  margin-left: 1rem;
   position: fixed;
-  top: 100;
-  left: -100%;
-  background: rgb(143, 143, 150);
-  height: 75vh;
-  width: 350px;
-  z-index: 1000;
-  text-align: right;
-  padding: 20px;
-  border-radius: 1rem;
-  transition: all 0.7s ease;
+  top: 0;
+  left: -320px;
+  width: 300px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15);
+  z-index: 1002;
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activeDark .themes-container {
+  background: rgba(30, 41, 59, 0.95);
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.35);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .themes-container.activeMenu {
@@ -472,67 +468,106 @@ export default {
 }
 
 .themes-container #theme-close {
-  font-size: 40px;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: all 0.7s ease;
+  color: var(--first-color);
+  transition: transform 0.3s ease;
+}
+
+.themes-container #theme-close:hover {
+  transform: rotate(90deg);
 }
 
 .themes-container h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   color: var(--first-color);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
-  padding: 2px 0;
-  margin: 20px 0;
+  width: 100%;
 }
 
 .themes-container .theme-toggler {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.activeDark .themes-container .theme-toggler {
+  color: #fff;
 }
 
 .themes-container .theme-toggler .toggler {
-  height: 40px;
-  width: 100px;
+  height: 26px;
+  width: 55px;
   border-radius: 50px;
-  background: rgb(89, 89, 95);
+  background: #cbd5e1;
   position: relative;
   cursor: pointer;
-  margin: 0 10px;
+  transition: background 0.3s ease;
+}
+
+.activeDark .themes-container .theme-toggler .toggler {
+  background: #475569;
 }
 
 .themes-container .theme-toggler .toggler::before {
   content: "";
   position: absolute;
-  top: 5px;
-  left: 5px;
-  height: 28px;
-  width: 28px;
+  top: 3px;
+  left: 3px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
-  background: rgb(233, 228, 228);
-  transition: 0.2s linear;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .themes-container .theme-toggler.activeToggle .toggler::before {
-  left: 65px;
+  left: 32px;
 }
 
 .themes-container .theme-colors {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  justify-items: center;
+  width: 100%;
+  padding: 0.5rem 0;
 }
 
 .themes-container .theme-colors .color {
-  border-radius: 5px;
-  height: 50px;
-  width: 50px;
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
   cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
 }
 
 .themes-container .theme-colors .color:hover {
-  opacity: 0.5;
+  transform: scale(1.15);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
+
+.themes-container .version-text {
+  margin-top: auto;
+  font-size: 0.8rem;
+  color: #64748b;
+  letter-spacing: 0.5px;
+}
+
 @media (max-width: 320px) and (min-width: 300px) {
   .home {
     row-gap: 0rem;
@@ -552,212 +587,12 @@ export default {
   .home__img {
     width: 200px;
   }
-  .theme-colors {
-    gap: 5px;
-  }
-
-  .theme-colors .color {
-    border-radius: 15px;
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
-  }
-
-  #theme-open {
-    position: absolute;
-    top: 100px;
-    right: 0px;
-    cursor: pointer;
-    z-index: 1;
-    font-size: 2rem;
-  }
-
-  .themes-container {
-    position: fixed;
-    top: 100;
-    left: -100%;
-    background: rgb(143, 143, 150);
-    height: 70vh;
-    width: 250px;
-    z-index: 1000;
-    text-align: right;
-    padding: 20px;
-    border-radius: 1rem;
-    transition: all 0.7s ease;
-  }
-
-  .themes-container.activeMenu {
-    left: 0;
-  }
-
-  .themes-container #theme-close {
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 0.7s ease;
-  }
-
-  .themes-container h3 {
-    color: var(--first-color);
-    text-align: center;
-    padding: 2px 0;
-    margin: 10px 0;
-  }
-
-  .themes-container .theme-toggler {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .themes-container .theme-toggler .toggler {
-    height: 20px;
-    width: 70px;
-    border-radius: 50px;
-    background: rgb(89, 89, 95);
-    position: relative;
-    cursor: pointer;
-    margin: 0 10px;
-  }
-
-  .themes-container .theme-toggler .toggler::before {
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    height: 18px;
-    width: 18px;
-    border-radius: 50%;
-    background: rgb(233, 228, 228);
-    transition: 0.2s linear;
-  }
-
-  .themes-container .theme-toggler.activeToggle .toggler::before {
-    left: 50px;
-  }
-
-  .themes-container .theme-colors {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .themes-container .theme-colors .color {
-    border-radius: 5px;
-    height: 20px;
-    width: 20px;
-    cursor: pointer;
-  }
-
-  .themes-container .theme-colors .color:hover {
-    opacity: 0.5;
-  }
 }
-/* ===== MEDIA QUERIES=====*/
+
 @media (max-width: 430px) and (min-width: 321px) {
   .home {
     row-gap: 0rem;
     padding: 0rem 0 6rem;
-  }
-  .theme-colors {
-    gap: 5px;
-  }
-
-  .theme-colors .color {
-    border-radius: 15px;
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
-  }
-
-  #theme-open {
-    position: absolute;
-    top: 100px;
-    right: 0px;
-    cursor: pointer;
-    z-index: 1;
-    font-size: 2rem;
-  }
-
-  .themes-container {
-    position: fixed;
-    top: 100;
-    left: -100%;
-    background: rgb(143, 143, 150);
-    height: 70vh;
-    width: 250px;
-    z-index: 1000;
-    text-align: right;
-    padding: 20px;
-    border-radius: 1rem;
-    transition: all 0.7s ease;
-  }
-
-  .themes-container.activeMenu {
-    left: 0;
-  }
-
-  .themes-container #theme-close {
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 0.7s ease;
-  }
-
-  .themes-container h3 {
-    color: var(--first-color);
-    text-align: center;
-    padding: 2px 0;
-    margin: 10px 0;
-  }
-
-  .themes-container .theme-toggler {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .themes-container .theme-toggler .toggler {
-    height: 20px;
-    width: 70px;
-    border-radius: 50px;
-    background: rgb(89, 89, 95);
-    position: relative;
-    cursor: pointer;
-    margin: 0 10px;
-  }
-
-  .themes-container .theme-toggler .toggler::before {
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    height: 18px;
-    width: 18px;
-    border-radius: 50%;
-    background: rgb(233, 228, 228);
-    transition: 0.2s linear;
-  }
-
-  .themes-container .theme-toggler.activeToggle .toggler::before {
-    left: 50px;
-  }
-
-  .themes-container .theme-colors {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .themes-container .theme-colors .color {
-    border-radius: 5px;
-    height: 20px;
-    width: 20px;
-    cursor: pointer;
-  }
-
-  .themes-container .theme-colors .color:hover {
-    opacity: 0.5;
   }
 }
 
@@ -785,10 +620,6 @@ export default {
 }
 
 @media screen and (min-width: 992px) {
-  .bd-grid {
-    margin-left: auto;
-    margin-right: auto;
-  }
   .home__img {
     width: 450px;
   }

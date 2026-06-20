@@ -151,66 +151,28 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import typical from "vue-typical";
 
-export default {
-  data: function () {
-    return {
-      msg: "vue typical",
-    };
-  },
-  components: {
-    typical,
-  },
-  methods: {
-    imageView(el) {
-      const popup = document.querySelector("#popup");
-      const gallery = document.querySelector("#"+el);
-      const selectedImage = document.querySelector("#selectedImage");
-      selectedImage.src = gallery.src;
-      popup.style.transform = `translateY(0%)`;
-      popup.addEventListener("click", () => {
-        popup.style.transform = `translateY(-100%)`;
-        popup.src = "";
-      });
-    } 
-  },
+const msg = "vue typical";
+
+const imageView = (el) => {
+  const popup = document.querySelector("#popup");
+  const gallery = document.querySelector("#" + el);
+  const selectedImage = document.querySelector("#selectedImage");
+  if (popup && gallery && selectedImage) {
+    selectedImage.src = gallery.src;
+    popup.style.transform = `translateY(0%)`;
+    popup.addEventListener("click", () => {
+      popup.style.transform = `translateY(-100%)`;
+      popup.src = "";
+    });
+  }
 };
 </script>
 
 <style scoped>
 /* ===== ABOUT =====*/
-.bd-grid {
-  max-width: 1024px;
-  display: grid;
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
-}
-.section-title {
-  position: relative;
-  font-size: var(--h2-font-size);
-  color: var(--first-color);
-  margin-top: var(--mb-2);
-  margin-bottom: var(--mb-4);
-  text-align: center;
-}
-.section-title::after {
-  position: absolute;
-  content: "";
-  width: 64px;
-  height: 0.18rem;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 2rem;
-  background-color: var(--first-color);
-}
-
-.section {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-}
 .about__container {
   row-gap: 2rem;
   text-align: center;
@@ -237,29 +199,7 @@ export default {
   transition: 0.3s;
 }
 
-#popup {
-  position: fixed;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  background-color: rgba(23, 22, 22, 0.95);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(-100%);
-  transition: 250ms transform;
-  padding: 50px;
-  z-index: 2000;
-  overflow-x: hidden;
-}
-#selectedImage {
-  max-height: 100%;
-  border-radius: 1rem;
-  max-width: 100%;
-}
 /* ===== MEDIA QUERIES=====*/
-
 @media screen and (min-width: 576px) {
   .about__container {
     grid-template-columns: repeat(2, 1fr);
@@ -272,28 +212,11 @@ export default {
   body {
     margin: 0;
   }
-  .section {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-  }
-  .section-title {
-    margin-bottom: var(--mb-6);
-  }
-  .section-title::after {
-    width: 80px;
-    top: 3rem;
-  }
   .about__container {
     padding-top: 2rem;
   }
   .about__img img {
     width: 300px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .bd-grid {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 </style>
