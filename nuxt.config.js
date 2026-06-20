@@ -16,7 +16,7 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
         { name: 'description', content: 'Portfolio website of Nay Ba La, a passionate web developer from Myanmar.' },
-        { name: 'keywords', content: 'Nay Ba La, naybala, web developer, portfolio, GitHub' },
+        { name: 'keywords', content: 'Nay Ba La, naybala, web developer, portfolio, GitHub, Nuxt.js, Vue.js, React, Next.js, Tailwind, TypeScript, Svelte, Developer Myanmar' },
         { name: 'author', content: 'Nay Ba La' },
         { name: 'robots', content: 'index, follow' },
         // Open Graph / Facebook
@@ -24,17 +24,17 @@ export default defineNuxtConfig({
         { property: 'og:url', content: 'https://naybala.netlify.app/' },
         { property: 'og:title', content: 'Nay Ba La – Web Developer from Myanmar' },
         { property: 'og:description', content: "Hi! I'm Nay Ba La, a passionate web developer building modern and efficient websites." },
-        { property: 'og:image', content: 'https://naybala.netlify.app/assets/myFullProfile.c362dc2b.jpg' },
+        { property: 'og:image', content: 'https://naybala.netlify.app/favicon.png' },
         { property: 'og:site_name', content: 'Nay Ba La Portfolio' },
         // Twitter
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:url', content: 'https://naybala.netlify.app/' },
         { name: 'twitter:title', content: 'Nay Ba La – Web Developer from Myanmar' },
         { name: 'twitter:description', content: "Hi! I'm Nay Ba La, a passionate web developer building modern and efficient websites." },
-        { name: 'twitter:image', content: 'https://naybala.netlify.app/assets/myFullProfile.c362dc2b.jpg' }
+        { name: 'twitter:image', content: 'https://naybala.netlify.app/favicon.png' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
         {
           rel: 'stylesheet',
           href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css',
