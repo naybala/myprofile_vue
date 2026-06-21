@@ -42,21 +42,27 @@
         />
         <br />
         <br />
-        <h5 class="fw-bold text-decoration-underline">Current Laptop Specification</h5>
+        <h5 class="fw-bold text-decoration-underline">
+          Current Laptop Specification
+        </h5>
         <h3>Xaomi Note-Book Pro 2020</h3>
         <ul class="text-capitalize">
-          <li><span>15.6-inch</span> screen,<span> 1920x1080</span> pixel display.</li>
+          <li>
+            <span>15.6-inch</span> screen,<span> 1920x1080</span> pixel display.
+          </li>
           <li>Full-size keyboard built in back lid white light</li>
           <li>
             Intel Core <span>i7-10510U</span> processor, Quad core up to
             <span> 4.2GHz-4.9GHz</span>.
           </li>
-          <li>GPU: <span>2G GDDR5 NVIDIA GeForce MX350</span> Discrete Graphics.</li>
+          <li>
+            GPU: <span>2G GDDR5 NVIDIA GeForce MX350</span> Discrete Graphics.
+          </li>
           <li>
             <span>16GB DDR4</span> dual channel RAM, and
             <span>1TB PCIe SSD storage</span>.
           </li>
-          <li>Windows <span>11 pro</span> Home operating system</li>
+          <li>Ubuntu <span>26.04(Resolute Raccoon)</span> operating system</li>
           <br />
           <li>
             more details

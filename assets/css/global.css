@@ -45,11 +45,11 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -72,7 +72,7 @@ body:before {
 }
 
 body.activeDark {
-  overflow-x: hidden;
+  overflow-x: clip;
   background: #242f3f;
   color: #ffffff;
   z-index: 1;
