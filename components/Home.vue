@@ -1,65 +1,58 @@
 <template>
   <Warning />
   <LeftAnimation />
-  <div class="leftShowCase-2">
+  <div class="leftShowCase-2 animate-slide-left delay-100">
     <div class="container-left"></div>
   </div>
-  <div class="leftShowCase-3">
+  <div class="leftShowCase-3 animate-slide-left delay-200">
     <div class="container-left"></div>
   </div>
 
-  <div class="leftShowCase-5">
+  <div class="leftShowCase-5 animate-slide-left delay-300">
     <div class="container-thin-left"></div>
   </div>
-  <div class="rightShowCase-0">
+  <div class="rightShowCase-0 animate-slide-right delay-100">
     <div class="container-thin"></div>
   </div>
 
-  <div class="rightShowCase-2">
+  <div class="rightShowCase-2 animate-slide-right delay-200">
     <div class="container-right"></div>
   </div>
-  <div class="rightShowCase-3">
+  <div class="rightShowCase-3 animate-slide-right delay-300">
     <div class="container-right"></div>
   </div>
   <br /><br />
   <section class="home bd-grid" id="home">
     <div data-aos="fade-up">
-      <div id="theme-open" @click="themeOpen" class="home__social-icon">
+      <div id="theme-open" @click="isThemeActive = true" class="home__social-icon" :style="{ opacity: isThemeActive ? '0' : '1' }">
         <i class="fa-solid fa-palette"></i>
       </div>
-      <div class="themes-container">
-        <div id="theme-close" @click="themeClose">
+      <div class="themes-container" :class="{ activeMenu: isThemeActive }">
+        <div id="theme-close" @click="isThemeActive = false">
           <i class="fa-solid fa-circle-xmark"></i>
         </div>
         <h3>Switch Theme</h3>
-        <div class="theme-toggler" @click="themeToggler">
-          <span>light</span>
+        <div class="theme-toggler" :class="{ activeToggle: isDark }" @click="themeToggler">
+          <span>Light</span>
           <span class="toggler"></span>
-          <span>dark</span>
+          <span>Dark</span>
         </div>
 
-        <h3>pick an acent color</h3>
+        <h3>Pick an accent color</h3>
 
         <div class="theme-colors">
-          <div class="color" style="background: #3e6ff4"></div>
-          <div class="color" style="background: #0044fd"></div>
-          <div class="color" style="background: #27ae60"></div>
-          <div class="color" style="background: #00ee63"></div>
-          <div class="color" style="background: #0fb9b1"></div>
-          <div class="color" style="background: #00fff2"></div>
-          <div class="color" style="background: #ceb244"></div>
-          <div class="color" style="background: #ffcc00"></div>
-          <div class="color" style="background: #ac354c"></div>
-          <div class="color" style="background: #ff0033"></div>
-          <div class="color" style="background: #e84393"></div>
-          <div class="color" style="background: #baee00"></div>
-          <div class="color" style="background: #914b6c"></div>
-          <div class="color" style="background: #fc07ef"></div>
+          <div
+            v-for="c in colors"
+            :key="c.id"
+            class="color"
+            :style="{ background: c.value }"
+            @click="setAccentColor(c)"
+          ></div>
         </div>
-        <span class="version-text">version 3.0</span>
+        <span class="version-text">Version 3.0</span>
       </div>
       <div class="home__data">
-        <h1 class="home__title">
+        <h1 class="home__title animate-fade-up">
           Hello
           <a
             href="https://earth.google.com/web/"
@@ -81,17 +74,17 @@
           Web Developer
         </h1>
 
-        <p class="mb-3">Email : naybala.personal@gmail.com</p>
+        <p class="mb-3 animate-fade-up delay-100">Email : naybala.personal@gmail.com</p>
         <a
           href="https://drive.google.com/file/d/1WliobQmUhoYBZr7Qij5dD1oSQe6vIPQi/view?usp=sharing"
-          class="button text-decoration-none mb-2"
+          class="button text-decoration-none mb-2 animate-fade-up delay-200"
           target="_blink"
           >Download My Resume</a
         >
         <br />
       </div>
 
-      <div class="home__social mt-2 ms-3">
+      <div class="home__social mt-2 ms-3 animate-fade-up delay-300">
         <a
           href="https://www.facebook.com/profile.php?id=100076412994170"
           class="home__social-icon"
@@ -114,7 +107,7 @@
       </div>
     </div>
 
-    <div class="home__img">
+    <div class="home__img animate-scale-in delay-200">
       <svg
         class="home__blob"
         viewBox="0 0 479 467"
@@ -168,114 +161,64 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
 import typical from "vue-typical";
 
-const msg = "vue typical";
-const home = "< Home >";
-const homeEnd = "< Home />";
+const isThemeActive = ref(false);
+const isDark = ref(false);
 
-const themeOpen = () => {
-  const themesContainer = document.querySelector(".themes-container");
-  const themeOpenBtn = document.querySelector("#theme-open");
-  if (themesContainer && themeOpenBtn) {
-    themesContainer.classList.add("activeMenu");
-    themeOpenBtn.style.opacity = "0";
-  }
-  const themeColor = document.querySelectorAll(".theme-colors .color");
-  themeColor.forEach((color) => {
-    color.onclick = () => {
-      let background = color.style.background;
-      switch (background) {
-        case "rgb(62, 111, 244)":
-          localStorage.setItem("theme", "1");
-          break;
-        case "rgb(0, 68, 253)":
-          localStorage.setItem("theme", "2");
-          break;
-        case "rgb(39, 174, 96)":
-          localStorage.setItem("theme", "3");
-          break;
-        case "rgb(0, 238, 99)":
-          localStorage.setItem("theme", "4");
-          break;
-        case "rgb(15, 185, 177)":
-          localStorage.setItem("theme", "5");
-          break;
-        case "rgb(0, 255, 242)":
-          localStorage.setItem("theme", "6");
-          break;
-        case "rgb(206, 178, 68)":
-          localStorage.setItem("theme", "7");
-          break;
-        case "rgb(255, 204, 0)":
-          localStorage.setItem("theme", "8");
-          break;
-        case "rgb(172, 53, 76)":
-          localStorage.setItem("theme", "9");
-          break;
-        case "rgb(255, 0, 51)":
-          localStorage.setItem("theme", "10");
-          break;
-        case "rgb(232, 67, 147)":
-          localStorage.setItem("theme", "11");
-          break;
-        case "rgb(186, 238, 0)":
-          localStorage.setItem("theme", "12");
-          break;
-        case "rgb(145, 75, 108)":
-          localStorage.setItem("theme", "13");
-          break;
-        case "rgb(252, 7, 239)":
-          localStorage.setItem("theme", "14");
-          break;
-        default:
-          break;
-      }
-      document
-        .querySelector(":root")
-        .style.setProperty("--first-color", background);
-    };
-  });
-};
+const colors = [
+  { id: "1", value: "rgb(62, 111, 244)" },
+  { id: "2", value: "rgb(0, 68, 253)" },
+  { id: "3", value: "rgb(39, 174, 96)" },
+  { id: "4", value: "rgb(0, 238, 99)" },
+  { id: "5", value: "rgb(15, 185, 177)" },
+  { id: "6", value: "rgb(0, 255, 242)" },
+  { id: "7", value: "rgb(206, 178, 68)" },
+  { id: "8", value: "rgb(255, 204, 0)" },
+  { id: "9", value: "rgb(172, 53, 76)" },
+  { id: "10", value: "rgb(255, 0, 51)" },
+  { id: "11", value: "rgb(232, 67, 147)" },
+  { id: "12", value: "rgb(186, 238, 0)" },
+  { id: "13", value: "rgb(145, 75, 108)" },
+  { id: "14", value: "rgb(252, 7, 239)" }
+];
 
-const themeClose = () => {
-  const themesContainer = document.querySelector(".themes-container");
-  const themeOpenBtn = document.querySelector("#theme-open");
-  if (themesContainer && themeOpenBtn) {
-    themesContainer.classList.remove("activeMenu");
-    themeOpenBtn.style.opacity = "1";
-  }
+const setAccentColor = (c) => {
+  localStorage.setItem("theme", c.id);
+  document.documentElement.style.setProperty("--first-color", c.value);
 };
 
 const themeToggler = () => {
-  let togglerEl = document.querySelector(".theme-toggler");
   let headDark = document.querySelector("#head");
   let footerDark = document.querySelector("#footer");
   let toastAlert = document.querySelector("#cookie");
   let imageUrl = document.querySelector("#imageUrl");
   let imageUrl1 = document.querySelector("#imageUrl1");
 
-  if (togglerEl) {
-    togglerEl.classList.toggle("activeToggle");
-    if (togglerEl.classList.contains("activeToggle")) {
-      document.body.classList.add("activeDark");
-      if (headDark) headDark.classList.add("ac");
-      if (footerDark) footerDark.classList.add("acti");
-      localStorage.setItem("dark", "1");
-      if (toastAlert) toastAlert.classList.add("dark");
-      if (imageUrl) imageUrl.style.opacity = "0";
-      if (imageUrl1) imageUrl1.style.opacity = "1";
-    } else {
-      document.body.classList.remove("activeDark");
-      if (headDark) headDark.classList.remove("ac");
-      if (footerDark) footerDark.classList.remove("acti");
-      localStorage.setItem("dark", "0");
-      if (toastAlert) toastAlert.classList.remove("dark");
-      if (imageUrl) imageUrl.style.opacity = "1";
-      if (imageUrl1) imageUrl1.style.opacity = "0";
-    }
+  isDark.value = !isDark.value;
+  if (isDark.value) {
+    document.body.classList.add("activeDark");
+    if (headDark) headDark.classList.add("ac");
+    if (footerDark) footerDark.classList.add("acti");
+    localStorage.setItem("dark", "1");
+    if (toastAlert) toastAlert.classList.add("dark");
+    if (imageUrl) imageUrl.style.opacity = "0";
+    if (imageUrl1) imageUrl1.style.opacity = "1";
+  } else {
+    document.body.classList.remove("activeDark");
+    if (headDark) headDark.classList.remove("ac");
+    if (footerDark) footerDark.classList.remove("acti");
+    localStorage.setItem("dark", "0");
+    if (toastAlert) toastAlert.classList.remove("dark");
+    if (imageUrl) imageUrl.style.opacity = "1";
+    if (imageUrl1) imageUrl1.style.opacity = "0";
   }
 };
+
+onMounted(() => {
+  isDark.value = document.body.classList.contains("activeDark") || localStorage.getItem("dark") === "1";
+});
 </script>
 
 <style scoped>
@@ -302,18 +245,28 @@ const themeToggler = () => {
 .home__social {
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
 }
 
 .home__social-icon {
-  width: max-content;
-  margin-bottom: var(--mb-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   font-size: 1.5rem;
   color: var(--first-color);
   z-index: auto;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
 }
 
 .home__social-icon:hover {
-  color: var(--first-color);
+  color: #fff;
+  background-color: var(--first-color);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .home__img {
@@ -326,11 +279,18 @@ const themeToggler = () => {
 .home__blob {
   fill: #fffefe;
   background-color: #fffefe;
-  box-shadow: 2px 6px 5px 5px rgb(99, 98, 98);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   border-top-left-radius: 5rem;
   border-bottom-right-radius: 5rem;
   border-top-right-radius: 10rem;
   border-bottom-left-radius: 20rem;
+  transition: background-color 0.3s ease, fill 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activeDark .home__blob {
+  fill: #1b2330;
+  background-color: #1b2330;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .home__blob-img {
@@ -383,11 +343,13 @@ const themeToggler = () => {
   width: 95rem;
   height: 10px;
   box-shadow: 3px 3px 10px rgb(214, 212, 212);
+  transition: box-shadow 0.3s ease;
 }
 .container-thin {
   width: 75rem;
   height: 10px;
   box-shadow: 3px 3px 10px rgb(214, 212, 212);
+  transition: box-shadow 0.3s ease;
 }
 .container-right {
   width: 350px;
@@ -395,6 +357,7 @@ const themeToggler = () => {
   border-top-left-radius: 5rem;
   border-bottom-left-radius: 5rem;
   box-shadow: 3px 3px 10px rgb(214, 212, 212);
+  transition: box-shadow 0.3s ease;
 }
 .container-left {
   width: 350px;
@@ -402,6 +365,14 @@ const themeToggler = () => {
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
   box-shadow: 3px 3px 10px rgb(214, 212, 212);
+  transition: box-shadow 0.3s ease;
+}
+
+.activeDark .container-thin-left,
+.activeDark .container-thin,
+.activeDark .container-right,
+.activeDark .container-left {
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
 }
 
 #imageUrl1 {
@@ -503,6 +474,8 @@ const themeToggler = () => {
   margin-bottom: 1rem;
   font-weight: 500;
   color: #333;
+  cursor: pointer;
+  user-select: none;
 }
 
 .activeDark .themes-container .theme-toggler {
@@ -515,7 +488,6 @@ const themeToggler = () => {
   border-radius: 50px;
   background: #cbd5e1;
   position: relative;
-  cursor: pointer;
   transition: background 0.3s ease;
 }
 
@@ -604,16 +576,11 @@ const themeToggler = () => {
     padding-bottom: 2.5rem;
     flex-direction: row;
     align-self: flex-end;
+    gap: 0;
   }
   .home__social-icon {
     margin-bottom: 0;
     margin-right: var(--mb-4);
-    transition: 0.3s;
-  }
-  .home__social-icon:hover {
-    transform: translateY(-6px);
-    box-shadow: 2px 2px 10px rgb(223, 219, 219);
-    border-radius: 2.5rem;
   }
   .home__img {
     width: 300px;
@@ -625,5 +592,86 @@ const themeToggler = () => {
   .home__img {
     width: 450px;
   }
+}
+
+/* Entrance Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px) rotate(-40deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(-40deg);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px) rotate(-40deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(-40deg);
+  }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-in {
+  opacity: 0;
+  animation: fadeInScale 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-left {
+  opacity: 0;
+  animation: slideInLeft 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-right {
+  opacity: 0;
+  animation: slideInRight 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
 }
 </style>
