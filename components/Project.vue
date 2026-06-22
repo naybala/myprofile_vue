@@ -52,12 +52,12 @@ const projects = [
     description:
       "A comprehensive accounting system designed to streamline financial workflows, manage ledger transactions, generate balance sheets, and automate tax compliance processing.",
     image: accountingImg,
-    tech: [
-      { name: "Laravel", icon: "fa-brands fa-laravel" },
-      { name: "MySQL", icon: "fa-solid fa-database" },
-      { name: "PHP", icon: "fa-brands fa-php" },
-      { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
-    ],
+    // tech: [
+    //   { name: "Laravel", icon: "fa-brands fa-laravel" },
+    //   { name: "MySQL", icon: "fa-solid fa-database" },
+    //   { name: "PHP", icon: "fa-brands fa-php" },
+    //   { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
+    // ],
     link: "https://github.com/naybala",
   },
   {
@@ -65,12 +65,12 @@ const projects = [
     description:
       "An advanced fintech platform featuring real-time wallet tracking, secure peer-to-peer transfers, interactive balance charts, and multi-currency payment processing.",
     image: fintechImg,
-    tech: [
-      { name: "Vue.js", icon: "fa-brands fa-vuejs" },
-      { name: "Node.js", icon: "fa-brands fa-node-js" },
-      { name: "PostgreSQL", icon: "fa-solid fa-database" },
-      { name: "JavaScript", icon: "fa-brands fa-js" },
-    ],
+    // tech: [
+    //   { name: "Vue.js", icon: "fa-brands fa-vuejs" },
+    //   { name: "Node.js", icon: "fa-brands fa-node-js" },
+    //   { name: "PostgreSQL", icon: "fa-solid fa-database" },
+    //   { name: "JavaScript", icon: "fa-brands fa-js" },
+    // ],
     link: "https://github.com/naybala",
   },
   {
@@ -78,12 +78,12 @@ const projects = [
     description:
       "A high-performance retail POS system supporting automated barcode scanning, dynamic product search, real-time inventory alerts, and instant invoice billing receipt creation.",
     image: posImg,
-    tech: [
-      { name: "Laravel", icon: "fa-brands fa-laravel" },
-      { name: "SQLite", icon: "fa-solid fa-database" },
-      { name: "Vue.js", icon: "fa-brands fa-vuejs" },
-      { name: "Tailwind", icon: "fa-brands fa-css3-alt" },
-    ],
+    // tech: [
+    //   { name: "Laravel", icon: "fa-brands fa-laravel" },
+    //   { name: "SQLite", icon: "fa-solid fa-database" },
+    //   { name: "Vue.js", icon: "fa-brands fa-vuejs" },
+    //   { name: "Tailwind", icon: "fa-brands fa-css3-alt" },
+    // ],
     link: "https://github.com/naybala",
   },
   {
@@ -91,12 +91,12 @@ const projects = [
     description:
       "A specialized system for managing garment manufacturing processes, handling raw material inventory, production line scheduling, and order tracking.",
     image: garmentImg,
-    tech: [
-      { name: "Laravel", icon: "fa-brands fa-laravel" },
-      { name: "MySQL", icon: "fa-solid fa-database" },
-      { name: "PHP", icon: "fa-brands fa-php" },
-      { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
-    ],
+    // tech: [
+    //   { name: "Laravel", icon: "fa-brands fa-laravel" },
+    //   { name: "MySQL", icon: "fa-solid fa-database" },
+    //   { name: "PHP", icon: "fa-brands fa-php" },
+    //   { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
+    // ],
     link: "https://github.com/naybala",
   },
   {
@@ -104,12 +104,12 @@ const projects = [
     description:
       "A customized customer loyalty program designed to track member reward points, process reward redemptions, and manage discount voucher lifecycle.",
     image: loyaltyImg,
-    tech: [
-      { name: "Vue.js", icon: "fa-brands fa-vuejs" },
-      { name: "Node.js", icon: "fa-brands fa-node-js" },
-      { name: "PostgreSQL", icon: "fa-solid fa-database" },
-      { name: "Express", icon: "fa-brands fa-js" },
-    ],
+    // tech: [
+    //   { name: "Vue.js", icon: "fa-brands fa-vuejs" },
+    //   { name: "Node.js", icon: "fa-brands fa-node-js" },
+    //   { name: "PostgreSQL", icon: "fa-solid fa-database" },
+    //   { name: "Express", icon: "fa-brands fa-js" },
+    // ],
     link: "https://github.com/naybala",
   },
   {
@@ -117,12 +117,12 @@ const projects = [
     description:
       "A media publishing and resource management platform featuring structured layout directories, rapid upload tools, and multi-user subscription profiles.",
     image: mediaImg,
-    tech: [
-      { name: "Laravel", icon: "fa-brands fa-laravel" },
-      { name: "MySQL", icon: "fa-solid fa-database" },
-      { name: "PHP", icon: "fa-brands fa-php" },
-      { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
-    ],
+    // tech: [
+    //   { name: "Laravel", icon: "fa-brands fa-laravel" },
+    //   { name: "MySQL", icon: "fa-solid fa-database" },
+    //   { name: "PHP", icon: "fa-brands fa-php" },
+    //   { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
+    // ],
     link: "https://github.com/naybala",
   },
   {
@@ -130,12 +130,12 @@ const projects = [
     description:
       "A comprehensive listing portal matching home buyers with properties, supporting advanced keyword filters, agent profiles, and property maps.",
     image: realestateImg,
-    tech: [
-      { name: "Laravel", icon: "fa-brands fa-laravel" },
-      { name: "SQLite", icon: "fa-solid fa-database" },
-      { name: "Vue.js", icon: "fa-brands fa-vuejs" },
-      { name: "Tailwind", icon: "fa-brands fa-css3-alt" },
-    ],
+    // tech: [
+    //   { name: "Laravel", icon: "fa-brands fa-laravel" },
+    //   { name: "SQLite", icon: "fa-solid fa-database" },
+    //   { name: "Vue.js", icon: "fa-brands fa-vuejs" },
+    //   { name: "Tailwind", icon: "fa-brands fa-css3-alt" },
+    // ],
     link: "https://github.com/naybala",
   },
 ];
@@ -150,7 +150,7 @@ const getCardStyle = (index) => {
 
 <style scoped>
 #project {
-  background-color: #242f3f;
+  background-color: rgba(139, 143, 142, 0.3);
 }
 .section-title::after {
   width: 120px;

@@ -8,7 +8,7 @@
     <About />
     <Skill />
     <Project />
-    <CurrentlyWork />
+    <!-- <CurrentlyWork /> -->
     <Contact />
     <Footer />
     <Cookie />

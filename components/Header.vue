@@ -21,19 +21,27 @@
             >
           </li>
           <li class="nav__item">
-            <a href="#about" class="nav__link text-decoration-none">{{ about }}</a>
+            <a href="#about" class="nav__link text-decoration-none">{{
+              about
+            }}</a>
           </li>
           <li class="nav__item">
-            <a href="#skills" class="nav__link text-decoration-none">{{ skill }}</a>
+            <a href="#skills" class="nav__link text-decoration-none">{{
+              skill
+            }}</a>
           </li>
           <li class="nav__item">
-            <a href="#project" class="nav__link text-decoration-none">{{ project }}</a>
+            <a href="#project" class="nav__link text-decoration-none">{{
+              project
+            }}</a>
           </li>
-          <li class="nav__item">
+          <!-- <li class="nav__item">
             <a href="#currentlyWork" class="nav__link text-decoration-none">{{ currentlyWork }}</a>
-          </li>
+          </li> -->
           <li class="nav__item">
-            <a href="#contact" class="nav__link text-decoration-none">{{ contact }}</a>
+            <a href="#contact" class="nav__link text-decoration-none">{{
+              contact
+            }}</a>
           </li>
         </ul>
       </div>
@@ -84,7 +92,9 @@ const scrollActive = () => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
     const sectionId = current.getAttribute("id");
-    const activeLink = document.querySelector(".nav__menu a[href*=" + sectionId + "]");
+    const activeLink = document.querySelector(
+      ".nav__menu a[href*=" + sectionId + "]",
+    );
     if (activeLink) {
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
         activeLink.classList.add("active");
