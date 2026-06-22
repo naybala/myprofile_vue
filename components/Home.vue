@@ -1,5 +1,4 @@
 <template>
-  <Warning />
   <LeftAnimation />
   <div class="leftShowCase-2 animate-slide-left delay-100">
     <div class="container-left"></div>
@@ -24,7 +23,12 @@
   <br /><br />
   <section class="home bd-grid" id="home">
     <div data-aos="fade-up">
-      <div id="theme-open" @click="isThemeActive = true" class="home__social-icon" :style="{ opacity: isThemeActive ? '0' : '1' }">
+      <div
+        id="theme-open"
+        @click="isThemeActive = true"
+        class="home__social-icon"
+        :style="{ opacity: isThemeActive ? '0' : '1' }"
+      >
         <i class="fa-solid fa-palette"></i>
       </div>
       <div class="themes-container" :class="{ activeMenu: isThemeActive }">
@@ -32,7 +36,11 @@
           <i class="fa-solid fa-circle-xmark"></i>
         </div>
         <h3>Switch Theme</h3>
-        <div class="theme-toggler" :class="{ activeToggle: isDark }" @click="themeToggler">
+        <div
+          class="theme-toggler"
+          :class="{ activeToggle: isDark }"
+          @click="themeToggler"
+        >
           <span>Light</span>
           <span class="toggler"></span>
           <span>Dark</span>
@@ -74,7 +82,9 @@
           Web Developer
         </h1>
 
-        <p class="mb-3 animate-fade-up delay-100">Email : naybala.personal@gmail.com</p>
+        <p class="mb-3 animate-fade-up delay-100">
+          Email : naybala.personal@gmail.com
+        </p>
         <a
           href="https://drive.google.com/file/d/1WliobQmUhoYBZr7Qij5dD1oSQe6vIPQi/view?usp=sharing"
           class="button text-decoration-none mb-2 animate-fade-up delay-200"
@@ -181,7 +191,7 @@ const colors = [
   { id: "11", value: "rgb(232, 67, 147)" },
   { id: "12", value: "rgb(186, 238, 0)" },
   { id: "13", value: "rgb(145, 75, 108)" },
-  { id: "14", value: "rgb(252, 7, 239)" }
+  { id: "14", value: "rgb(252, 7, 239)" },
 ];
 
 const setAccentColor = (c) => {
@@ -217,7 +227,9 @@ const themeToggler = () => {
 };
 
 onMounted(() => {
-  isDark.value = document.body.classList.contains("activeDark") || localStorage.getItem("dark") === "1";
+  isDark.value =
+    document.body.classList.contains("activeDark") ||
+    localStorage.getItem("dark") === "1";
 });
 </script>
 
@@ -284,7 +296,10 @@ onMounted(() => {
   border-bottom-right-radius: 5rem;
   border-top-right-radius: 10rem;
   border-bottom-left-radius: 20rem;
-  transition: background-color 0.3s ease, fill 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    fill 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .activeDark .home__blob {
