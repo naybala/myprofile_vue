@@ -112,13 +112,14 @@
       <div class="collage-sticky-viewport">
         <div class="collage-track">
           <!-- Column 1: HTML, CSS, Bootstrap (Moves Up) -->
+          <!-- Column 1: HTML, CSS, Bootstrap (Moves Up) -->
           <div
             class="collage-column col-vue"
             :style="{
-              transform: `translateY(${offsetY * -1}px) skewX(-22deg)`,
+              transform: `translateY(${offsetY * -1}px) skewX(${isMobile ? -14 : -22}deg)`,
             }"
           >
-            <div class="collage-column-content">
+            <div class="collage-column-content" :style="{ transform: `skewX(${isMobile ? 14 : 22}deg)` }">
               <div class="collage-skill-item">
                 <i class="fa-brands fa-html5 collage-icon"></i>
                 <span class="collage-name">HTML</span>
@@ -137,9 +138,9 @@
           <!-- Column 2: Tailwind, JS, TS (Moves Down) -->
           <div
             class="collage-column col-laravel"
-            :style="{ transform: `translateY(${offsetY * 1}px) skewX(-22deg)` }"
+            :style="{ transform: `translateY(${offsetY * 1}px) skewX(${isMobile ? -14 : -22}deg)` }"
           >
-            <div class="collage-column-content">
+            <div class="collage-column-content" :style="{ transform: `skewX(${isMobile ? 14 : 22}deg)` }">
               <div class="collage-skill-item">
                 <i class="fa-solid fa-wind collage-icon"></i>
                 <span class="collage-name">Tailwind CSS</span>
@@ -159,10 +160,10 @@
           <div
             class="collage-column col-node"
             :style="{
-              transform: `translateY(${offsetY * -1}px) skewX(-22deg)`,
+              transform: `translateY(${offsetY * -1}px) skewX(${isMobile ? -14 : -22}deg)`,
             }"
           >
-            <div class="collage-column-content">
+            <div class="collage-column-content" :style="{ transform: `skewX(${isMobile ? 14 : 22}deg)` }">
               <div class="collage-skill-item">
                 <i class="fa-brands fa-vuejs collage-icon"></i>
                 <span class="collage-name">Vue Js</span>
@@ -181,9 +182,9 @@
           <!-- Column 4: React, Next, PHP (Moves Down) -->
           <div
             class="collage-column col-react"
-            :style="{ transform: `translateY(${offsetY * 1}px) skewX(-22deg)` }"
+            :style="{ transform: `translateY(${offsetY * 1}px) skewX(${isMobile ? -14 : -22}deg)` }"
           >
-            <div class="collage-column-content">
+            <div class="collage-column-content" :style="{ transform: `skewX(${isMobile ? 14 : 22}deg)` }">
               <div class="collage-skill-item">
                 <i class="fa-brands fa-react collage-icon"></i>
                 <span class="collage-name">React</span>
@@ -203,10 +204,10 @@
           <div
             class="collage-column col-js"
             :style="{
-              transform: `translateY(${offsetY * -1}px) skewX(-22deg)`,
+              transform: `translateY(${offsetY * -1}px) skewX(${isMobile ? -14 : -22}deg)`,
             }"
           >
-            <div class="collage-column-content">
+            <div class="collage-column-content" :style="{ transform: `skewX(${isMobile ? 14 : 22}deg)` }">
               <div class="collage-skill-item">
                 <i class="fa-brands fa-laravel collage-icon"></i>
                 <span class="collage-name">Laravel</span>
@@ -225,9 +226,9 @@
           <!-- Column 6: Nest, Postgres, MySQL (Moves Down) -->
           <div
             class="collage-column col-postgres"
-            :style="{ transform: `translateY(${offsetY * 1}px) skewX(-22deg)` }"
+            :style="{ transform: `translateY(${offsetY * 1}px) skewX(${isMobile ? -14 : -22}deg)` }"
           >
-            <div class="collage-column-content">
+            <div class="collage-column-content" :style="{ transform: `skewX(${isMobile ? 14 : 22}deg)` }">
               <div class="collage-skill-item">
                 <i class="fa-solid fa-cubes collage-icon"></i>
                 <span class="collage-name">Nest Js</span>
@@ -247,10 +248,10 @@
           <div
             class="collage-column col-php"
             :style="{
-              transform: `translateY(${offsetY * -1}px) skewX(-22deg)`,
+              transform: `translateY(${offsetY * -1}px) skewX(${isMobile ? -14 : -22}deg)`,
             }"
           >
-            <div class="collage-column-content">
+            <div class="collage-column-content" :style="{ transform: `skewX(${isMobile ? 14 : 22}deg)` }">
               <div class="collage-skill-item">
                 <i class="fa-solid fa-leaf collage-icon"></i>
                 <span class="collage-name">Mongo DB</span>
@@ -265,9 +266,9 @@
           <!-- Column 8: Prime Vue, Prime React (Moves Down) -->
           <div
             class="collage-column col-tailwind"
-            :style="{ transform: `translateY(${offsetY * 1}px) skewX(-22deg)` }"
+            :style="{ transform: `translateY(${offsetY * 1}px) skewX(${isMobile ? -14 : -22}deg)` }"
           >
-            <div class="collage-column-content">
+            <div class="collage-column-content" :style="{ transform: `skewX(${isMobile ? 14 : 22}deg)` }">
               <div class="collage-skill-item">
                 <i class="fa-solid fa-shield-halved collage-icon"></i>
                 <span class="collage-name">Prime Vue</span>
@@ -292,6 +293,13 @@ const hoveredIndex = ref(null);
 
 const pinContainer = ref(null);
 const offsetY = ref(0);
+const isMobile = ref(false);
+
+const updateMobileStatus = () => {
+  if (typeof window !== "undefined") {
+    isMobile.value = window.innerWidth <= 768;
+  }
+};
 
 const handleCollageScroll = () => {
   if (!pinContainer.value) return;
@@ -300,23 +308,29 @@ const handleCollageScroll = () => {
   const containerHeight = rect.height;
   const scrollRange = containerHeight - windowHeight;
 
+  const multiplier = isMobile.value ? 100 : 240;
+  const half = multiplier / 2;
+
   if (rect.top <= 0 && rect.bottom >= windowHeight) {
     const scrolled = -rect.top;
     const progress = Math.max(0, Math.min(1, scrolled / scrollRange));
-    offsetY.value = (progress - 0.5) * 440;
+    offsetY.value = (progress - 0.5) * multiplier;
   } else if (rect.top > 0) {
-    offsetY.value = -220;
+    offsetY.value = -half;
   } else if (rect.bottom < windowHeight) {
-    offsetY.value = 220;
+    offsetY.value = half;
   }
 };
 
 onMounted(() => {
+  updateMobileStatus();
+  window.addEventListener("resize", updateMobileStatus, { passive: true });
   window.addEventListener("scroll", handleCollageScroll, { passive: true });
   handleCollageScroll();
 });
 
 onUnmounted(() => {
+  window.removeEventListener("resize", updateMobileStatus);
   window.removeEventListener("scroll", handleCollageScroll);
 });
 
@@ -644,9 +658,9 @@ const backendLines = [
 
 .collage-column {
   flex: 1;
-  height: 1000px;
+  height: 760px;
   position: relative;
-  top: -240px;
+  top: -120px;
   overflow: hidden;
   margin: 0 -12px;
   transition: transform 0.15s cubic-bezier(0.1, 0.8, 0.2, 1);
@@ -676,7 +690,7 @@ const backendLines = [
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3.5rem;
+  gap: 2.2rem;
   height: 100%;
   width: 250%;
   position: absolute;
@@ -763,11 +777,39 @@ const backendLines = [
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
+  .collage-pin-container {
+    height: 160vh;
+  }
+  .collage-sticky-viewport {
+    top: 3.5rem;
+    height: calc(100vh - 3.5rem);
+  }
   .collage-track {
-    font-size: 0.85rem;
+    height: 420px;
+  }
+  .collage-column {
+    height: 580px;
+    top: -80px;
+    margin: 0 -15px;
+  }
+  .collage-column:nth-child(n+4) {
+    display: none;
+  }
+  .collage-column-content {
+    width: 300%;
+    left: -100%;
+    gap: 1.6rem;
+  }
+  .collage-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.4rem;
+  }
+  .collage-name {
+    font-size: 0.8rem;
   }
   .collage-text {
     font-size: 0.8rem;
+    padding: 0 1rem;
   }
 }
 </style>
