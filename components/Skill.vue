@@ -2,18 +2,20 @@
   <section class="skills section" id="skills">
     <h2 class="section-title">Skills</h2>
     <div class="skills-map-container">
-      
       <!-- Left Column: Frontend -->
       <div class="skills-column left-column">
-        <div 
-          v-for="(skill, index) in frontendSkills" 
-          :key="index" 
+        <div
+          v-for="(skill, index) in frontendSkills"
+          :key="index"
           class="skill-card"
           data-aos="fade-right"
           :data-aos-delay="index * 50"
           @mouseenter="setHover('frontend', index)"
           @mouseleave="clearHover()"
-          :class="{ 'card-hovered': hoveredType === 'frontend' && hoveredIndex === index }"
+          :class="{
+            'card-hovered':
+              hoveredType === 'frontend' && hoveredIndex === index,
+          }"
         >
           <i :class="[skill.icon, 'skills__icon']"></i>
           <span class="skill-name">{{ skill.name }}</span>
@@ -23,60 +25,300 @@
       <!-- Center: Image & Connections -->
       <div class="skills-center">
         <div class="center-image-wrapper">
-          <img src="../assets/images/myView.jpg" alt="Nay Ba La" class="center-img" />
+          <img
+            src="../assets/images/myView.jpg"
+            alt="Nay Ba La"
+            class="center-img"
+          />
         </div>
         <!-- Dynamic connecting lines using SVG -->
-        <svg class="skills-connections" viewBox="0 0 800 600" preserveAspectRatio="none">
+        <svg
+          class="skills-connections"
+          viewBox="0 0 800 600"
+          preserveAspectRatio="none"
+        >
           <!-- Left Spoke Lines -->
-          <line 
+          <line
             v-for="(line, index) in frontendLines"
             :key="'fe-' + index"
-            :x1="line.x1" :y1="line.y1" :x2="line.x2" :y2="line.y2"
-            stroke="var(--first-color)" 
-            :stroke-width="hoveredType === 'frontend' && hoveredIndex === index ? '3.5' : '1.5'" 
-            :opacity="hoveredType === 'frontend' && hoveredIndex === index ? '1' : '0.3'"
-            :class="{ 'flowing-line': true, 'highlighted-line': hoveredType === 'frontend' && hoveredIndex === index }"
+            :x1="line.x1"
+            :y1="line.y1"
+            :x2="line.x2"
+            :y2="line.y2"
+            stroke="var(--first-color)"
+            :stroke-width="
+              hoveredType === 'frontend' && hoveredIndex === index
+                ? '3.5'
+                : '1.5'
+            "
+            :opacity="
+              hoveredType === 'frontend' && hoveredIndex === index ? '1' : '0.3'
+            "
+            :class="{
+              'flowing-line': true,
+              'highlighted-line':
+                hoveredType === 'frontend' && hoveredIndex === index,
+            }"
           />
 
           <!-- Right Spoke Lines -->
-          <line 
+          <line
             v-for="(line, index) in backendLines"
             :key="'be-' + index"
-            :x1="line.x1" :y1="line.y1" :x2="line.x2" :y2="line.y2"
-            stroke="var(--first-color)" 
-            :stroke-width="hoveredType === 'backend' && hoveredIndex === index ? '3.5' : '1.5'" 
-            :opacity="hoveredType === 'backend' && hoveredIndex === index ? '1' : '0.3'"
-            :class="{ 'flowing-line': true, 'highlighted-line': hoveredType === 'backend' && hoveredIndex === index }"
+            :x1="line.x1"
+            :y1="line.y1"
+            :x2="line.x2"
+            :y2="line.y2"
+            stroke="var(--first-color)"
+            :stroke-width="
+              hoveredType === 'backend' && hoveredIndex === index
+                ? '3.5'
+                : '1.5'
+            "
+            :opacity="
+              hoveredType === 'backend' && hoveredIndex === index ? '1' : '0.3'
+            "
+            :class="{
+              'flowing-line': true,
+              'highlighted-line':
+                hoveredType === 'backend' && hoveredIndex === index,
+            }"
           />
         </svg>
       </div>
 
       <!-- Right Column: Backend & Systems -->
       <div class="skills-column right-column">
-        <div 
-          v-for="(skill, index) in backendSkills" 
-          :key="index" 
+        <div
+          v-for="(skill, index) in backendSkills"
+          :key="index"
           class="skill-card"
           data-aos="fade-left"
           :data-aos-delay="index * 50"
           @mouseenter="setHover('backend', index)"
           @mouseleave="clearHover()"
-          :class="{ 'card-hovered': hoveredType === 'backend' && hoveredIndex === index }"
+          :class="{
+            'card-hovered': hoveredType === 'backend' && hoveredIndex === index,
+          }"
         >
           <i :class="[skill.icon, 'skills__icon']"></i>
           <span class="skill-name">{{ skill.name }}</span>
         </div>
       </div>
+    </div>
 
+    <!-- Criss Cross Parallax Photo Collage (Pinned and Sticky) -->
+    <div class="collage-pin-container" ref="pinContainer">
+      <div class="collage-sticky-viewport">
+        <div class="collage-track">
+          <!-- Column 1: HTML, CSS, Bootstrap (Moves Up) -->
+          <div
+            class="collage-column col-vue"
+            :style="{
+              transform: `translateY(${offsetY * -1}px) skewX(-22deg)`,
+            }"
+          >
+            <div class="collage-column-content">
+              <div class="collage-skill-item">
+                <i class="fa-brands fa-html5 collage-icon"></i>
+                <span class="collage-name">HTML</span>
+              </div>
+              <div class="collage-skill-item">
+                <i class="fa-brands fa-css3-alt collage-icon"></i>
+                <span class="collage-name">CSS</span>
+              </div>
+              <div class="collage-skill-item">
+                <i class="fa-brands fa-bootstrap collage-icon"></i>
+                <span class="collage-name">Bootstrap</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Tailwind, JS, TS (Moves Down) -->
+          <div
+            class="collage-column col-laravel"
+            :style="{ transform: `translateY(${offsetY * 1}px) skewX(-22deg)` }"
+          >
+            <div class="collage-column-content">
+              <div class="collage-skill-item">
+                <i class="fa-solid fa-wind collage-icon"></i>
+                <span class="collage-name">Tailwind CSS</span>
+              </div>
+              <div class="collage-skill-item">
+                <i class="fa-brands fa-js collage-icon"></i>
+                <span class="collage-name">JavaScript</span>
+              </div>
+              <div class="collage-skill-item">
+                <i class="fa-solid fa-code collage-icon"></i>
+                <span class="collage-name">TypeScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Vue, Nuxt, Svelte (Moves Up) -->
+          <div
+            class="collage-column col-node"
+            :style="{
+              transform: `translateY(${offsetY * -1}px) skewX(-22deg)`,
+            }"
+          >
+            <div class="collage-column-content">
+              <div class="collage-skill-item">
+                <i class="fa-brands fa-vuejs collage-icon"></i>
+                <span class="collage-name">Vue Js</span>
+              </div>
+              <div class="collage-skill-item">
+                <i class="fa-brands fa-vuejs collage-icon"></i>
+                <span class="collage-name">Nuxt Js</span>
+              </div>
+              <div class="collage-skill-item">
+                <i class="fa-solid fa-fire collage-icon"></i>
+                <span class="collage-name">Svelte</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 4: React, Next, PHP (Moves Down) -->
+          <div
+            class="collage-column col-react"
+            :style="{ transform: `translateY(${offsetY * 1}px) skewX(-22deg)` }"
+          >
+            <div class="collage-column-content">
+              <div class="collage-skill-item">
+                <i class="fa-brands fa-react collage-icon"></i>
+                <span class="collage-name">React</span>
+              </div>
+              <div class="collage-skill-item">
+                <i class="fa-brands fa-react collage-icon"></i>
+                <span class="collage-name">Next Js</span>
+              </div>
+              <div class="collage-skill-item">
+                <i class="fa-brands fa-php collage-icon"></i>
+                <span class="collage-name">PHP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 5: Laravel, Node, Express (Moves Up) -->
+          <div
+            class="collage-column col-js"
+            :style="{
+              transform: `translateY(${offsetY * -1}px) skewX(-22deg)`,
+            }"
+          >
+            <div class="collage-column-content">
+              <div class="collage-skill-item">
+                <i class="fa-brands fa-laravel collage-icon"></i>
+                <span class="collage-name">Laravel</span>
+              </div>
+              <div class="collage-skill-item">
+                <i class="fa-brands fa-node-js collage-icon"></i>
+                <span class="collage-name">Node Js</span>
+              </div>
+              <div class="collage-skill-item">
+                <i class="fa-solid fa-server collage-icon"></i>
+                <span class="collage-name">Express Js</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 6: Nest, Postgres, MySQL (Moves Down) -->
+          <div
+            class="collage-column col-postgres"
+            :style="{ transform: `translateY(${offsetY * 1}px) skewX(-22deg)` }"
+          >
+            <div class="collage-column-content">
+              <div class="collage-skill-item">
+                <i class="fa-solid fa-cubes collage-icon"></i>
+                <span class="collage-name">Nest Js</span>
+              </div>
+              <div class="collage-skill-item">
+                <i class="fa-solid fa-database collage-icon"></i>
+                <span class="collage-name">PostgreSQL</span>
+              </div>
+              <div class="collage-skill-item">
+                <i class="fa-solid fa-database collage-icon"></i>
+                <span class="collage-name">MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 7: MongoDB, Linux (Moves Up) -->
+          <div
+            class="collage-column col-php"
+            :style="{
+              transform: `translateY(${offsetY * -1}px) skewX(-22deg)`,
+            }"
+          >
+            <div class="collage-column-content">
+              <div class="collage-skill-item">
+                <i class="fa-solid fa-leaf collage-icon"></i>
+                <span class="collage-name">Mongo DB</span>
+              </div>
+              <div class="collage-skill-item">
+                <i class="fa-brands fa-linux collage-icon"></i>
+                <span class="collage-name">Linux Ubuntu</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 8: Prime Vue, Prime React (Moves Down) -->
+          <div
+            class="collage-column col-tailwind"
+            :style="{ transform: `translateY(${offsetY * 1}px) skewX(-22deg)` }"
+          >
+            <div class="collage-column-content">
+              <div class="collage-skill-item">
+                <i class="fa-solid fa-shield-halved collage-icon"></i>
+                <span class="collage-name">Prime Vue</span>
+              </div>
+              <div class="collage-skill-item">
+                <i class="fa-solid fa-shield-halved collage-icon"></i>
+                <span class="collage-name">Prime React</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from "vue";
 
 const hoveredType = ref(null);
 const hoveredIndex = ref(null);
+
+const pinContainer = ref(null);
+const offsetY = ref(0);
+
+const handleCollageScroll = () => {
+  if (!pinContainer.value) return;
+  const rect = pinContainer.value.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+  const containerHeight = rect.height;
+  const scrollRange = containerHeight - windowHeight;
+
+  if (rect.top <= 0 && rect.bottom >= windowHeight) {
+    const scrolled = -rect.top;
+    const progress = Math.max(0, Math.min(1, scrolled / scrollRange));
+    offsetY.value = (progress - 0.5) * 440;
+  } else if (rect.top > 0) {
+    offsetY.value = -220;
+  } else if (rect.bottom < windowHeight) {
+    offsetY.value = 220;
+  }
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleCollageScroll, { passive: true });
+  handleCollageScroll();
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleCollageScroll);
+});
 
 const setHover = (type, index) => {
   hoveredType.value = type;
@@ -99,7 +341,7 @@ const frontendSkills = [
   { name: "Nuxt Js", icon: "fa-brands fa-vuejs" },
   { name: "React", icon: "fa-brands fa-react" },
   { name: "Next Js", icon: "fa-brands fa-react" },
-  { name: "Svelte", icon: "fa-solid fa-fire" }
+  { name: "Svelte", icon: "fa-solid fa-fire" },
 ];
 
 const backendSkills = [
@@ -113,7 +355,7 @@ const backendSkills = [
   { name: "Mongo DB", icon: "fa-solid fa-leaf" },
   { name: "Linux Ubuntu", icon: "fa-brands fa-linux" },
   { name: "Prime Vue", icon: "fa-solid fa-shield-halved" },
-  { name: "Prime React", icon: "fa-solid fa-shield-halved" }
+  { name: "Prime React", icon: "fa-solid fa-shield-halved" },
 ];
 
 const frontendLines = [
@@ -127,7 +369,7 @@ const frontendLines = [
   { x1: 220, y1: 380, x2: 400, y2: 300 },
   { x1: 220, y1: 430, x2: 400, y2: 300 },
   { x1: 220, y1: 480, x2: 400, y2: 300 },
-  { x1: 220, y1: 530, x2: 400, y2: 300 }
+  { x1: 220, y1: 530, x2: 400, y2: 300 },
 ];
 
 const backendLines = [
@@ -141,7 +383,7 @@ const backendLines = [
   { x1: 580, y1: 380, x2: 400, y2: 300 },
   { x1: 580, y1: 430, x2: 400, y2: 300 },
   { x1: 580, y1: 480, x2: 400, y2: 300 },
-  { x1: 580, y1: 530, x2: 400, y2: 300 }
+  { x1: 580, y1: 530, x2: 400, y2: 300 },
 ];
 </script>
 
@@ -191,7 +433,10 @@ const backendLines = [
 .flowing-line {
   stroke-dasharray: 6 4;
   animation: flow-lines 1.5s linear infinite;
-  transition: stroke-width 0.3s ease, opacity 0.3s ease, stroke 0.3s ease;
+  transition:
+    stroke-width 0.3s ease,
+    opacity 0.3s ease,
+    stroke 0.3s ease;
 }
 
 .highlighted-line {
@@ -200,7 +445,8 @@ const backendLines = [
 }
 
 @keyframes bobble {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -233,7 +479,7 @@ const backendLines = [
   animation-duration: 5s;
 }
 
-.skill-card:nth-child(3n+1) {
+.skill-card:nth-child(3n + 1) {
   animation-delay: 1.5s;
   animation-duration: 3.5s;
 }
@@ -359,6 +605,169 @@ const backendLines = [
   .center-image-wrapper {
     width: 180px;
     height: 180px;
+  }
+}
+
+/* Collage Section Styles */
+.collage-pin-container {
+  height: 250vh;
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.collage-sticky-viewport {
+  position: sticky;
+  top: 3.5rem;
+  height: calc(100vh - 3.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background: #f4f5f7;
+}
+
+.activeDark .collage-sticky-viewport {
+  background: #111827;
+}
+
+.collage-track {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+}
+
+.collage-column {
+  flex: 1;
+  height: 1000px;
+  position: relative;
+  top: -240px;
+  overflow: hidden;
+  margin: 0 -12px;
+  transition: transform 0.15s cubic-bezier(0.1, 0.8, 0.2, 1);
+  will-change: transform;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.collage-column::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.12);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.collage-column:hover::after {
+  opacity: 1;
+}
+
+.collage-column-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+  height: 100%;
+  width: 250%;
+  position: absolute;
+  left: -75%;
+  transform: skewX(22deg);
+  color: #fff;
+}
+
+.collage-skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.collage-skill-item:hover {
+  transform: scale(1.15);
+}
+
+.collage-icon {
+  font-size: 3.2rem;
+  margin-bottom: 0.6rem;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.collage-skill-item:hover .collage-icon {
+  transform: scale(1.2) rotate(6deg);
+}
+
+.collage-name {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+
+/* Specific Technology Color Gradients */
+.col-vue {
+  background: linear-gradient(135deg, #42b883, #1e3f35);
+}
+.col-laravel {
+  background: linear-gradient(135deg, #ff2d20, #4c110d);
+}
+.col-node {
+  background: linear-gradient(135deg, #68a063, #223521);
+}
+.col-react {
+  background: linear-gradient(135deg, #61dafb, #16363e);
+}
+.col-js {
+  background: linear-gradient(135deg, #f0db4f, #3a3512);
+}
+.col-postgres {
+  background: linear-gradient(135deg, #336791, #112332);
+}
+.col-php {
+  background: linear-gradient(135deg, #777bb4, #222334);
+}
+.col-tailwind {
+  background: linear-gradient(135deg, #38bdf8, #113444);
+}
+
+.collage-footer {
+  text-align: center;
+  padding: 1.5rem 1rem 0;
+}
+
+.collage-text {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.activeDark .collage-text {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .collage-track {
+    font-size: 0.85rem;
+  }
+  .collage-text {
+    font-size: 0.8rem;
   }
 }
 </style>
