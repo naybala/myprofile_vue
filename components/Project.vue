@@ -1,605 +1,331 @@
 <template>
   <section class="project section" id="project">
     <h2 class="section-title">Projects</h2>
-    <div class="container">
-      <div class="flex-container">
-        <div class="py-3" id="col" data-aos="fade-right">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/logo.png" />
-            </div>
-            <div class="contentBx">
-              <h2>TEC Clollage</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
-              </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
-                <p class="text-white">Portfolio</p>
-              </div>
-              <div class="btn-project">
-                <a
-                  href="https://61f03b2509e1d572f0acd7be--naughty-hugle-7cf607.netlify.app/"
-                  target="_blink"
-                  >View Detail</a
-                >
-              </div>
-            </div>
+
+    <div class="project-stack-container">
+      <div
+        v-for="(project, index) in projects"
+        :key="index"
+        class="project-stack-card"
+        :style="getCardStyle(index)"
+      >
+        <div class="project-card-inner">
+          <div class="project-card-image">
+            <img :src="project.image" :alt="project.title" />
           </div>
-        </div>
-        <div class="py-3" id="col" data-aos="fade-right">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/logo1.png" />
+          <div class="project-card-content">
+            <span class="project-card-num">0{{ index + 1 }}</span>
+            <h3 class="project-card-title">{{ project.title }}</h3>
+            <p class="project-card-description">{{ project.description }}</p>
+            <div class="project-card-tech">
+              <span
+                v-for="(tech, tIndex) in project.tech"
+                :key="tIndex"
+                class="tech-badge"
+              >
+                <i :class="tech.icon"></i> {{ tech.name }}
+              </span>
             </div>
-            <div class="contentBx">
-              <h2>Daily News</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
-              </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
-                <p class="text-white">Portfolio</p>
-              </div>
-              <div class="btn-project">
-                <a
-                  href="https://61f03022e2d4ae55df6b63c8--priceless-ptolemy-f0444b.netlify.app/"
-                  target="_blink"
-                  >View Detail</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="py-3" id="col" data-aos="fade-left">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/logo2.png" />
-            </div>
-            <div class="contentBx">
-              <h2>Alpha Cement</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
-              </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
-                <p class="text-white">Portfolio</p>
-              </div>
-              <div class="btn-project">
-                <a
-                  href="https://61f03500fa3a5f000887b362--adoring-dijkstra-34907e.netlify.app/"
-                  target="_blink"
-                  >View Detail</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <hr />
-        <div class="py-3" id="col" data-aos="fade-left">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/google.jpg" class="img-fluid" />
-            </div>
-            <div class="contentBx">
-              <h2 class="mt-2">Google Clone</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
-              </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
-                <p class="text-white">JavaScript</p>
-              </div>
-              <div class="btn-project">
-                <a
-                  href="https://62187191868ca642f1d13408--competent-chandrasekhar-b57c89.netlify.app/"
-                  target="_blink"
-                  >View Detail</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="py-3" id="col" data-aos="fade-right">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/autocomplete_search.jpg" class="img-thumbnail" />
-            </div>
-            <div class="contentBx">
-              <h2>Auto Complete</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
-              </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
-                <p class="text-white">JavaScript</p>
-              </div>
-              <div class="btn-project">
-                <a
-                  href="https://621871f590b15959528f792e--agitated-wing-d5b708.netlify.app/"
-                  target="_blink"
-                  >View Detail</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="py-3" id="col" data-aos="fade-right">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/stop-watch.jpg" class="img-fluid" />
-            </div>
-            <div class="contentBx">
-              <h2>Stop Watch</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
-              </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
-                <p class="text-white">JavaScript</p>
-              </div>
-              <div class="btn-project">
-                <a
-                  href="https://62187231163f604c0e1be791--elegant-bardeen-ef25d0.netlify.app/"
-                  target="_blink"
-                  >View Detail</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <hr />
-        <div class="py-3" id="col" data-aos="fade-left">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/To_Do_List.png" class="img-thumbnail" />
-            </div>
-            <div class="contentBx">
-              <h2 class="mt-2">To Do List</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
-              </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
-                <p class="text-white">JavaScript</p>
-              </div>
-              <div class="btn-project">
-                <a
-                  href="https://6218772f529a4b469a5aa3bc--vigilant-mirzakhani-16f9ab.netlify.app/"
-                  target="_blink"
-                  >View Detail</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="py-3" id="col" data-aos="fade-left">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/heroBg.jpg" class="img-thumbnail" />
-            </div>
-            <div class="contentBx">
-              <h2>Simple Scroll</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
-              </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
-                <p class="text-white">JavaScript</p>
-              </div>
-              <div class="btn-project">
-                <a
-                  href="https://62187820163f6048891bec8e--nervous-einstein-6ff6f2.netlify.app/"
-                  target="_blink"
-                  >View Detail</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="py-3" id="col" data-aos="fade-right">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/facebook-messenger.png" class="img-fluid" />
-            </div>
-            <div class="contentBx">
-              <h2>Messenger</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span> <i class="fab fa-bootstrap skills__icon"></i></span>
-              </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
-                <p class="text-white">Simple</p>
-              </div>
-              <div class="btn-project">
-                <a
-                  href="https://621877d5ba5aba588084ab49--hardcore-babbage-7e84ae.netlify.app/"
-                  target="_blink"
-                  >View Detail</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <hr />
-        <div class="py-3" id="col" data-aos="fade-right">
-          <div class="card">
-            <div class="imgBx">
-              <img
-                src="../assets/images/simple-music-player.jpg"
-                class="img-fluid rounded-1"
-              />
-            </div>
-            <div class="contentBx">
-              <h2>Simple Music Player</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">usage :</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span>
-                  <i class="fab fa-bootstrap skills__icon"></i>
-                </span>
-              </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
-                <p class="text-white">Simple</p>
-              </div>
-              <div class="btn-project">
-                <a
-                  href="https://621c71a8ae1b82ed2a39a4f7--serene-borg-f36e46.netlify.app/"
-                  target="_blink"
-                  >View Detail</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="py-3" id="col" data-aos="fade-left">
-          <div class="card">
-            <div class="imgBx">
-              <img src="../assets/images/step-2.png" />
-            </div>
-            <div class="contentBx">
-              <h2>Pizza Online Order</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">use:</h3>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span class="me-2">
-                  <i class="fab fa-bootstrap skills__icon"></i>
-                </span>
-                <span class="me-3">
-                  <i class="fab fa-php skills__icon"> </i>
-                </span>
-                <span><i class="fas fa-database skills__icon"></i></span>
-              </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
-                <p class="text-white">Full-Stack</p>
-              </div>
-              <div class="btn-project">
-                <a href="https://github.com/naybala/Admin-Pannel-Laravel-" target="_blink"
-                  >View Detail</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="py-3" id="col" data-aos="fade-left">
-          <div class="card">
-            <div class="imgBx">
-              <img class="rounded" src="../assets/images/admin-pannel.jpg" />
-            </div>
-            <div class="contentBx">
-              <h2>Pizza Online Order</h2>
-              <div class="size mt-1 mb-2">
-                <h3 class="mt-2">use:</h3>
-                <span> <i class="fab fa-laravel skills__icon"></i></span>
-                <span> <i class="fa-brands fa-html5 skills__icon"></i></span>
-                <span><i class="fa-brands fa-css3 skills__icon"></i></span>
-                <span> <i class="fa-brands fa-js-square skills__icon"></i></span>
-                <span class="me-2">
-                  <i class="fab fa-bootstrap skills__icon"></i>
-                </span>
-                <span class="me-3">
-                  <i class="fab fa-php skills__icon"> </i>
-                </span>
-                <span><i class="fas fa-database skills__icon"></i></span>
-              </div>
-              <div class="color mt-1 mb-1">
-                <h3 class="mt-2">Type of Wesbsite :</h3>
-                <p class="text-white">Full-Stack</p>
-              </div>
-              <div class="btn-project">
-                <a href="https://github.com/naybala/Admin-Pannel-Laravel-" target="_blink"
-                  >View Detail</a
-                >
-              </div>
-            </div>
+            <!-- <a :href="project.link" target="_blank" class="project-card-btn">
+              Explore Project <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+            </a> -->
           </div>
         </div>
       </div>
     </div>
-    <hr />
+    <hr class="project-divider" />
   </section>
 </template>
 
 <script setup>
-// No script logic needed for this presentational component
+import accountingImg from "../assets/images/Accounting_system.jpg";
+import fintechImg from "../assets/images/Fin_tech_system.jpg";
+import posImg from "../assets/images/POS_system.jpg";
+import garmentImg from "../assets/images/Garment_factory.jpg";
+import loyaltyImg from "../assets/images/Loyalty_point_system.jpg";
+import mediaImg from "../assets/images/Media_web_system.jpg";
+import realestateImg from "../assets/images/Real_estate_system.jpg";
+
+const projects = [
+  {
+    title: "Accounting System",
+    description:
+      "A comprehensive accounting system designed to streamline financial workflows, manage ledger transactions, generate balance sheets, and automate tax compliance processing.",
+    image: accountingImg,
+    tech: [
+      { name: "Laravel", icon: "fa-brands fa-laravel" },
+      { name: "MySQL", icon: "fa-solid fa-database" },
+      { name: "PHP", icon: "fa-brands fa-php" },
+      { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
+    ],
+    link: "https://github.com/naybala",
+  },
+  {
+    title: "Fin Tech System",
+    description:
+      "An advanced fintech platform featuring real-time wallet tracking, secure peer-to-peer transfers, interactive balance charts, and multi-currency payment processing.",
+    image: fintechImg,
+    tech: [
+      { name: "Vue.js", icon: "fa-brands fa-vuejs" },
+      { name: "Node.js", icon: "fa-brands fa-node-js" },
+      { name: "PostgreSQL", icon: "fa-solid fa-database" },
+      { name: "JavaScript", icon: "fa-brands fa-js" },
+    ],
+    link: "https://github.com/naybala",
+  },
+  {
+    title: "POS System",
+    description:
+      "A high-performance retail POS system supporting automated barcode scanning, dynamic product search, real-time inventory alerts, and instant invoice billing receipt creation.",
+    image: posImg,
+    tech: [
+      { name: "Laravel", icon: "fa-brands fa-laravel" },
+      { name: "SQLite", icon: "fa-solid fa-database" },
+      { name: "Vue.js", icon: "fa-brands fa-vuejs" },
+      { name: "Tailwind", icon: "fa-brands fa-css3-alt" },
+    ],
+    link: "https://github.com/naybala",
+  },
+  {
+    title: "Garment System",
+    description:
+      "A specialized system for managing garment manufacturing processes, handling raw material inventory, production line scheduling, and order tracking.",
+    image: garmentImg,
+    tech: [
+      { name: "Laravel", icon: "fa-brands fa-laravel" },
+      { name: "MySQL", icon: "fa-solid fa-database" },
+      { name: "PHP", icon: "fa-brands fa-php" },
+      { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
+    ],
+    link: "https://github.com/naybala",
+  },
+  {
+    title: "Loyalty Point System",
+    description:
+      "A customized customer loyalty program designed to track member reward points, process reward redemptions, and manage discount voucher lifecycle.",
+    image: loyaltyImg,
+    tech: [
+      { name: "Vue.js", icon: "fa-brands fa-vuejs" },
+      { name: "Node.js", icon: "fa-brands fa-node-js" },
+      { name: "PostgreSQL", icon: "fa-solid fa-database" },
+      { name: "Express", icon: "fa-brands fa-js" },
+    ],
+    link: "https://github.com/naybala",
+  },
+  {
+    title: "Media Web System",
+    description:
+      "A media publishing and resource management platform featuring structured layout directories, rapid upload tools, and multi-user subscription profiles.",
+    image: mediaImg,
+    tech: [
+      { name: "Laravel", icon: "fa-brands fa-laravel" },
+      { name: "MySQL", icon: "fa-solid fa-database" },
+      { name: "PHP", icon: "fa-brands fa-php" },
+      { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
+    ],
+    link: "https://github.com/naybala",
+  },
+  {
+    title: "Real Estate System",
+    description:
+      "A comprehensive listing portal matching home buyers with properties, supporting advanced keyword filters, agent profiles, and property maps.",
+    image: realestateImg,
+    tech: [
+      { name: "Laravel", icon: "fa-brands fa-laravel" },
+      { name: "SQLite", icon: "fa-solid fa-database" },
+      { name: "Vue.js", icon: "fa-brands fa-vuejs" },
+      { name: "Tailwind", icon: "fa-brands fa-css3-alt" },
+    ],
+    link: "https://github.com/naybala",
+  },
+];
+
+const getCardStyle = (index) => {
+  return {
+    top: `calc(120px + ${index * 30}px)`,
+    zIndex: index + 1,
+  };
+};
 </script>
 
 <style scoped>
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.flex-container > div {
-  margin: 0.12rem;
+#project {
+  background-color: #242f3f;
 }
 .section-title::after {
   width: 120px;
   top: 2.5rem;
 }
 
-/* ===== Projects =====*/
-
-.container .card {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  width: 320px;
-  height: 450px;
-  background: #232323;
-  border-radius: 20px;
-  overflow: hidden;
+/* Stacking Container */
+.project-stack-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
 }
 
-.container .card:before {
-  content: "naybala";
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Individual Stacking Card */
+.project-stack-card {
+  position: sticky;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  background: #242f3f;
+  color: #fff;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  margin-bottom: 8vh;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.activeDark .project-stack-card {
+  background: #1b2330;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Hover Zoom Effect on Image Column */
+.project-card-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 380px;
+}
+
+.project-card-image {
+  position: relative;
   width: 100%;
   height: 100%;
-  background: var(--first-color);
-  clip-path: circle(200px at 50% 20%);
-  transition: 1s ease-in-out;
+  min-height: 250px;
+  overflow: hidden;
+  background: #1b2330;
 }
 
-.container .card:hover:before {
-  clip-path: circle(300px at 80% -20%);
-}
-
-.container .card:after {
-  content: "";
-  position: absolute;
-  top: 30%;
-  left: -20%;
-  font-size: 12em;
-  font-weight: 800;
-  font-style: italic;
-  color: rgba(255, 255, 25, 0.05);
-}
-
-.container .card .imgBx {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
+.project-card-image img {
   width: 100%;
-  height: 220px;
-  transition: 0.5s;
+  height: 100%;
+  object-fit: fill;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.container .card:hover .imgBx {
-  top: 0%;
-  transform: translateY(0%);
+.project-stack-card:hover .project-card-image img {
+  transform: scale(1.04);
 }
 
-.container .card .imgBx img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
-  width: 270px;
-}
-
-.container .card .contentBx {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  transition: 1s;
-  z-index: 10;
-}
-
-.container .card:hover .contentBx {
-  height: 210px;
-}
-
-.container .card .contentBx h2 {
-  position: relative;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: rgb(250, 246, 246);
-  margin: 0;
-}
-
-.container .card .contentBx .size,
-.container .card .contentBx .color {
+/* Card Content Details */
+.project-card-content {
+  padding: 2.5rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 8px 20px;
-  transition: 0.5s;
-  opacity: 0;
-  visibility: hidden;
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
-.container .card:hover .contentBx .size {
-  opacity: 1;
-  visibility: visible;
-  transition-delay: 0.5s;
-}
-
-.container .card:hover .contentBx .color {
-  opacity: 1;
-  visibility: visible;
-  transition-delay: 0.6s;
-}
-
-.container .card .contentBx .size h3,
-.container .card .contentBx .color h3 {
-  color: #fff;
-  font-weight: 300;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-right: 6px;
-}
-
-.container .card .contentBx .size span {
-  width: 26px;
-  height: 26px;
-  text-align: center;
-  line-height: 26px;
-  font-size: 14px;
-  display: inline-block;
-  color: #111;
-
-  margin: 0 5px;
-  transition: 0.5s;
-  color: #111;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.skills__icon {
-  font-size: 1.8rem;
-  margin-right: var(--mb-2);
+.project-card-num {
+  font-family: monospace;
   color: var(--first-color);
-  transform: translateY(0px);
-  transition: 0.3s;
-}
-.skills__icon:hover {
-  transform: translateY(-3px);
-  box-shadow: 3px 3px 10px rgb(114, 109, 109);
-  transition: 0.3s;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
-.container .card .contentBx .color span {
-  width: 20px;
-  height: 20px;
-  background: #ff0;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
+.project-card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.container .card .contentBx .color span:nth-child(2) {
-  background: #9bdc28;
+.project-card-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.5rem;
 }
 
-.container .card .contentBx .color span:nth-child(3) {
-  background: #03a9f4;
+/* Tech Stack Badges */
+.project-card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
 }
 
-.container .card .contentBx .color span:nth-child(4) {
-  background: #e91e63;
+.tech-badge {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.container .card .contentBx a {
-  display: inline-block;
-  padding: 10px 20px;
+.tech-badge i {
+  color: var(--first-color);
+  font-size: 1rem;
+}
+
+/* CTA Button */
+.project-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
   background: var(--first-color);
-  border-radius: 4px;
-  margin-top: 10px;
-  text-decoration: none;
+  color: #fff;
+  border-radius: 8px;
   font-weight: 600;
-  color: #111;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: 0.5s;
-  margin-top: 0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  align-self: flex-start;
 }
 
-.container .card:hover .contentBx a {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0.75s;
+.project-card-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.1);
 }
 
-.btn-project {
-  transform: translateY(0px);
-  transition: 0.3s;
+.project-divider {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 2rem 0;
 }
 
-.btn-project:hover {
-  transform: translateY(3px);
-  box-shadow: 3px 3px 10px black;
-  transition: 0.3s;
-}
-
-@media (min-width: 300px) and (max-width: 800px) {
-  .container .card {
-    width: 300px;
-    height: 410px;
+/* Desktop Responsive Layout */
+@media screen and (min-width: 768px) {
+  .project-card-inner {
+    grid-template-columns: 1.2fr 1fr;
   }
-  .container .card .imgBx {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    width: 100%;
-    height: 180px;
-    transition: 0.5s;
+  .project-card-image {
+    min-height: auto;
   }
-  .flex-container {
-    justify-content: center;
+}
+
+/* Tablet & Mobile responsive adjustments */
+@media screen and (max-width: 767px) {
+  .project-stack-card {
+    margin-bottom: 5vh;
+  }
+
+  .project-card-content {
+    padding: 1.75rem;
+  }
+
+  .project-card-title {
+    font-size: 1.4rem;
+  }
+
+  .project-card-description {
+    font-size: 0.875rem;
   }
 }
 </style>
