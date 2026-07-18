@@ -22,45 +22,43 @@
       </div>
 
       <!-- Skills Grid -->
-      <div v-for="cat in categories" :key="cat.id">
-        <Transition name="skills-fade" mode="out-in">
-          <div v-if="activeCategory === cat.id" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      <div class="relative min-h-[320px]">
+        <div :key="activeCategory" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div
+            v-for="skill in currentCategory?.skills"
+            :key="skill.name"
+            class="glass-card p-4 text-center group hover:-translate-y-2 transition-transform duration-300 cursor-default"
+          >
             <div
-              v-for="(skill, i) in cat.skills"
-              :key="skill.name"
-              class="glass-card p-4 text-center group hover:-translate-y-2 transition-all duration-300 cursor-default"
-              :style="{ animationDelay: `${i * 0.05}s` }"
+              class="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-3 font-bold text-lg transition-transform duration-300 group-hover:scale-110"
+              :style="{ background: `linear-gradient(135deg, ${skill.color}30, ${skill.color}10)`, border: `1px solid ${skill.color}30` }"
             >
+              <span :style="{ color: skill.color }">{{ skill.abbr }}</span>
+            </div>
+            <p class="text-sm font-semibold transition-colors duration-200" style="color: var(--color-text)">
+              {{ skill.name }}
+            </p>
+            <div class="mt-3 h-1 rounded-full overflow-hidden" style="background: var(--color-border)">
               <div
-                class="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-3 font-bold text-lg transition-transform duration-300 group-hover:scale-110"
-                :style="{ background: `linear-gradient(135deg, ${skill.color}30, ${skill.color}10)`, border: `1px solid ${skill.color}30` }"
-              >
-                <span :style="{ color: skill.color }">{{ skill.abbr }}</span>
-              </div>
-              <p class="text-sm font-semibold transition-colors duration-200" style="color: var(--color-text)">
-                {{ skill.name }}
-              </p>
-              <div class="mt-3 h-1 rounded-full overflow-hidden" style="background: var(--color-border)">
-                <div
-                  class="h-full rounded-full transition-all duration-700"
-                  :style="{
-                    width: activeCategory === cat.id ? `${skill.level}%` : '0%',
-                    background: `linear-gradient(90deg, ${skill.color}, ${skill.color}80)`,
-                    transitionDelay: `${i * 0.06}s`,
-                  }"
-                />
-              </div>
+                class="h-full rounded-full"
+                :style="{
+                  width: `${skill.level}%`,
+                  background: `linear-gradient(90deg, ${skill.color}, ${skill.color}80)`,
+                }"
+              />
             </div>
           </div>
-        </Transition>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+
 const activeCategory = ref('frontend')
+
 const categories = [
   { id: 'frontend', label: 'Frontend', skills: [
     { name: 'HTML5', abbr: 'H', color: '#E34F26', level: 95 }, { name: 'CSS3', abbr: 'C', color: '#1572B6', level: 90 },
@@ -87,9 +85,6 @@ const categories = [
     { name: 'Figma', abbr: 'F', color: '#F24E1E', level: 75 }, { name: 'VS Code', abbr: 'VS', color: '#007ACC', level: 95 },
   ]},
 ]
-</script>
 
-<style scoped>
-.skills-fade-enter-active, .skills-fade-leave-active { transition: all 0.35s ease; }
-.skills-fade-enter-from, .skills-fade-leave-to { opacity: 0; transform: translateY(12px); }
-</style>
+const currentCategory = computed(() => categories.find(c => c.id === activeCategory.value))
+</script>
