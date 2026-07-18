@@ -1,5 +1,7 @@
 <template>
   <div class="min-h-screen">
+    <!-- Preloader -->
+    <AppLoader />
     <!-- Custom Cursor -->
     <AppCursor />
     <!-- Scroll Progress Bar -->
