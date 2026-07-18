@@ -169,42 +169,49 @@ html.dark {
 /* ── Custom Cursor ── */
 .cursor {
   position: fixed;
-  width: 12px;
-  height: 12px;
-  background: #00E5FF;
-  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00E5FF;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: bold;
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: difference;
-  transition: transform 0.1s ease, opacity 0.3s ease;
+  transform: translate(var(--x, -100px), var(--y, -100px)) scale(1);
+  transition: transform 0.1s ease, opacity 0.3s ease, font-size 0.3s ease, color 0.3s ease;
   will-change: transform;
 }
 
 html:not(.dark) .cursor {
   mix-blend-mode: normal;
-  background: #0891b2;
+  color: #0891b2;
 }
 
 .cursor-follower {
   position: fixed;
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   border: 1.5px solid rgba(0, 229, 255, 0.5);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
-  transition: transform 0.25s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+  transform: translate(var(--x, -100px), var(--y, -100px)) scale(1);
+  transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
   will-change: transform;
 }
 
 .cursor.is-hovering {
-  transform: scale(2.5);
-  background: rgba(0, 229, 255, 0.4);
+  transform: translate(var(--x, -100px), var(--y, -100px)) scale(1.5);
+  color: #00E5FF;
 }
 
 .cursor-follower.is-hovering {
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   border-color: rgba(0, 229, 255, 0.3);
 }
 

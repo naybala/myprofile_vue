@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div ref="cursorEl" class="cursor" aria-hidden="true" />
+    <div ref="cursorEl" class="cursor" aria-hidden="true">&lt;/&gt;</div>
     <div ref="followerEl" class="cursor-follower" aria-hidden="true" />
   </div>
 </template>
@@ -11,10 +11,10 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const cursorEl = ref<HTMLElement | null>(null)
 const followerEl = ref<HTMLElement | null>(null)
 
-let mouseX = 0
-let mouseY = 0
-let followerX = 0
-let followerY = 0
+let mouseX = -100
+let mouseY = -100
+let followerX = -100
+let followerY = -100
 let rafId: number
 
 const onMouseMove = (e: MouseEvent) => {
@@ -22,16 +22,20 @@ const onMouseMove = (e: MouseEvent) => {
   mouseY = e.clientY
 
   if (cursorEl.value) {
-    cursorEl.value.style.transform = `translate(${mouseX - 6}px, ${mouseY - 6}px)`
+    // 32x32 cursor size -> 16px offset
+    cursorEl.value.style.setProperty('--x', `${mouseX - 16}px`)
+    cursorEl.value.style.setProperty('--y', `${mouseY - 16}px`)
   }
 }
 
 const animate = () => {
-  followerX += (mouseX - followerX - 18) * 0.12
-  followerY += (mouseY - followerY - 18) * 0.12
+  // 48x48 follower size -> 24px offset
+  followerX += (mouseX - followerX - 24) * 0.12
+  followerY += (mouseY - followerY - 24) * 0.12
 
   if (followerEl.value) {
-    followerEl.value.style.transform = `translate(${followerX}px, ${followerY}px)`
+    followerEl.value.style.setProperty('--x', `${followerX}px`)
+    followerEl.value.style.setProperty('--y', `${followerY}px`)
   }
   rafId = requestAnimationFrame(animate)
 }
