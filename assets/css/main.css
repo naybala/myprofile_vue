@@ -1,0 +1,330 @@
+/* ================================
+   MAIN CSS — Nay Ba La Portfolio
+   ================================ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #050816;
+    color: #ffffff;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #050816;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background: rgba(0, 229, 255, 0.3);
+    color: #ffffff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #050816;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #00E5FF;
+    border-radius: 2px;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ── Components ── */
+@layer components {
+  .section {
+    @apply relative py-20 lg:py-32 overflow-hidden;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-2 text-primary font-mono text-sm font-semibold tracking-widest uppercase mb-4;
+  }
+
+  .section-title {
+    @apply text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-muted text-lg lg:text-xl mt-4 leading-relaxed max-w-2xl;
+  }
+
+  .glass-card {
+    @apply rounded-3xl border border-white/5 backdrop-blur-sm;
+    background: rgba(15, 23, 42, 0.7);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-2xl font-semibold text-background bg-primary
+           hover:shadow-glow-primary transition-all duration-300 hover:-translate-y-0.5 cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-2xl font-semibold text-white border border-white/20
+           hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 hover:-translate-y-0.5 cursor-pointer;
+  }
+
+  .tech-badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold font-mono
+           bg-white/5 border border-white/10 text-muted hover:border-primary/40 hover:text-primary
+           transition-all duration-200 cursor-default;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent;
+  }
+
+  .glow-line {
+    @apply w-12 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full;
+  }
+}
+
+/* ── Custom Cursor ── */
+.cursor {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background: #00E5FF;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+  transition: transform 0.1s ease, opacity 0.3s ease;
+  will-change: transform;
+}
+
+.cursor-follower {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(0, 229, 255, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.25s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+  will-change: transform;
+}
+
+.cursor.is-hovering {
+  transform: scale(2.5);
+  background: rgba(0, 229, 255, 0.4);
+}
+
+.cursor-follower.is-hovering {
+  width: 60px;
+  height: 60px;
+  border-color: rgba(0, 229, 255, 0.3);
+}
+
+/* ── Scroll Progress ── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00E5FF, #6366F1, #22C55E);
+  z-index: 9999;
+  transform-origin: left;
+  will-change: transform;
+}
+
+/* ── Floating Code Background ── */
+.code-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.code-snippet {
+  position: absolute;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: rgba(0, 229, 255, 0.04);
+  white-space: nowrap;
+  user-select: none;
+  animation: floatCode linear infinite;
+}
+
+@keyframes floatCode {
+  0% { transform: translateY(100vh) rotate(-5deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100px) rotate(-5deg); opacity: 0; }
+}
+
+/* ── Hero Orbit ── */
+.orbit-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.orbit-ring {
+  position: absolute;
+  border: 1px solid rgba(0, 229, 255, 0.06);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbit-spin linear infinite;
+}
+
+@keyframes orbit-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ── Page Transitions ── */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+/* ── Gradient Noise Overlay ── */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+/* ── Typing Cursor ── */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background: #00E5FF;
+  margin-left: 4px;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ── Grid Background ── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ── Animated Underline ── */
+.animated-underline {
+  position: relative;
+}
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00E5FF, #6366F1);
+  transition: width 0.3s ease;
+}
+.animated-underline:hover::after {
+  width: 100%;
+}
+
+/* ── Timeline ── */
+.timeline-line {
+  @apply absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-secondary/30 to-transparent;
+}
+
+/* ── Skill Category Tab ── */
+.skill-tab {
+  @apply px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer border;
+}
+.skill-tab.active {
+  @apply bg-primary text-background border-primary;
+}
+.skill-tab.inactive {
+  @apply text-muted border-white/10 hover:border-primary/40 hover:text-primary;
+}
+
+/* ── Project Card ── */
+.project-card {
+  @apply glass-card overflow-hidden cursor-pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 229, 255, 0.1);
+}
+
+/* ── Contact Input ── */
+.contact-input {
+  @apply w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white placeholder-muted
+         focus:outline-none focus:border-primary/50 focus:bg-white/10 transition-all duration-300;
+}
+
+/* ── Magnetic Button (JS enhanced) ── */
+.magnetic {
+  @apply relative inline-flex;
+  will-change: transform;
+}
+
+/* ── Reveal Animation Classes ── */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+}

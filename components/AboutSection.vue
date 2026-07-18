@@ -1,0 +1,208 @@
+<template>
+  <section id="about" class="section">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <span class="section-label">
+          <span class="glow-line" />
+          About Me
+        </span>
+        <h2 class="section-title">
+          The Engineer Behind
+          <span class="gradient-text"> the Code</span>
+        </h2>
+        <p class="section-subtitle mx-auto">
+          Building scalable systems and elegant user experiences with 4+ years of hands-on engineering.
+        </p>
+      </div>
+
+      <!-- Split Layout -->
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+        <!-- Left: Profile Visual -->
+        <div ref="leftCol" class="relative reveal-left">
+          <div class="relative mx-auto max-w-sm">
+            <!-- Decorative rings -->
+            <div class="absolute -inset-4 rounded-full border border-primary/10 animate-spin-slow" aria-hidden="true" />
+            <div class="absolute -inset-8 rounded-full border border-secondary/5" aria-hidden="true" />
+
+            <!-- Profile image -->
+            <div class="relative rounded-3xl overflow-hidden aspect-[4/5] border border-white/10 shadow-card">
+              <div
+                class="w-full h-full flex items-center justify-center"
+                style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%)"
+              >
+                <!-- Avatar Placeholder with initials -->
+                <div class="flex flex-col items-center gap-4">
+                  <div
+                    class="w-32 h-32 rounded-full flex items-center justify-center text-4xl font-black font-mono gradient-text border-2 border-primary/30"
+                    style="background: rgba(0,229,255,0.05)"
+                  >
+                    NBL
+                  </div>
+                  <div class="text-center">
+                    <p class="text-white font-semibold text-lg">Nay Ba La</p>
+                    <p class="text-muted text-sm font-mono">Senior Full Stack Developer</p>
+                  </div>
+                  <!-- Status Badge -->
+                  <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20">
+                    <span class="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                    <span class="text-accent text-xs font-semibold">Open to work</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating skill badges -->
+            <div class="absolute -right-4 top-8 glass-card px-3 py-2 shadow-glow-primary">
+              <p class="text-xs font-mono text-primary">4+ Years</p>
+              <p class="text-xs text-muted">Experience</p>
+            </div>
+            <div class="absolute -left-4 bottom-12 glass-card px-3 py-2 shadow-glow-secondary">
+              <p class="text-xs font-mono text-secondary">20+</p>
+              <p class="text-xs text-muted">Projects Done</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Bio -->
+        <div ref="rightCol" class="reveal-right space-y-6">
+          <div class="space-y-4">
+            <p class="text-white/80 leading-relaxed text-base lg:text-lg">
+              I'm a <span class="text-primary font-semibold">Senior Full Stack Web Developer</span> with
+              4+ years of experience crafting scalable backend architectures and modern frontend experiences.
+              Based in Myanmar, I specialize in building production-grade systems that power real businesses.
+            </p>
+            <p class="text-muted leading-relaxed">
+              My expertise spans <span class="text-white">REST API design</span>,
+              <span class="text-white">authentication & RBAC systems</span>,
+              <span class="text-white">database design</span>, and
+              <span class="text-white">server deployment</span> using modern DevOps practices.
+              I bring technical leadership to teams and love mentoring junior developers.
+            </p>
+          </div>
+
+          <!-- Key Skills List -->
+          <div class="grid grid-cols-2 gap-3">
+            <div
+              v-for="skill in keySkills"
+              :key="skill"
+              class="flex items-center gap-2 text-sm text-muted"
+            >
+              <svg class="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              {{ skill }}
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="flex gap-3 pt-2">
+            <button class="btn-primary" @click="$el.closest('section')?.nextElementSibling?.scrollIntoView({ behavior: 'smooth' })">
+              View My Skills
+            </button>
+            <a href="mailto:naybala.dev@gmail.com" class="btn-outline">
+              Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div ref="statsRef" class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div
+          v-for="stat in stats"
+          :key="stat.label"
+          class="glass-card p-6 text-center group hover:-translate-y-1 transition-transform duration-300 cursor-default"
+        >
+          <p class="text-3xl lg:text-4xl font-black font-mono gradient-text mb-1">
+            {{ stat.count }}{{ stat.suffix }}
+          </p>
+          <p class="text-sm text-muted font-medium">{{ stat.label }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+import { useIntersectionObserver } from '@vueuse/core'
+import { useCounterAnimation } from '~/composables/useCounterAnimation'
+
+const leftCol = ref<HTMLElement | null>(null)
+const rightCol = ref<HTMLElement | null>(null)
+const statsRef = ref<HTMLElement | null>(null)
+
+const keySkills = [
+  'Backend Architecture',
+  'REST API Design',
+  'Authentication & RBAC',
+  'Database Design',
+  'Server Deployment',
+  'DevOps & CI/CD',
+  'Team Leadership',
+  'Code Reviews',
+]
+
+// Counters
+const { count: yearsCount, animate: animateYears } = useCounterAnimation(4)
+const { count: projectsCount, animate: animateProjects } = useCounterAnimation(20, 1800, 200)
+const { count: techCount, animate: animateTech } = useCounterAnimation(30, 1600, 400)
+const { count: clientCount, animate: animateClients } = useCounterAnimation(15, 2000, 600)
+
+const stats = [
+  { label: 'Years Experience', count: yearsCount, suffix: '+' },
+  { label: 'Projects Completed', count: projectsCount, suffix: '+' },
+  { label: 'Technologies', count: techCount, suffix: '+' },
+  { label: 'Happy Clients', count: clientCount, suffix: '+' },
+]
+
+// GSAP animations
+onMounted(async () => {
+  if (!import.meta.client) return
+  const { gsap } = await import('gsap')
+  const { ScrollTrigger } = await import('gsap/ScrollTrigger')
+  gsap.registerPlugin(ScrollTrigger)
+
+  gsap.fromTo(
+    leftCol.value,
+    { opacity: 0, x: -60 },
+    {
+      opacity: 1, x: 0, duration: 1, ease: 'power3.out',
+      scrollTrigger: { trigger: leftCol.value, start: 'top 80%' },
+    },
+  )
+
+  gsap.fromTo(
+    rightCol.value,
+    { opacity: 0, x: 60 },
+    {
+      opacity: 1, x: 0, duration: 1, ease: 'power3.out',
+      scrollTrigger: { trigger: rightCol.value, start: 'top 80%' },
+    },
+  )
+
+  gsap.fromTo(
+    statsRef.value?.querySelectorAll('.glass-card'),
+    { opacity: 0, y: 40 },
+    {
+      opacity: 1, y: 0, duration: 0.7, stagger: 0.1, ease: 'power3.out',
+      scrollTrigger: { trigger: statsRef.value, start: 'top 85%' },
+    },
+  )
+})
+
+// Counter trigger
+useIntersectionObserver(
+  statsRef,
+  ([{ isIntersecting }]) => {
+    if (isIntersecting) {
+      animateYears()
+      animateProjects()
+      animateTech()
+      animateClients()
+    }
+  },
+  { threshold: 0.3 },
+)
+</script>
