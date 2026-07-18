@@ -1,12 +1,12 @@
 <template>
-  <section id="home" class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+  <section id="home" class="relative min-h-screen flex flex-col justify-center overflow-hidden">
     <!-- Grid bg -->
     <div class="absolute inset-0 grid-bg opacity-40" aria-hidden="true" />
 
-    <!-- Radial glow -->
+    <!-- Radial glow left -->
     <div
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full pointer-events-none"
-      style="background: radial-gradient(ellipse at center, rgba(0,229,255,0.06) 0%, transparent 70%)"
+      class="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
+      style="background: radial-gradient(ellipse at center, rgba(0,229,255,0.07) 0%, transparent 70%)"
       aria-hidden="true"
     />
 
@@ -23,71 +23,153 @@
       </div>
     </div>
 
-    <!-- Hero Content -->
-    <div ref="heroRef" class="container relative z-10 text-center px-4">
-      <!-- Badge -->
-      <div class="reveal-up inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-mono mb-8">
-        <span class="w-2 h-2 rounded-full bg-accent animate-pulse" />
-        Available for opportunities
-      </div>
+    <!-- Hero Content — split layout -->
+    <div ref="heroRef" class="container relative z-10 py-24 lg:py-32">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-      <!-- Main Headline -->
-      <h1 class="reveal-up text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black tracking-tight leading-[1.05] mb-6">
-        <span class="block text-muted text-2xl sm:text-3xl font-semibold font-mono mb-3 tracking-widest">Hello, I'm</span>
-        <span class="gradient-text">Nay Ba La</span>
-      </h1>
+        <!-- ── Left: Text ── -->
+        <div class="flex flex-col items-start text-left">
+          <!-- Badge -->
+          <div class="reveal-up inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-mono mb-8">
+            <span class="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            Available for opportunities
+          </div>
 
-      <!-- Role Title -->
-      <p class="reveal-up text-xl sm:text-2xl md:text-3xl font-semibold text-white/80 mb-4">
-        Senior Full Stack Web Developer
-      </p>
+          <!-- Headline -->
+          <h1 class="reveal-up font-black tracking-tight leading-[1.05] mb-5">
+            <span class="block text-muted text-xl sm:text-2xl font-semibold font-mono mb-3 tracking-widest">
+              Hello, I'm
+            </span>
+            <span class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl gradient-text">
+              Nay Ba La
+            </span>
+          </h1>
 
-      <!-- Typing Animation -->
-      <div class="reveal-up flex items-center justify-center gap-2 text-lg sm:text-xl text-muted mb-10 h-8">
-        <span class="text-primary font-mono">&gt;</span>
-        <span class="font-mono text-white">{{ displayText }}</span>
-        <span class="typing-cursor" aria-hidden="true" />
-      </div>
+          <!-- Role -->
+          <p class="reveal-up text-xl sm:text-2xl font-semibold text-white/80 mb-4">
+            Senior Full Stack Web Developer
+          </p>
 
-      <!-- CTA Buttons -->
-      <div class="reveal-up flex flex-wrap items-center justify-center gap-4 mb-16">
-        <button
-          class="btn-primary magnetic text-sm sm:text-base"
-          @click="scrollTo('projects')"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-          View Projects
-        </button>
-        <a
-          href="/resume.pdf"
-          download
-          class="btn-outline magnetic text-sm sm:text-base"
-          aria-label="Download Resume PDF"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-          </svg>
-          Download Resume
-        </a>
-      </div>
+          <!-- Typing -->
+          <div class="reveal-up flex items-center gap-2 text-base sm:text-lg text-muted mb-10 h-8">
+            <span class="text-primary font-mono">&gt;</span>
+            <span class="font-mono text-white">{{ displayText }}</span>
+            <span class="typing-cursor" aria-hidden="true" />
+          </div>
 
-      <!-- Social Links -->
-      <div class="reveal-up flex items-center justify-center gap-4">
-        <a
-          v-for="social in socials"
-          :key="social.label"
-          :href="social.href"
-          target="_blank"
-          rel="noopener noreferrer"
-          :aria-label="social.label"
-          class="w-10 h-10 flex items-center justify-center rounded-xl border border-white/10 text-muted hover:text-primary hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 cursor-pointer"
-        >
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path :d="social.icon" />
-          </svg>
-        </a>
+          <!-- CTA -->
+          <div class="reveal-up flex flex-wrap items-center gap-4 mb-10">
+            <button
+              class="btn-primary magnetic"
+              @click="scrollTo('projects')"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              View Projects
+            </button>
+            <a
+              href="/resume.pdf"
+              download
+              class="btn-outline magnetic"
+              aria-label="Download Resume PDF"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download Resume
+            </a>
+          </div>
+
+          <!-- Socials -->
+          <div class="reveal-up flex items-center gap-3">
+            <a
+              v-for="social in socials"
+              :key="social.label"
+              :href="social.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              :aria-label="social.label"
+              class="w-10 h-10 flex items-center justify-center rounded-xl border border-white/10 text-muted hover:text-primary hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 cursor-pointer"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path :d="social.icon" />
+              </svg>
+            </a>
+
+            <!-- Separator -->
+            <span class="w-px h-6 bg-white/10" aria-hidden="true" />
+
+            <!-- Quick stats -->
+            <div class="flex items-center gap-4 text-xs font-mono text-muted">
+              <span><span class="text-primary font-bold">4+</span> yrs</span>
+              <span><span class="text-primary font-bold">20+</span> projects</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Right: Profile Photo ── -->
+        <div class="reveal-right flex items-center justify-center lg:justify-end">
+          <div class="relative">
+            <!-- Outer decorative ring — slow spin -->
+            <div
+              class="absolute -inset-6 rounded-full border border-primary/10"
+              style="animation: spin-slow 30s linear infinite"
+              aria-hidden="true"
+            />
+            <!-- Dashed ring -->
+            <div
+              class="absolute -inset-3 rounded-full border border-dashed border-primary/20"
+              style="animation: spin-slow 20s linear infinite reverse"
+              aria-hidden="true"
+            />
+
+            <!-- Photo wrapper -->
+            <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden">
+              <!-- Glow backdrop -->
+              <div
+                class="absolute inset-0 rounded-full"
+                style="background: radial-gradient(ellipse at center, rgba(0,229,255,0.15) 0%, transparent 70%)"
+                aria-hidden="true"
+              />
+
+              <!-- Gradient border ring -->
+              <div
+                class="absolute inset-0 rounded-full p-[3px]"
+                style="background: linear-gradient(135deg, #00E5FF, #6366F1, #22C55E)"
+                aria-hidden="true"
+              >
+                <div class="w-full h-full rounded-full bg-background" />
+              </div>
+
+              <!-- Actual image -->
+              <img
+                src="/myProfile.png"
+                alt="Nay Ba La — Senior Full Stack Web Developer"
+                class="absolute inset-[3px] w-[calc(100%-6px)] h-[calc(100%-6px)] rounded-full object-cover object-top"
+                loading="eager"
+                fetchpriority="high"
+              />
+            </div>
+
+            <!-- Status badge — bottom right -->
+            <div
+              class="absolute bottom-4 -right-4 flex items-center gap-2 px-3 py-2 rounded-xl glass-card border-primary/20 shadow-glow-primary"
+            >
+              <span class="w-2 h-2 rounded-full bg-accent animate-pulse flex-shrink-0" />
+              <span class="text-xs font-semibold text-white whitespace-nowrap">Open to work</span>
+            </div>
+
+            <!-- Tech badge — top left -->
+            <div
+              class="absolute -top-2 -left-6 flex items-center gap-1.5 px-3 py-2 rounded-xl glass-card"
+            >
+              <span class="text-primary text-xs font-mono font-bold">4+</span>
+              <span class="text-xs text-muted">Years Exp.</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -163,9 +245,8 @@ const socials = [
 onMounted(async () => {
   if (import.meta.client) {
     const { gsap } = await import('gsap')
-    const { ScrollTrigger } = await import('gsap/ScrollTrigger')
-    gsap.registerPlugin(ScrollTrigger)
 
+    // Stagger in the left column text elements
     const elements = heroRef.value?.querySelectorAll('.reveal-up')
     if (elements?.length) {
       gsap.fromTo(
@@ -181,6 +262,16 @@ onMounted(async () => {
         },
       )
     }
+
+    // Slide in the photo from the right
+    const photoEl = heroRef.value?.querySelector('.reveal-right')
+    if (photoEl) {
+      gsap.fromTo(
+        photoEl,
+        { opacity: 0, x: 80 },
+        { opacity: 1, x: 0, duration: 1.1, ease: 'power3.out', delay: 0.4 },
+      )
+    }
   }
 })
 </script>
@@ -190,5 +281,10 @@ onMounted(async () => {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   33% { transform: translateY(-12px) rotate(1deg); }
   66% { transform: translateY(-6px) rotate(-1deg); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 </style>
