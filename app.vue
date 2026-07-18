@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-background min-h-screen text-white font-sans">
+  <div class="min-h-screen">
     <!-- Custom Cursor -->
     <AppCursor />
     <!-- Scroll Progress Bar -->
@@ -25,9 +25,6 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  bodyAttrs: {
-    class: 'dark',
-  },
-})
+// useDark from useTheme sets the `dark` class on <html> automatically
+useTheme()
 </script>
