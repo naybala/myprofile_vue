@@ -1,5 +1,5 @@
 <template>
-  <section id="home" class="relative min-h-screen flex flex-col justify-center overflow-hidden">
+  <section id="home" ref="heroRef" class="relative min-h-screen flex flex-col justify-center overflow-hidden">
     <!-- Grid bg -->
     <div class="absolute inset-0 grid-bg opacity-60" aria-hidden="true" />
 
@@ -10,25 +10,39 @@
       aria-hidden="true"
     />
 
+    <!-- Connecting SVG Lines -->
+    <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" aria-hidden="true">
+      <line
+        v-for="(tech, i) in floatingTechs"
+        :key="`line-${i}`"
+        :ref="(el) => { if (el) lineRefs[i] = el as any }"
+        stroke="var(--color-primary)"
+        stroke-width="1.5"
+        stroke-dasharray="6 6"
+        style="opacity: 0.25"
+      />
+    </svg>
+
     <!-- Floating Tech Icons -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-10" aria-hidden="true">
       <div
         v-for="(tech, i) in floatingTechs"
         :key="i"
-        class="absolute flex items-center gap-1.5 px-3 py-1.5 rounded-full font-mono text-xs font-semibold"
-        :style="[tech.style, { color: 'var(--color-text-muted)', borderColor: 'var(--color-border)', border: '1px solid', opacity: 0.5 }]"
+        :ref="(el) => { if (el) techRefs[i] = el as any }"
+        class="absolute flex items-center gap-1.5 px-3 py-1.5 rounded-full font-mono text-xs font-semibold glass-card"
+        :style="[tech.style, { color: 'var(--color-text-muted)' }]"
       >
-        <span :style="{ color: tech.color + '70' }">{{ tech.icon }}</span>
+        <span :style="{ color: tech.color + '90' }">{{ tech.icon }}</span>
         {{ tech.name }}
       </div>
     </div>
 
     <!-- Hero Content -->
-    <div ref="heroRef" class="container relative z-10 py-24 lg:py-32">
+    <div class="container relative z-20 py-24 lg:py-32">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
         <!-- ── Left: Text ── -->
-        <div class="flex flex-col items-start text-left">
+        <div ref="leftContentRef" class="flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 mt-8 lg:mt-0">
           <!-- Badge -->
           <div class="reveal-up inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-mono mb-8">
             <span class="w-2 h-2 rounded-full bg-accent animate-pulse" />
@@ -51,14 +65,14 @@
           </p>
 
           <!-- Typing -->
-          <div class="reveal-up flex items-center gap-2 text-base sm:text-lg mb-10 h-8" style="color: var(--color-text-muted)">
+          <div class="reveal-up flex items-center justify-center lg:justify-start gap-2 text-base sm:text-lg mb-10 h-8" style="color: var(--color-text-muted)">
             <span class="text-primary font-mono">&gt;</span>
             <span class="font-mono" style="color: var(--color-text)">{{ displayText }}</span>
             <span class="typing-cursor" aria-hidden="true" />
           </div>
 
           <!-- CTA -->
-          <div class="reveal-up flex flex-wrap items-center gap-4 mb-10">
+          <div class="reveal-up flex flex-wrap justify-center lg:justify-start items-center gap-4 mb-10">
             <button class="btn-primary magnetic" @click="scrollTo('projects')">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -74,7 +88,7 @@
           </div>
 
           <!-- Socials -->
-          <div class="reveal-up flex items-center gap-3">
+          <div class="reveal-up flex flex-wrap justify-center lg:justify-start items-center gap-3">
             <a
               v-for="social in socials"
               :key="social.label"
@@ -82,15 +96,15 @@
               target="_blank"
               rel="noopener noreferrer"
               :aria-label="social.label"
-              class="w-10 h-10 flex items-center justify-center rounded-xl hover:text-primary hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 cursor-pointer"
-              :style="{ border: '1px solid var(--color-border)', color: 'var(--color-text-muted)' }"
+              class="w-10 h-10 flex items-center justify-center rounded-xl hover:text-primary hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 cursor-pointer glass-card"
+              :style="{ color: 'var(--color-text-muted)' }"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path :d="social.icon" />
               </svg>
             </a>
-            <span class="w-px h-6 bg-white/10" aria-hidden="true" :style="{ background: 'var(--color-border)' }" />
-            <div class="flex items-center gap-4 text-xs font-mono" style="color: var(--color-text-muted)">
+            <span class="hidden sm:block w-px h-6 bg-white/10" aria-hidden="true" :style="{ background: 'var(--color-border)' }" />
+            <div class="flex items-center gap-4 text-xs font-mono w-full sm:w-auto justify-center sm:justify-start mt-2 sm:mt-0" style="color: var(--color-text-muted)">
               <span><span class="text-primary font-bold">4+</span> yrs</span>
               <span><span class="text-primary font-bold">20+</span> projects</span>
             </div>
@@ -98,14 +112,14 @@
         </div>
 
         <!-- ── Right: Profile Photo ── -->
-        <div class="reveal-right flex items-center justify-center lg:justify-end">
+        <div ref="rightContentRef" class="reveal-right flex items-center justify-center lg:justify-end order-1 lg:order-2">
           <div class="relative">
             <!-- Outer rings -->
             <div class="absolute -inset-6 rounded-full border border-primary/10" style="animation: spin-slow 30s linear infinite" aria-hidden="true" />
             <div class="absolute -inset-3 rounded-full border border-dashed border-primary/20" style="animation: spin-slow 20s linear infinite reverse" aria-hidden="true" />
 
-            <!-- Photo wrapper -->
-            <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden">
+            <!-- Photo wrapper (Target for SVG lines) -->
+            <div ref="photoRef" class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden">
               <div
                 class="absolute inset-0 rounded-full"
                 style="background: radial-gradient(ellipse at center, rgba(0,229,255,0.15) 0%, transparent 70%)"
@@ -145,7 +159,7 @@
     </div>
 
     <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-xs font-mono" style="color: var(--color-text-muted)">
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-xs font-mono z-10" style="color: var(--color-text-muted)">
       <span>scroll</span>
       <div class="w-px h-12 bg-gradient-to-b from-primary/50 to-transparent animate-pulse" />
     </div>
@@ -153,10 +167,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useTypingAnimation } from '~/composables/useTypingAnimation'
 
 const heroRef = ref<HTMLElement | null>(null)
+const photoRef = ref<HTMLElement | null>(null)
+const leftContentRef = ref<HTMLElement | null>(null)
+const rightContentRef = ref<HTMLElement | null>(null)
+const techRefs = ref<HTMLElement[]>([])
+const lineRefs = ref<SVGLineElement[]>([])
+
+let rafId: number
 
 const typingWords = ['Laravel Developer', 'Nuxt Developer', 'Backend Engineer', 'Full Stack Engineer', 'Technical Lead']
 const { displayText } = useTypingAnimation(typingWords, { speed: 90, deleteSpeed: 55, pauseTime: 2200 })
@@ -186,17 +207,54 @@ const socials = [
   { label: 'Email', href: 'mailto:naybala.dev@gmail.com', icon: 'M0 4a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v.217l-12 7.857L0 4.217V4zm0 2.383v11.234l7.84-7.84L0 6.383zm22 11.234V6.383l-7.84 3.394 7.84 7.84zM8.617 10.794L.217 18h23.566l-8.4-7.206L12 13.143l-3.383-2.349z' },
 ]
 
+const updateLines = () => {
+  if (!heroRef.value || !photoRef.value) {
+    rafId = requestAnimationFrame(updateLines)
+    return
+  }
+  
+  const heroRect = heroRef.value.getBoundingClientRect()
+  const photoRect = photoRef.value.getBoundingClientRect()
+  
+  // Center of the profile photo relative to the section
+  const pX = photoRect.left + photoRect.width / 2 - heroRect.left
+  const pY = photoRect.top + photoRect.height / 2 - heroRect.top
+
+  techRefs.value.forEach((techEl, i) => {
+    const lineEl = lineRefs.value[i]
+    if (!techEl || !lineEl) return
+    const techRect = techEl.getBoundingClientRect()
+    // Center of the tech badge relative to the section
+    const tX = techRect.left + techRect.width / 2 - heroRect.left
+    const tY = techRect.top + techRect.height / 2 - heroRect.top
+    
+    lineEl.setAttribute('x1', String(pX))
+    lineEl.setAttribute('y1', String(pY))
+    lineEl.setAttribute('x2', String(tX))
+    lineEl.setAttribute('y2', String(tY))
+  })
+  
+  rafId = requestAnimationFrame(updateLines)
+}
+
 onMounted(async () => {
   if (!import.meta.client) return
+  
+  // Start line animation loop
+  rafId = requestAnimationFrame(updateLines)
+
   const { gsap } = await import('gsap')
-  const elements = heroRef.value?.querySelectorAll('.reveal-up')
+  const elements = leftContentRef.value?.querySelectorAll('.reveal-up')
   if (elements?.length) {
     gsap.fromTo(elements, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.9, stagger: 0.12, ease: 'power3.out', delay: 0.2 })
   }
-  const photoEl = heroRef.value?.querySelector('.reveal-right')
-  if (photoEl) {
-    gsap.fromTo(photoEl, { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 1.1, ease: 'power3.out', delay: 0.4 })
+  if (rightContentRef.value) {
+    gsap.fromTo(rightContentRef.value, { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 1.1, ease: 'power3.out', delay: 0.4 })
   }
+})
+
+onUnmounted(() => {
+  cancelAnimationFrame(rafId)
 })
 </script>
 
