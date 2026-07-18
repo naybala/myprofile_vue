@@ -2,13 +2,9 @@
   <header
     :class="[
       'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
-      scrolled
-        ? 'backdrop-blur-xl border-b shadow-sm'
-        : 'bg-transparent',
+      scrolled ? 'backdrop-blur-xl border-b shadow-sm' : 'bg-transparent',
     ]"
-    :style="scrolled
-      ? { background: 'var(--color-surface)', borderColor: 'var(--color-border)' }
-      : {}"
+    :style="scrolled ? { background: 'var(--color-surface)', borderColor: 'var(--color-border)' } : {}"
   >
     <nav class="container flex items-center justify-between h-16 lg:h-20" role="navigation" aria-label="Main navigation">
       <!-- Logo -->
@@ -26,9 +22,7 @@
         <li v-for="item in navItems" :key="item.id">
           <button
             class="px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer"
-            :class="activeSection === item.id
-              ? 'text-primary bg-primary/10'
-              : 'hover:bg-primary/5'"
+            :class="activeSection === item.id ? 'text-primary bg-primary/10' : 'hover:bg-primary/5'"
             :style="activeSection !== item.id ? { color: 'var(--color-text-muted)' } : {}"
             :aria-current="activeSection === item.id ? 'page' : undefined"
             @click="scrollTo(item.id)"
@@ -40,34 +34,18 @@
 
       <!-- Right actions -->
       <div class="flex items-center gap-2">
-        <!-- Theme toggle -->
+        <!-- ── Theme Toggle ── -->
         <button
-          class="theme-toggle"
+          ref="toggleBtn"
+          class="theme-toggle relative overflow-visible"
           :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
           :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
-          @click="toggleTheme()"
+          @click="handleThemeToggle"
         >
           <Transition name="icon-swap" mode="out-in">
-            <!-- Moon icon — shown in light mode (click to go dark) -->
+            <!-- Sun — shown in dark mode -->
             <svg
-              v-if="!isDark"
-              key="moon"
-              class="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-              />
-            </svg>
-            <!-- Sun icon — shown in dark mode (click to go light) -->
-            <svg
-              v-else
+              v-if="isDark"
               key="sun"
               class="w-5 h-5"
               fill="none"
@@ -75,17 +53,24 @@
               viewBox="0 0 24 24"
               aria-hidden="true"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"
-              />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+            </svg>
+            <!-- Moon — shown in light mode -->
+            <svg
+              v-else
+              key="moon"
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
             </svg>
           </Transition>
         </button>
 
-        <!-- GitHub CTA (desktop) -->
+        <!-- GitHub CTA -->
         <a
           href="https://github.com/naybala"
           target="_blank"
@@ -107,20 +92,8 @@
           @click="mobileOpen = !mobileOpen"
         >
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              v-if="!mobileOpen"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-            <path
-              v-else
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
+            <path v-if="!mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
@@ -148,6 +121,17 @@
       </div>
     </Transition>
   </header>
+
+  <!-- ── Circular Ripple Overlay ── -->
+  <Teleport to="body">
+    <div
+      ref="rippleEl"
+      class="theme-ripple"
+      :class="{ 'theme-ripple--active': rippleActive }"
+      :style="rippleStyle"
+      aria-hidden="true"
+    />
+  </Teleport>
 </template>
 
 <script setup lang="ts">
@@ -170,6 +154,47 @@ const { isDark, toggleTheme } = useTheme()
 
 const scrolled = ref(false)
 const mobileOpen = ref(false)
+const toggleBtn = ref<HTMLElement | null>(null)
+const rippleEl = ref<HTMLElement | null>(null)
+
+// Ripple state
+const rippleActive = ref(false)
+const rippleStyle = ref<Record<string, string>>({
+  '--x': '50%',
+  '--y': '50px',
+  '--ripple-color': '#050816',
+})
+
+let rippleTimeout: ReturnType<typeof setTimeout>
+
+const handleThemeToggle = () => {
+  const btn = toggleBtn.value
+  if (!btn) { toggleTheme(); return }
+
+  const rect = btn.getBoundingClientRect()
+  const x = rect.left + rect.width / 2
+  const y = rect.top + rect.height / 2
+
+  // The ripple color is the DESTINATION theme background
+  const nextIsDark = !isDark.value
+  const color = nextIsDark ? '#050816' : '#f0f4f8'
+
+  rippleStyle.value = {
+    '--x': `${x}px`,
+    '--y': `${y}px`,
+    '--ripple-color': color,
+  }
+
+  // Phase 1: expand — circle grows from button to cover the entire viewport
+  rippleActive.value = true
+
+  // Phase 2: switch theme once the circle fully covers the page (~450ms)
+  rippleTimeout = setTimeout(() => {
+    toggleTheme()
+    // Phase 3: collapse — shrink the circle away (now the new theme is visible beneath)
+    rippleActive.value = false
+  }, 480)
+}
 
 const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -178,23 +203,52 @@ const scrollTo = (id: string) => {
 const onScroll = () => { scrolled.value = window.scrollY > 50 }
 
 onMounted(() => { window.addEventListener('scroll', onScroll, { passive: true }) })
-onUnmounted(() => { window.removeEventListener('scroll', onScroll) })
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll)
+  clearTimeout(rippleTimeout)
+})
 </script>
 
 <style scoped>
+/* ── Circular Ripple Wipe ── */
+.theme-ripple {
+  position: fixed;
+  /* Positioned at toggle button center via CSS vars */
+  top: var(--y);
+  left: var(--x);
+  /* Start as a tiny point */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--ripple-color);
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+  z-index: 9990;
+  /* No transition on default — collapse is instant */
+  transition: none;
+}
+
+.theme-ripple--active {
+  /* Grow to cover entire viewport diagonally */
+  transform: translate(-50%, -50%) scale(150);
+  transition: transform 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Icon swap animation */
 .icon-swap-enter-active,
 .icon-swap-leave-active {
-  transition: all 0.2s ease;
+  transition: all 0.22s ease;
 }
 .icon-swap-enter-from {
   opacity: 0;
-  transform: rotate(-90deg) scale(0.7);
+  transform: rotate(-90deg) scale(0.6);
 }
 .icon-swap-leave-to {
   opacity: 0;
-  transform: rotate(90deg) scale(0.7);
+  transform: rotate(90deg) scale(0.6);
 }
 
+/* Mobile menu */
 .mobile-menu-enter-active,
 .mobile-menu-leave-active {
   transition: all 0.3s ease;
