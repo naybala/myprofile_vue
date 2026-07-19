@@ -22,7 +22,7 @@
 
     <!-- Connecting SVG Lines -->
     <svg
-      class="absolute inset-0 w-full h-full pointer-events-none z-0"
+      class="absolute inset-0 w-full h-full pointer-events-none z-0 hidden lg:block"
       aria-hidden="true"
     >
       <line
@@ -42,7 +42,7 @@
 
     <!-- Floating Tech Icons -->
     <div
-      class="absolute inset-0 overflow-hidden pointer-events-none z-10"
+      class="absolute inset-0 overflow-hidden pointer-events-none z-10 hidden lg:block"
       aria-hidden="true"
     >
       <div

@@ -21,11 +21,12 @@
       <!-- Logo -->
       <a
         href="#home"
-        class="text-xl font-bold font-mono gradient-text animated-underline cursor-pointer"
+        class="text-xl font-bold font-mono gradient-text animated-underline cursor-pointer whitespace-nowrap"
         aria-label="Nay Ba La — Home"
         @click.prevent="scrollTo('home')"
       >
-        &lt; Nay Ba La /&gt;
+        <span class="md:hidden lg:inline">&lt; Nay Ba La /&gt;</span>
+        <span class="hidden md:inline lg:hidden">&lt; NBL /&gt;</span>
       </a>
 
       <!-- Desktop Nav -->
